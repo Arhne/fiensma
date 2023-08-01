@@ -1,0 +1,35 @@
+.HeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  background-color: inherit;
+  padding: 2rem 6.25rem;
+
+  .Menus {
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+      padding-top: 1rem;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-color);
+      margin-right: 9rem;
+
+      li {
+        margin: 0 1.8rem;
+      }
+    }
+
+    .TryItButton {
+      cursor: pointer;
+      border: none;
+      width: 8.5rem;
+      height: 3rem;
+      border-radius: 4.4rem;
+      color: #ffffff;
+      font-weight: 600;
+      background-color: var(--primary-color);
+    }
+  }
+}
