@@ -1,0 +1,33 @@
+.FooterContainer {
+  width: 100%;
+  background-color: #000000;
+  height: 33rem;
+  padding-top: 9.3rem;
+  padding-left: 6.3rem;
+  padding-right: 6.3rem;
+  color: #ffffff;
+  font-weight: 500;
+
+  .Address {
+    margin-top: 3rem;
+  }
+
+  .SocialIcons {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+
+    li {
+      margin-right: 1rem;
+    }
+  }
+
+  .FooterMenus {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 3rem;
+    }
+  }
+}
