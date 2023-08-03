@@ -15,3 +15,10 @@ body {
   overflow-x: hidden;
   font-family: "Manrope", sans-serif !important;
 }
+
+h3 {
+  color: var(--black, #161616);
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.96px;
+}

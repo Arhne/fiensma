@@ -1,0 +1,108 @@
+.Companies {
+  padding: 5rem 6.25rem;
+  background-color: #fafafa;
+
+  .TextContainer {
+    display: flex;
+
+    .BoldText {
+      font-weight: 700;
+      color: #000;
+      font-size: 2.5rem;
+    }
+
+    .CommonText {
+      color: #10192d;
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-style: normal;
+      margin-left: 1.9rem;
+    }
+  }
+
+  .PartnerCompanies {
+    margin-top: 7rem;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+    }
+  }
+}
+
+.Features {
+  padding: 14rem 6.25rem;
+  background-color: #ffffff;
+
+  .LeftText {
+    color: rgba(0, 0, 0, 0.6);
+    font-feature-settings: "clig" off, "liga" off;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    text-transform: capitalize;
+  }
+
+  .IconContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .Heading {
+    color: #000;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+  .Content {
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+    text-transform: capitalize;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Companies {
+    padding: 1rem;
+
+    .TextContainer {
+      flex-direction: column;
+
+      .BoldText {
+        text-align: center;
+        font-size: 2rem;
+      }
+
+      .CommonText {
+        text-align: center;
+        font-size: 1rem;
+      }
+    }
+
+    .PartnerCompanies {
+      margin-top: 3rem;
+
+      ul {
+        display: block;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
