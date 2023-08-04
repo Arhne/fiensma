@@ -13,15 +13,29 @@ import dollarIcon from "../../public/feature_dollar_icon.svg";
 import shieldIcon from "../../public/feature_shield_icon.svg";
 import hourIcon from "../../public/feature_hour_icon.svg";
 
+import googlePlayStoreIcon from "../../public/google_play.svg";
+import appleStoreIcon from "../../public/apple_store.svg";
+
 import styles from "./page.module.scss";
 
 export default function Home() {
   return (
     <main>
       <div className={`row ${styles.Landing}`}>
-        <div className="col-sm-6"></div>
-        <div className="col-sm-6">
-          <img src="/landing_image.svg" alt="" />
+        <div className={`col-sm-7 ${styles.LandingLeftContainer}`}>
+          <h1 className={styles.HeaderText}>Currency Exchange Made Easy</h1>
+          <p className={styles.TagLine}>
+            Easy and instant way to buy or sell your currency <br />
+            with 100% trust guarantee{" "}
+          </p>
+          <div className={styles.MobileStore}>
+            <Image
+              src={googlePlayStoreIcon}
+              alt=""
+              className={styles.GoogleStore}
+            />
+            <Image src={appleStoreIcon} alt="" />
+          </div>
         </div>
       </div>
       <div className={styles.Companies}>

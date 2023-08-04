@@ -1,6 +1,8 @@
 :root {
   --text-color: #606060;
   --primary-color: #7041de;
+  --header-one-color: #101010;
+  --header-three-color: #161616;
 }
 
 * {
@@ -16,9 +18,22 @@ body {
   font-family: "Manrope", sans-serif !important;
 }
 
+p {
+  color: var(--text-color);
+}
+
 h3 {
-  color: var(--black, #161616);
+  color: var(--header-three-color);
   font-size: 3rem;
   font-weight: 800;
   letter-spacing: -0.96px;
+}
+
+h1 {
+  color: var(--header-one-color);
+  font-size: 5.6rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 110%;
+  letter-spacing: -1.8px;
 }
