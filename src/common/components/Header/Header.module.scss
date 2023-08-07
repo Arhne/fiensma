@@ -23,11 +23,25 @@
       list-style-type: none;
       display: flex;
       justify-content: space-between;
-      color: var(--text-color);
       margin-right: 9rem;
 
       li {
         margin: 0 1.8rem;
+
+        & .NavLink {
+          color: var(--text-color);
+          text-decoration: none;
+
+          &:hover {
+            color: #101010;
+            font-weight: 500;
+          }
+        }
+
+        & .Active {
+          color: #101010;
+          font-weight: 500;
+        }
       }
     }
 
@@ -44,7 +58,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 993px) {
   .HeaderContainer {
     flex-direction: column;
     padding: 1rem;
