@@ -1,8 +1,8 @@
 .Landing {
   padding: 0 6.25rem;
   height: 56rem;
-  background-image: url("../../public/landing_left_background_image.svg"),
-    url("../../public/landing_image.svg");
+  background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg"),
+    url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418243/ibx-website-v2/landing_image_l8ju3e.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: left top, 0;
   background-position-x: 0, 93%;
@@ -17,7 +17,7 @@
     }
 
     & .HeaderText::after {
-      content: url("../../public/yellow_mark.svg");
+      content: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418229/ibx-website-v2/yellow_mark_tsz3mm.svg");
       position: absolute;
       top: 19rem;
       left: 1rem;
@@ -32,6 +32,8 @@
     .MobileStore {
       .GoogleStore {
         margin-right: 1rem;
+        width: 213px;
+        height: 64px;
       }
     }
   }
@@ -108,6 +110,38 @@
     font-weight: 400;
     line-height: 2rem;
     text-transform: capitalize;
+  }
+}
+
+.Advert {
+  padding: 8.75rem 6.25rem;
+  height: 40rem;
+  background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691582586/ibx-website-v2/app-in-hand_hgytsk.webp");
+  background-repeat: no-repeat;
+
+  .HeaderText {
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 3rem;
+    font-style: normal;
+    line-height: normal;
+    margin-bottom: 3.125rem;
+  }
+
+  .AdvertText {
+    color: #ffffff;
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5rem;
+  }
+
+  .MobileStore {
+    .GoogleStore {
+      margin-right: 1rem;
+    }
   }
 }
 

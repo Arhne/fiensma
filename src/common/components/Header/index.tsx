@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
@@ -13,10 +14,20 @@ const Header = () => {
   return (
     <div className={styles.HeaderContainer}>
       <div className={styles.LogoHamburger}>
-        <img src="/logo.svg" className={styles.Logo} />
-        <img
-          src="/hamburger.svg"
-          className={`${styles.Hamburger}`}
+        <Image
+          src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418208/ibx-website-v2/logo_cz22mb.svg"
+          width={57}
+          height={38}
+          alt=""
+          className={styles.Logo}
+        />
+
+        <Image
+          src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/hamburger_wdp6ft.svg"
+          width={24}
+          height={24}
+          alt=""
+          className={styles.Hamburger}
           onClick={() => setIsOpenMobileMenu((prev) => !prev)}
         />
       </div>

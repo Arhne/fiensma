@@ -1,20 +1,8 @@
+"use client";
+
 import Image from "next/image";
 
-import slackIcon from "../../public/slack.svg";
-import paypalIcon from "../../public/paypal.svg";
-import adobeIcon from "../../public/adobe.svg";
-import youtubeIcon from "../../public/youtube.svg";
-import microsoftIcon from "../../public/microsoft.svg";
-import googleIcon from "../../public/google.svg";
-import moneyImage from "../../public/money.svg";
-
-import reliableIcon from "../../public/feature_reliable_icon.svg";
-import dollarIcon from "../../public/feature_dollar_icon.svg";
-import shieldIcon from "../../public/feature_shield_icon.svg";
-import hourIcon from "../../public/feature_hour_icon.svg";
-
-import googlePlayStoreIcon from "../../public/google_play.svg";
-import appleStoreIcon from "../../public/apple_store.svg";
+import { moneyImageLoader } from "@/common/Utils/imageLoaders";
 
 import styles from "./page.module.scss";
 
@@ -30,11 +18,19 @@ export default function Home() {
           </p>
           <div className={styles.MobileStore}>
             <Image
-              src={googlePlayStoreIcon}
+              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418195/ibx-website-v2/google_play_rm0r2b.svg"
               alt=""
+              width={213}
+              height={64}
               className={styles.GoogleStore}
             />
-            <Image src={appleStoreIcon} alt="" />
+
+            <Image
+              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/apple_store_fgtmpg.svg"
+              width={213}
+              height={64}
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -51,26 +47,56 @@ export default function Home() {
           <div className="col-6">
             <ul>
               <li>
-                <Image src={slackIcon} alt="" />
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418218/ibx-website-v2/slack_et8vic.svg"
+                  width={150}
+                  height={60.959}
+                  alt=""
+                />
               </li>
               <li>
-                <Image src={paypalIcon} alt="" />
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418206/ibx-website-v2/paypal_dphrwm.svg"
+                  width={143}
+                  height={48}
+                  alt=""
+                />
               </li>
               <li>
-                <Image src={adobeIcon} alt="" />
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/adobe_thftlk.svg"
+                  width={133}
+                  height={48}
+                  alt=""
+                />
               </li>
             </ul>
           </div>
           <div className="col-6">
             <ul>
               <li>
-                <Image src={youtubeIcon} alt="" />
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418245/ibx-website-v2/youtube_e9gmem.svg"
+                  width={150}
+                  height={45.813}
+                  alt=""
+                />
               </li>
               <li>
-                <Image src={microsoftIcon} alt="" />
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418204/ibx-website-v2/microsoft_rpniif.svg"
+                  width={164}
+                  height={48}
+                  alt=""
+                />
               </li>
               <li>
-                <Image src={googleIcon} alt="" />
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/google_ox9wco.svg"
+                  width={113}
+                  height={48}
+                  alt=""
+                />
               </li>
             </ul>
           </div>
@@ -84,13 +110,28 @@ export default function Home() {
             offer. You could share your company’s story and details about why
             you are in business.{" "}
           </p>
-          <Image src={moneyImage} alt="" />
+          <Image
+            loader={() =>
+              moneyImageLoader(
+                "https://res.cloudinary.com/dbg2z1svm/image/upload/v1691574412/ibx-website-v2/money_uulrjr.png"
+              )
+            }
+            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691574412/ibx-website-v2/money_uulrjr.png"
+            width={505}
+            height={449}
+            alt=""
+          />
         </div>
         <div className="col-6">
           <div className="row mb-4">
             <div className="col-6">
               <div className={styles.IconContainer}>
-                <Image src={reliableIcon} alt="" />
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/feature_reliable_icon_jmu1il.svg"
+                  width={100}
+                  height={100}
+                  alt=""
+                />
               </div>
               <p className={styles.Heading}>Reliable and Accurate</p>
               <p className={styles.Content}>
@@ -100,7 +141,12 @@ export default function Home() {
             </div>
             <div className="col-6">
               <div className={styles.IconContainer}>
-                <Image src={dollarIcon} alt="" />
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/feature_dollar_icon_alxtvq.svg"
+                  width={100}
+                  height={100}
+                  alt=""
+                />
               </div>
               <p className={styles.Heading}>0% Charges</p>
               <p className={styles.Content}>
@@ -112,7 +158,12 @@ export default function Home() {
           <div className="row">
             <div className="col-6">
               <div className={styles.IconContainer}>
-                <Image src={shieldIcon} alt="" />
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/feature_shield_icon_lczop6.svg"
+                  width={100}
+                  height={100}
+                  alt=""
+                />
               </div>
 
               <p className={styles.Heading}>Trust Guaranteed</p>
@@ -123,7 +174,12 @@ export default function Home() {
             </div>
             <div className="col-6">
               <div className={styles.IconContainer}>
-                <Image src={hourIcon} alt="" />
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/feature_hour_icon_edqbct.svg"
+                  width={100}
+                  height={100}
+                  alt=""
+                />
               </div>
               <p className={styles.Heading}>24/7 p2p ads</p>
               <p className={styles.Content}>
@@ -132,6 +188,30 @@ export default function Home() {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+      <div className={styles.Advert}>
+        <h1 className={styles.HeaderText}>
+          Join our 235,000+ <br /> mobile app users
+        </h1>
+        <p className={styles.AdvertText}>
+          Scan QR code to download mobile app{" "}
+        </p>
+        <div className={styles.MobileStore}>
+          <Image
+            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691583936/ibx-website-v2/google_play_white_mzoobw.svg"
+            alt=""
+            width={180}
+            height={54}
+            className={styles.GoogleStore}
+          />
+
+          <Image
+            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691583936/ibx-website-v2/apple_store_white_frrda0.svg"
+            width={183}
+            height={54}
+            alt=""
+          />
         </div>
       </div>
     </main>
