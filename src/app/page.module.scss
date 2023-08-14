@@ -145,7 +145,47 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 480px) {
+  .Landing {
+    padding: 0 2rem;
+    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-position-x: 0;
+    background-size: cover;
+
+    .LandingLeftContainer {
+      .HeaderText {
+        font-size: 4rem;
+      }
+
+      & .HeaderText::after {
+        content: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418229/ibx-website-v2/yellow_mark_tsz3mm.svg");
+        position: absolute;
+        top: 16rem;
+        left: 5rem;
+        z-index: -1;
+      }
+
+      .MobileStore {
+        display: flex;
+
+        .GoogleStore,
+        .AppStore {
+          width: 150px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .Landing {
+    padding: 0 3rem;
+  }
   .Companies {
     padding: 1rem;
 
@@ -175,6 +215,90 @@
         li {
           margin-bottom: 2rem;
         }
+      }
+    }
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .Landing {
+    padding: 0 3rem;
+    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-position-x: 0;
+    background-size: cover;
+  }
+  .Companies {
+    padding: 1rem;
+
+    .TextContainer {
+      flex-direction: column;
+
+      .BoldText {
+        text-align: center;
+        font-size: 2rem;
+      }
+
+      .CommonText {
+        text-align: center;
+        font-size: 1rem;
+      }
+    }
+
+    .PartnerCompanies {
+      margin-top: 3rem;
+
+      ul {
+        display: block;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .Landing {
+    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-position-x: 0;
+    background-size: cover;
+
+    .LandingLeftContainer {
+      .HeaderText {
+      }
+      .MobileStore {
+        display: flex;
+
+        .GoogleStore,
+        .AppStore {
+          width: 200px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+
+// Mobile Exceptions
+@media screen and (min-width: 360px) and (max-width: 375px) {
+  .Landing {
+    .LandingLeftContainer {
+      & .HeaderText::after {
+        content: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418229/ibx-website-v2/yellow_mark_tsz3mm.svg");
+        position: absolute;
+        top: 20rem;
+        left: 1rem;
+        z-index: -1;
       }
     }
   }

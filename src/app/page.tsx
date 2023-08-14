@@ -10,7 +10,9 @@ export default function Home() {
   return (
     <main>
       <div className={`row ${styles.Landing}`}>
-        <div className={`col-sm-7 ${styles.LandingLeftContainer}`}>
+        <div
+          className={`col-sm-12 col-xs-12 col-lg-7  ${styles.LandingLeftContainer}`}
+        >
           <h1 className={styles.HeaderText}>Currency Exchange Made Easy</h1>
           <p className={styles.TagLine}>
             Easy and instant way to buy or sell your currency <br />
@@ -30,6 +32,7 @@ export default function Home() {
               width={213}
               height={64}
               alt=""
+              className={styles.AppStore}
             />
           </div>
         </div>
