@@ -5,6 +5,8 @@ import Image from "next/image";
 import { moneyImageLoader } from "@/common/Utils/imageLoaders";
 
 import styles from "./page.module.scss";
+import ClientTestimonial from "@/common/components/Landing/ClientTestimonial";
+import OurTeam from "@/common/components/Landing/OurTeam/OurTeam";
 
 export default function Home() {
   return (
@@ -105,6 +107,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className={`row gx-5 ${styles.Features}`}>
         <div className="col-6">
           <h3>Gain more with IBX</h3>
@@ -193,6 +196,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className={styles.Advert}>
         <h1 className={styles.HeaderText}>
           Join our 235,000+ <br /> mobile app users
@@ -217,6 +221,9 @@ export default function Home() {
           />
         </div>
       </div>
+
+      <ClientTestimonial />
+      <OurTeam />
     </main>
   );
 }

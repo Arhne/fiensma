@@ -1,0 +1,82 @@
+.ClientTestimonialContainer {
+  padding: 7.8rem;
+
+  .Description {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+    text-transform: capitalize;
+  }
+  .CarouselContainer {
+    margin-right: -5rem;
+
+    // .NextButton {
+    //   position: absolute;
+    //   top: 0;
+    // }
+
+    // .PrevButton {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 3rem;
+    // }
+
+    .Slide {
+      width: 32rem;
+      min-height: 16rem;
+
+      .SlideItem {
+        padding: 2.5rem 4.6rem 2.5rem 2.5rem;
+        background-color: #f8f9ff;
+        border-radius: 30px;
+
+        .HeaderContainer {
+          display: flex;
+
+          .Header {
+            margin-left: 1.25rem;
+
+            h6 {
+              color: #000;
+            }
+
+            small {
+              color: #facc15;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+              text-transform: capitalize;
+            }
+          }
+        }
+
+        .Content {
+          margin-top: 1.2rem;
+          color: #000;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 2rem;
+          text-transform: capitalize;
+        }
+      }
+
+      .ActiveSwiper {
+        background-color: var(--primary-color);
+
+        .HeaderContainer {
+          .Header {
+            h6 {
+              color: #ffffff;
+            }
+          }
+        }
+
+        .Content {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
