@@ -67,11 +67,33 @@ const ClientTestimonial = () => {
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           navigation
-          slidesPerView={3}
           spaceBetween={30}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            576: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
         >
-          <SwiperButtonNext>Next</SwiperButtonNext>
-          <SwiperButtonPrevious>Previous</SwiperButtonPrevious>
+          <div className={styles.SwiperButtonContainer}>
+            <SwiperButtonNext>
+              <Image src="/left_arrow_icon.svg" width={47} height={47} alt="" />
+            </SwiperButtonNext>
+            <SwiperButtonPrevious>
+              <Image
+                src="/right_arrow_icon.svg"
+                width={47}
+                height={47}
+                alt=""
+              />
+            </SwiperButtonPrevious>
+          </div>
+
           {_slides.map((_slide) => (
             <SwiperSlide key={_slide?.id} className={styles.Slide}>
               {({ isActive }) => (

@@ -12,16 +12,24 @@
   .CarouselContainer {
     margin-right: -5rem;
 
-    // .NextButton {
-    //   position: absolute;
-    //   top: 0;
-    // }
+    .SwiperButtonContainer {
+      display: flex;
+      justify-content: center;
 
-    // .PrevButton {
-    //   position: absolute;
-    //   top: 0;
-    //   left: 3rem;
-    // }
+      .NextButton,
+      .PrevButton {
+        border-radius: 50%;
+        border: none;
+        height: 3rem;
+        width: 3rem;
+        margin-top: 1rem;
+      }
+    }
+
+    .PrevButton {
+      background-color: var(--primary-color);
+      margin-left: 0.5rem;
+    }
 
     .Slide {
       width: 32rem;
@@ -77,6 +85,51 @@
           color: #ffffff;
         }
       }
+    }
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 480px) {
+  .ClientTestimonialContainer {
+    padding: 1rem;
+
+    .HeaderText {
+      font-size: 2rem;
+    }
+
+    .CarouselContainer {
+      margin-right: 0.2rem;
+    }
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .ClientTestimonialContainer {
+    padding: 1.5rem;
+
+    .HeaderText {
+      font-size: 2rem;
+    }
+
+    .CarouselContainer {
+      margin-right: 0.2rem;
+    }
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .ClientTestimonialContainer {
+    padding: 1.5rem;
+
+    .HeaderText {
+      font-size: 2rem;
+    }
+
+    .CarouselContainer {
+      margin-right: 0.2rem;
     }
   }
 }
