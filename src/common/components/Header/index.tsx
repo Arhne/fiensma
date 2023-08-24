@@ -59,6 +59,16 @@ const Header = () => {
           <li>
             <Link
               className={`${styles.NavLink} ${
+                pathname === "/rates" && styles.Active
+              }`}
+              href={"/rates"}
+            >
+              Rates
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={`${styles.NavLink} ${
                 pathname === "/careers" && styles.Active
               }`}
               href={"/careers"}
