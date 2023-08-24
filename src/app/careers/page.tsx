@@ -74,8 +74,8 @@ const Careers = () => {
         ))}
       </div>
       <div className={styles.JobContainer}>
-        {[1, 2, 3, 4, 5, 6, 7, 8].map((_item) => (
-          <JobCard />
+        {[1, 2, 3, 4, 5, 6, 7, 8].map((_item, indx) => (
+          <JobCard key={indx} />
         ))}
       </div>
     </main>
