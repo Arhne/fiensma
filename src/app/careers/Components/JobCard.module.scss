@@ -1,0 +1,76 @@
+.JobCardContainer {
+  width: 100%;
+  height: 14.75rem;
+  border: 1.5px solid #5e5e60;
+  padding: 1.625rem 2.5rem;
+  margin-bottom: 2rem;
+
+  .CategoryTag {
+    display: inline-block;
+    min-width: 5rem;
+    height: 2rem;
+    border-radius: 51.517px;
+    padding: 0.179rem 1rem;
+    background-color: #d8caf5;
+    color: #253280;
+    font-weight: 500;
+  }
+
+  .TitleActionContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.125rem;
+
+    span {
+      display: inline-block;
+      color: #000;
+      font-size: 1.5rem;
+      line-height: 20px;
+      text-transform: capitalize;
+
+      &::after {
+        content: url("https://res.cloudinary.com/dbg2z1svm/image/upload/h_18,w_18/v1692866097/ibx-website-v2/icons/apply_jyercu.webp");
+        margin-left: 0.5rem;
+        padding-top: 10rem;
+      }
+    }
+  }
+
+  .TypeContainer {
+    display: flex;
+    margin-top: 1.6rem;
+
+    .JobType {
+      display: inline-block;
+      color: #333f51;
+      font-style: normal;
+      font-weight: 500;
+      position: relative;
+      margin-left: 2rem;
+      margin-right: 2rem;
+
+      &::before {
+        content: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1692868299/ibx-website-v2/icons/Outline_jufjea.svg");
+        position: absolute;
+        margin-right: 1rem;
+        left: -2.2rem;
+      }
+    }
+
+    .ContractType {
+      display: inline-block;
+      color: #333f51;
+      font-style: normal;
+      font-weight: 500;
+      position: relative;
+      margin-left: 2rem;
+
+      &::before {
+        content: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1692870495/ibx-website-v2/icons/Clock_tusczk.svg");
+        position: absolute;
+        margin-right: 1rem;
+        left: -2.2rem;
+      }
+    }
+  }
+}
