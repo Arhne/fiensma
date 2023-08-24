@@ -197,6 +197,53 @@ export default function Home() {
         </div>
       </div>
 
+      <div className={`row gx-5 ${styles.Statistics}`}>
+        <div className="col-7">
+          <h3>
+            We believe in the <br /> power of numbers
+          </h3>
+          <p className={styles.LeftText}>
+            Every trade, every transaction, and every connection made on Ibx
+            Exchange contributes to a growing ecosystem of empowered
+            individuals, shaping the future of currency exchange. Join us on
+            this journey of limitless possibilities.
+          </p>
+          <div className="row mb-4">
+            <div className="col-6">
+              <h2>235,000</h2>
+              <p className={styles.StatTitle}>Mobile App Download</p>
+            </div>
+            <div className="col-6">
+              <h2>$10m</h2>
+              <p className={styles.StatTitle}>Contributors</p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-6">
+              <h2>50,000+</h2>
+              <p className={styles.StatTitle}>Daily Users</p>
+            </div>
+            <div className="col-6">
+              <h2>$10b</h2>
+              <p className={styles.StatTitle}>Transaction volume per quarter</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-5">
+          <Image
+            loader={() =>
+              moneyImageLoader(
+                "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692872973/ibx-website-v2/money_dollar_qbsefi.webp"
+              )
+            }
+            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1692872973/ibx-website-v2/money_dollar_qbsefi.webp"
+            width={505}
+            height={543}
+            alt=""
+          />
+        </div>
+      </div>
+
       <div className={styles.Advert}>
         <h1 className={styles.HeaderText}>
           Join our 235,000+ <br /> mobile app users

@@ -113,6 +113,25 @@
   }
 }
 
+.Statistics {
+  padding: 0 6.25rem;
+  background-color: #ffffff;
+  margin-bottom: 19rem;
+
+  .LeftText {
+    color: rgba(0, 0, 0, 0.6);
+    font-feature-settings: "clig" off, "liga" off;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    text-transform: capitalize;
+  }
+
+  .StatTitle {
+    margin-top: -1rem;
+  }
+}
+
 .Advert {
   padding: 8.75rem 6.25rem;
   height: 40rem;
