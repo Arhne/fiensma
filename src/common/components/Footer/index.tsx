@@ -4,18 +4,21 @@ const Footer = () => {
   return (
     <div className={`row ${styles.FooterContainer}`}>
       <div className="col-sm-6">
-        <img src="/logo_white.svg" alt="" />
+        <img
+          src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418205/ibx-website-v2/logo_white_g81svy.svg"
+          alt=""
+        />
         <p className={styles.Address}>Abuja, Nigeria</p>
         <p>Follow us</p>
         <ul className={styles.SocialIcons}>
           <li>
-            <img src="/instagram.svg" />
+            <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/instagram_lwt3ga.svg" />
           </li>
           <li>
-            <img src="/twitter.svg" />
+            <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418216/ibx-website-v2/twitter_odaotw.svg" />
           </li>
           <li>
-            <img src="/facebook.svg" />
+            <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418193/ibx-website-v2/facebook_jjrxg2.svg" />
           </li>
         </ul>
       </div>
