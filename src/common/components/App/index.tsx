@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 import Footer from "../Footer";
 import Header from "../Header";
+import Subscription from "../Subscription/Subscription";
 
 interface IApp {
   children: React.ReactNode;
@@ -17,6 +18,7 @@ const App = ({ children }: IApp) => {
     <>
       <Header />
       <main>{children}</main>
+      <Subscription />
       <Footer />
     </>
   );

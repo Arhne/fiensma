@@ -1,0 +1,36 @@
+.Input {
+  min-width: 19.3rem;
+  height: 4rem;
+  padding: 1.25rem 1.125rem;
+  border-radius: 37px;
+  border: none;
+  outline: none;
+
+  //   &:focus {
+  //     border: 1px solid var(--primary-color);
+  //   }
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 480px) {
+  .Input {
+    height: 2.5rem;
+    width: 100% !important;
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .Input {
+    height: 2.5rem;
+    width: 100%;
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+}

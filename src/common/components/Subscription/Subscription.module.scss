@@ -1,0 +1,146 @@
+.SubscriptionContainer {
+  width: 100%;
+  background: rgba(112, 65, 222, 0.1);
+  margin: 0 !important;
+  height: 19.5rem;
+  position: relative;
+  background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1692969441/ibx-website-v2/subscription-section-images/far_left_jcu1sc.svg"),
+    url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1692969443/ibx-website-v2/subscription-section-images/top_bda1gp.svg"),
+    url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1692969441/ibx-website-v2/subscription-section-images/orange_round_cxjlve.svg"),
+    url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1692969441/ibx-website-v2/subscription-section-images/purple_arrow_giomf4.svg"),
+    url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1692969441/ibx-website-v2/subscription-section-images/small_dot_vmlueu.svg"),
+    url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1692969441/ibx-website-v2/subscription-section-images/bottom_right_arrow_vzbuqn.svg"),
+    url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1692969441/ibx-website-v2/subscription-section-images/far_right_z7powh.svg");
+  background-repeat: no-repeat;
+  background-position-x: 2.4rem, 23rem, 22.4rem, 35.3rem, 38.4rem, 78.4rem,
+    81.4rem;
+  background-position-y: 11rem, top, 12rem, 13rem, 4rem, 17.4rem, 11.7rem;
+
+  .LeftColumn {
+    padding-left: 6.9rem;
+    padding-top: 4.125rem;
+  }
+
+  .RightColumn {
+    padding-top: 3.2rem;
+    padding-right: 6rem;
+
+    .ActionContainer {
+      margin-top: 1.25rem;
+      display: flex;
+
+      .ActionButton {
+        cursor: pointer;
+        border: none;
+        margin-left: 1rem;
+        width: 9rem;
+        height: 4rem;
+        border-radius: 4.3rem;
+        color: #ffffff;
+        font-weight: 600;
+        background-color: #161616;
+      }
+    }
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 480px) {
+  .SubscriptionContainer {
+    width: 100%;
+    min-height: 30rem;
+    margin: 0 !important;
+    position: relative;
+    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1692969441/ibx-website-v2/subscription-section-images/far_left_jcu1sc.svg");
+    background-repeat: no-repeat;
+    background-position-x: 19rem;
+    background-position-y: 2rem;
+
+    .LeftColumn {
+      padding: 1.5rem;
+    }
+    .RightColumn {
+      padding: 0 1.5rem 0 1.5rem;
+      margin-top: -1rem;
+      .ActionContainer {
+        padding-top: 0;
+        margin-top: 0;
+        flex-direction: column;
+
+        .ActionButton {
+          width: 100%;
+          height: 3rem;
+          margin: 1rem auto;
+        }
+      }
+    }
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .SubscriptionContainer {
+    width: 100%;
+    min-height: 25rem;
+    margin: 0 !important;
+    position: relative;
+    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1692969441/ibx-website-v2/subscription-section-images/far_left_jcu1sc.svg");
+    background-repeat: no-repeat;
+    background-position-x: 2.4rem;
+    background-position-y: 7rem;
+
+    .LeftColumn {
+      padding-left: 4rem;
+      padding-top: 2rem;
+    }
+    .RightColumn {
+      padding: 1.5rem 1.5rem 0 1.5rem;
+
+      .ActionContainer {
+        padding-top: 0;
+        margin-top: 0;
+        flex-direction: column;
+
+        .ActionButton {
+          width: 100%;
+          height: 3rem;
+          margin: 1rem auto;
+        }
+      }
+    }
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .SubscriptionContainer {
+    width: 100%;
+    min-height: 25rem;
+    margin: 0 !important;
+    position: relative;
+    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1692969441/ibx-website-v2/subscription-section-images/far_left_jcu1sc.svg");
+    background-repeat: no-repeat;
+    background-position-x: 2.4rem;
+    background-position-y: 7rem;
+
+    .LeftColumn {
+      padding-left: 4rem;
+      padding-top: 2rem;
+    }
+    .RightColumn {
+      padding: 1.5rem 1.5rem 0 1.5rem;
+
+      .ActionContainer {
+        padding-top: 0;
+        margin-top: 0;
+        flex-direction: column;
+
+        .ActionButton {
+          width: 100%;
+          height: 3rem;
+          margin: 1rem auto;
+        }
+      }
+    }
+  }
+}
