@@ -109,7 +109,7 @@ export default function Home() {
       </div>
 
       <div className={`row gx-5 ${styles.Features}`}>
-        <div className="col-6">
+        <div className="col-xs-12 col-sm-12 col-md-6">
           <h3>Gain more with IBX</h3>
           <p className={styles.LeftText}>
             Use this section to describe your company and the products you
@@ -125,10 +125,11 @@ export default function Home() {
             src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691574412/ibx-website-v2/money_uulrjr.png"
             width={505}
             height={449}
+            className={styles.LeftImage}
             alt=""
           />
         </div>
-        <div className="col-6">
+        <div className={`col-xs-12 col-sm-12 col-md-6 ${styles.RightColumn}`}>
           <div className="row mb-4">
             <div className="col-6">
               <div className={styles.IconContainer}>
@@ -198,7 +199,7 @@ export default function Home() {
       </div>
 
       <div className={`row gx-5 ${styles.Statistics}`}>
-        <div className="col-7">
+        <div className={`col-xs-12 col-sm-7 ${styles.LeftColumn}`}>
           <h3>
             We believe in the <br /> power of numbers
           </h3>
@@ -229,7 +230,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="col-5">
+        <div className={`col-xs-12 col-sm-5 ${styles.RightColumn}`}>
           <Image
             loader={() =>
               moneyImageLoader(
@@ -239,6 +240,7 @@ export default function Home() {
             src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1692872973/ibx-website-v2/money_dollar_qbsefi.webp"
             width={505}
             height={543}
+            className={styles.RightImage}
             alt=""
           />
         </div>
@@ -265,6 +267,7 @@ export default function Home() {
             width={183}
             height={54}
             alt=""
+            className={styles.AppleStore}
           />
         </div>
       </div>
