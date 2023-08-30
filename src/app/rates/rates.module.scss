@@ -1,0 +1,55 @@
+.RatesContainer {
+  .Header {
+    padding: 7.5rem 6.25rem 0;
+
+    h3 {
+      color: var(--black, #161616);
+      font-size: 4.375rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+    }
+    .Exchange {
+      color: var(--primary-color);
+    }
+
+    .HeaderText {
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.48px;
+      margin-top: 2.25rem;
+    }
+
+    .ActionButton {
+      cursor: pointer;
+      border: none;
+      width: 10.4rem;
+      height: 3.25rem;
+      border-radius: 4.4rem;
+      color: #ffffff;
+      font-weight: 600;
+      background-color: var(--primary-color);
+      margin-top: 2.25rem;
+      text-transform: capitalize;
+    }
+  }
+
+  .ExchangeRates {
+    padding: 5.7rem 6.25rem 0;
+    margin-bottom: 5.7rem;
+
+    h3 {
+      color: #2a3342;
+    }
+
+    .HeaderText {
+      color: #777;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 32px */
+    }
+  }
+}

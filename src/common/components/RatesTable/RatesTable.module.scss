@@ -1,0 +1,43 @@
+.Table {
+  width: 100%;
+  overflow: hidden;
+  border-collapse: collapse;
+
+  tr {
+    border: 0.299px solid #d2d2d2;
+    // &:last-child {
+    //   border-bottom: 0;
+    // }
+  }
+
+  .TableHeaderRow {
+    background-color: #fafafc;
+
+    .TableHeaderCell {
+      color: #000;
+      font-family: Inter;
+      font-size: 15.949px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-align: center;
+      padding: 0.5rem;
+    }
+  }
+
+  .EmptyCell {
+    background-color: #fafafc;
+    padding: 1rem;
+    font-size: 0.875rem;
+  }
+
+  .TableCell {
+    text-align: center;
+    color: #4b4b4b;
+    font-family: Inter;
+    font-size: 15.949px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}

@@ -1,0 +1,18 @@
+.CustomAccordionContainer {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+  .Header {
+    display: flex;
+    justify-content: space-between;
+    height: 10.5rem;
+    padding: 4.5rem 0;
+
+    .Toggler {
+      cursor: pointer;
+    }
+  }
+
+  .Content {
+    padding-bottom: 2.813rem;
+  }
+}
