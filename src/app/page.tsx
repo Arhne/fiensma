@@ -8,6 +8,7 @@ import styles from "./page.module.scss";
 import ClientTestimonial from "@/common/components/Landing/ClientTestimonial";
 import OurTeam from "@/common/components/Landing/OurTeam/OurTeam";
 import { newsTicker } from "@/common/Utils/dummyData";
+import Faq from "@/common/components/Landing/Faq";
 
 export default function Home() {
   return (
@@ -321,6 +322,7 @@ export default function Home() {
 
       <ClientTestimonial />
       <OurTeam />
+      <Faq />
     </main>
   );
 }

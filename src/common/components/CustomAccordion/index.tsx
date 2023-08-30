@@ -7,13 +7,18 @@ import styles from "./CustomAccordion.module.scss";
 interface ICustomAccordion {
   title: string;
   children: React.ReactNode;
+  customHeaderStyle?: object;
 }
 
-const CustomAccordion = ({ title, children }: ICustomAccordion) => {
+const CustomAccordion = ({
+  title,
+  children,
+  customHeaderStyle,
+}: ICustomAccordion) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className={styles.CustomAccordionContainer}>
-      <div className={styles.Header}>
+      <div className={styles.Header} style={{ ...customHeaderStyle }}>
         <p>{title}</p>
         <img
           src={
