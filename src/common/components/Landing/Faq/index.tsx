@@ -15,7 +15,7 @@ const Faq = () => {
           address your most pressing questions and provide you with the
           information you need.
         </p>
-        <p className={styles.NoAnswer}>Can't find an answer?</p>
+        <p className={styles.NoAnswer}>Can&apos;t find an answer?</p>
         <div className={styles.ActionContainer}>
           <CustomInput
             type="text"
@@ -67,8 +67,8 @@ const Faq = () => {
           }}
         >
           To create an account on IBXP2P.com, go to the website and click on the
-          "Register" button. Follow the instructions to provide your personal
-          information and create a username and password.
+          &quot;Register&quot; button. Follow the instructions to provide your
+          personal information and create a username and password.
         </CustomAccordion>
       </div>
     </div>
