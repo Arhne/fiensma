@@ -1,53 +1,33 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-import ApexCharts from "apexcharts";
+import dynamic from "next/dynamic";
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 import CustomAccordion from "@/common/components/CustomAccordion";
 import RatesTable from "@/common/components/RatesTable";
 
 import styles from "./rates.module.scss";
 
 const Rates = () => {
-  // useful link
-  // https://apexcharts.com/javascript-chart-demos/line-charts/dashed/
-
-  useEffect(() => {
-    var options = {
+  const [state, setState] = useState({
+    options: {
       chart: {
-        type: "line",
-        height: "654px",
+        id: "apexchart-example",
       },
-      //   series: [{
-      //     name: "Session Duration",
-      //     data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
-      //   },
-      //   {
-      //     name: "Page Views",
-      //     data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
-      //   },
-      //   {
-      //     name: 'Total Visits',
-      //     data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
-      //   }
-      // ],
-      series: [
-        {
-          name: "sales",
-          data: [30, 40, 35, 50, 49, 60, 70, 91, 125],
-        },
-      ],
       xaxis: {
         categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
       },
-    };
-
-    var chart = new ApexCharts(document.querySelector("#chart"), options);
-
-    setTimeout(() => {
-      chart.render();
-    }, 2000);
-  }, []);
+    },
+    series: [
+      {
+        name: "series-1",
+        data: [30, 40, 35, 50, 49, 60, 70, 91, 125],
+      },
+    ],
+  });
+  // useful link
+  // https://apexcharts.com/javascript-chart-demos/line-charts/dashed/
 
   return (
     <div className={styles.RatesContainer}>
@@ -65,7 +45,14 @@ const Rates = () => {
 
       <div className={styles.ChartContainer}>
         <h3>Naira Exchange Rate</h3>
-        <div className={styles.Chart} id="chart"></div>
+        <div className={styles.Chart} id="chart">
+          <Chart
+            options={state.options}
+            series={state.series}
+            type="line"
+            height={550}
+          />
+        </div>
       </div>
 
       <div className={styles.ExchangeRates}>
