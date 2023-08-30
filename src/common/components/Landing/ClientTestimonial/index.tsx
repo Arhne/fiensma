@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import Image from "next/image";
@@ -82,11 +80,16 @@ const ClientTestimonial = () => {
         >
           <div className={styles.SwiperButtonContainer}>
             <SwiperButtonNext>
-              <Image src="/left_arrow_icon.svg" width={47} height={47} alt="" />
+              <Image
+                src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1693404384/ibx-website-v2/icons/left_arrow_icon_dpdlxk.svg"
+                width={47}
+                height={47}
+                alt=""
+              />
             </SwiperButtonNext>
             <SwiperButtonPrevious>
               <Image
-                src="/right_arrow_icon.svg"
+                src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1693404384/ibx-website-v2/icons/right_arrow_icon_adrnmh.svg"
                 width={47}
                 height={47}
                 alt=""
