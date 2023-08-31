@@ -165,7 +165,7 @@ export default function Home() {
             Fiat Trading. Discover a Seamless Platform for Buying and Selling
             Digital and Traditional Currencies with Confidence. Explore Our
             User-Friendly Interface, Robust Security Measures, and Diverse
-            Cryptocurrency Selection Today!"
+            Cryptocurrency Selection Today!
           </p>
           <Image
             loader={() =>
