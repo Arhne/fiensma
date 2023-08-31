@@ -6,11 +6,11 @@ import styles from "./OurTeam.module.scss";
 const OurTeam = () => {
   return (
     <div
-      className={`d-flex justify-content-between ${styles.OurTeamContainer}`}
+      className={`row d-flex justify-content-between ${styles.OurTeamContainer}`}
     >
-      <div className={`col-4 ${styles.LeftColumn}`}>
+      <div className={`col-xs-12 col-sm-4 ${styles.LeftColumn}`}>
         <div className="row mb-3">
-          <div className="col-6">
+          <div className={`col-xs-12 col-sm-6 ${styles.ImageContainer}`}>
             <Image
               loader={() =>
                 moneyImageLoader(
@@ -23,7 +23,7 @@ const OurTeam = () => {
               height={191}
             />
           </div>
-          <div className="col-6">
+          <div className={`col-xs-12 col-sm-6 ${styles.ImageContainer}`}>
             <Image
               loader={() =>
                 moneyImageLoader(
@@ -38,7 +38,7 @@ const OurTeam = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-6">
+          <div className={`col-xs-12 col-sm-6 ${styles.ImageContainer}`}>
             <Image
               loader={() =>
                 moneyImageLoader(
@@ -51,7 +51,7 @@ const OurTeam = () => {
               height={190}
             />
           </div>
-          <div className="col-6">
+          <div className={`col-xs-12 col-sm-6 ${styles.ImageContainer}`}>
             <Image
               loader={() =>
                 moneyImageLoader(
@@ -66,7 +66,7 @@ const OurTeam = () => {
           </div>
         </div>
       </div>
-      <div className={`col-4 ${styles.RightColumn}`}>
+      <div className={`col-xs-12 col-sm-4 ${styles.RightColumn}`}>
         <h3 className={styles.HeaderText}>Meet our Team</h3>
         <p>
           Our team of credible professionals with proven records of running

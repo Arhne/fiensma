@@ -55,9 +55,10 @@
     .CommonText {
       color: #10192d;
       font-size: 1.5rem;
-      font-weight: 400;
+      // font-weight: 400;
       font-style: normal;
       margin-left: 1.9rem;
+      margin-top: 1rem;
     }
   }
 
@@ -135,7 +136,7 @@
 .Advert {
   padding: 8.75rem 6.25rem;
   height: 40rem;
-  background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691582586/ibx-website-v2/app-in-hand_hgytsk.webp");
+  background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1693426557/ibx-website-v2/fiat_z6fpcq.webp");
   background-repeat: no-repeat;
 
   .HeaderText {
@@ -280,6 +281,39 @@
     }
   }
 
+  .Companies {
+    padding: 1rem;
+
+    .TextContainer {
+      flex-direction: column;
+
+      .BoldText {
+        text-align: center;
+        font-size: 2rem;
+      }
+
+      .CommonText {
+        text-align: center;
+        font-size: 1rem;
+      }
+    }
+
+    .PartnerCompanies {
+      margin-top: 3rem;
+
+      ul {
+        display: block;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+
   .Features {
     padding: 2rem 1.5rem;
     background-color: #ffffff;
@@ -345,6 +379,11 @@
 @media screen and (min-width: 481px) and (max-width: 767px) {
   .Landing {
     padding: 0 3rem;
+    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-position-x: 0;
+    background-size: cover;
   }
   .Companies {
     padding: 1rem;
@@ -434,50 +473,6 @@
 
       .AppleStore {
         margin-top: 1rem;
-      }
-    }
-  }
-}
-
-/* Media Query for low resolution  Tablets, Ipads */
-@media screen and (min-width: 481px) and (max-width: 767px) {
-  .Landing {
-    padding: 0 3rem;
-    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg");
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-position-x: 0;
-    background-size: cover;
-  }
-  .Companies {
-    padding: 1rem;
-
-    .TextContainer {
-      flex-direction: column;
-
-      .BoldText {
-        text-align: center;
-        font-size: 2rem;
-      }
-
-      .CommonText {
-        text-align: center;
-        font-size: 1rem;
-      }
-    }
-
-    .PartnerCompanies {
-      margin-top: 3rem;
-
-      ul {
-        display: block;
-        justify-content: space-between;
-        list-style-type: none;
-        padding: 0;
-
-        li {
-          margin-bottom: 2rem;
-        }
       }
     }
   }

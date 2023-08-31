@@ -9,6 +9,7 @@ import ClientTestimonial from "@/common/components/Landing/ClientTestimonial";
 import OurTeam from "@/common/components/Landing/OurTeam/OurTeam";
 import { newsTicker } from "@/common/Utils/dummyData";
 import Faq from "@/common/components/Landing/Faq";
+import AdvertSectionTwo from "@/common/components/Landing/AdvertSectionTwo";
 
 export default function Home() {
   return (
@@ -19,8 +20,8 @@ export default function Home() {
         >
           <h1 className={styles.HeaderText}>Currency Exchange Made Easy</h1>
           <p className={styles.TagLine}>
-            Easy and instant way to buy or sell your currency <br />
-            with 100% trust guarantee{" "}
+            Welcome to Ibx Exchange - Your Gateway to <br /> Effortless Currency
+            Trading with Uncompromising <br /> Security.
           </p>
           <div className={styles.MobileStore}>
             <Image
@@ -44,7 +45,7 @@ export default function Home() {
       <div className={styles.Companies}>
         <div className={styles.TextContainer}>
           <p className={styles.BoldText}>
-            Companies <br /> That Trust Us
+            Trusted by Top <br /> Companies
           </p>
           <p className={styles.CommonText}>
             More than 45,000+ companies trust IBX
@@ -160,9 +161,11 @@ export default function Home() {
         <div className="col-xs-12 col-sm-12 col-md-6">
           <h3>Gain more with IBX</h3>
           <p className={styles.LeftText}>
-            Use this section to describe your company and the products you
-            offer. You could share your company’s story and details about why
-            you are in business.{" "}
+            Ibx Exchange is Your Premier Destination for Peer-to-Peer Crypto and
+            Fiat Trading. Discover a Seamless Platform for Buying and Selling
+            Digital and Traditional Currencies with Confidence. Explore Our
+            User-Friendly Interface, Robust Security Measures, and Diverse
+            Cryptocurrency Selection Today!"
           </p>
           <Image
             loader={() =>
@@ -205,8 +208,8 @@ export default function Home() {
               </div>
               <p className={styles.Heading}>0% Charges</p>
               <p className={styles.Content}>
-                Our exchange rate is excellent, and we take great satisfaction
-                in being open and honest.
+                Enjoy fee-free trading with Ibx Exchange, where your profits
+                stay yours and we keep your costs at zero.
               </p>
             </div>
           </div>
@@ -238,8 +241,9 @@ export default function Home() {
               </div>
               <p className={styles.Heading}>24/7 p2p ads</p>
               <p className={styles.Content}>
-                New ads are placed every minute and this provides you unlimited
-                offer in the marketplace.
+                Experience round-the-clock access to our dynamic peer-to-peer
+                ads, empowering you to trade cryptocurrencies and fiat
+                currencies at your convenience, any time, day or night.
               </p>
             </div>
           </div>
@@ -321,6 +325,7 @@ export default function Home() {
       </div>
 
       <ClientTestimonial />
+      <AdvertSectionTwo />
       <OurTeam />
       <Faq />
     </main>

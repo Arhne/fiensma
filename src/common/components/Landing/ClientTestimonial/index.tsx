@@ -21,23 +21,21 @@ const ClientTestimonial = () => {
       imageSrc:
         "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692537582/ibx-website-v2/carousel-images/testifier_1_oyjwt4.webp",
       title: "Alex T",
-      content: `I've been impressed with Ibx Exchange's commitment to security. The trust guarantee gives me confidence in every transaction, and the platform's reliability is unmatched. Their accurate data and user-friendly interface have made trading a breeze." - Alex T.`,
+      content: ` "I've been impressed with Ibx Exchange's commitment to security. The trust guarantee gives me confidence in every transaction, and the platform's reliability is unmatched. Their accurate data and user-friendly interface have made trading a breeze." - Alex T.`,
     },
     {
       id: 2,
       imageSrc:
         "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692535820/ibx-website-v2/carousel-images/testifier_5_ufidpu.webp",
       title: "Jordn O'Reilly",
-      content:
-        "I like that IBX uses user feedback to improve their processes. It is very impressive.",
+      content: `"Trading fiat currencies on Ibx Exchange has been a game-changer for me. The platform's seamless process and diverse fiat options have simplified my trading journey. I've found a reliable partner for secure and convenient fiat exchange." - John S.`,
     },
     {
       id: 3,
       imageSrc:
         "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692535819/ibx-website-v2/carousel-images/testifier_2_t7gevb.webp",
-      title: "Lawson Carol",
-      content:
-        "The human interaction aspect of IBX is the most intriguing. Even if this is your first time trading, the team is always great and doesn't make you feel alone. I love it!",
+      title: "Elena M",
+      content: `"Customer satisfaction shines through at Ibx Exchange. Their swift responses to my inquiries coupled with the convenience of fiat currency trading make them a reliable choice for traders seeking a hassle-free experience." - Elena M.`,
     },
     {
       id: 4,
@@ -57,7 +55,9 @@ const ClientTestimonial = () => {
 
   return (
     <div className={styles.ClientTestimonialContainer}>
-      <h3 className={styles.HeaderText}>What Our Client Said about us</h3>
+      <h3 className={styles.HeaderText}>
+        What Our Clients Have to Say About Us
+      </h3>
       <p className={styles.Description}>
         Explore Testimonials from Our Valued Clients.
       </p>
