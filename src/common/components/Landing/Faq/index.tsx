@@ -18,6 +18,7 @@ const Faq = () => {
         <p className={styles.NoAnswer}>Can&apos;t find an answer?</p>
         <div className={styles.ActionContainer}>
           <CustomInput
+            isShowLabel={false}
             type="text"
             placeholder="Enter your email"
             customStyle={{ backgroundColor: "#FAFAFA" }}

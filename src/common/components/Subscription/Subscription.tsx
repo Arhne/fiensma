@@ -19,7 +19,11 @@ const Subscription = () => {
         </p>
 
         <div className={styles.ActionContainer}>
-          <CustomInput type="text" placeholder="Enter your email" />
+          <CustomInput
+            isShowLabel={false}
+            type="text"
+            placeholder="Enter your email"
+          />
           <button className={styles.ActionButton}>Subscribe</button>
         </div>
       </div>

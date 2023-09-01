@@ -1,31 +1,28 @@
-import styles from "./Inputs.module.scss";
+import styles from "./TextArea.module.scss";
 
-interface ICustomInput {
-  type: string;
+interface ICustomTextArea {
   placeholder?: string;
   customStyle?: object;
   isShowLabel: boolean;
   labelText?: string;
 }
 
-const CustomInput = ({
-  type = "text",
+const CustomTextArea = ({
   placeholder,
   customStyle,
   isShowLabel,
   labelText,
-}: ICustomInput) => {
+}: ICustomTextArea) => {
   return (
-    <div className={styles.InputContainer}>
+    <div className={styles.TextAreaContainer}>
       {isShowLabel && <label className={styles.Label}>{labelText}</label>}
-      <input
-        className={styles.Input}
-        type={type}
+      <textarea
+        className={styles.TextArea}
         placeholder={placeholder}
         style={{ ...customStyle }}
-      />
+      ></textarea>
     </div>
   );
 };
 
-export default CustomInput;
+export default CustomTextArea;
