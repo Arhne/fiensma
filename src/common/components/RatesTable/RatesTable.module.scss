@@ -39,5 +39,11 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    padding: 1rem;
+
+    span {
+      display: inline-block;
+      margin-left: 1rem;
+    }
   }
 }

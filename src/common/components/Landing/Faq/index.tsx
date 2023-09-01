@@ -28,6 +28,7 @@ const Faq = () => {
       <div className={`col-xs-12 col-sm-6 ${styles.RightColumn}`}>
         <CustomAccordion
           title="What is IBXP2P.com?"
+          isDefaultOpen={false}
           customHeaderStyle={{
             padding: "2rem 0",
             height: "5rem",
@@ -38,6 +39,7 @@ const Faq = () => {
         </CustomAccordion>
         <CustomAccordion
           title="What services does IBXP2P.com provide?"
+          isDefaultOpen={false}
           customHeaderStyle={{
             padding: "2rem 0",
             height: "5rem",
@@ -49,6 +51,7 @@ const Faq = () => {
         </CustomAccordion>
         <CustomAccordion
           title="Is IBXP2P.com a legitimate website?"
+          isDefaultOpen={false}
           customHeaderStyle={{
             padding: "2rem 0",
             height: "5rem",
@@ -61,6 +64,7 @@ const Faq = () => {
         </CustomAccordion>
         <CustomAccordion
           title="How do I create an account on IBXP2P.com?"
+          isDefaultOpen={false}
           customHeaderStyle={{
             padding: "2rem 0",
             height: "5rem",

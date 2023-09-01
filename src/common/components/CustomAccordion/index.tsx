@@ -8,14 +8,16 @@ interface ICustomAccordion {
   title: string;
   children: React.ReactNode;
   customHeaderStyle?: object;
+  isDefaultOpen: boolean;
 }
 
 const CustomAccordion = ({
   title,
   children,
   customHeaderStyle,
+  isDefaultOpen,
 }: ICustomAccordion) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(isDefaultOpen);
   return (
     <div className={styles.CustomAccordionContainer}>
       <div className={styles.Header} style={{ ...customHeaderStyle }}>

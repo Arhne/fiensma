@@ -44,7 +44,7 @@ const Rates = () => {
       </div>
 
       <div className={styles.ChartContainer}>
-        <h3>Naira Exchange Rate</h3>
+        <h3>Fiat Exchange Rate</h3>
         <div className={styles.Chart} id="chart">
           <Chart
             options={state.options}
@@ -63,20 +63,20 @@ const Rates = () => {
           successful businesses across digital channels
         </p>
 
-        <CustomAccordion title="NGN Exchange Rate 24/08/2023">
+        <CustomAccordion title="NGN Exchange Rate 24/08/2023" isDefaultOpen>
           <RatesTable />
         </CustomAccordion>
-        <CustomAccordion title="NGN Exchange Rate 24/08/2023">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut cumque,
-          recusandae hic obcaecati quam harum assumenda quidem corporis.
-          Voluptatem quae at asperiores ea veniam rerum earum, quod sapiente ex
-          odio.
+        <CustomAccordion
+          title="NGN Exchange Rate 24/08/2023"
+          isDefaultOpen={false}
+        >
+          <RatesTable />
         </CustomAccordion>
-        <CustomAccordion title="NGN Exchange Rate 24/08/2023">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut cumque,
-          recusandae hic obcaecati quam harum assumenda quidem corporis.
-          Voluptatem quae at asperiores ea veniam rerum earum, quod sapiente ex
-          odio.
+        <CustomAccordion
+          title="NGN Exchange Rate 24/08/2023"
+          isDefaultOpen={false}
+        >
+          <RatesTable />
         </CustomAccordion>
       </div>
     </div>

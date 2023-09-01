@@ -326,7 +326,7 @@ export default function Home() {
 
       <ClientTestimonial />
       <AdvertSectionTwo />
-      <OurTeam />
+      {/* <OurTeam /> */}
       <Faq />
     </main>
   );
