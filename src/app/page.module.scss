@@ -7,6 +7,8 @@
   background-position: left top, 0;
   background-position-x: 0, 93%;
   background-position-y: 0, 15%;
+  max-width: 1440px;
+  margin: 0 auto;
 
   .LandingLeftContainer {
     padding-top: 5rem;
@@ -42,6 +44,8 @@
 .Companies {
   padding: 5rem 6.25rem;
   background-color: #fafafa;
+  max-width: 1440px;
+  margin: 0 auto;
 
   .TextContainer {
     display: flex;
@@ -76,6 +80,8 @@
 .Features {
   padding: 14rem 6.25rem;
   background-color: #ffffff;
+  max-width: 1440px;
+  margin: 0 auto;
 
   .LeftText {
     color: rgba(0, 0, 0, 0.6);
@@ -117,6 +123,8 @@
 .Statistics {
   padding: 0 6.25rem;
   background-color: #ffffff;
+  max-width: 1440px;
+  margin: 0 auto;
   margin-bottom: 19rem;
 
   .LeftText {
@@ -138,6 +146,8 @@
   height: 40rem;
   background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1693426557/ibx-website-v2/fiat_z6fpcq.webp");
   background-repeat: no-repeat;
+  max-width: 1440px;
+  margin: 0 auto;
 
   .HeaderText {
     color: #ffffff;
