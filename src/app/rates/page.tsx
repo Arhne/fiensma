@@ -46,8 +46,6 @@ const Rates = () => {
     refetchOnMountOrArgChange: true,
   });
 
-  console.log("exchangeSummaryByDate: ", exchangeSummaryByDate);
-
   const renderExchangeRates = () => {
     if (isLoading) {
       return <ExchangeRateLoader />;
