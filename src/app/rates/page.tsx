@@ -6,10 +6,21 @@ import dynamic from "next/dynamic";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 import CustomAccordion from "@/common/components/CustomAccordion";
 import RatesTable from "@/common/components/RatesTable";
+import {
+  useGetCurrentRatesQuery,
+  useGetExchangeRateSummaryByDateQuery,
+} from "@/redux/services/exchangeRatesApi";
 
 import styles from "./rates.module.scss";
 
 const Rates = () => {
+  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalRows, setTotalRows] = useState(100);
+  const paginate = {
+    perPage: rowsPerPage,
+    currentPage: currentPage,
+  };
   const [state, setState] = useState({
     options: {
       chart: {
@@ -28,6 +39,16 @@ const Rates = () => {
   });
   // useful link
   // https://apexcharts.com/javascript-chart-demos/line-charts/dashed/
+
+  const {
+    data: exchangeSummaryByDate,
+    isLoading,
+    isFetching,
+  } = useGetExchangeRateSummaryByDateQuery(paginate, {
+    refetchOnMountOrArgChange: true,
+  });
+
+  const { data: currentrates } = useGetCurrentRatesQuery();
 
   return (
     <div className={styles.RatesContainer}>

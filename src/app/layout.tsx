@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 
 import App from "@/common/components/App";
+import { Providers } from "@/redux/provider";
 
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -26,7 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={manrope.className}>
-        <App>{children}</App>
+        <Providers>
+          <App>{children}</App>
+        </Providers>
       </body>
     </html>
   );
