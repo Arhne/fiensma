@@ -24,6 +24,47 @@ export interface IAdvert {
     accountType: string;
   };
 }
+export interface ICurrency {
+  _id: string;
+  name: string;
+  currencyType: string;
+  currencySymbol: string;
+  status: boolean;
+  deletedAt: string;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+}
+export interface ICurrencyPair {
+  _id: string;
+  baseCurrency: ICurrency;
+  tradingCurrency: ICurrency;
+  status: boolean;
+  deletedAt: string;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+}
+
+export type ITrend = "UP" | "DOWN";
+export interface IExchangeSummaryData {
+  buyPrice: number;
+  buyTrend: ITrend;
+  createdAt: string;
+  currencyPair: ICurrencyPair;
+  deletedAt: string;
+  isActive: boolean;
+  isDeleted: boolean;
+  sellPrice: number;
+  sellTrend: ITrend;
+  updatedAt: string;
+  __v: number;
+  _id: string;
+}
+export interface IExchangeSummary {
+  date: string;
+  data: IExchangeSummaryData[];
+}
 
 export interface IAdvertStats {
   totalAdverts: number;

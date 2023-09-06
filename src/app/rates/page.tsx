@@ -6,10 +6,8 @@ import dynamic from "next/dynamic";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 import CustomAccordion from "@/common/components/CustomAccordion";
 import RatesTable from "@/common/components/RatesTable";
-import {
-  useGetCurrentRatesQuery,
-  useGetExchangeRateSummaryByDateQuery,
-} from "@/redux/services/exchangeRatesApi";
+import { useGetExchangeRateSummaryByDateQuery } from "@/redux/services/exchangeRatesApi";
+import { ExchangeRateLoader } from "./components/loader";
 
 import styles from "./rates.module.scss";
 
@@ -43,12 +41,42 @@ const Rates = () => {
   const {
     data: exchangeSummaryByDate,
     isLoading,
-    isFetching,
+    isError,
   } = useGetExchangeRateSummaryByDateQuery(paginate, {
     refetchOnMountOrArgChange: true,
   });
 
-  const { data: currentrates } = useGetCurrentRatesQuery();
+  console.log("exchangeSummaryByDate: ", exchangeSummaryByDate);
+
+  const renderExchangeRates = () => {
+    if (isLoading) {
+      return <ExchangeRateLoader />;
+    } else if (!isLoading) {
+      if (isError) {
+        <p className="text-center mt-5">
+          There was a problem fetching exchange rates
+        </p>;
+      } else {
+        if (exchangeSummaryByDate && exchangeSummaryByDate.data.length > 0) {
+          return (
+            <>
+              {exchangeSummaryByDate?.data.map((_exchangeRate, index) => (
+                <CustomAccordion
+                  key={index}
+                  title={_exchangeRate?.date}
+                  isDefaultOpen={index === 0 && true}
+                >
+                  <RatesTable data={_exchangeRate.data} />
+                </CustomAccordion>
+              ))}
+            </>
+          );
+        } else {
+          <p className="text-center mt-5">No data available</p>;
+        }
+      }
+    }
+  };
 
   return (
     <div className={styles.RatesContainer}>
@@ -83,22 +111,7 @@ const Rates = () => {
           <br />
           successful businesses across digital channels
         </p>
-
-        <CustomAccordion title="NGN Exchange Rate 24/08/2023" isDefaultOpen>
-          <RatesTable />
-        </CustomAccordion>
-        <CustomAccordion
-          title="NGN Exchange Rate 24/08/2023"
-          isDefaultOpen={false}
-        >
-          <RatesTable />
-        </CustomAccordion>
-        <CustomAccordion
-          title="NGN Exchange Rate 24/08/2023"
-          isDefaultOpen={false}
-        >
-          <RatesTable />
-        </CustomAccordion>
+        {renderExchangeRates()}
       </div>
     </div>
   );

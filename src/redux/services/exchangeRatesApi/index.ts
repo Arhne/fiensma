@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
-import { IAdvert, IAdvertStats } from "./interface";
+import { IAdvert, IExchangeSummary } from "./interface";
 import { Response, PaginatedResponse } from "@/util/interface";
 import { BASE_URL } from "@/api/baseUrl";
 
@@ -11,7 +11,7 @@ export const exchangeRatesApi = createApi({
   tagTypes: ["exchangeRates"],
   endpoints: (builder) => ({
     getExchangeRateSummaryByDate: builder.query<
-      PaginatedResponse<IAdvert[]>,
+      Response<IExchangeSummary[]>,
       { perPage: number; currentPage: number }
     >({
       query: ({ perPage, currentPage }) => ({
