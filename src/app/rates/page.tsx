@@ -53,9 +53,11 @@ const Rates = () => {
       return <ExchangeRateLoader />;
     } else if (!isLoading) {
       if (isError) {
-        <p className="text-center mt-5">
-          There was a problem fetching exchange rates
-        </p>;
+        return (
+          <p className="text-center mt-5">
+            There was a problem fetching exchange rates
+          </p>
+        );
       } else {
         if (exchangeSummaryByDate && exchangeSummaryByDate.data.length > 0) {
           return (
@@ -72,7 +74,7 @@ const Rates = () => {
             </>
           );
         } else {
-          <p className="text-center mt-5">No data available</p>;
+          return <p className="text-center mt-5">No data available</p>;
         }
       }
     }
