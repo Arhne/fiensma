@@ -3,13 +3,12 @@
 import Image from "next/image";
 
 import { moneyImageLoader } from "@/common/Utils/imageLoaders";
-
-import styles from "./page.module.scss";
 import ClientTestimonial from "@/common/components/Landing/ClientTestimonial";
-import OurTeam from "@/common/components/Landing/OurTeam/OurTeam";
-import { newsTicker } from "@/common/Utils/dummyData";
 import Faq from "@/common/components/Landing/Faq";
 import AdvertSectionTwo from "@/common/components/Landing/AdvertSectionTwo";
+import Ticker from "@/common/components/Landing/Ticker";
+
+import styles from "./page.module.scss";
 
 export default function Home() {
   return (
@@ -110,53 +109,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={styles.TickerContainer}>
-        <div className={styles.TickerWrapper}>
-          <div className={styles.TickerTransition}>
-            {newsTicker.map((_item) => (
-              <div key={_item?.id} className={styles.TickerItem}>
-                <div className={styles.TickerItemContent}>
-                  <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1693285622/ibx-website-v2/icons/news-ticker/britain_b49zmm.svg" />
-                  <h6>{_item?.currenyPair}</h6>
-                  <div className={styles.BuySellContainer}>
-                    <div className={styles.Buy}>
-                      Buy=
-                      <span
-                        className={
-                          _item?.trend === "up"
-                            ? styles.TrendUp
-                            : styles.TrendDown
-                        }
-                      >
-                        910.90
-                      </span>
-                    </div>
-                    <div className={styles.Sell}>
-                      Sell=
-                      <span
-                        className={
-                          _item?.trend === "up"
-                            ? styles.TrendUp
-                            : styles.TrendDown
-                        }
-                      >
-                        910.89
-                      </span>
-                    </div>
-                  </div>
-                  <img
-                    src={`${
-                      _item?.trend === "up"
-                        ? "https://res.cloudinary.com/dbg2z1svm/image/upload/v1693285622/ibx-website-v2/icons/news-ticker/trend_up_fiqvbw.svg"
-                        : "https://res.cloudinary.com/dbg2z1svm/image/upload/v1693285622/ibx-website-v2/icons/news-ticker/trend_down_tmkrx3.svg"
-                    }`}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <Ticker />
       <div className={`row gx-5 ${styles.Features}`}>
         <div className="col-xs-12 col-sm-12 col-md-6">
           <h3>Gain more with IBX</h3>
@@ -249,7 +202,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <div className={`row gx-5 ${styles.Statistics}`}>
         <div className={`col-xs-12 col-sm-7 ${styles.LeftColumn}`}>
           <h3>
@@ -297,7 +249,6 @@ export default function Home() {
           />
         </div>
       </div>
-
       <div className={styles.Advert}>
         <h1 className={styles.HeaderText}>
           Join our 235,000+ <br /> mobile app users
@@ -323,7 +274,6 @@ export default function Home() {
           />
         </div>
       </div>
-
       <ClientTestimonial />
       <AdvertSectionTwo />
       {/* <OurTeam /> */}

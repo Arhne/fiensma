@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
-import { IAdvert, IExchangeSummary } from "./interface";
-import { Response, PaginatedResponse } from "@/util/interface";
+import { ICurrentRates, IExchangeSummary } from "./interface";
+import { Response } from "@/util/interface";
 import { BASE_URL } from "@/api/baseUrl";
 
 export const exchangeRatesApi = createApi({
@@ -21,30 +21,15 @@ export const exchangeRatesApi = createApi({
       providesTags: ["exchangeRates"],
     }),
 
-    getCurrentRates: builder.query<Response<IAdvert[]>, void>({
+    getCurrentRates: builder.query<Response<ICurrentRates[]>, void>({
       query: () => ({
         url: `/marketPlace/api/v1/rates/findCurrentRates`,
         method: "GET",
       }),
       providesTags: ["exchangeRates"],
     }),
-
-    suspendAdvert: builder.mutation<
-      Response<IAdvert>,
-      { advertStatus: string; advertId: string }
-    >({
-      query: (body) => ({
-        url: `/marketPlace/api/v1/advert/updateAdvertStatus`,
-        method: "PATCH",
-        body,
-      }),
-      invalidatesTags: ["exchangeRates"],
-    }),
   }),
 });
 
-export const {
-  useGetExchangeRateSummaryByDateQuery,
-  useGetCurrentRatesQuery,
-  useSuspendAdvertMutation,
-} = exchangeRatesApi;
+export const { useGetExchangeRateSummaryByDateQuery, useGetCurrentRatesQuery } =
+  exchangeRatesApi;
