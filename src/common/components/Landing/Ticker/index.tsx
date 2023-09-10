@@ -50,7 +50,7 @@ const Ticker = () => {
                                 : styles.TrendDown
                             }
                           >
-                            910.90
+                            {_item?.buyPrice}
                           </span>
                         </div>
                         <div className={styles.Sell}>
@@ -62,7 +62,7 @@ const Ticker = () => {
                                 : styles.TrendDown
                             }
                           >
-                            910.89
+                            {_item?.sellTrend}
                           </span>
                         </div>
                       </div>
