@@ -1,4 +1,4 @@
-import { moneyImageLoader } from "@/common/Utils/imageLoaders";
+import { imageLoader } from "@/common/Utils/imageLoaders";
 import Image from "next/image";
 
 import styles from "./OurTeam.module.scss";
@@ -13,7 +13,7 @@ const OurTeam = () => {
           <div className={`col-xs-12 col-sm-6 ${styles.ImageContainer}`}>
             <Image
               loader={() =>
-                moneyImageLoader(
+                imageLoader(
                   "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692603430/ibx-website-v2/tem-members/dummy_member_3_lndlq0.png"
                 )
               }
@@ -26,7 +26,7 @@ const OurTeam = () => {
           <div className={`col-xs-12 col-sm-6 ${styles.ImageContainer}`}>
             <Image
               loader={() =>
-                moneyImageLoader(
+                imageLoader(
                   "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692603430/ibx-website-v2/tem-members/dummy_member_1_ggp0lo.png"
                 )
               }
@@ -41,7 +41,7 @@ const OurTeam = () => {
           <div className={`col-xs-12 col-sm-6 ${styles.ImageContainer}`}>
             <Image
               loader={() =>
-                moneyImageLoader(
+                imageLoader(
                   "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692603430/ibx-website-v2/tem-members/dummy_member_2_du43up.png"
                 )
               }
@@ -54,7 +54,7 @@ const OurTeam = () => {
           <div className={`col-xs-12 col-sm-6 ${styles.ImageContainer}`}>
             <Image
               loader={() =>
-                moneyImageLoader(
+                imageLoader(
                   "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692603430/ibx-website-v2/tem-members/dummy_member_4_hjaomc.png"
                 )
               }

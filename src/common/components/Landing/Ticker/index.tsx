@@ -1,6 +1,8 @@
 import styles from "./Ticker.module.scss";
 import { useGetCurrentRatesQuery } from "@/redux/services/exchangeRatesApi";
 import { TickerLoader } from "./components/loader";
+import Image from "next/image";
+import { imageLoader } from "@/common/Utils/imageLoaders";
 
 const Ticker = () => {
   const { data: currentRates, isLoading, isError } = useGetCurrentRatesQuery();
@@ -23,10 +25,20 @@ const Ticker = () => {
                 {currentRates?.data.map((_item) => (
                   <div key={_item._id} className={styles.TickerItem}>
                     <div className={styles.TickerItemContent}>
-                      {/* <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1693285622/ibx-website-v2/icons/news-ticker/britain_b49zmm.svg" /> */}
+                      <Image
+                        src={_item?.currencyPair?.imageUrl}
+                        alt=""
+                        width={30}
+                        height={30}
+                        className={styles.RateImage}
+                        loader={() =>
+                          imageLoader(_item?.currencyPair?.imageUrl)
+                        }
+                      />
+
                       <h6>
-                        {_item?.currencyPair?.baseCurrency?.name}/
-                        {_item?.currencyPair?.tradingCurrency?.name}
+                        {_item?.currencyPair?.tradingCurrency?.name.toUpperCase()}
+                        /{_item?.currencyPair?.baseCurrency?.name.toUpperCase()}
                       </h6>
                       <div className={styles.BuySellContainer}>
                         <div className={styles.Buy}>
