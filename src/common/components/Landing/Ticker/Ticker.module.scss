@@ -35,6 +35,10 @@
         .TickerItemContent {
           display: flex;
 
+          .RateImage {
+            margin-top: 0.6rem;
+          }
+
           .TrendContainer {
             display: flex;
             flex-direction: column;

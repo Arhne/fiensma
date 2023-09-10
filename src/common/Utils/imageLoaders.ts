@@ -1,3 +1,3 @@
-export const moneyImageLoader = (url: string) => {
+export const imageLoader = (url: string) => {
   return url;
 };
