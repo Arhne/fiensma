@@ -1,19 +1,10 @@
 import Image from "next/image";
 import styles from "./RatesTable.module.scss";
+import { imageLoader } from "@/common/Utils/imageLoaders";
+import { IExchangeSummaryData } from "@/redux/services/exchangeRatesApi/interface";
 
 interface IRatesTable {
-  data: {
-    buyPrice: number;
-    sellPrice: number;
-    currencyPair: {
-      baseCurrency: {
-        name: string;
-      };
-      tradingCurrency: {
-        name: string;
-      };
-    };
-  }[];
+  data: IExchangeSummaryData[];
 }
 
 const RatesTable = ({ data }: IRatesTable) => {
@@ -22,8 +13,12 @@ const RatesTable = ({ data }: IRatesTable) => {
       <tr className={styles.TableHeaderRow}>
         <td className={styles.TableHeaderCell}></td>
         <td className={styles.TableHeaderCell}>Currency Pair</td>
-        <td className={styles.TableHeaderCell}>Buying</td>
-        <td className={styles.TableHeaderCell}>Selling</td>
+        <td className={styles.TableHeaderCell}>
+          Buying (<span className={styles.Currency}>NGN</span>)
+        </td>
+        <td className={styles.TableHeaderCell}>
+          Selling (<span className={styles.Currency}>NGN</span>)
+        </td>
       </tr>
 
       {data.length > 0 &&
@@ -31,13 +26,15 @@ const RatesTable = ({ data }: IRatesTable) => {
           <tr key={index}>
             <td className={styles.EmptyCell}></td>
             <td className={styles.TableCell}>
-              {/* <Image
-                src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1693537362/ibx-website-v2/icons/twemoji_flag-us-outlying-islands_ypcncl.svg"
-                width={26}
-                height={26}
+              <Image
+                src={_item?.currencyPair?.imageUrl}
                 alt=""
-              /> */}
-              <span>{`${_item.currencyPair.baseCurrency.name}/${_item?.currencyPair?.tradingCurrency?.name}`}</span>
+                width={30}
+                height={30}
+                className={styles.RateImage}
+                loader={() => imageLoader(_item?.currencyPair?.imageUrl)}
+              />
+              <span>{`${_item?.currencyPair?.tradingCurrency?.name.toUpperCase()}/${_item.currencyPair.baseCurrency.name.toUpperCase()}`}</span>
             </td>
             <td className={styles.TableCell}>{_item?.buyPrice}</td>
             <td className={styles.TableCell}>{_item?.sellPrice}</td>

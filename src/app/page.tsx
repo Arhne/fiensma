@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { moneyImageLoader } from "@/common/Utils/imageLoaders";
+import { imageLoader } from "@/common/Utils/imageLoaders";
 import ClientTestimonial from "@/common/components/Landing/ClientTestimonial";
 import Faq from "@/common/components/Landing/Faq";
 import AdvertSectionTwo from "@/common/components/Landing/AdvertSectionTwo";
@@ -122,7 +122,7 @@ export default function Home() {
           </p>
           <Image
             loader={() =>
-              moneyImageLoader(
+              imageLoader(
                 "https://res.cloudinary.com/dbg2z1svm/image/upload/v1691574412/ibx-website-v2/money_uulrjr.png"
               )
             }
@@ -237,7 +237,7 @@ export default function Home() {
         <div className={`col-xs-12 col-sm-5 ${styles.RightColumn}`}>
           <Image
             loader={() =>
-              moneyImageLoader(
+              imageLoader(
                 "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692872973/ibx-website-v2/money_dollar_qbsefi.webp"
               )
             }

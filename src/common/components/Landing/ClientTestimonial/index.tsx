@@ -10,7 +10,7 @@ import styles from "./ClientTestimonial.module.scss";
 
 // import required modules
 import { Pagination, Navigation, Scrollbar, A11y } from "swiper/modules";
-import { moneyImageLoader } from "@/common/Utils/imageLoaders";
+import { imageLoader } from "@/common/Utils/imageLoaders";
 import SwiperButtonNext from "./SliderButtons/Next";
 import SwiperButtonPrevious from "./SliderButtons/Prev";
 
@@ -107,7 +107,7 @@ const ClientTestimonial = () => {
                 >
                   <div className={styles.HeaderContainer}>
                     <Image
-                      loader={() => moneyImageLoader(_slide.imageSrc)}
+                      loader={() => imageLoader(_slide.imageSrc)}
                       width={85}
                       height={85}
                       src={_slide.imageSrc}
