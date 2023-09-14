@@ -1,15 +1,43 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import dynamic from "next/dynamic";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 import CustomAccordion from "@/common/components/CustomAccordion";
 import RatesTable from "@/common/components/RatesTable";
-import { useGetExchangeRateSummaryByDateQuery } from "@/redux/services/exchangeRatesApi";
+import {
+  useGetExchangeRateSummaryByDateQuery,
+  useGetExchangeRateSummaryQuery,
+} from "@/redux/services/exchangeRatesApi";
 import { ExchangeRateLoader } from "./components/loader";
 
 import styles from "./rates.module.scss";
+import { IExchangeSummary } from "@/redux/services/exchangeRatesApi/interface";
+import { useGetAllCurrencyPairQuery } from "@/redux/services/currencyPairApi";
+import { PaginatedResponse } from "@/util/interface";
+import { ICurrencyPair } from "@/redux/services/currencyPairApi/interface";
+
+type TGraphData = {
+  name: string;
+  sellPrice: number;
+  date: string;
+};
+
+type TState = {
+  options: {
+    chart: {
+      id: string;
+    };
+    xaxis: {
+      categories: string[];
+    };
+  };
+  series: {
+    name: string;
+    data: number[];
+  }[];
+};
 
 const Rates = () => {
   const [rowsPerPage, setRowsPerPage] = useState(10);
@@ -19,19 +47,19 @@ const Rates = () => {
     perPage: rowsPerPage,
     currentPage: currentPage,
   };
-  const [state, setState] = useState({
+  const [state, setState] = useState<TState>({
     options: {
       chart: {
-        id: "apexchart-example",
+        id: "fiat-exchange-rate-graph",
       },
       xaxis: {
-        categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
+        categories: [],
       },
     },
     series: [
       {
         name: "series-1",
-        data: [30, 40, 35, 50, 49, 60, 70, 91, 125],
+        data: [],
       },
     ],
   });
@@ -39,12 +67,105 @@ const Rates = () => {
   // https://apexcharts.com/javascript-chart-demos/line-charts/dashed/
 
   const {
-    data: exchangeSummaryByDate,
+    data: exchangeRateSummary,
     isLoading,
     isError,
-  } = useGetExchangeRateSummaryByDateQuery(paginate, {
+  } = useGetExchangeRateSummaryQuery(paginate, {
     refetchOnMountOrArgChange: true,
   });
+
+  const {
+    data: exchangeSummaryByDate,
+    isLoading: isLoadingGraphSummaryByDate,
+    isError: isGraphError,
+  } = useGetExchangeRateSummaryByDateQuery(
+    { startDate: "", endDate: "" },
+    {
+      refetchOnMountOrArgChange: true,
+    }
+  );
+
+  const { data: currencyPair } = useGetAllCurrencyPairQuery(
+    { perPage: 1000, currentPage: 1 },
+    {
+      refetchOnMountOrArgChange: true,
+    }
+  );
+
+  const extractGraphData = (
+    currencyPair: PaginatedResponse<ICurrencyPair[]> | undefined
+  ) => {
+    const graphDataRepo = [] as TGraphData[];
+    if (currencyPair) {
+      currencyPair?.data.forEach((_cpair) => {
+        if (exchangeSummaryByDate) {
+          exchangeSummaryByDate?.data.forEach((_summary) => {
+            _summary.data.forEach((_data) => {
+              if (
+                _data?.currencyPair?.tradingCurrency?.name ===
+                _cpair?.tradingCurrency?.name
+              ) {
+                graphDataRepo.push({
+                  name: `${_data?.currencyPair?.tradingCurrency?.name.toUpperCase()}/${_data?.currencyPair?.baseCurrency?.name.toUpperCase()}`,
+                  sellPrice: _data?.sellPrice,
+                  date: _summary?.date,
+                });
+              }
+            });
+          });
+        }
+      });
+    }
+
+    return graphDataRepo;
+  };
+
+  const getXaxis = (dataInQuestion: IExchangeSummary[]) => {
+    const result = dataInQuestion.map((_item) => {
+      return _item?.date;
+    });
+
+    return result.reverse();
+  };
+
+  useEffect(() => {
+    if (exchangeSummaryByDate) {
+      extractGraphData(currencyPair);
+      const groupedKeys = extractGraphData(currencyPair).reduce(
+        (group: { [key: string]: TGraphData[] }, item) => {
+          if (!group[item.name]) {
+            group[item.name] = [];
+          }
+          group[item.name].push(item);
+          return group;
+        },
+        {}
+      );
+
+      const series = Object.keys(groupedKeys)?.map((_item) => {
+        return {
+          name: _item,
+          data: groupedKeys[_item].map((_data) => _data?.sellPrice).reverse(),
+        };
+      });
+
+      setState((prev) => {
+        return {
+          ...prev,
+          options: {
+            ...state?.options,
+            xaxis: {
+              categories: getXaxis(exchangeSummaryByDate?.data),
+            },
+            chart: {
+              ...state?.options?.chart,
+            },
+          },
+          series: [...series],
+        };
+      });
+    }
+  }, [exchangeSummaryByDate, currencyPair]);
 
   const renderExchangeRates = () => {
     if (isLoading) {
@@ -57,10 +178,10 @@ const Rates = () => {
           </p>
         );
       } else {
-        if (exchangeSummaryByDate && exchangeSummaryByDate.data.length > 0) {
+        if (exchangeRateSummary && exchangeRateSummary.data.length > 0) {
           return (
             <>
-              {exchangeSummaryByDate?.data.map((_exchangeRate, index) => (
+              {exchangeRateSummary?.data.map((_exchangeRate, index) => (
                 <CustomAccordion
                   key={index}
                   title={_exchangeRate?.date}
