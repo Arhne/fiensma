@@ -46,7 +46,7 @@ const Header = () => {
               Home
             </Link>
           </li>
-          {/* <li>
+          <li>
             <Link
               className={`${styles.NavLink} ${
                 pathname === "/about" && styles.Active
@@ -55,7 +55,7 @@ const Header = () => {
             >
               About Us
             </Link>
-          </li> */}
+          </li>
           <li>
             <Link
               className={`${styles.NavLink} ${

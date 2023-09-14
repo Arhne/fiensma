@@ -1,0 +1,409 @@
+.AboutUs {
+  padding: 0 6.25rem;
+  height: 41rem;
+  background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1694619314/ibx-website-v2/about-us/aboout_us_img_w6opzu.svg");
+  background-repeat: no-repeat;
+  background-position-x: 93%;
+  background-position-y: 15%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  .AboutUsTag {
+    font: 1.25rem;
+    color: var(--header-one-color);
+  }
+
+  .LeftContainer {
+    padding-top: 5rem;
+    position: relative;
+
+    .HeaderText {
+      margin-bottom: 4rem;
+
+      .HighlightedInnovators {
+        color: var(--primary-color);
+      }
+    }
+
+    .TagLine {
+      font-size: 1.5rem;
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+.Mission {
+  background-color: #f5f5f5;
+  height: 39rem;
+  background-image: url("../../../public/mission_img.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-position-x: 10%;
+  background-position-y: 5rem;
+  padding: 0 5rem;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  .RightContainer {
+    padding-top: 14rem;
+    .Text {
+      color: #10192d;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 35px; /* 145.833% */
+      letter-spacing: 1px;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+.Vision {
+  padding: 0 6.25rem;
+  background-color: #ffffff;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 19rem;
+  padding-top: 4.3rem;
+
+  .LeftColumn {
+    .Title {
+      margin-top: 10rem;
+    }
+  }
+
+  .LeftText {
+    color: rgba(0, 0, 0, 0.6);
+    font-feature-settings: "clig" off, "liga" off;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    text-transform: capitalize;
+  }
+
+  .StatTitle {
+    margin-top: -1rem;
+  }
+}
+
+.Values {
+  padding: 0 6.25rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 11rem;
+
+  .Trust {
+    height: 33rem;
+    background-color: #ececec;
+    border-radius: 1.25rem;
+
+    .Left {
+      padding-left: 6rem;
+      padding-top: 7rem;
+
+      p {
+        line-height: 2.7rem;
+        font-size: 1.375rem;
+      }
+
+      p,
+      h4 {
+        color: var(--header-one-color);
+      }
+    }
+
+    .Right {
+      .RightImage {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .Teamwork {
+    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1694626480/ibx-website-v2/about-us/teamwork_img_uy7pcu.webp");
+    background-repeat: no-repeat;
+    background-color: #f4beba;
+    background-position-x: 100%;
+    background-position-y: 100%;
+    height: 47.5rem;
+    padding-left: 5.6rem;
+    padding-top: 8.4rem;
+
+    p {
+      line-height: 2.7rem;
+      font-size: 1.375rem;
+    }
+
+    p,
+    h4 {
+      color: #ffffff;
+    }
+  }
+
+  .Transparency {
+    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1694626756/ibx-website-v2/about-us/transparency_img_vxy63g.png");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 100%;
+    height: 47.5rem;
+    padding-left: 5.6rem;
+    padding-top: 8.4rem;
+
+    p {
+      line-height: 2.7rem;
+      font-size: 1.375rem;
+    }
+
+    p,
+    h4 {
+      color: #ffffff;
+    }
+  }
+
+  .Accountability {
+    height: 33rem;
+    background-color: var(--primary-color);
+    border-radius: 1.25rem;
+
+    .Left {
+      padding-left: 6rem;
+      padding-top: 7rem;
+
+      p {
+        line-height: 2.7rem;
+        font-size: 1.375rem;
+      }
+
+      p,
+      h4 {
+        color: #ffffff;
+      }
+    }
+
+    .Right {
+      .RightImage {
+        width: 100%;
+        height: auto;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+.OurTeam {
+  padding: 11rem 6.25rem 0 6.25rem;
+  max-width: 1440px;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 480px) {
+  .AboutUs {
+    padding: 0 2rem;
+    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-position-x: 0;
+    background-size: cover;
+
+    .LeftContainer {
+      .HeaderText {
+        font-size: 4rem;
+      }
+
+      & .HeaderText::after {
+        content: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418229/ibx-website-v2/yellow_mark_tsz3mm.svg");
+        position: absolute;
+        top: 16rem;
+        left: 5rem;
+        z-index: -1;
+      }
+    }
+  }
+
+  .Mission {
+    margin: 0 1.5rem 8.7rem;
+    padding: 1rem;
+    background-image: none;
+    height: auto;
+
+    .Text {
+      color: #10192d;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 35px; /* 145.833% */
+      letter-spacing: 1px;
+      margin-top: 4rem;
+    }
+  }
+
+  .Vision {
+    padding: 0 1.5rem;
+    background-color: #ffffff;
+    margin-bottom: 19rem;
+
+    .LeftColumn {
+      .LeftText {
+        color: rgba(0, 0, 0, 0.6);
+        font-feature-settings: "clig" off, "liga" off;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        text-transform: capitalize;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .StatTitle {
+        margin-top: -1rem;
+        font-size: 0.875rem;
+      }
+    }
+
+    .RightColumn {
+      .RightImage {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .AboutUs {
+    padding: 0 3rem;
+    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-position-x: 0;
+    background-size: cover;
+  }
+
+  .Mission {
+    margin: 0 1.5rem 8.7rem;
+    padding: 1rem;
+    background-image: none;
+    height: auto;
+
+    .Text {
+      color: #10192d;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 35px; /* 145.833% */
+      letter-spacing: 1px;
+      margin-top: 4rem;
+    }
+  }
+
+  .Vision {
+    padding: 0 1.5rem;
+    background-color: #ffffff;
+    margin-bottom: 19rem;
+
+    .LeftColumn {
+      .LeftText {
+        color: rgba(0, 0, 0, 0.6);
+        font-feature-settings: "clig" off, "liga" off;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        text-transform: capitalize;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .StatTitle {
+        margin-top: -1rem;
+        font-size: 0.875rem;
+      }
+    }
+
+    .RightColumn {
+      .RightImage {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .AboutUs {
+    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-position-x: 0;
+    background-size: cover;
+  }
+  .Mission {
+    margin: 0 1.5rem 8.7rem;
+    padding: 1rem;
+    background-image: none;
+    height: auto;
+
+    .Text {
+      color: #10192d;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 35px; /* 145.833% */
+      letter-spacing: 1px;
+      margin-top: 4rem;
+    }
+  }
+
+  .Vision {
+    padding: 0 1.5rem;
+    background-color: #ffffff;
+    margin-bottom: 19rem;
+
+    .LeftColumn {
+      .LeftText {
+        color: rgba(0, 0, 0, 0.6);
+        font-feature-settings: "clig" off, "liga" off;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        text-transform: capitalize;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .StatTitle {
+        margin-top: -1rem;
+        font-size: 0.875rem;
+      }
+    }
+
+    .RightColumn {
+      .RightImage {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+// Mobile Exceptions
+@media screen and (min-width: 360px) and (max-width: 375px) {
+  .AboutUs {
+    .LeftContainer {
+      & .HeaderText::after {
+        content: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418229/ibx-website-v2/yellow_mark_tsz3mm.svg");
+        position: absolute;
+        top: 20rem;
+        left: 1rem;
+        z-index: -1;
+      }
+    }
+  }
+}
