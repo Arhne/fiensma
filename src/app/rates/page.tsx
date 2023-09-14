@@ -92,6 +92,16 @@ const Rates = () => {
         <button className={styles.ActionButton}>Get the App</button>
       </div>
 
+      <div className={styles.ExchangeRates}>
+        <h3>Exchange Rates</h3>
+        <p className={styles.HeaderText}>
+          Our team of credible professionals with proven records of running{" "}
+          <br />
+          successful businesses across digital channels
+        </p>
+        {renderExchangeRates()}
+      </div>
+
       <div className={styles.ChartContainer}>
         <h3>Fiat Exchange Rate</h3>
         <div className={styles.Chart} id="chart">
@@ -102,16 +112,6 @@ const Rates = () => {
             height={550}
           />
         </div>
-      </div>
-
-      <div className={styles.ExchangeRates}>
-        <h3>Exchange Rates</h3>
-        <p className={styles.HeaderText}>
-          Our team of credible professionals with proven records of running{" "}
-          <br />
-          successful businesses across digital channels
-        </p>
-        {renderExchangeRates()}
       </div>
     </div>
   );
