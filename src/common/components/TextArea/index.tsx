@@ -5,6 +5,7 @@ interface ICustomTextArea {
   customStyle?: object;
   isShowLabel: boolean;
   labelText?: string;
+  errors?: any;
 }
 
 const CustomTextArea = ({
@@ -12,6 +13,8 @@ const CustomTextArea = ({
   customStyle,
   isShowLabel,
   labelText,
+  errors,
+  ...props
 }: ICustomTextArea) => {
   return (
     <div className={styles.TextAreaContainer}>
@@ -20,7 +23,13 @@ const CustomTextArea = ({
         className={styles.TextArea}
         placeholder={placeholder}
         style={{ ...customStyle }}
+        {...props}
       ></textarea>
+      {errors?.map((error: any, i: any) => (
+        <small className="text-danger mt-2" key={i}>
+          {error}
+        </small>
+      ))}
     </div>
   );
 };
