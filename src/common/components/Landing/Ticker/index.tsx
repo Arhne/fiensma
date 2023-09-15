@@ -21,12 +21,14 @@ const Ticker = () => {
         if (currentRates && currentRates.data.length > 0) {
           return (
             <div className={styles.TickerWrapper}>
-              <div className={styles.TickerTransition}>
+              <div className={`${styles.TickerTransition}`}>
                 {currentRates?.data.map((_item) => (
                   <div key={_item._id} className={styles.TickerItem}>
                     <div className={styles.TickerItemContent}>
                       <Image
-                        src={_item?.currencyPair?.imageUrl}
+                        src={
+                          _item?.currencyPair?.tradingCurrency?.imageUrl ?? ""
+                        }
                         alt=""
                         width={30}
                         height={30}

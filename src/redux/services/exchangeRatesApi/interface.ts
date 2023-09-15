@@ -29,6 +29,7 @@ export interface ICurrency {
   name: string;
   currencyType: string;
   currencySymbol: string;
+  imageUrl: string;
   status: boolean;
   deletedAt: string;
   createdAt: string;
