@@ -199,30 +199,18 @@
 /* Media Query for Mobile Devices */
 @media screen and (max-width: 480px) {
   .AboutUs {
-    padding: 0 2rem;
-    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg");
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-position-x: 0;
-    background-size: cover;
+    padding: 1rem;
+    background-image: none;
+    height: 60rem;
 
     .LeftContainer {
       .HeaderText {
         font-size: 4rem;
       }
-
-      & .HeaderText::after {
-        content: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418229/ibx-website-v2/yellow_mark_tsz3mm.svg");
-        position: absolute;
-        top: 16rem;
-        left: 5rem;
-        z-index: -1;
-      }
     }
   }
 
   .Mission {
-    margin: 0 1.5rem 8.7rem;
     padding: 1rem;
     background-image: none;
     height: auto;
@@ -239,9 +227,9 @@
   }
 
   .Vision {
-    padding: 0 1.5rem;
+    padding: 0;
     background-color: #ffffff;
-    margin-bottom: 19rem;
+    // margin-bottom: 19rem;
 
     .LeftColumn {
       .LeftText {
@@ -256,16 +244,100 @@
       h2 {
         font-size: 2rem;
       }
-
-      .StatTitle {
-        margin-top: -1rem;
-        font-size: 0.875rem;
-      }
     }
 
     .RightColumn {
       .RightImage {
         width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .Values {
+    padding: 1.5rem;
+
+    .Trust {
+      height: auto;
+
+      .Left {
+        padding: 1.5rem;
+
+        p {
+          line-height: 2.7rem;
+          font-size: 1.375rem;
+        }
+      }
+
+      .Right {
+        .RightImage {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .Teamwork {
+      height: auto;
+      padding: 1.5rem;
+
+      p {
+        line-height: 2.7rem;
+        font-size: 1.375rem;
+      }
+
+      p,
+      h4 {
+        color: #ffffff;
+      }
+    }
+
+    .Transparency {
+      background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1694626756/ibx-website-v2/about-us/transparency_img_vxy63g.png");
+      background-repeat: no-repeat;
+      background-position-x: 100%;
+      background-position-y: 100%;
+      height: 47.5rem;
+      padding-left: 5.6rem;
+      padding-top: 8.4rem;
+
+      p {
+        line-height: 2.7rem;
+        font-size: 1.375rem;
+      }
+
+      p,
+      h4 {
+        color: #ffffff;
+      }
+    }
+
+    .Accountability {
+      height: 33rem;
+      background-color: var(--primary-color);
+      border-radius: 1.25rem;
+
+      .Left {
+        padding-left: 6rem;
+        padding-top: 7rem;
+
+        p {
+          line-height: 2.7rem;
+          font-size: 1.375rem;
+        }
+
+        p,
+        h4 {
+          color: #ffffff;
+        }
+      }
+
+      .Right {
+        .RightImage {
+          width: 100%;
+          height: auto;
+          margin-top: 1rem;
+        }
       }
     }
   }
@@ -393,17 +465,17 @@
   }
 }
 
-// Mobile Exceptions
-@media screen and (min-width: 360px) and (max-width: 375px) {
-  .AboutUs {
-    .LeftContainer {
-      & .HeaderText::after {
-        content: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418229/ibx-website-v2/yellow_mark_tsz3mm.svg");
-        position: absolute;
-        top: 20rem;
-        left: 1rem;
-        z-index: -1;
-      }
-    }
-  }
-}
+// // Mobile Exceptions
+// @media screen and (min-width: 360px) and (max-width: 375px) {
+//   .AboutUs {
+//     .LeftContainer {
+//       & .HeaderText::after {
+//         content: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418229/ibx-website-v2/yellow_mark_tsz3mm.svg");
+//         position: absolute;
+//         top: 20rem;
+//         left: 1rem;
+//         z-index: -1;
+//       }
+//     }
+//   }
+// }
