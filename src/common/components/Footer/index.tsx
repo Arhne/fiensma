@@ -12,13 +12,19 @@ const Footer = () => {
         <p>Follow us</p>
         <ul className={styles.SocialIcons}>
           <li>
-            <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/instagram_lwt3ga.svg" />
+            <a href="https://instagram.com/ibx__marketplace?igshid=MzRlODBiNWFlZA==">
+              <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/instagram_lwt3ga.svg" />
+            </a>
           </li>
           <li>
-            <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418216/ibx-website-v2/twitter_odaotw.svg" />
+            <a href="https://twitter.com/Ibx_P2P">
+              <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418216/ibx-website-v2/twitter_odaotw.svg" />
+            </a>
           </li>
           <li>
-            <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418193/ibx-website-v2/facebook_jjrxg2.svg" />
+            <a href="https://web.facebook.com/profile.php?id=100094346709928">
+              <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418193/ibx-website-v2/facebook_jjrxg2.svg" />
+            </a>
           </li>
         </ul>
       </div>

@@ -1,11 +1,50 @@
+"use client";
+
+import { Controller, useForm } from "react-hook-form";
+
 import Image from "next/image";
 import styles from "./ContactUs.module.scss";
 import CustomInput from "@/common/components/Inputs";
 import CustomTextArea from "@/common/components/TextArea";
+import { useAddContactUsMutation } from "@/redux/services/contactUsApi";
+import ToastProvider, {
+  showErrorToast,
+  showSuccessToast,
+} from "@/common/Utils/toast";
 
 const ContactUs = () => {
+  const [addContactUs, { isLoading }] = useAddContactUsMutation();
+
+  const { handleSubmit, control } = useForm({
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      message: "",
+      phone: "",
+    },
+  });
+
+  const onHandleSubmit = (value: {
+    firstName: string;
+    lastName: string;
+    email: string;
+    message: string;
+    phone: string;
+  }) => {
+    addContactUs(value)
+      .unwrap()
+      .then((result) => {
+        showSuccessToast(result?.message);
+      })
+      .catch((error) => {
+        showErrorToast(error?.data?.message);
+      });
+  };
+
   return (
     <div className={styles.ContactUsContainer}>
+      <ToastProvider />
       <div className="row gx-5">
         <div className={`col-xs-12 col-sm-6 ${styles.LeftColumn}`}>
           <Image
@@ -22,71 +61,144 @@ const ContactUs = () => {
           <h3>Contact Us</h3>
           <p>Send us a message, we reply as soon as possible.</p>
           <div className={styles.FormSection}>
-            <div className="row gx-5 mb-4">
-              <div className={`col-sm-6 ${styles.InputContainer}`}>
-                {" "}
-                <CustomInput
-                  isShowLabel
-                  labelText="First Name"
-                  type="text"
-                  customStyle={inputStyle}
-                  placeholder="First Name"
-                />
+            <form onSubmit={handleSubmit(onHandleSubmit)}>
+              <div className="row gx-5 mb-4">
+                <div className={`col-sm-6 ${styles.InputContainer}`}>
+                  {" "}
+                  <Controller
+                    name="firstName"
+                    control={control}
+                    rules={{ required: "*first name is required" }}
+                    render={({
+                      field: { onChange, value },
+                      formState: { errors },
+                    }) => {
+                      const errorMessage = errors.firstName?.message;
+                      return (
+                        <CustomInput
+                          isShowLabel
+                          labelText="First Name"
+                          type="text"
+                          customStyle={inputStyle}
+                          placeholder="First Name"
+                          {...{ value, onChange, errors: [errorMessage] }}
+                        />
+                      );
+                    }}
+                  />
+                </div>
+                <div className={`col-sm-6 ${styles.InputContainer}`}>
+                  {" "}
+                  <Controller
+                    name="lastName"
+                    control={control}
+                    rules={{ required: "*last name is required" }}
+                    render={({
+                      field: { onChange, value },
+                      formState: { errors },
+                    }) => {
+                      const errorMessage = errors.lastName?.message;
+                      return (
+                        <CustomInput
+                          isShowLabel
+                          labelText="Last Name"
+                          type="text"
+                          customStyle={inputStyle}
+                          placeholder="Last Name"
+                          {...{ value, onChange, errors: [errorMessage] }}
+                        />
+                      );
+                    }}
+                  />
+                </div>
               </div>
-              <div className={`col-sm-6 ${styles.InputContainer}`}>
-                {" "}
-                <CustomInput
-                  isShowLabel
-                  labelText="Last Name"
-                  type="text"
-                  customStyle={inputStyle}
-                  placeholder="Last Name"
-                />
+              <div className="row gx-5 mb-4">
+                <div className={`col-sm-6 ${styles.InputContainer}`}>
+                  {" "}
+                  <Controller
+                    name="email"
+                    control={control}
+                    rules={{ required: "*email is required" }}
+                    render={({
+                      field: { onChange, value },
+                      formState: { errors },
+                    }) => {
+                      const errorMessage = errors.email?.message;
+                      return (
+                        <CustomInput
+                          isShowLabel
+                          labelText="Email"
+                          type="email"
+                          customStyle={inputStyle}
+                          placeholder="name@example.com"
+                          {...{ value, onChange, errors: [errorMessage] }}
+                        />
+                      );
+                    }}
+                  />
+                </div>
+                <div className={`col-sm-6 ${styles.InputContainer}`}>
+                  {" "}
+                  <Controller
+                    name="phone"
+                    control={control}
+                    rules={{ required: "*phone is required" }}
+                    render={({
+                      field: { onChange, value },
+                      formState: { errors },
+                    }) => {
+                      const errorMessage = errors.phone?.message;
+                      return (
+                        <CustomInput
+                          isShowLabel
+                          labelText="Phone Number"
+                          type="number"
+                          customStyle={inputStyle}
+                          {...{ value, onChange, errors: [errorMessage] }}
+                        />
+                      );
+                    }}
+                  />
+                </div>
               </div>
-            </div>
-            <div className="row gx-5 mb-4">
-              <div className={`col-sm-6 ${styles.InputContainer}`}>
-                {" "}
-                <CustomInput
-                  isShowLabel
-                  labelText="Email"
-                  type="text"
-                  customStyle={inputStyle}
-                  placeholder="name@example.com"
-                />
-              </div>
-              <div className={`col-sm-6 ${styles.InputContainer}`}>
-                {" "}
-                <CustomInput
-                  isShowLabel
-                  labelText="Phone Number"
-                  type="text"
-                  customStyle={inputStyle}
-                  placeholder="+(12) 345 6789"
-                />
-              </div>
-            </div>
 
-            <div>
-              <CustomTextArea
-                isShowLabel
-                labelText="Your Message"
-                customStyle={textAreaStyle}
-              />
-            </div>
-            <small className={styles.Terms}>
-              By submitting this form you agree to our{" "}
-              <span className={styles.HighlightedText}>
-                terms and conditions
-              </span>{" "}
-              and our{" "}
-              <span className={styles.HighlightedText}>Privacy Policy</span>{" "}
-              which explains how we may collect, use and disclose your personal
-              information including to third parties.
-            </small>
-            <div>
-              <button className={styles.ActionButton}>Send Message</button>
-            </div>
+              <div className="mb-3">
+                <Controller
+                  name="message"
+                  control={control}
+                  rules={{ required: "*message is required" }}
+                  render={({
+                    field: { onChange, value },
+                    formState: { errors },
+                  }) => {
+                    const errorMessage = errors.message?.message;
+                    return (
+                      <CustomTextArea
+                        isShowLabel
+                        labelText="Your Message"
+                        customStyle={textAreaStyle}
+                        {...{ value, onChange, errors: [errorMessage] }}
+                      />
+                    );
+                  }}
+                />
+              </div>
+              <small className={styles.Terms}>
+                By submitting this form you agree to our{" "}
+                <span className={styles.HighlightedText}>
+                  terms and conditions
+                </span>{" "}
+                and our{" "}
+                <span className={styles.HighlightedText}>Privacy Policy</span>{" "}
+                which explains how we may collect, use and disclose your
+                personal information including to third parties.
+              </small>
+              <div>
+                <button className={styles.ActionButton}>
+                  {isLoading ? "Sending" : "Send Message"}
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
