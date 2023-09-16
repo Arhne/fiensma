@@ -49,7 +49,8 @@ export interface ICurrencyPair {
 }
 
 export type ITrend = "UP" | "DOWN";
-export interface IExchangeSummaryData {
+
+export interface ITimePeriodData {
   buyPrice: number;
   buyTrend: ITrend;
   createdAt: string;
@@ -62,6 +63,10 @@ export interface IExchangeSummaryData {
   updatedAt: string;
   __v: number;
   _id: string;
+}
+export interface IExchangeSummaryData {
+  data: ITimePeriodData[];
+  timePeriod: string;
 }
 export interface IExchangeSummary {
   date: string;

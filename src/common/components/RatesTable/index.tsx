@@ -1,10 +1,10 @@
 import Image from "next/image";
 import styles from "./RatesTable.module.scss";
 import { imageLoader } from "@/common/Utils/imageLoaders";
-import { IExchangeSummaryData } from "@/redux/services/exchangeRatesApi/interface";
+import { ITimePeriodData } from "@/redux/services/exchangeRatesApi/interface";
 
 interface IRatesTable {
-  data: IExchangeSummaryData[];
+  data: ITimePeriodData[];
 }
 
 const RatesTable = ({ data }: IRatesTable) => {
@@ -21,7 +21,8 @@ const RatesTable = ({ data }: IRatesTable) => {
         </td>
       </tr>
 
-      {data.length > 0 &&
+      {data &&
+        data.length > 0 &&
         data.map((_item, index) => (
           <tr key={index}>
             <td className={styles.EmptyCell}></td>

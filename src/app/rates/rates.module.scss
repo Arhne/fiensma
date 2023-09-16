@@ -55,6 +55,11 @@
       color: #2a3342;
     }
 
+    .Title {
+      color: var(--primary-color);
+      text-transform: capitalize;
+    }
+
     .HeaderText {
       color: #777;
       font-size: 1.25rem;
