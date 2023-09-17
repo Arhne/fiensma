@@ -190,8 +190,8 @@ const Rates = () => {
                   {_exchangeRate?.data?.length > 0 &&
                     _exchangeRate.data
                       .filter((_rate) => _rate !== null)
-                      .map((_item) => (
-                        <div className="mb-3">
+                      .map((_item, idx) => (
+                        <div key={idx} className="mb-3">
                           <p className={styles.Title}>{_item?.timePeriod}</p>
                           <RatesTable data={_item?.data} />
                         </div>
