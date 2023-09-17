@@ -10,7 +10,7 @@ export const exchangeRatesApi = createApi({
   }),
   tagTypes: ["exchangeRates"],
   endpoints: (builder) => ({
-    getExchangeRateSummaryByDate: builder.query<
+    getExchangeRateSummary: builder.query<
       Response<IExchangeSummary[]>,
       { perPage: number; currentPage: number }
     >({
@@ -18,6 +18,24 @@ export const exchangeRatesApi = createApi({
         url: `/marketPlace/api/v1/rates/a/stats/getRateSummary?perPage=${perPage}&currentPage=${currentPage}`,
         method: "GET",
       }),
+      providesTags: ["exchangeRates"],
+    }),
+
+    getExchangeRateSummaryByDate: builder.query<
+      Response<IExchangeSummary[]>,
+      { currencyPairId?: string; startDate: string; endDate: string }
+    >({
+      query: ({ currencyPairId, startDate, endDate }) => {
+        let query = `?startDate=${startDate}&endDate=${endDate}`;
+
+        if (currencyPairId) {
+          query = `${query}&currencyPairId=${currencyPairId}`;
+        }
+        return {
+          url: `/marketPlace/api/v1/rates/a/stats/getRateSummary${query}`,
+          method: "GET",
+        };
+      },
       providesTags: ["exchangeRates"],
     }),
 
@@ -31,5 +49,8 @@ export const exchangeRatesApi = createApi({
   }),
 });
 
-export const { useGetExchangeRateSummaryByDateQuery, useGetCurrentRatesQuery } =
-  exchangeRatesApi;
+export const {
+  useGetExchangeRateSummaryByDateQuery,
+  useGetCurrentRatesQuery,
+  useGetExchangeRateSummaryQuery,
+} = exchangeRatesApi;
