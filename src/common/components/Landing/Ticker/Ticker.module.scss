@@ -23,6 +23,17 @@
       -webkit-animation-name: ticker;
       animation-duration: 30s;
 
+      .CurrentDate {
+        display: inline-block;
+        position: relative;
+        top: -0.3rem;
+        color: var(--primary-color);
+        font-size: 2.1rem;
+        font-weight: 600;
+        line-height: 42px;
+        letter-spacing: -0.672px;
+      }
+
       &:hover {
         animation-play-state: paused;
         cursor: pointer;

@@ -1,10 +1,13 @@
-import styles from "./Ticker.module.scss";
+import moment from "moment";
 import { useGetCurrentRatesQuery } from "@/redux/services/exchangeRatesApi";
 import { TickerLoader } from "./components/loader";
 import Image from "next/image";
 import { imageLoader } from "@/common/Utils/imageLoaders";
 
+import styles from "./Ticker.module.scss";
+
 const Ticker = () => {
+  const now = new Date();
   const { data: currentRates, isLoading, isError } = useGetCurrentRatesQuery();
 
   const renderTicker = () => {
@@ -22,6 +25,9 @@ const Ticker = () => {
           return (
             <div className={styles.TickerWrapper}>
               <div className={`${styles.TickerTransition}`}>
+                <span className={styles.CurrentDate}>
+                  {moment(now.toISOString()).format("MMMM Do YYYY, h:mm:ss a")}
+                </span>
                 {currentRates?.data.map((_item) => (
                   <div key={_item._id} className={styles.TickerItem}>
                     <div className={styles.TickerItemContent}>
