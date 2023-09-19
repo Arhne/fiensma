@@ -7,10 +7,7 @@ import styles from "./ContactUs.module.scss";
 import CustomInput from "@/common/components/Inputs";
 import CustomTextArea from "@/common/components/TextArea";
 import { useAddContactUsMutation } from "@/redux/services/contactUsApi";
-import ToastProvider, {
-  showErrorToast,
-  showSuccessToast,
-} from "@/common/Utils/toast";
+import { showErrorToast, showSuccessToast } from "@/common/Utils/toast";
 
 const ContactUs = () => {
   const [addContactUs, { isLoading }] = useAddContactUsMutation();
@@ -44,7 +41,6 @@ const ContactUs = () => {
 
   return (
     <div className={styles.ContactUsContainer}>
-      <ToastProvider />
       <div className="row gx-5">
         <div className={`col-xs-12 col-sm-6 ${styles.LeftColumn}`}>
           <Image
