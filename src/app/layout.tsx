@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 
 import App from "@/common/components/App";
 import { Providers } from "@/redux/provider";
+import ToastProvider from "@/common/Utils/toast";
 
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body className={manrope.className}>
         <Providers>
           <App>{children}</App>
+          <ToastProvider />
         </Providers>
       </body>
     </html>

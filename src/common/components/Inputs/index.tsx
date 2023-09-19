@@ -6,6 +6,7 @@ interface ICustomInput {
   customStyle?: object;
   isShowLabel: boolean;
   labelText?: string;
+  errors?: any;
 }
 
 const CustomInput = ({
@@ -14,6 +15,8 @@ const CustomInput = ({
   customStyle,
   isShowLabel,
   labelText,
+  errors,
+  ...props
 }: ICustomInput) => {
   return (
     <div className={styles.InputContainer}>
@@ -23,7 +26,13 @@ const CustomInput = ({
         type={type}
         placeholder={placeholder}
         style={{ ...customStyle }}
+        {...props}
       />
+      {errors?.map((error: any, i: any) => (
+        <small className="d-block text-danger mt-2" key={i}>
+          {error}
+        </small>
+      ))}
     </div>
   );
 };

@@ -253,9 +253,9 @@ export default function Home() {
         <h1 className={styles.HeaderText}>
           Join our 235,000+ <br /> mobile app users
         </h1>
-        <p className={styles.AdvertText}>
+        {/* <p className={styles.AdvertText}>
           Scan QR code to download mobile app{" "}
-        </p>
+        </p> */}
         <div className={styles.MobileStore}>
           <Image
             src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691583936/ibx-website-v2/google_play_white_mzoobw.svg"
