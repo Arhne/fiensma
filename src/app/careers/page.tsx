@@ -83,7 +83,7 @@ const Careers = () => {
   };
 
   return (
-    <main>
+    <main className={styles.CareersContainer}>
       <div className={styles.Landing}>
         <h1 className={styles.HeaderText}>Be part of our Mission</h1>
         <button className={styles.ActionButton}>Join Our Team</button>
