@@ -33,7 +33,23 @@ const About = () => {
         </div>
       </div>
       <div className={`row gx-5 ${styles.Mission}`}>
-        <div className="col-sm-12 col-xs-12 col-lg-6"></div>
+        <div className={`col-sm-12 col-xs-12 col-lg-6 ${styles.LeftContainer}`}>
+          <Image
+            loader={() =>
+              imageLoader(
+                "https://res.cloudinary.com/dbg2z1svm/image/upload/v1695105193/ibx-website-v2/about-us/mission_img_cppp1i_1_nu9dbc.webp"
+              )
+            }
+            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1695105193/ibx-website-v2/about-us/mission_img_cppp1i_1_nu9dbc.webp"
+            width={505}
+            height={543}
+            priority={true}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8UQ8AAnUBeRHU5C8AAAAASUVORK5CYII="
+            className={styles.LeftImage}
+            alt=""
+          />
+        </div>
         <div
           className={`col-sm-12 col-xs-12 col-lg-6  ${styles.RightContainer}`}
         >

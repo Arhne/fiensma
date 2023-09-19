@@ -53,6 +53,9 @@ const ContactUs = () => {
             src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1695026410/ibx-website-v2/contact-us/con_y0gfge.svg"
             alt=""
             className={styles.LeftColumnImage}
+            priority={true}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mMscLxXDwAEyAIQ0V1oYQAAAABJRU5ErkJggg=="
             width={628}
             height={924}
           />
