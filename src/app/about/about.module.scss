@@ -66,7 +66,8 @@
   background-color: #ffffff;
   max-width: 1440px;
   margin: 0 auto;
-  margin-bottom: 19rem;
+  // margin-bottom: 19rem;
+  margin-bottom: 10rem;
   padding-top: 4.3rem;
 
   .LeftColumn {
@@ -76,12 +77,13 @@
   }
 
   .LeftText {
-    color: rgba(0, 0, 0, 0.6);
-    font-feature-settings: "clig" off, "liga" off;
+    color: #10192d;
+    font-size: 1.25rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 32px;
-    text-transform: capitalize;
+    line-height: 35px; /* 145.833% */
+    letter-spacing: 1px;
+    margin-top: 1.5rem;
   }
 
   .StatTitle {

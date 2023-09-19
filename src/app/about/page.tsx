@@ -37,12 +37,15 @@ const About = () => {
           <Image
             loader={() =>
               imageLoader(
-                "https://res.cloudinary.com/dbg2z1svm/image/upload/v1694858020/ibx-website-v2/about-us/mission_img_cppp1i.webp"
+                "https://res.cloudinary.com/dbg2z1svm/image/upload/v1695105193/ibx-website-v2/about-us/mission_img_cppp1i_1_nu9dbc.webp"
               )
             }
-            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1694858020/ibx-website-v2/about-us/mission_img_cppp1i.webp"
+            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1695105193/ibx-website-v2/about-us/mission_img_cppp1i_1_nu9dbc.webp"
             width={505}
             height={543}
+            priority={true}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8UQ8AAnUBeRHU5C8AAAAASUVORK5CYII="
             className={styles.LeftImage}
             alt=""
           />
