@@ -66,7 +66,7 @@ const Header = () => {
               Rates
             </Link>
           </li>
-          {/* <li>
+          <li>
             <Link
               className={`${styles.NavLink} ${
                 pathname === "/careers" && styles.Active
@@ -75,7 +75,7 @@ const Header = () => {
             >
               Careers
             </Link>
-          </li> */}
+          </li>
           <li>
             <Link
               className={`${styles.NavLink} ${

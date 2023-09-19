@@ -1,0 +1,55 @@
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
+
+import { BASE_URL } from "@/api/baseUrl";
+import { Response } from "@/util/interface";
+import { IApplicant, IJob } from "./interface";
+
+export const jobApi = createApi({
+  reducerPath: "jobApi",
+  baseQuery: fetchBaseQuery({
+    baseUrl: BASE_URL,
+  }),
+  tagTypes: ["job"],
+  endpoints: (builder) => ({
+    applyForJob: builder.mutation<
+      Response<IApplicant>,
+      {
+        job: string;
+        firstName: string;
+        lastName: string;
+        email: string;
+        applicantCV: string;
+      }
+    >({
+      query: (body) => ({
+        url: `/user/api/v1/jobs/apply`,
+        method: "POST",
+        body,
+      }),
+    }),
+
+    getAllJobs: builder.query<
+      Response<IJob[]>,
+      { perPage: number; currentPage: number }
+    >({
+      query: ({ perPage, currentPage }) => ({
+        url: `/user/api/v1/jobs?perPage=${perPage}&currentPage=${currentPage}`,
+        method: "GET",
+      }),
+      providesTags: ["job"],
+    }),
+    getSingleJobs: builder.query<Response<IJob>, string>({
+      query: (query) => ({
+        url: `/user/api/v1/jobs/get-job-by-id/${query}`,
+        method: "GET",
+      }),
+      providesTags: ["job"],
+    }),
+  }),
+});
+
+export const {
+  useApplyForJobMutation,
+  useGetAllJobsQuery,
+  useGetSingleJobsQuery,
+} = jobApi;
