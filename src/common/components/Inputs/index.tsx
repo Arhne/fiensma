@@ -29,7 +29,7 @@ const CustomInput = ({
         {...props}
       />
       {errors?.map((error: any, i: any) => (
-        <small className="text-danger mt-2" key={i}>
+        <small className="d-block text-danger mt-2" key={i}>
           {error}
         </small>
       ))}
