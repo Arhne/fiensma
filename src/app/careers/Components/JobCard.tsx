@@ -1,17 +1,22 @@
+import { IJob } from "@/redux/services/jobApi/interface";
 import styles from "./JobCard.module.scss";
 
-const JobCard = () => {
+interface IJobCard {
+  data: IJob;
+}
+
+const JobCard = ({ data }: IJobCard) => {
   return (
     <div className={styles.JobCardContainer}>
-      <span className={styles.CategoryTag}>Design</span>
+      <span className={styles.CategoryTag}>{data?.category}</span>
       <div className={styles.TitleActionContainer}>
-        <h6 className={styles.Title}>UI/UX Designer</h6>
+        <h6 className={styles.Title}>{data?.title}</h6>
         <span>Apply</span>
       </div>
       <p>We’re looking for an expert ui/ux designer to join our team.</p>
       <div className={styles.TypeContainer}>
-        <span className={styles.JobType}>Remote Friendly</span>
-        <span className={styles.ContractType}>Full-time</span>
+        <span className={styles.JobType}>{data?.location}</span>
+        <span className={styles.ContractType}>{data?.schedule}</span>
       </div>
     </div>
   );
