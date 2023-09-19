@@ -1,5 +1,5 @@
+import Link from "next/link";
 import CustomAccordion from "../../CustomAccordion";
-import CustomInput from "../../Inputs";
 
 import styles from "./Faq.module.scss";
 
@@ -17,13 +17,9 @@ const Faq = () => {
         </p>
         <p className={styles.NoAnswer}>Can&apos;t find an answer?</p>
         <div className={styles.ActionContainer}>
-          <CustomInput
-            isShowLabel={false}
-            type="text"
-            placeholder="Enter your email"
-            customStyle={{ backgroundColor: "#FAFAFA" }}
-          />
-          <button className={styles.ActionButton}>Contact Us</button>
+          <Link href={"/contactus"}>
+            <button className={styles.ActionButton}>Contact Us</button>
+          </Link>
         </div>
       </div>
       <div className={`col-xs-12 col-sm-6 ${styles.RightColumn}`}>

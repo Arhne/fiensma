@@ -8,6 +8,7 @@ import CustomInput from "@/common/components/Inputs";
 import CustomTextArea from "@/common/components/TextArea";
 import { useAddContactUsMutation } from "@/redux/services/contactUsApi";
 import { showErrorToast, showSuccessToast } from "@/common/Utils/toast";
+import { imageLoader } from "@/common/Utils/imageLoaders";
 
 const ContactUs = () => {
   const [addContactUs, { isLoading }] = useAddContactUsMutation();
@@ -44,7 +45,12 @@ const ContactUs = () => {
       <div className="row gx-5">
         <div className={`col-xs-12 col-sm-6 ${styles.LeftColumn}`}>
           <Image
-            src="/contactus.svg"
+            loader={() =>
+              imageLoader(
+                "https://res.cloudinary.com/dbg2z1svm/image/upload/v1695026410/ibx-website-v2/contact-us/con_y0gfge.svg"
+              )
+            }
+            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1695026410/ibx-website-v2/contact-us/con_y0gfge.svg"
             alt=""
             className={styles.LeftColumnImage}
             width={628}
