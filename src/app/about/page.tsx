@@ -55,9 +55,12 @@ const About = () => {
         >
           <h3>Our Mission</h3>
           <p className={styles.Text}>
-            Our mission is to simplify currency transactions for individuals,
-            foreign businesses, freelancers, and other institutions by utilizing
-            cutting-edge technologies.
+            At Ibx, our mission is to revolutionize the way individuals transact
+            with fiat currencies. We strive to provide a secure and
+            user-friendly platform that simplifies P2P trading, empowering our
+            users to take control of their financial future. Through innovation,
+            transparency, and exceptional customer service, we aim to foster
+            trust and accessibility in the world of traditional currencies.
           </p>
         </div>
       </div>
@@ -65,8 +68,13 @@ const About = () => {
         <div className={`col-xs-12 col-sm-7 ${styles.LeftColumn}`}>
           <h3 className={styles.Title}>Our Vision</h3>
           <p className={styles.LeftText}>
-            Our vision is to rank the top decentralized exchanges platform that
-            enables anyone anywhere to control their own money.
+            Our vision is to become the leading global platform for peer-to-peer
+            fiat currency trading, known for our commitment to security,
+            reliability, and user experience. We envision a world where
+            individuals can easily and safely engage in P2P transactions,
+            unlocking the full potential of traditional financial systems. By
+            fostering a vibrant community and embracing cutting-edge
+            technologies, we seek to reshape the future of finance.
           </p>
         </div>
         <div className={`col-xs-12 col-sm-5 ${styles.RightColumn}`}>
