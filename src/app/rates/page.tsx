@@ -187,8 +187,6 @@ const Rates = () => {
     setEndDate(formatString[1]);
   };
 
-  console.log("timePeriod: ", timePeriod);
-
   const handleChangeTimePeriod = (value: string) => {
     return setTimePeriod(value);
   };

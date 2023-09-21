@@ -37,8 +37,66 @@ const RatesTable = ({ data }: IRatesTable) => {
               />
               <span>{`${_item?.currencyPair?.tradingCurrency?.name.toUpperCase()}/${_item.currencyPair.baseCurrency.name.toUpperCase()}`}</span>
             </td>
-            <td className={styles.TableCell}>{_item?.buyPrice}</td>
-            <td className={styles.TableCell}>{_item?.sellPrice}</td>
+            <td className={styles.TableCell}>
+              {_item?.buyPrice}
+              {_item?.buyTrend === "UP" ? (
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1693285622/ibx-website-v2/icons/news-ticker/trend_up_fiqvbw.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className={styles.TrendImage}
+                  loader={() =>
+                    imageLoader(
+                      "https://res.cloudinary.com/dbg2z1svm/image/upload/v1693285622/ibx-website-v2/icons/news-ticker/trend_up_fiqvbw.svg"
+                    )
+                  }
+                />
+              ) : (
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1693285622/ibx-website-v2/icons/news-ticker/trend_down_tmkrx3.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className={styles.TrendImage}
+                  loader={() =>
+                    imageLoader(
+                      "https://res.cloudinary.com/dbg2z1svm/image/upload/v1693285622/ibx-website-v2/icons/news-ticker/trend_down_tmkrx3.svg"
+                    )
+                  }
+                />
+              )}
+            </td>
+            <td className={styles.TableCell}>
+              {_item?.sellPrice}
+              {_item?.sellTrend === "UP" ? (
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1693285622/ibx-website-v2/icons/news-ticker/trend_up_fiqvbw.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className={styles.TrendImage}
+                  loader={() =>
+                    imageLoader(
+                      "https://res.cloudinary.com/dbg2z1svm/image/upload/v1693285622/ibx-website-v2/icons/news-ticker/trend_up_fiqvbw.svg"
+                    )
+                  }
+                />
+              ) : (
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1693285622/ibx-website-v2/icons/news-ticker/trend_down_tmkrx3.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className={styles.TrendImage}
+                  loader={() =>
+                    imageLoader(
+                      "https://res.cloudinary.com/dbg2z1svm/image/upload/v1693285622/ibx-website-v2/icons/news-ticker/trend_down_tmkrx3.svg"
+                    )
+                  }
+                />
+              )}
+            </td>
           </tr>
         ))}
     </table>
