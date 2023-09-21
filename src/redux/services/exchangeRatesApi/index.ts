@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
-import { ICurrentRates, IExchangeSummary } from "./interface";
+import { ICurrentRates, IExchangeSummary, ITimePeriodData } from "./interface";
 import { Response } from "@/util/interface";
 import { BASE_URL } from "@/api/baseUrl";
 
@@ -22,17 +22,25 @@ export const exchangeRatesApi = createApi({
     }),
 
     getExchangeRateSummaryByDate: builder.query<
-      Response<IExchangeSummary[]>,
-      { currencyPairId?: string; startDate: string; endDate: string }
+      Response<ITimePeriodData[]>,
+      {
+        currencyPairId?: string;
+        startDate: string;
+        endDate: string;
+        timePeriod?: string;
+      }
     >({
-      query: ({ currencyPairId, startDate, endDate }) => {
+      query: ({ currencyPairId, startDate, endDate, timePeriod }) => {
         let query = `?startDate=${startDate}&endDate=${endDate}`;
 
         if (currencyPairId) {
           query = `${query}&currencyPairId=${currencyPairId}`;
         }
+        if (timePeriod) {
+          query = `${query}&timePeriod=${timePeriod}`;
+        }
         return {
-          url: `/marketPlace/api/v1/rates/a/stats/getRateSummary${query}`,
+          url: `/marketPlace/api/v1/rates/a/stats/getRateSummaryByDate${query}`,
           method: "GET",
         };
       },

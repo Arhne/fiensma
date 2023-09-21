@@ -7,6 +7,7 @@ import ClientTestimonial from "@/common/components/Landing/ClientTestimonial";
 import Faq from "@/common/components/Landing/Faq";
 import AdvertSectionTwo from "@/common/components/Landing/AdvertSectionTwo";
 import Ticker from "@/common/components/Landing/Ticker";
+import GettingStarted from "@/common/components/Landing/GettingStarted/page";
 
 import styles from "./page.module.scss";
 
@@ -276,7 +277,7 @@ export default function Home() {
       </div>
       <ClientTestimonial />
       <AdvertSectionTwo />
-      {/* <OurTeam /> */}
+      <GettingStarted />
       <Faq />
     </main>
   );
