@@ -1,16 +1,12 @@
 "use client";
 
 import { useEffect } from "react";
-import { useParams } from "next/navigation";
 import { useGetSingleJobsQuery } from "@/redux/services/jobApi";
 
 import styles from "./Job.module.scss";
 
-const Page = () => {
-  const params = useParams();
-  const jobId = params?.job as string;
-
-  const { data: job } = useGetSingleJobsQuery(jobId);
+const Page = ({ params }: { params: { slug: string } }) => {
+  const { data: job } = useGetSingleJobsQuery(params.slug);
 
   useEffect(() => {
     if (job) {
