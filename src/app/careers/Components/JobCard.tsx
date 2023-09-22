@@ -22,7 +22,7 @@ const JobCard = ({ data }: IJobCard) => {
           Apply
         </span>
       </div>
-      <p>We're looking for an expert ui/ux designer to join our team.</p>
+      <p>We&apos;re looking for an expert ui/ux designer to join our team.</p>
       <div className={styles.TypeContainer}>
         <span className={styles.JobType}>{data?.location}</span>
         <span className={styles.ContractType}>{data?.schedule}</span>
