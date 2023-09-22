@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import moment from "moment";
+import { DatePicker, Select } from "antd";
 
 import dynamic from "next/dynamic";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
@@ -12,11 +14,13 @@ import {
 } from "@/redux/services/exchangeRatesApi";
 import { ExchangeRateLoader } from "./components/loader";
 
-import styles from "./rates.module.scss";
-import { IExchangeSummary } from "@/redux/services/exchangeRatesApi/interface";
 import { useGetAllCurrencyPairQuery } from "@/redux/services/currencyPairApi";
 import { PaginatedResponse } from "@/util/interface";
 import { ICurrencyPair } from "@/redux/services/currencyPairApi/interface";
+
+const { RangePicker } = DatePicker;
+
+import styles from "./rates.module.scss";
 
 type TGraphData = {
   name: string;
@@ -40,9 +44,14 @@ type TState = {
 };
 
 const Rates = () => {
-  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [rowsPerPage, setRowsPerPage] = useState(3);
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalRows, setTotalRows] = useState(100);
+  const [startDate, setStartDate] = useState(
+    moment().subtract(3, "days").format("YYYY-MM-DD")
+  );
+  const [endDate, setEndDate] = useState(moment().format("YYYY-MM-DD"));
+  const [timePeriod, setTimePeriod] = useState("morning");
+
   const paginate = {
     perPage: rowsPerPage,
     currentPage: currentPage,
@@ -79,7 +88,11 @@ const Rates = () => {
     isLoading: isLoadingGraphSummaryByDate,
     isError: isGraphError,
   } = useGetExchangeRateSummaryByDateQuery(
-    { startDate: "", endDate: "" },
+    {
+      startDate: startDate,
+      endDate: endDate,
+      timePeriod: timePeriod,
+    },
     {
       refetchOnMountOrArgChange: true,
     }
@@ -92,80 +105,116 @@ const Rates = () => {
     }
   );
 
-  // const extractGraphData = (
-  //   currencyPair: PaginatedResponse<ICurrencyPair[]> | undefined
-  // ) => {
-  //   const graphDataRepo = [] as TGraphData[];
-  //   if (currencyPair) {
-  //     currencyPair?.data.forEach((_cpair) => {
-  //       if (exchangeSummaryByDate) {
-  //         exchangeSummaryByDate?.data.forEach((_summary) => {
-  //           _summary.data.forEach((_data) => {
-  //             if (
-  //               _data?.currencyPair?.tradingCurrency?.name ===
-  //               _cpair?.tradingCurrency?.name
-  //             ) {
-  //               graphDataRepo.push({
-  //                 name: `${_data?.currencyPair?.tradingCurrency?.name.toUpperCase()}/${_data?.currencyPair?.baseCurrency?.name.toUpperCase()}`,
-  //                 sellPrice: _data?.sellPrice,
-  //                 date: _summary?.date,
-  //               });
-  //             }
-  //           });
-  //         });
-  //       }
-  //     });
-  //   }
+  const extractGraphData = (
+    currencyPair: PaginatedResponse<ICurrencyPair[]> | undefined
+  ) => {
+    const graphDataRepo = [] as TGraphData[];
+    if (currencyPair) {
+      currencyPair?.data.forEach((_cpair) => {
+        if (exchangeSummaryByDate) {
+          exchangeSummaryByDate?.data.forEach((_data) => {
+            if (
+              _data?.currencyPair?.tradingCurrency?.name ===
+              _cpair?.tradingCurrency?.name
+            ) {
+              graphDataRepo.push({
+                name: `${_data?.currencyPair?.tradingCurrency?.name.toUpperCase()}/${_data?.currencyPair?.baseCurrency?.name.toUpperCase()}`,
+                sellPrice: _data?.sellPrice,
+                date: _data?.createdAt.split("T")[0],
+              });
+            }
+          });
+        }
+      });
+    }
 
-  //   return graphDataRepo;
-  // };
-
-  const getXaxis = (dataInQuestion: IExchangeSummary[]) => {
-    const result = dataInQuestion.map((_item) => {
-      return _item?.date;
-    });
-
-    return result.reverse();
+    return graphDataRepo;
   };
 
-  // useEffect(() => {
-  //   if (exchangeSummaryByDate) {
-  //     extractGraphData(currencyPair);
-  //     const groupedKeys = extractGraphData(currencyPair).reduce(
-  //       (group: { [key: string]: TGraphData[] }, item) => {
-  //         if (!group[item.name]) {
-  //           group[item.name] = [];
-  //         }
-  //         group[item.name].push(item);
-  //         return group;
-  //       },
-  //       {}
-  //     );
+  const getXaxis = (groupedKeys: { [key: string]: TGraphData[] }) => {
+    const dates = [] as string[];
+    Object.keys(groupedKeys)?.forEach((_item) => {
+      groupedKeys[_item].forEach((_data) => {
+        dates.push(_data?.date);
+      });
+    });
+    let uniqueDates = new Set([...dates]);
 
-  //     const series = Object.keys(groupedKeys)?.map((_item) => {
-  //       return {
-  //         name: _item,
-  //         data: groupedKeys[_item].map((_data) => _data?.sellPrice).reverse(),
-  //       };
-  //     });
+    return Array.from(uniqueDates);
+  };
 
-  //     setState((prev) => {
-  //       return {
-  //         ...prev,
-  //         options: {
-  //           ...state?.options,
-  //           xaxis: {
-  //             categories: getXaxis(exchangeSummaryByDate?.data),
-  //           },
-  //           chart: {
-  //             ...state?.options?.chart,
-  //           },
-  //         },
-  //         series: [...series],
-  //       };
-  //     });
-  //   }
-  // }, [exchangeSummaryByDate, currencyPair]);
+  useEffect(() => {
+    if (exchangeSummaryByDate) {
+      extractGraphData(currencyPair);
+      const groupedKeys = extractGraphData(currencyPair).reduce(
+        (group: { [key: string]: TGraphData[] }, item) => {
+          if (!group[item.name]) {
+            group[item.name] = [];
+          }
+          group[item.name].push(item);
+          return group;
+        },
+        {}
+      );
+
+      const series = Object.keys(groupedKeys)?.map((_item) => {
+        return {
+          name: _item,
+          data: groupedKeys[_item].map((_data) => _data?.sellPrice).reverse(),
+        };
+      });
+
+      setState((prev) => {
+        return {
+          ...prev,
+          options: {
+            ...state?.options,
+            xaxis: {
+              categories: getXaxis(groupedKeys),
+            },
+            chart: {
+              ...state?.options?.chart,
+            },
+          },
+          series: [...series],
+        };
+      });
+    }
+  }, [exchangeSummaryByDate, currencyPair]);
+
+  const handleChangeDate = (values: any, formatString: [string, string]) => {
+    setStartDate(formatString[0]);
+    setEndDate(formatString[1]);
+  };
+
+  const handleChangeTimePeriod = (value: string) => {
+    return setTimePeriod(value);
+  };
+
+  const renderChart = () => {
+    if (isLoadingGraphSummaryByDate) {
+      return <ExchangeRateLoader />;
+    } else if (!isLoadingGraphSummaryByDate) {
+      if (isGraphError) {
+        return (
+          <p className="text-center mt-5">
+            There was a problem fetching exchange rate date
+          </p>
+        );
+      } else {
+        return (
+          <div className={styles.Chart} id="chart">
+            <Chart
+              options={state.options}
+              series={state.series}
+              type="line"
+              height={550}
+            />
+          </div>
+        );
+      }
+    }
+  };
 
   const renderExchangeRates = () => {
     if (isLoading) {
@@ -231,17 +280,41 @@ const Rates = () => {
         {renderExchangeRates()}
       </div>
 
-      {/* <div className={styles.ChartContainer}>
+      <div className={styles.ChartContainer}>
         <h3>Fiat Exchange Rate</h3>
-        <div className={styles.Chart} id="chart">
-          <Chart
-            options={state.options}
-            series={state.series}
-            type="line"
-            height={550}
-          />
+        <div className="row">
+          <div className="col-xs-12 col-sm-12 col-md-6"></div>
+          <div className="col-xs-12 col-sm-12 col-md-6">
+            <div className="d-flex justify-content-end">
+              <RangePicker onChange={handleChangeDate} format={"YYYY-MM-DD"} />
+              <Select
+                showSearch={false}
+                style={{ marginLeft: "2rem" }}
+                placeholder="Select time period"
+                optionFilterProp="children"
+                defaultValue={"morning"}
+                onChange={handleChangeTimePeriod}
+                options={[
+                  {
+                    value: "morning",
+                    label: "Morning",
+                  },
+                  {
+                    value: "afternoon",
+                    label: "Afternoon",
+                  },
+                  {
+                    value: "evening",
+                    label: "Evening",
+                  },
+                ]}
+              />
+            </div>
+          </div>
         </div>
-      </div> */}
+
+        {renderChart()}
+      </div>
     </div>
   );
 };

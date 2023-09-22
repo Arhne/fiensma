@@ -1,0 +1,163 @@
+.Features {
+  padding: 2rem 6.25rem;
+  background-color: #ffffff;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  .LeftText {
+    color: rgba(0, 0, 0, 0.6);
+    font-feature-settings: "clig" off, "liga" off;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    text-transform: capitalize;
+  }
+
+  .IconContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .Heading {
+    color: #000;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+  .Content {
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+    text-transform: capitalize;
+  }
+
+  .RightColumn {
+    .HeaderText {
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 200;
+      line-height: 36px;
+    }
+
+    .FlowContainer {
+      .Flow {
+        padding-left: 15px;
+        margin-top: 2rem;
+
+        .FlowItem {
+          padding-left: 33px;
+          margin-bottom: 2.5em;
+          list-style: none;
+          position: relative; /* so that pseudoelements are positioned relatively to their "li"s*/
+          /* use padding-bottom instead of margin-bottom.*/
+          margin-bottom: 0; /* This overrides previously specified margin-bottom */
+          margin-left: 1rem;
+          padding-bottom: 2.5em;
+
+          &::after {
+            /* bullets */
+            content: url("../../../../../public/bullet.svg");
+            position: absolute;
+            left: -30px; /*adjust manually*/
+            top: 0px;
+          }
+
+          &::before {
+            /* lines */
+            content: url("../../../../../public/connector.svg");
+            position: absolute;
+            left: -1rem; /* adjust manually */
+            width: 1px;
+          }
+
+          &:first-child::before {
+            /* first li's line */
+            top: 25px; /* moves the line down so that it disappears under the bullet. Adjust manually */
+          }
+
+          &:last-child::before {
+            content: "";
+          }
+
+          .Title {
+            color: #000;
+            font-size: 1.75rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 36px;
+            margin-bottom: 1.25rem;
+          }
+
+          .FlowContent {
+            color: #5e5e60;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 36px;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 480px) {
+  .Features {
+    padding: 2rem 1.5rem;
+    background-color: #ffffff;
+
+    .RightColumn {
+      margin-top: 1.5rem;
+    }
+
+    .LeftImage {
+      width: 100%;
+    }
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .Features {
+    padding: 2rem 1.5rem;
+    background-color: #ffffff;
+
+    .RightColumn {
+      margin-top: 1.5rem;
+    }
+
+    .LeftImage {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .Features {
+    padding: 2rem 1.5rem;
+    background-color: #ffffff;
+
+    .RightColumn {
+      margin-top: 1.5rem;
+    }
+
+    .LeftImage {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}

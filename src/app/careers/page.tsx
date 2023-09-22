@@ -3,9 +3,16 @@
 import { useState } from "react";
 import styles from "./Careers.module.scss";
 import JobCard from "./Components/JobCard";
+import { useGetAllJobsQuery } from "@/redux/services/jobApi";
+import { ExchangeRateLoader } from "../rates/components/loader";
 
 const Careers = () => {
   const [activeCategory, setActiveCategory] = useState("all");
+  const paginate = {
+    perPage: 10,
+    currentPage: 1,
+  };
+
   const jobCategories = [
     {
       id: 99,
@@ -49,8 +56,34 @@ const Careers = () => {
     },
   ];
 
+  const { data: allJobs, isLoading, isError } = useGetAllJobsQuery(paginate);
+
+  const renderJobs = () => {
+    if (isLoading) {
+      return <ExchangeRateLoader />;
+    } else if (!isLoading) {
+      if (isError) {
+        return (
+          <p className="text-center mt-5">There was a problem fetching jobs</p>
+        );
+      } else {
+        if (allJobs && allJobs.data.length > 0) {
+          return (
+            <>
+              {allJobs?.data.map((_job, index) => (
+                <JobCard data={_job} key={index} />
+              ))}
+            </>
+          );
+        } else {
+          return <p className="text-center mt-5">No data available</p>;
+        }
+      }
+    }
+  };
+
   return (
-    <main>
+    <main className={styles.CareersContainer}>
       <div className={styles.Landing}>
         <h1 className={styles.HeaderText}>Be part of our Mission</h1>
         <button className={styles.ActionButton}>Join Our Team</button>
@@ -73,11 +106,7 @@ const Careers = () => {
           </button>
         ))}
       </div>
-      <div className={styles.JobContainer}>
-        {[1, 2, 3, 4, 5, 6, 7, 8].map((_item, indx) => (
-          <JobCard key={indx} />
-        ))}
-      </div>
+      <div className={styles.JobContainer}>{renderJobs()}</div>
     </main>
   );
 };

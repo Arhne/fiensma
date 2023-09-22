@@ -146,7 +146,8 @@
   height: 40rem;
   background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1693426557/ibx-website-v2/fiat_z6fpcq.webp");
   background-repeat: no-repeat;
-  max-width: 1440px;
+  background-size: cover;
+  // max-width: 1440px;
   margin: 0 auto;
 
   .HeaderText {

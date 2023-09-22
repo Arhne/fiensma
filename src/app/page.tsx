@@ -7,6 +7,7 @@ import ClientTestimonial from "@/common/components/Landing/ClientTestimonial";
 import Faq from "@/common/components/Landing/Faq";
 import AdvertSectionTwo from "@/common/components/Landing/AdvertSectionTwo";
 import Ticker from "@/common/components/Landing/Ticker";
+import GettingStarted from "@/common/components/Landing/GettingStarted/page";
 
 import styles from "./page.module.scss";
 
@@ -253,9 +254,9 @@ export default function Home() {
         <h1 className={styles.HeaderText}>
           Join our 235,000+ <br /> mobile app users
         </h1>
-        <p className={styles.AdvertText}>
+        {/* <p className={styles.AdvertText}>
           Scan QR code to download mobile app{" "}
-        </p>
+        </p> */}
         <div className={styles.MobileStore}>
           <Image
             src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691583936/ibx-website-v2/google_play_white_mzoobw.svg"
@@ -276,7 +277,7 @@ export default function Home() {
       </div>
       <ClientTestimonial />
       <AdvertSectionTwo />
-      {/* <OurTeam /> */}
+      <GettingStarted />
       <Faq />
     </main>
   );
