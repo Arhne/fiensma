@@ -1,11 +1,12 @@
 .CareersContainer {
-  max-width: 1440px;
   margin: 0 auto;
+
   .Landing {
     padding: 6rem 6.25rem;
     // height: 40rem;
     background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1695112137/ibx-website-v2/career_landing_coyxee_i9cvvz.webp");
     background-repeat: no-repeat;
+    background-size: cover;
 
     p {
       color: #ffffff;
@@ -41,7 +42,8 @@
 
   .Categories {
     display: flex;
-    margin-top: 4.3rem;
+    margin: 4.3rem auto;
+    max-width: 1440px;
     padding: 0 6.25rem;
 
     .CategoryButton {
@@ -68,5 +70,79 @@
 
   .JobContainer {
     padding: 6rem 6.25rem;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 480px) {
+  .CareersContainer {
+    .Landing {
+      padding: 1.5rem;
+    }
+
+    .Categories {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 1rem;
+      margin-bottom: 1rem;
+
+      .CategoryButton {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .JobContainer {
+      padding: 1.5rem;
+    }
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .CareersContainer {
+    .Landing {
+      padding: 1.5rem;
+    }
+
+    .Categories {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 1rem;
+      margin-bottom: 1rem;
+
+      .CategoryButton {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .JobContainer {
+      padding: 1.5rem;
+    }
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .CareersContainer {
+    .Landing {
+      padding: 1.5rem;
+    }
+
+    .Categories {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 1rem;
+      margin-bottom: 1rem;
+
+      .CategoryButton {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .JobContainer {
+      padding: 1.5rem;
+    }
   }
 }
