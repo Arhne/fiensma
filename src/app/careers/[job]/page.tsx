@@ -6,13 +6,11 @@ import { useGetSingleJobsQuery } from "@/redux/services/jobApi";
 
 import styles from "./Job.module.scss";
 
-const Jobs = () => {
+const Page = () => {
   const params = useParams();
   const jobId = params?.job as string;
 
   const { data: job } = useGetSingleJobsQuery(jobId);
-
-  console.log("job: ", job);
 
   useEffect(() => {
     if (job) {
@@ -45,4 +43,4 @@ const Jobs = () => {
   );
 };
 
-export default Jobs;
+export default Page;
