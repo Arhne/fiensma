@@ -21,8 +21,9 @@
     display: flex;
     justify-content: space-between;
     margin-top: 1.125rem;
+    cursor: pointer;
 
-    span {
+    .Apply {
       display: inline-block;
       color: #000;
       font-size: 1.5rem;
