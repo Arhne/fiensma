@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
-
+import GoogleAnalytics from "./googleAnalytics";
 import App from "@/common/components/App";
 import { Providers } from "@/redux/provider";
 import ToastProvider from "@/common/Utils/toast";
@@ -31,6 +31,7 @@ export default function RootLayout({
         <Providers>
           <App>{children}</App>
           <ToastProvider />
+          <GoogleAnalytics />
         </Providers>
       </body>
     </html>
