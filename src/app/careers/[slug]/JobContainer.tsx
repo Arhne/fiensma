@@ -13,7 +13,7 @@ const JobContainer = ({ job }: any) => {
 
       element?.insertAdjacentHTML("afterbegin", job?.data?.description);
     }
-  }, []);
+  }, [job]);
   return <div className={styles.JobContainer} id="job-container"></div>;
 };
 

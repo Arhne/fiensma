@@ -1,11 +1,52 @@
 import Link from "next/link";
+
+import parse from "html-react-parser";
 import CustomAccordion from "../../CustomAccordion";
 import { useGetAllFaqQuery } from "@/redux/services/faqApi";
+import { ExchangeRateLoader } from "@/app/rates/components/loader";
 
 import styles from "./Faq.module.scss";
 
 const Faq = () => {
-  const { data: faq } = useGetAllFaqQuery({ perPage: 1000, currentPage: 1 });
+  const {
+    data: faq,
+    isLoading,
+    isError,
+  } = useGetAllFaqQuery({ perPage: 15, currentPage: 1 });
+
+  const renderFaq = () => {
+    if (isLoading) {
+      return <ExchangeRateLoader />;
+    } else if (!isLoading) {
+      if (isError) {
+        return (
+          <p className="text-center mt-5">There was a problem fetching faqs</p>
+        );
+      } else {
+        if (faq && faq.data.length > 0) {
+          return (
+            <>
+              {faq?.data.map((item, index) => (
+                <CustomAccordion
+                  key={index}
+                  title={item?.question}
+                  isDefaultOpen={false}
+                  customHeaderStyle={{
+                    padding: "2rem 0",
+                    height: "5rem",
+                  }}
+                >
+                  {parse(item?.answer)}
+                </CustomAccordion>
+              ))}
+            </>
+          );
+        } else {
+          return <p className="text-center mt-5">No data available</p>;
+        }
+      }
+    }
+  };
 
   return (
     <div
@@ -26,20 +67,7 @@ const Faq = () => {
         </div>
       </div>
       <div className={`col-xs-12 col-sm-6  ${styles.RightColumn}`}>
-        {faq &&
-          faq?.data.map((item, index) => (
-            <CustomAccordion
-              key={index}
-              title={item?.question}
-              isDefaultOpen={false}
-              customHeaderStyle={{
-                padding: "2rem 0",
-                height: "5rem",
-              }}
-            >
-              {item?.answer}
-            </CustomAccordion>
-          ))}
+        {renderFaq()}
       </div>
     </div>
   );
