@@ -1,16 +1,12 @@
 import Link from "next/link";
 import CustomAccordion from "../../CustomAccordion";
-
-import styles from "./Faq.module.scss";
 import { useGetAllFaqQuery } from "@/redux/services/faqApi";
 
+import styles from "./Faq.module.scss";
+
 const Faq = () => {
-  const { data: faq } = useGetAllFaqQuery(
-    
-    { perPage: 1000, currentPage: 1 },
-    
-  );
-  console.log(faq)
+  const { data: faq } = useGetAllFaqQuery({ perPage: 1000, currentPage: 1 });
+
   return (
     <div
       className={`row d-flex justify-content-between ${styles.FaqContainer}`}
@@ -29,24 +25,21 @@ const Faq = () => {
           </Link>
         </div>
       </div>
-      <div
-      className={`col-xs-12 col-sm-6  ${styles.RightColumn}`}
-    >
-      {
-        faq?.data.map(item =>(
-          <CustomAccordion
-          title={item.question}
-          isDefaultOpen={false}
-          customHeaderStyle={{
-            padding: "2rem 0",
-            height: "5rem",
-          }}
-        >
-           {item.answer}
-
-        </CustomAccordion>
-        ))
-      }
+      <div className={`col-xs-12 col-sm-6  ${styles.RightColumn}`}>
+        {faq &&
+          faq?.data.map((item, index) => (
+            <CustomAccordion
+              key={index}
+              title={item?.question}
+              isDefaultOpen={false}
+              customHeaderStyle={{
+                padding: "2rem 0",
+                height: "5rem",
+              }}
+            >
+              {item?.answer}
+            </CustomAccordion>
+          ))}
       </div>
     </div>
   );
