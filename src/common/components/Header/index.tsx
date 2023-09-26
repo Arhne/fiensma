@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 
 import styles from "./Header.module.scss";
@@ -10,6 +10,7 @@ const Header = () => {
   const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
 
   const pathname = usePathname();
+  const router = useRouter();
 
   return (
     <div className={styles.HeaderContainer}>
@@ -20,6 +21,7 @@ const Header = () => {
           height={38}
           alt=""
           className={styles.Logo}
+          onClick={() => router.push("/")}
         />
 
         <Image
