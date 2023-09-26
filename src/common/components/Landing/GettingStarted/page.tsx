@@ -44,30 +44,8 @@ const GettingStarted = () => {
               </p>
             </li>
           </ul>
-          {/* <div className={styles.Flow}>
-            <div className={styles.FlowItem}>
-              <p className={styles.Title}>Create an Account</p>
-              <p className={styles.FlowContent}>
-                Register an account with your name, email and phone number.
-              </p>
-            </div>
 
-            <div className={styles.FlowItem}>
-              <p className={styles.Title}>Perform your KYC</p>
-              <p className={styles.FlowContent}>
-                With your identification details and personal information apply
-                for a kyc and get verified.
-              </p>
-            </div>
-
-            <div className={styles.FlowItem}>
-              <p className={styles.Title}>Start Trading</p>
-              <p className={styles.FlowContent}>
-                Once verified, start your easy trading experience and earn in
-                style.
-              </p>
-            </div>
-          </div> */}
+          <button className={styles.ActionButton}>Get Started</button>
         </div>
       </div>
     </div>
