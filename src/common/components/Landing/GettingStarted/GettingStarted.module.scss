@@ -108,6 +108,20 @@
           }
         }
       }
+
+      .ActionButton {
+        cursor: pointer;
+        border: none;
+        margin-left: 1rem;
+        width: 14rem;
+        height: 4rem;
+        border-radius: 4.3rem;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-left: -0.5rem;
+        background-color: var(--primary-color);
+      }
     }
   }
 }
