@@ -49,9 +49,13 @@
 /* Media Query for Mobile Devices */
 @media screen and (max-width: 480px) {
   .FaqContainer {
-    padding: 1.5rem;
+    padding: 1rem;
 
     .LeftColumn {
+      h3 {
+        font-size: 2rem;
+        text-align: center;
+      }
       .ActionContainer {
         padding-top: 0;
         margin-top: 0;

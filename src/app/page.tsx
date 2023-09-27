@@ -205,9 +205,7 @@ export default function Home() {
       </div>
       <div className={`row gx-5 ${styles.Statistics}`}>
         <div className={`col-xs-12 col-sm-7 ${styles.LeftColumn}`}>
-          <h3>
-            We believe in the <br /> power of numbers
-          </h3>
+          <h3>We believe in the power of numbers</h3>
           <p className={styles.LeftText}>
             Every trade, every transaction, and every connection made on Ibx
             Exchange contributes to a growing ecosystem of empowered
