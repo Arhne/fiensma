@@ -17,11 +17,6 @@ import { _slides } from "./util";
 import { pageview } from "../../../gtag";
 
 const About = () => {
-  const pathname = usePathname();
-
-  useEffect(() => {
-    pageview(pathname);
-  }, []);
   return (
     <main>
       <div className={`row ${styles.AboutUs}`}>
@@ -30,7 +25,7 @@ const About = () => {
         >
           <small className={styles.AboutUsTag}>About Us</small>
           <h2 className={styles.HeaderText}>
-            We are a team of <br /> creators and <br />{" "}
+            We are a team of creators and{" "}
             <span className={styles.HighlightedInnovators}>innovators</span>
           </h2>
           <p className={styles.TagLine}>
@@ -102,7 +97,7 @@ const About = () => {
       </div>
       <div className={styles.Values}>
         <h3>The 4 Values we live by</h3>
-        <p>
+        <p className={styles.Text}>
           We hold our customers so dearly and always focus on bring a seamless
           solution to them.
         </p>
