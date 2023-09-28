@@ -26,7 +26,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="https://instagram.com/ibx__marketplace?igshid=MzRlODBiNWFlZA==">
+            <a href={activeQuery && activeQuery?.data?.socialLinks?.instagram}>
               <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/instagram_lwt3ga.svg" />
             </a>
           </li>
@@ -41,7 +41,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="">
+            <a href={activeQuery && activeQuery?.data?.socialLinks?.linkedin}>
               <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1695043080/ibx-website-v2/linkedin_ac5uvc.svg" />
             </a>
           </li>

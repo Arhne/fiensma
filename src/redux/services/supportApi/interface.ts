@@ -16,6 +16,8 @@ export interface ISocialLinks {
   tiktok: string;
   twitter: string;
   youtube: string;
+  linkedin: string;
+  instagram: string;
 }
 
 export interface ISetup {
