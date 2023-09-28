@@ -1,12 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 import JobCard from "./Components/JobCard";
 import { useGetAllJobsQuery } from "@/redux/services/jobApi";
 import { ExchangeRateLoader } from "../rates/components/loader";
-import { pageview } from "../../../gtag";
 
 import styles from "./Careers.module.scss";
 
@@ -16,12 +14,6 @@ const Careers = () => {
     perPage: 10,
     currentPage: 1,
   };
-
-  const pathname = usePathname();
-
-  useEffect(() => {
-    pageview(pathname);
-  }, []);
 
   const jobCategories = [
     {
