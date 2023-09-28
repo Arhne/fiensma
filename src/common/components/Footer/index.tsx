@@ -7,8 +7,6 @@ import styles from "./Footer.module.scss";
 const Footer = () => {
   const { data: activeQuery } = useFindActiveSetupQuery();
 
-  console.log("activeQuery: ", activeQuery);
-
   const router = useRouter();
 
   return (
