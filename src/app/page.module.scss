@@ -2,7 +2,7 @@
   padding: 0 6.25rem;
   height: 56rem;
   background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg"),
-    url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418243/ibx-website-v2/landing_image_l8ju3e.svg");
+    url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1695883945/ibx-website-v2/landing_image_l8ju3e_1_zqzdgg.png");
   background-repeat: no-repeat, no-repeat;
   background-position: left top, 0;
   background-position-x: 0, 93%;
@@ -186,7 +186,7 @@
 /* Media Query for Mobile Devices */
 @media screen and (max-width: 480px) {
   .Landing {
-    padding: 0 2rem;
+    padding: 0 1.5rem;
     background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg");
     background-repeat: no-repeat;
     background-position: left top;
