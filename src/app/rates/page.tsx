@@ -259,15 +259,17 @@ const Rates = () => {
   return (
     <div className={styles.RatesContainer}>
       <div className={styles.Header}>
-        <h2>
-          Track Multiple Currencies <br /> and{" "}
+        <h3>
+          Track Multiple Currencies and{" "}
           <span className={styles.Exchange}>exchange</span> in Style
-        </h2>
+        </h3>
         <p className={styles.HeaderText}>
-          Ibxp2p exchange gives you the opportunity to transact quickly <br />{" "}
-          and easily with any currencies i the world.
+          Ibx p2p exchange gives you the opportunity to transact quickly <br />{" "}
+          and easily with any currencies in the world.
         </p>
-        <button className={styles.ActionButton}>Get the App</button>
+        <div className={styles.ButtonContainer}>
+          <button className={styles.ActionButton}>Get the App</button>
+        </div>
       </div>
 
       <div className={styles.ExchangeRates}>
