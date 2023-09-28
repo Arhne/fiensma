@@ -1,5 +1,5 @@
 .RatesContainer {
-  padding: 7.5rem 6.25rem 0;
+  padding: 2rem 6.25rem 0;
   max-width: 1440px;
   margin: 0 auto;
 
@@ -77,10 +77,11 @@
     .Header {
       h3 {
         color: var(--black, #161616);
-        font-size: 4.375rem;
+        font-size: 3rem;
         font-style: normal;
         font-weight: 800;
         line-height: normal;
+        text-align: center;
       }
       .Exchange {
         color: var(--primary-color);
@@ -93,19 +94,25 @@
         line-height: normal;
         letter-spacing: 0.48px;
         margin-top: 2.25rem;
+        text-align: center;
       }
 
-      .ActionButton {
-        cursor: pointer;
-        border: none;
-        width: 10.4rem;
-        height: 3.25rem;
-        border-radius: 4.4rem;
-        color: #ffffff;
-        font-weight: 600;
-        background-color: var(--primary-color);
-        margin-top: 2.25rem;
-        text-transform: capitalize;
+      .ButtonContainer {
+        display: flex;
+        justify-content: center;
+
+        .ActionButton {
+          cursor: pointer;
+          border: none;
+          width: 10.4rem;
+          height: 3.25rem;
+          border-radius: 4.4rem;
+          color: #ffffff;
+          font-weight: 600;
+          background-color: var(--primary-color);
+          margin-top: 2.25rem;
+          text-transform: capitalize;
+        }
       }
     }
 
@@ -123,6 +130,7 @@
         font-style: normal;
         font-weight: 400;
         line-height: 160%; /* 32px */
+        text-align: center;
       }
     }
   }
