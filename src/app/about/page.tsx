@@ -14,8 +14,14 @@ import { Pagination, Navigation, Scrollbar, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { _slides } from "./util";
+import { pageview } from "../../../gtag";
 
 const About = () => {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    pageview(pathname);
+  }, []);
   return (
     <main>
       <div className={`row ${styles.AboutUs}`}>

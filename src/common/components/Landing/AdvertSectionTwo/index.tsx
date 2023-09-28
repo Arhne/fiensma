@@ -4,9 +4,7 @@ import styles from "./AdvertSectionTwo.module.scss";
 const AdvertSectionTwo = () => {
   return (
     <div className={styles.AdvertContainer}>
-      <h3>
-        Fastest means of <br /> exchange
-      </h3>
+      <h3>Fastest means of exchange</h3>
       <p className={styles.Text}>
         Experience lightning-fast transactions with <br />
         Ibx Exchange, where speed meets security <br /> for seamless trading.
