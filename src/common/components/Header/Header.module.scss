@@ -5,6 +5,10 @@
   padding: 2rem 6.25rem;
   max-width: 1440px;
   margin: 0 auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 
   .LogoHamburger {
     .Logo {
