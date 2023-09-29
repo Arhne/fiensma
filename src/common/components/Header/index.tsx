@@ -44,6 +44,7 @@ const Header = () => {
                 pathname === "/" && styles.Active
               }`}
               href={"/"}
+              onClick={() => setIsOpenMobileMenu(false)}
             >
               Home
             </Link>
@@ -54,6 +55,7 @@ const Header = () => {
                 pathname === "/about" && styles.Active
               }`}
               href={"/about"}
+              onClick={() => setIsOpenMobileMenu(false)}
             >
               About Us
             </Link>
@@ -64,6 +66,7 @@ const Header = () => {
                 pathname === "/rates" && styles.Active
               }`}
               href={"/rates"}
+              onClick={() => setIsOpenMobileMenu(false)}
             >
               Rates
             </Link>
@@ -74,6 +77,7 @@ const Header = () => {
                 pathname === "/careers" && styles.Active
               }`}
               href={"/careers"}
+              onClick={() => setIsOpenMobileMenu(false)}
             >
               Careers
             </Link>
@@ -84,6 +88,7 @@ const Header = () => {
                 pathname === "/contactus" && styles.Active
               }`}
               href={"/contactus"}
+              onClick={() => setIsOpenMobileMenu(false)}
             >
               Contact Us
             </Link>
