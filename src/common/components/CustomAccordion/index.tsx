@@ -21,7 +21,7 @@ const CustomAccordion = ({
   return (
     <div className={styles.CustomAccordionContainer}>
       <div className={styles.Header} style={{ ...customHeaderStyle }}>
-        <p>{title}</p>
+        <p className="font-weight-bold">{title}</p>
         <img
           src={
             isOpen
