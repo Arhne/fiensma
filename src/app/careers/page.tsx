@@ -3,62 +3,36 @@
 import { useState } from "react";
 
 import JobCard from "./Components/JobCard";
-import { useGetAllJobsQuery } from "@/redux/services/jobApi";
+import {
+  useGetAllJobCategoriesQuery,
+  useGetAllJobsQuery,
+} from "@/redux/services/jobApi";
 import { ExchangeRateLoader } from "../rates/components/loader";
+import { TickerLoader } from "@/common/components/Landing/Ticker/components/loader";
 
 import styles from "./Careers.module.scss";
 
 const Careers = () => {
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCategory, setActiveCategory] = useState("");
   const paginate = {
     perPage: 10,
     currentPage: 1,
   };
 
-  const jobCategories = [
-    {
-      id: 99,
-      name: "View all",
-      identifier: "all",
-    },
-    {
-      id: 1,
-      name: "Development",
-      identifier: "development",
-    },
-    {
-      id: 2,
-      name: "Marketing",
-      identifier: "marketing",
-    },
-    {
-      id: 3,
-      name: "Design",
-      identifier: "design",
-    },
-    {
-      id: 4,
-      name: "Management",
-      identifier: "management",
-    },
-    {
-      id: 5,
-      name: "Operations",
-      identifier: "operations",
-    },
-    {
-      id: 6,
-      name: "Finance",
-      identifier: "finance",
-    },
-    {
-      id: 7,
-      name: "Customer Service",
-      identifier: "customer-service",
-    },
-  ];
+  const {
+    data: allJobs,
+    isLoading,
+    isError,
+  } = useGetAllJobsQuery({
+    ...paginate,
+    category: activeCategory,
+  });
 
-  const { data: allJobs, isLoading, isError } = useGetAllJobsQuery(paginate);
+  const {
+    data: allJobCategories,
+    isLoading: isLoadingCategories,
+    isError: isCategoryError,
+  } = useGetAllJobCategoriesQuery();
 
   const renderJobs = () => {
     if (isLoading) {
@@ -84,6 +58,44 @@ const Careers = () => {
     }
   };
 
+  const renderCategories = () => {
+    if (isLoadingCategories) {
+      return <TickerLoader />;
+    } else if (!isLoadingCategories) {
+      if (isCategoryError) {
+        return (
+          <p className="text-center mt-5">
+            There was a problem fetching job categories
+          </p>
+        );
+      } else {
+        if (allJobCategories && allJobCategories.data.length > 0) {
+          return (
+            <>
+              {allJobCategories?.data.map((_category, index) => (
+                <button
+                  key={index}
+                  className={`${styles.CategoryButton} ${
+                    activeCategory === _category.toLowerCase() && styles.Active
+                  }`}
+                  onClick={() => setActiveCategory(_category)}
+                >
+                  {_category}
+                </button>
+              ))}
+            </>
+          );
+        } else {
+          return (
+            <p className="text-center mt-5">
+              No jobs available for this category
+            </p>
+          );
+        }
+      }
+    }
+  };
+
   return (
     <main className={styles.CareersContainer}>
       <div className={styles.Landing}>
@@ -95,19 +107,7 @@ const Careers = () => {
           and foster a culture that empowers you to do you best work.
         </p>
       </div>
-      <div className={styles.Categories}>
-        {jobCategories.map((_category) => (
-          <button
-            key={_category?.id}
-            className={`${styles.CategoryButton} ${
-              activeCategory === _category?.identifier && styles.Active
-            }`}
-            onClick={() => setActiveCategory(_category?.identifier)}
-          >
-            {_category?.name}
-          </button>
-        ))}
-      </div>
+      <div className={styles.Categories}>{renderCategories()}</div>
       <div className={styles.JobContainer}>{renderJobs()}</div>
     </main>
   );
