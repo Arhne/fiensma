@@ -22,7 +22,7 @@ export const faqApi = createApi({
       }
     >({
       query: ({ perPage, currentPage, question, active, answer, date }) => {
-        let query = `/user/api/v1/faq?perPage=${perPage}&currentPage=${currentPage}`;
+        let query = `/user/api/v1/faq/findActiveFaq?perPage=${perPage}&currentPage=${currentPage}`;
         if (question) {
           query = `${query}&category=${question}`;
         }
