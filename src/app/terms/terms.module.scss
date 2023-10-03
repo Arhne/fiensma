@@ -1,0 +1,168 @@
+.TermsContainer {
+  margin: 0 auto;
+  margin-bottom: 10rem;
+
+  .Landing {
+    padding: 6rem 6.25rem;
+    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1696354092/ibx-website-v2/terms/morgan-housel-X_fbh4Utwk4-unsplash_1_j9dwg0.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 48%;
+    height: 25rem;
+
+    p {
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.48px;
+    }
+
+    .HeaderText {
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 3rem;
+      font-style: normal;
+      line-height: normal;
+      margin-bottom: 2.6rem;
+      text-align: center;
+    }
+
+    .ActionButton {
+      cursor: pointer;
+      border: none;
+      width: 13rem;
+      height: 4rem;
+      border-radius: 4.3rem;
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 1.5rem;
+      background-color: var(--primary-color);
+      margin-bottom: 3.5rem;
+    }
+  }
+
+  .Content {
+    height: auto;
+    padding: 0 6.25rem;
+    padding-top: 3.125rem;
+
+    h6 {
+      margin-bottom: 3.125rem;
+      font-weight: 600;
+    }
+
+    .Time {
+      display: block;
+      margin-bottom: 3.125rem;
+    }
+
+    .TermsItem {
+      color: #232323;
+
+      .Title {
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .TypeContainer {
+    display: flex;
+    margin-top: 1.6rem;
+    padding: 1rem 6rem;
+
+    .CategoryTag {
+      display: inline-block;
+      margin-right: 2rem;
+      margin-top: -0.2rem;
+      min-width: 5rem;
+      height: 2rem;
+      border-radius: 51.517px;
+      padding: 0.179rem 1rem;
+      background-color: #d8caf5;
+      color: #253280;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+
+    .JobType {
+      display: inline-block;
+      color: #333f51;
+      font-style: normal;
+      font-weight: 500;
+      position: relative;
+      margin-left: 2rem;
+      margin-right: 2rem;
+
+      &::before {
+        content: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1692868299/ibx-website-v2/icons/Outline_jufjea.svg");
+        position: absolute;
+        margin-right: 1rem;
+        left: -2.2rem;
+      }
+    }
+
+    .ContractType {
+      display: inline-block;
+      color: #333f51;
+      font-style: normal;
+      font-weight: 500;
+      position: relative;
+      margin-left: 2rem;
+
+      &::before {
+        content: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1692870495/ibx-website-v2/icons/Clock_tusczk.svg");
+        position: absolute;
+        margin-right: 1rem;
+        left: -2.2rem;
+      }
+    }
+  }
+
+  .JobContainer {
+    padding: 0rem 6.25rem;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 480px) {
+  .TermsContainer {
+    .Landing {
+      padding: 1.5rem;
+    }
+
+    .JobContainer {
+      padding: 1.5rem;
+    }
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .TermsContainer {
+    .Landing {
+      padding: 1.5rem;
+    }
+
+    .JobContainer {
+      padding: 1.5rem;
+    }
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .TermsContainer {
+    .Landing {
+      padding: 1.5rem;
+    }
+
+    .JobContainer {
+      padding: 1.5rem;
+    }
+  }
+}

@@ -82,13 +82,13 @@ const Footer = () => {
           <ul className={styles.FooterMenus}>
             <li>
               {" "}
-              <Link className={styles.MenuItem} href={""}>
+              <Link className={styles.MenuItem} href={"/terms"}>
                 Terms
               </Link>
             </li>
             <li>
               {" "}
-              <Link className={styles.MenuItem} href={"/contactus"}>
+              <Link className={styles.MenuItem} href={"/#getting-started"}>
                 How it works
               </Link>
             </li>
@@ -114,7 +114,7 @@ const Footer = () => {
             </li>
             <li>
               {" "}
-              <Link className={styles.MenuItem} href="">
+              <Link className={styles.MenuItem} href="/contactus">
                 Report a Bug
               </Link>
             </li>
