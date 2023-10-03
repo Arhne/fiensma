@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import parse from "html-react-parser";
 import CustomAccordion from "../../CustomAccordion";
-import { faqApi, useGetAllFaqQuery } from "@/redux/services/faqApi";
+import { useGetAllFaqQuery } from "@/redux/services/faqApi";
 import { ExchangeRateLoader } from "@/app/rates/components/loader";
 
 import styles from "./Faq.module.scss";
@@ -13,7 +13,7 @@ const Faq = () => {
     isLoading,
     isError,
   } = useGetAllFaqQuery({ perPage: 15, currentPage: 1 });
-console.log('faq', faq)
+
   const renderFaq = () => {
     if (isLoading) {
       return <ExchangeRateLoader />;
