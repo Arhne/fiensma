@@ -136,7 +136,7 @@ export default function Home() {
         </div>
         <div className={`col-xs-12 col-sm-12 col-md-6 ${styles.RightColumn}`}>
           <div className="row mb-4">
-            <div className="col-6">
+            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <div className={styles.IconContainer}>
                 <Image
                   src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/feature_reliable_icon_jmu1il.svg"
@@ -151,7 +151,7 @@ export default function Home() {
                 currencies, we also provide accurate and current data.
               </p>
             </div>
-            <div className="col-6">
+            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <div className={styles.IconContainer}>
                 <Image
                   src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/feature_dollar_icon_alxtvq.svg"
@@ -168,7 +168,7 @@ export default function Home() {
             </div>
           </div>
           <div className="row">
-            <div className="col-6">
+            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <div className={styles.IconContainer}>
                 <Image
                   src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/feature_shield_icon_lczop6.svg"
@@ -184,7 +184,7 @@ export default function Home() {
                 international currency markets every step of the way.
               </p>
             </div>
-            <div className="col-6">
+            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <div className={styles.IconContainer}>
                 <Image
                   src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/feature_hour_icon_edqbct.svg"

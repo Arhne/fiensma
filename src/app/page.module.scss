@@ -260,6 +260,10 @@
       text-align: center;
     }
 
+    .LeftText {
+      text-align: center;
+    }
+
     .RightColumn {
       margin-top: 1.5rem;
       padding: 1rem;
@@ -294,6 +298,7 @@
         font-weight: 400;
         line-height: 32px;
         text-transform: capitalize;
+        text-align: center;
       }
 
       h2 {
