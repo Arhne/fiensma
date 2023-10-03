@@ -52,7 +52,12 @@ const Careers = () => {
             </>
           );
         } else {
-          return <p className="text-center mt-5">No data available</p>;
+          return (
+            <p className="text-center mt-5">
+              {" "}
+              No jobs available for this category
+            </p>
+          );
         }
       }
     }
@@ -86,11 +91,7 @@ const Careers = () => {
             </>
           );
         } else {
-          return (
-            <p className="text-center mt-5">
-              No jobs available for this category
-            </p>
-          );
+          return <p className="text-center mt-5">No data available</p>;
         }
       }
     }
