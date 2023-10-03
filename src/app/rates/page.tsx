@@ -264,8 +264,8 @@ const Rates = () => {
           <span className={styles.Exchange}>exchange</span> in Style
         </h3>
         <p className={styles.HeaderText}>
-          Ibx p2p exchange gives you the opportunity to transact quickly <br />{" "}
-          and easily with any currencies in the world.
+          Ibx p2p exchange gives you the opportunity to transact quickly and
+          easily with any currencies in the world.
         </p>
         <div className={styles.ButtonContainer}>
           <button className={styles.ActionButton}>Get the App</button>
