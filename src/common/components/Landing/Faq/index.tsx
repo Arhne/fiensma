@@ -50,6 +50,7 @@ const Faq = () => {
 
   return (
     <div
+      id="frequencly-asked-questions"
       className={`row d-flex justify-content-between ${styles.FaqContainer}`}
     >
       <div className={`col-xs-12 col-sm-5 ${styles.LeftColumn}`}>

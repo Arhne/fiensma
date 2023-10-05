@@ -98,17 +98,20 @@ const Footer = () => {
                 Rates
               </Link>
             </li>
-            <li>
+            {/* <li>
               {" "}
               <Link className={styles.MenuItem} href="">
                 Our Team
               </Link>
-            </li>
+            </li> */}
           </ul>
           <ul className={styles.FooterMenus}>
             <li>
               {" "}
-              <Link className={styles.MenuItem} href="">
+              <Link
+                className={styles.MenuItem}
+                href="/#frequencly-asked-questions"
+              >
                 FAQs
               </Link>
             </li>
