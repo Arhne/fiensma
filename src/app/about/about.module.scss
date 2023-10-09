@@ -201,6 +201,39 @@
   overflow-x: hidden;
   margin-bottom: 7rem;
 
+  .ActionBar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    .LeftText {
+      .FirstSentence::after {
+        content: "\a";
+        white-space: pre;
+      }
+    }
+
+    .ActionContainer {
+      position: relative;
+
+      .WantToJoin {
+        position: absolute;
+        top: -2rem;
+        right: 8rem;
+      }
+      .ActionButton {
+        cursor: pointer;
+        border: none;
+        width: 9rem;
+        height: 3rem;
+        border-radius: 4.3rem;
+        color: #ffffff;
+        font-weight: 600;
+        background-color: var(--primary-color);
+      }
+    }
+  }
+
   .CarouselContainer {
     margin-right: -5rem;
 
@@ -355,6 +388,7 @@
     padding: 1.5rem;
     width: 100%;
     text-align: center;
+    margin-bottom: 1rem;
 
     .Text {
       // line-height: 2.7rem;
@@ -461,8 +495,38 @@
       font-size: 2rem;
     }
 
-    .LeftText {
-      text-align: center;
+    .ActionBar {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+
+      .LeftText {
+        text-align: center;
+
+        .FirstSentence::after {
+          content: " ";
+        }
+      }
+
+      .ActionContainer {
+        display: flex;
+        justify-content: center;
+        .WantToJoin {
+          display: none;
+        }
+        .ActionButton {
+          cursor: pointer;
+          border: none;
+          width: 12rem;
+          height: 3.6rem;
+          border-radius: 4.3rem;
+          color: #ffffff;
+          font-weight: 600;
+          background-color: var(--primary-color);
+          font-size: 1rem;
+        }
+      }
     }
 
     .CarouselContainer {
