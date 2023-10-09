@@ -20,4 +20,11 @@ export const teamData = [
     image_url:
       "https://res.cloudinary.com/dbg2z1svm/image/upload/v1696807201/ibx-website-v2/team/Urenna-Ochulo_u7x164.webp",
   },
+  {
+    id: 4,
+    name: "Samuel Chimaobi",
+    role: "Product Manager/QA Engineer",
+    image_url:
+      "https://res.cloudinary.com/dbg2z1svm/image/upload/v1696850508/ibx-website-v2/team/Samuel-Chimaobi-_1__tbimqu.webp",
+  },
 ];

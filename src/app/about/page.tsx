@@ -2,7 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
-
+import { useRouter } from "next/navigation";
 import SwiperButtonNext from "./Components/SliderButtons/Next";
 import SwiperButtonPrevious from "./Components/SliderButtons/Prev";
 
@@ -19,6 +19,7 @@ import { teamData } from "./teamData";
 import styles from "./about.module.scss";
 
 const About = () => {
+  const router = useRouter();
   return (
     <main>
       <div className={`row ${styles.AboutUs}`}>
@@ -173,13 +174,31 @@ const About = () => {
       </div>
       <div className={styles.OurTeam}>
         <h3 className={styles.Title}>Meet Our Team</h3>
-        <p className={styles.LeftText}>
-          <span>
-            {" "}
-            Our team of credible professionals with proven records of running
-          </span>
-          <span>successful businesses across digital channels</span>
-        </p>
+        <div className={styles.ActionBar}>
+          <p className={styles.LeftText}>
+            <span className={styles.FirstSentence}>
+              {" "}
+              Our team of credible professionals with proven records of running
+            </span>
+            <span>successful businesses across digital channels</span>
+          </p>
+          <div className={styles.ActionContainer}>
+            <Image
+              src="/want_to_join.svg"
+              alt=""
+              width={275.18}
+              height={160.31}
+              className={styles.WantToJoin}
+            />
+            <button
+              className={styles.ActionButton}
+              onClick={() => router.push("/careers")}
+            >
+              Open Positions
+            </button>
+          </div>
+        </div>
+
         <div className={styles.CarouselContainer}>
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
