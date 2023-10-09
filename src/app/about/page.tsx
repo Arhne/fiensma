@@ -231,8 +231,8 @@ const About = () => {
                   </div>
                 </div>
                 <div className={styles.MetaData}>
-                  <p className={styles.Name}>Jane oasdasdjj</p>
-                  <small className={styles.Role}>CEO & Founder</small>
+                  <p className={styles.Name}>{_slide?.name}</p>
+                  <small className={styles.Role}>{_slide?.role}</small>
                 </div>
               </SwiperSlide>
             ))}
