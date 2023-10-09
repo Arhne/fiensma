@@ -6,7 +6,9 @@
   max-width: 1440px;
   margin: 0 auto;
   position: fixed;
-  top: 0;
+  top: -8%;
+  left: 50%;
+  transform: translate(-50%, 50%);
   width: 100%;
   z-index: 100;
 
@@ -69,6 +71,9 @@
   .HeaderContainer {
     flex-direction: column;
     padding: 1rem;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
 
     .LogoHamburger {
       .Logo {

@@ -196,8 +196,110 @@
 }
 
 .OurTeam {
-  padding: 11rem 6.25rem 0 6.25rem;
+  padding: 0 1.5rem 0 6.25rem;
   max-width: 1440px;
+  overflow-x: hidden;
+  margin-bottom: 7rem;
+
+  .ActionBar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    .LeftText {
+      .FirstSentence::after {
+        content: "\a";
+        white-space: pre;
+      }
+    }
+
+    .ActionContainer {
+      position: relative;
+
+      .WantToJoin {
+        position: absolute;
+        top: -2rem;
+        right: 8rem;
+      }
+      .ActionButton {
+        cursor: pointer;
+        border: none;
+        width: 9rem;
+        height: 3rem;
+        border-radius: 4.3rem;
+        color: #ffffff;
+        font-weight: 600;
+        background-color: var(--primary-color);
+      }
+    }
+  }
+
+  .CarouselContainer {
+    margin-right: -5rem;
+
+    .SwiperButtonContainer {
+      display: flex;
+      justify-content: left;
+
+      .NextButton,
+      .PrevButton {
+        border-radius: 50%;
+        border: none;
+        height: 3rem;
+        width: 3rem;
+        margin-top: 1rem;
+      }
+    }
+
+    .PrevButton {
+      background-color: var(--primary-color);
+      margin-left: 0.5rem;
+    }
+
+    .Slide {
+      width: 32rem;
+      min-height: 16rem;
+
+      .MetaData {
+        margin-top: 1.25rem;
+
+        .Name {
+          font-size: 1.3rem;
+          color: #2a3342;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 35.989px;
+          letter-spacing: 0.421px;
+          margin-bottom: 0.1rem;
+        }
+
+        .Role {
+          color: #5e5e60;
+          font-size: 0.938rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22.902px;
+        }
+      }
+
+      .SlideItem {
+        border-radius: 30px;
+
+        .ImageContainer {
+          display: flex;
+        }
+
+        .Content {
+          margin-top: 1.2rem;
+          color: #000;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 2rem;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
 }
 
 /* Media Query for Mobile Devices */
@@ -286,6 +388,7 @@
     padding: 1.5rem;
     width: 100%;
     text-align: center;
+    margin-bottom: 1rem;
 
     .Text {
       // line-height: 2.7rem;
@@ -379,6 +482,68 @@
           width: 100%;
           height: auto;
           margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  .OurTeam {
+    padding: 1.5rem;
+
+    .Title {
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .ActionBar {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+
+      .LeftText {
+        text-align: center;
+
+        .FirstSentence::after {
+          content: " ";
+        }
+      }
+
+      .ActionContainer {
+        display: flex;
+        justify-content: center;
+        .WantToJoin {
+          display: none;
+        }
+        .ActionButton {
+          cursor: pointer;
+          border: none;
+          width: 12rem;
+          height: 3.6rem;
+          border-radius: 4.3rem;
+          color: #ffffff;
+          font-weight: 600;
+          background-color: var(--primary-color);
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .CarouselContainer {
+      .Slide {
+        width: 100%;
+
+        .SlideItem {
+          border-radius: 30px;
+
+          .ImageContainer {
+            display: flex;
+
+            .TeamImage {
+              object-fit: cover;
+              width: 80%;
+            }
+          }
         }
       }
     }

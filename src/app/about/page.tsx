@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect } from "react";
-import { usePathname } from "next/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import SwiperButtonNext from "./Components/SliderButtons/Next";
+import SwiperButtonPrevious from "./Components/SliderButtons/Prev";
 
-import styles from "./about.module.scss";
 import { imageLoader } from "@/common/Utils/imageLoaders";
 
 import { Pagination, Navigation, Scrollbar, A11y } from "swiper/modules";
@@ -13,10 +13,13 @@ import { Pagination, Navigation, Scrollbar, A11y } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+
 import { _slides } from "./util";
-import { pageview } from "../../../gtag";
+import { teamData } from "./teamData";
+import styles from "./about.module.scss";
 
 const About = () => {
+  const router = useRouter();
   return (
     <main>
       <div className={`row ${styles.AboutUs}`}>
@@ -169,17 +172,38 @@ const About = () => {
           </div>
         </div>
       </div>
-      {/* <div className={styles.OurTeam}>
+      <div className={styles.OurTeam}>
         <h3 className={styles.Title}>Meet Our Team</h3>
-        <p className={styles.LeftText}>
-          Our vision is to rank the top decentralized exchanges platform that
-          enables anyone anywhere to control their own money.
-        </p>
+        <div className={styles.ActionBar}>
+          <p className={styles.LeftText}>
+            <span className={styles.FirstSentence}>
+              {" "}
+              Our team of credible professionals with proven records of running
+            </span>
+            <span>successful businesses across digital channels</span>
+          </p>
+          <div className={styles.ActionContainer}>
+            <Image
+              src="/want_to_join.svg"
+              alt=""
+              width={275.18}
+              height={160.31}
+              className={styles.WantToJoin}
+            />
+            <button
+              className={styles.ActionButton}
+              onClick={() => router.push("/careers")}
+            >
+              Open Positions
+            </button>
+          </div>
+        </div>
+
         <div className={styles.CarouselContainer}>
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             navigation
-            spaceBetween={30}
+            spaceBetween={0}
             breakpoints={{
               0: {
                 slidesPerView: 1,
@@ -188,11 +212,11 @@ const About = () => {
                 slidesPerView: 2,
               },
               1024: {
-                slidesPerView: 3,
+                slidesPerView: 4,
               },
             }}
           >
-            {/* <div className={styles.SwiperButtonContainer}>
+            <div className={styles.SwiperButtonContainer}>
               <SwiperButtonNext>
                 <Image
                   src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1693404384/ibx-website-v2/icons/left_arrow_icon_dpdlxk.svg"
@@ -209,37 +233,31 @@ const About = () => {
                   alt=""
                 />
               </SwiperButtonPrevious>
-            </div> */}
+            </div>
 
-      {/* {_slides.map((_slide) => (
+            {teamData.map((_slide) => (
               <SwiperSlide key={_slide?.id} className={styles.Slide}>
-                {({ isActive }) => (
-                  <div
-                    className={`${styles.SlideItem} ${
-                      isActive && styles.ActiveSwiper
-                    }`}
-                  >
-                    <div className={styles.HeaderContainer}>
-                      <Image
-                        loader={() => imageLoader(_slide.imageSrc)}
-                        width={85}
-                        height={85}
-                        src={_slide.imageSrc}
-                        alt=""
-                      />
-                      <div className={styles.Header}>
-                        <h6>{_slide.title}</h6>
-                        <small>CEO youtube</small>
-                      </div>
-                    </div>
-                    <div className={styles.Content}>{_slide.content}</div>
+                <div className={styles.SlideItem}>
+                  <div className={styles.ImageContainer}>
+                    <Image
+                      loader={() => imageLoader(_slide.image_url)}
+                      width={293.5}
+                      height={313.8}
+                      src={_slide.image_url}
+                      alt=""
+                      className={styles.TeamImage}
+                    />
                   </div>
-                )}
+                </div>
+                <div className={styles.MetaData}>
+                  <p className={styles.Name}>{_slide?.name}</p>
+                  <small className={styles.Role}>{_slide?.role}</small>
+                </div>
               </SwiperSlide>
-            ))} */}
-      {/* </Swiper>
+            ))}
+          </Swiper>
         </div>
-      </div> */}
+      </div>
     </main>
   );
 };
