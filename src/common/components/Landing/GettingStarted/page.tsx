@@ -4,7 +4,7 @@ import styles from "./GettingStarted.module.scss";
 const GettingStarted = () => {
   return (
     <div id="getting-started" className={`row gx-3 ${styles.GettingStarted}`}>
-      <div className="col-xs-12 col-sm-12 col-md-6">
+      <div className={`col-xs-12 col-sm-12 col-md-6 ${styles.LeftColumn}`}>
         <Image
           src="/iphone.svg"
           width={423}
@@ -43,7 +43,9 @@ const GettingStarted = () => {
             </li>
           </ul>
 
-          <button className={styles.ActionButton}>Get Started</button>
+          <div className={styles.ActionButtonContainer}>
+            <button className={styles.ActionButton}>Get Started</button>
+          </div>
         </div>
       </div>
     </div>
