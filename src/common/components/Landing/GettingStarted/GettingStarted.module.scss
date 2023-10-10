@@ -97,12 +97,30 @@
     background-color: #ffffff;
     margin-top: -7rem;
 
+    .LeftColumn {
+      display: none;
+    }
+
     .RightColumn {
       margin-top: 1.5rem;
+
+      .HeaderText {
+        text-align: center;
+      }
 
       h3 {
         font-size: 2rem;
         text-align: center;
+      }
+    }
+
+    .ActionButtonContainer {
+      display: flex;
+      justify-content: center;
+      .ActionButton {
+        width: 11rem;
+        height: 3rem;
+        font-size: 1rem;
       }
     }
 
