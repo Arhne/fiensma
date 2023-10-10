@@ -143,8 +143,13 @@
     text-transform: capitalize;
   }
 
-  .StatTitle {
-    margin-top: -1rem;
+  .StatContainer {
+    margin-bottom: 2rem;
+    .StatItem {
+      .StatTitle {
+        margin-top: -1rem;
+      }
+    }
   }
 }
 
@@ -305,9 +310,20 @@
         font-size: 2rem;
       }
 
-      .StatTitle {
-        margin-top: -1rem;
-        font-size: 0.875rem;
+      .StatContainer {
+        .StatItem {
+          margin-bottom: 2rem;
+          .Stat,
+          .StatTitle {
+            text-align: center;
+            font-size: 3rem;
+          }
+
+          .StatTitle {
+            margin-top: -1rem;
+            font-size: 0.875rem;
+          }
+        }
       }
     }
 
