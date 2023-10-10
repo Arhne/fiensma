@@ -212,23 +212,31 @@ export default function Home() {
             individuals, shaping the future of currency exchange. Join us on
             this journey of limitless possibilities.
           </p>
-          <div className="row mb-4">
-            <div className="col-6">
-              <h2>235,000</h2>
+          <div className={`row ${styles.StatContainer}`}>
+            <div
+              className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
+            >
+              <h2 className={styles.Stat}>235,000</h2>
               <p className={styles.StatTitle}>Mobile App Download</p>
             </div>
-            <div className="col-6">
-              <h2>$10m</h2>
+            <div
+              className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
+            >
+              <h2 className={styles.Stat}>$10m</h2>
               <p className={styles.StatTitle}>Contributors</p>
             </div>
           </div>
-          <div className="row">
-            <div className="col-6">
-              <h2>50,000+</h2>
+          <div className={`row ${styles.StatContainer}`}>
+            <div
+              className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
+            >
+              <h2 className={styles.Stat}>50,000+</h2>
               <p className={styles.StatTitle}>Daily Users</p>
             </div>
-            <div className="col-6">
-              <h2>$10b</h2>
+            <div
+              className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
+            >
+              <h2 className={styles.Stat}>$10b</h2>
               <p className={styles.StatTitle}>Transaction volume per quarter</p>
             </div>
           </div>
