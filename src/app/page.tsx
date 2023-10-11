@@ -10,6 +10,7 @@ import Ticker from "@/common/components/Landing/Ticker";
 import GettingStarted from "@/common/components/Landing/GettingStarted/page";
 
 import styles from "./page.module.scss";
+import Services from "@/common/components/Landing/Services";
 
 export default function Home() {
   return (
@@ -42,75 +43,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={styles.Companies}>
-        <div className={styles.TextContainer}>
-          <p className={styles.BoldText}>
-            Trusted by Top <br /> Companies
-          </p>
-          <p className={styles.CommonText}>
-            More than 45,000+ companies trust IBX
-          </p>
-        </div>
-        <div className={`row ${styles.PartnerCompanies}`}>
-          <div className="col-6">
-            <ul>
-              <li>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418218/ibx-website-v2/slack_et8vic.svg"
-                  width={150}
-                  height={60.959}
-                  alt=""
-                />
-              </li>
-              <li>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418206/ibx-website-v2/paypal_dphrwm.svg"
-                  width={143}
-                  height={48}
-                  alt=""
-                />
-              </li>
-              <li>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/adobe_thftlk.svg"
-                  width={133}
-                  height={48}
-                  alt=""
-                />
-              </li>
-            </ul>
-          </div>
-          <div className="col-6">
-            <ul>
-              <li>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418245/ibx-website-v2/youtube_e9gmem.svg"
-                  width={150}
-                  height={45.813}
-                  alt=""
-                />
-              </li>
-              <li>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418204/ibx-website-v2/microsoft_rpniif.svg"
-                  width={164}
-                  height={48}
-                  alt=""
-                />
-              </li>
-              <li>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/google_ox9wco.svg"
-                  width={113}
-                  height={48}
-                  alt=""
-                />
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
       <Ticker />
+      <Services />
       <div className={`row gx-5 ${styles.Features}`}>
         <div className="col-xs-12 col-sm-12 col-md-6">
           <h3>Gain more with IBX</h3>
@@ -285,6 +219,74 @@ export default function Home() {
       <AdvertSectionTwo />
       <GettingStarted />
       <Faq />
+      <div className={styles.Companies}>
+        <div className={styles.TextContainer}>
+          <p className={styles.BoldText}>
+            Trusted by Top <br /> Companies
+          </p>
+          <p className={styles.CommonText}>
+            More than 45,000+ companies trust IBX
+          </p>
+        </div>
+        <div className={`row ${styles.PartnerCompanies}`}>
+          <div className="col-6">
+            <ul>
+              <li>
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418218/ibx-website-v2/slack_et8vic.svg"
+                  width={150}
+                  height={60.959}
+                  alt=""
+                />
+              </li>
+              <li>
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418206/ibx-website-v2/paypal_dphrwm.svg"
+                  width={143}
+                  height={48}
+                  alt=""
+                />
+              </li>
+              <li>
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/adobe_thftlk.svg"
+                  width={133}
+                  height={48}
+                  alt=""
+                />
+              </li>
+            </ul>
+          </div>
+          <div className="col-6">
+            <ul>
+              <li>
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418245/ibx-website-v2/youtube_e9gmem.svg"
+                  width={150}
+                  height={45.813}
+                  alt=""
+                />
+              </li>
+              <li>
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418204/ibx-website-v2/microsoft_rpniif.svg"
+                  width={164}
+                  height={48}
+                  alt=""
+                />
+              </li>
+              <li>
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/google_ox9wco.svg"
+                  width={113}
+                  height={48}
+                  alt=""
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }

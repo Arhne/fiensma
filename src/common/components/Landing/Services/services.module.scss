@@ -1,0 +1,318 @@
+.ServicesContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 7rem 6.25rem 0 6.25rem;
+  height: auto;
+
+  .Title {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -0.4px;
+  }
+
+  .Question {
+    color: #10192d;
+    text-align: center;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: -1.2px;
+  }
+
+  .Content {
+    color: var(--header-three-color);
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.4px;
+  }
+
+  .Services {
+    margin-top: 4rem;
+    .FlowContainer {
+      padding: 1.5rem 2rem 0 2rem;
+      border-radius: 12px;
+      background: rgba(243, 245, 247, 0.5);
+
+      .Flow {
+        padding-left: 15px;
+        margin-top: 2rem;
+
+        .One {
+          &::after {
+            /* bullets */
+            content: url("../../../../../public/one.svg");
+            position: absolute;
+            left: -30px; /*adjust manually*/
+            top: 0px;
+          }
+        }
+
+        .Two {
+          &::after {
+            /* bullets */
+            content: url("../../../../../public/two.svg");
+            position: absolute;
+            left: -30px; /*adjust manually*/
+            top: 0px;
+          }
+        }
+
+        .Three {
+          &::after {
+            /* bullets */
+            content: url("../../../../../public/three.svg");
+            position: absolute;
+            left: -30px; /*adjust manually*/
+            top: 0px;
+          }
+        }
+
+        .FlowItem {
+          padding-left: 33px;
+          margin-bottom: 2.5em;
+          list-style: none;
+          position: relative; /* so that pseudoelements are positioned relatively to their "li"s*/
+          /* use padding-bottom instead of margin-bottom.*/
+          margin-bottom: 0; /* This overrides previously specified margin-bottom */
+          margin-left: 1rem;
+          padding-bottom: 2.5em;
+
+          &::before {
+            /* lines */
+            content: url("../../../../../public/connector_2.svg");
+            position: absolute;
+            left: -0.5rem; /* adjust manually */
+            width: 1px;
+          }
+
+          &:first-child::before {
+            /* first li's line */
+            top: 25px; /* moves the line down so that it disappears under the bullet. Adjust manually */
+          }
+
+          &:last-child::before {
+            content: "";
+          }
+
+          .Title {
+            color: #000;
+            font-size: 1.75rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 36px;
+            margin-bottom: 1.25rem;
+          }
+
+          .FlowContent {
+            color: #5e5e60;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 36px;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 480px) {
+  .ServicesContainer {
+    padding: 1.5rem;
+
+    .Services {
+      .FlowContainer {
+        height: auto;
+        padding: 0.5rem;
+        margin-bottom: 1.875rem;
+      }
+
+      .RightImage {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .Landing {
+    padding: 0 3rem;
+    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-position-x: 0;
+    background-size: cover;
+  }
+  .Companies {
+    padding: 1rem;
+
+    .TextContainer {
+      flex-direction: column;
+
+      .BoldText {
+        text-align: center;
+        font-size: 2rem;
+      }
+
+      .CommonText {
+        text-align: center;
+        font-size: 1rem;
+      }
+    }
+
+    .PartnerCompanies {
+      margin-top: 3rem;
+
+      ul {
+        display: block;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+  .Features {
+    padding: 2rem 1.5rem;
+    background-color: #ffffff;
+
+    .RightColumn {
+      margin-top: 1.5rem;
+    }
+
+    .LeftImage {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .Statistics {
+    padding: 0 1.5rem;
+    background-color: #ffffff;
+    margin-bottom: 19rem;
+
+    .LeftColumn {
+      .LeftText {
+        color: rgba(0, 0, 0, 0.6);
+        font-feature-settings: "clig" off, "liga" off;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        text-transform: capitalize;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .StatTitle {
+        margin-top: -1rem;
+        font-size: 0.875rem;
+      }
+    }
+
+    .RightColumn {
+      .RightImage {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  .Advert {
+    padding: 1.5rem 1.5rem;
+
+    .MobileStore {
+      .GoogleStore,
+      .AppleStore {
+        width: 100%;
+      }
+
+      .AppleStore {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .Landing {
+    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-position-x: 0;
+    background-size: cover;
+
+    .LandingLeftContainer {
+      .MobileStore {
+        display: flex;
+
+        .GoogleStore,
+        .AppStore {
+          width: 200px;
+          height: 50px;
+        }
+      }
+    }
+  }
+  .Features {
+    padding: 2rem 1.5rem;
+    background-color: #ffffff;
+
+    .RightColumn {
+      margin-top: 1.5rem;
+    }
+
+    .LeftImage {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .Statistics {
+    padding: 0 1.5rem;
+    background-color: #ffffff;
+    margin-bottom: 19rem;
+
+    .LeftColumn {
+      .LeftText {
+        color: rgba(0, 0, 0, 0.6);
+        font-feature-settings: "clig" off, "liga" off;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        text-transform: capitalize;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .StatTitle {
+        margin-top: -1rem;
+        font-size: 0.875rem;
+      }
+    }
+
+    .RightColumn {
+      .RightImage {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
