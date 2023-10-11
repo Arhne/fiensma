@@ -478,10 +478,14 @@
       }
 
       .Right {
+        display: flex;
+        justify-content: center;
+
         .RightImage {
           width: 100%;
-          height: auto;
-          margin-top: 1rem;
+          // height: auto;
+
+          margin-right: 6rem;
         }
       }
     }
