@@ -4,6 +4,10 @@ const JobContainer = dynamic(() => import("../[slug]/JobContainer"), {
   ssr: false,
 });
 
+const JobApplication = dynamic(() => import("./JobApplication"), {
+  ssr: false,
+});
+
 import styles from "./Job.module.scss";
 
 export async function generateStaticParams() {
@@ -49,6 +53,8 @@ const Page = async ({ params }: { params: { slug: string } }) => {
         </span>
       </div>
       <JobContainer job={job} />
+
+      <JobApplication jobId={params?.slug} />
     </main>
   );
 };
