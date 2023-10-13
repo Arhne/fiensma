@@ -4,11 +4,10 @@ import styles from "./services.module.scss";
 const Services = () => {
   return (
     <div className={styles.ServicesContainer}>
-      <p className={styles.Title}>Our Services</p>
       <h4 className={styles.Question}>What we do</h4>
       <p className={styles.Content}>
-        Our platform helps you fiat exchange. These are some of the reasons why
-        you should use our platform in fiat exchange finances.
+        These are some of the reasons why you should use our platform in fiat
+        exchange finances.
       </p>
 
       <div className={`row gx-5 ${styles.Services}`}>
