@@ -3,7 +3,7 @@ import styles from "./GettingStarted.module.scss";
 
 const GettingStarted = () => {
   return (
-    <div id="getting-started" className={`row gx-3 ${styles.GettingStarted}`}>
+    <div id="gettingstarted" className={`row gx-3 ${styles.GettingStarted}`}>
       <div className={`col-xs-12 col-sm-12 col-md-6 ${styles.LeftColumn}`}>
         <Image
           src="/iphone.svg"
