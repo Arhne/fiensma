@@ -33,7 +33,7 @@ export const jobApi = createApi({
       { perPage: number; currentPage: number; category?: string }
     >({
       query: ({ perPage, currentPage, category }) => {
-        let query = `?perPage=${perPage}&currentPage=${currentPage}`;
+        let query = `?isActive=true&perPage=${perPage}&currentPage=${currentPage}`;
         if (category) {
           query = `${query}&category=${category}`;
         }
