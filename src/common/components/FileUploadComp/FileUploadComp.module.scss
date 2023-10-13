@@ -1,0 +1,30 @@
+.FileUploadContainer {
+  input {
+    display: none;
+  }
+
+  .FileContainer {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    height: 40px;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+    p {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    .UploadIcon {
+      position: absolute;
+      left: 13rem;
+      bottom: 0.5rem;
+    }
+  }
+}
