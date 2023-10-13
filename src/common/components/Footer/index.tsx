@@ -88,7 +88,7 @@ const Footer = () => {
             </li>
             <li>
               {" "}
-              <Link className={styles.MenuItem} href={"/#getting-started"}>
+              <Link className={styles.MenuItem} href="#gettingstarted">
                 How it works
               </Link>
             </li>
@@ -98,19 +98,19 @@ const Footer = () => {
                 Rates
               </Link>
             </li>
-            {/* <li>
+            <li>
               {" "}
-              <Link className={styles.MenuItem} href="">
+              <Link className={styles.MenuItem} href="#ourteam">
                 Our Team
               </Link>
-            </li> */}
+            </li>
           </ul>
           <ul className={styles.FooterMenus}>
             <li>
               {" "}
               <Link
                 className={styles.MenuItem}
-                href="/#frequencly-asked-questions"
+                href="#frequencly-asked-questions"
               >
                 FAQs
               </Link>

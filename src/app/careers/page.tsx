@@ -101,7 +101,7 @@ const Careers = () => {
     <main className={styles.CareersContainer}>
       <div className={styles.Landing}>
         <h1 className={styles.HeaderText}>Be part of our Mission</h1>
-        <button className={styles.ActionButton}>Join Our Team</button>
+
         <p>
           Our philosophy is simple — hire a team of diverse, passionate people{" "}
           <br />

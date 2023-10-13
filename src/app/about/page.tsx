@@ -26,7 +26,6 @@ const About = () => {
         <div
           className={`col-sm-12 col-xs-12 col-lg-6  ${styles.LeftContainer}`}
         >
-          <small className={styles.AboutUsTag}>About Us</small>
           <h2 className={styles.HeaderText}>
             We are a team of creators and{" "}
             <span className={styles.HighlightedInnovators}>innovators</span>
@@ -172,7 +171,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className={styles.OurTeam}>
+      <div id="ourteam" className={styles.OurTeam}>
         <h3 className={styles.Title}>Meet Our Team</h3>
         <div className={styles.ActionBar}>
           <p className={styles.LeftText}>
