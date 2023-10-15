@@ -55,71 +55,66 @@ const Footer = () => {
       <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
         <div className={`${styles.MenusContainer}`}>
           <ul className={styles.FooterMenus}>
-            <li>
-              <Link className={styles.MenuItem} href={"/"}>
-                Home
-              </Link>
+            <li className={styles.MenuItem} onClick={() => router.replace("/")}>
+              Home
             </li>
-            <li>
-              {" "}
-              <Link className={styles.MenuItem} href={"/about"}>
-                About
-              </Link>
+            <li
+              className={styles.MenuItem}
+              onClick={() => router.replace("/about")}
+            >
+              About
             </li>
-            <li>
-              {" "}
-              <Link className={styles.MenuItem} href={"/careers"}>
-                Careers
-              </Link>
+            <li
+              className={styles.MenuItem}
+              onClick={() => router.replace("/careers")}
+            >
+              Careers
             </li>
-            <li>
-              {" "}
-              <Link className={styles.MenuItem} href={"/contactus"}>
-                Contact Us
-              </Link>
+            <li
+              className={styles.MenuItem}
+              onClick={() => router.replace('"/contactus"')}
+            >
+              Contact Us
             </li>
           </ul>
           <ul className={styles.FooterMenus}>
-            <li>
-              {" "}
-              <Link className={styles.MenuItem} href={"/terms"}>
-                Terms
-              </Link>
+            <li
+              className={styles.MenuItem}
+              onClick={() => router.replace("/terms")}
+            >
+              Terms
             </li>
-            <li>
-              {" "}
-              <Link className={styles.MenuItem} href="/#gettingstarted">
-                How it works
-              </Link>
+            <li
+              className={styles.MenuItem}
+              onClick={() => router.replace("/#gettingstarted")}
+            >
+              How it works
             </li>
-            <li>
-              {" "}
-              <Link className={styles.MenuItem} href={"/rates"}>
-                Rates
-              </Link>
+            <li
+              className={styles.MenuItem}
+              onClick={() => router.replace("/rates")}
+            >
+              Rates
             </li>
-            <li>
-              {" "}
-              <Link className={styles.MenuItem} href="/#ourteam">
-                Our Team
-              </Link>
+            <li
+              className={styles.MenuItem}
+              onClick={() => router.replace("/#ourteam")}
+            >
+              Our Team
             </li>
           </ul>
           <ul className={styles.FooterMenus}>
-            <li>
-              {" "}
-              <Link
-                className={styles.MenuItem}
-                href="/#frequencly-asked-questions"
-              >
-                FAQs
-              </Link>
+            <li
+              onClick={() => router.replace("/#frequencly-asked-questions")}
+              className={styles.MenuItem}
+            >
+              FAQs
             </li>
-            <li>
-              {" "}
-              <Link className={styles.MenuItem} href="/contactus">
-                Report a Bug
-              </Link>
+            <li
+              className={styles.MenuItem}
+              onClick={() => router.replace("/contactus")}
+            >
+              Report a Bug
             </li>
           </ul>
         </div>
