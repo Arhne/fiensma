@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useFindActiveSetupQuery } from "@/redux/services/supportApi";
 
@@ -55,66 +54,71 @@ const Footer = () => {
       <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
         <div className={`${styles.MenusContainer}`}>
           <ul className={styles.FooterMenus}>
-            <li className={styles.MenuItem} onClick={() => router.replace("/")}>
-              Home
+            <li>
+              <a className={styles.MenuItem} href={"/"}>
+                Home
+              </a>
             </li>
-            <li
-              className={styles.MenuItem}
-              onClick={() => router.replace("/about")}
-            >
-              About
+            <li>
+              {" "}
+              <a className={styles.MenuItem} href={"/about"}>
+                About
+              </a>
             </li>
-            <li
-              className={styles.MenuItem}
-              onClick={() => router.replace("/careers")}
-            >
-              Careers
+            <li>
+              {" "}
+              <a className={styles.MenuItem} href={"/careers"}>
+                Careers
+              </a>
             </li>
-            <li
-              className={styles.MenuItem}
-              onClick={() => router.replace('"/contactus"')}
-            >
-              Contact Us
-            </li>
-          </ul>
-          <ul className={styles.FooterMenus}>
-            <li
-              className={styles.MenuItem}
-              onClick={() => router.replace("/terms")}
-            >
-              Terms
-            </li>
-            <li
-              className={styles.MenuItem}
-              onClick={() => router.replace("/#gettingstarted")}
-            >
-              How it works
-            </li>
-            <li
-              className={styles.MenuItem}
-              onClick={() => router.replace("/rates")}
-            >
-              Rates
-            </li>
-            <li
-              className={styles.MenuItem}
-              onClick={() => router.replace("/#ourteam")}
-            >
-              Our Team
+            <li>
+              {" "}
+              <a className={styles.MenuItem} href={"/contactus"}>
+                Contact Us
+              </a>
             </li>
           </ul>
           <ul className={styles.FooterMenus}>
-            <li
-              onClick={() => router.replace("/#frequencly-asked-questions")}
-              className={styles.MenuItem}
-            >
-              FAQs
+            <li>
+              {" "}
+              <a className={styles.MenuItem} href={"/terms"}>
+                Terms
+              </a>
             </li>
-            <li
-              className={styles.MenuItem}
-              onClick={() => router.replace("/contactus")}
-            >
-              Report a Bug
+            <li>
+              {" "}
+              <a className={styles.MenuItem} href="/#gettingstarted">
+                How it works
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a className={styles.MenuItem} href={"/rates"}>
+                Rates
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a className={styles.MenuItem} href="/about#ourteam">
+                Our Team
+              </a>
+            </li>
+          </ul>
+          <ul className={styles.FooterMenus}>
+            <li>
+              {" "}
+              <a
+                className={styles.MenuItem}
+                href="/#frequencly-asked-questions"
+              >
+                FAQs
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a className={styles.MenuItem} href="/contactus">
+                Report a Bug
+              </a>
             </li>
           </ul>
         </div>
