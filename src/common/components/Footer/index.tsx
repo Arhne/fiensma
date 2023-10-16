@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useFindActiveSetupQuery } from "@/redux/services/supportApi";
 
@@ -56,70 +55,70 @@ const Footer = () => {
         <div className={`${styles.MenusContainer}`}>
           <ul className={styles.FooterMenus}>
             <li>
-              <Link className={styles.MenuItem} href={"/"}>
+              <a className={styles.MenuItem} href={"/"}>
                 Home
-              </Link>
+              </a>
             </li>
             <li>
               {" "}
-              <Link className={styles.MenuItem} href={"/about"}>
+              <a className={styles.MenuItem} href={"/about"}>
                 About
-              </Link>
+              </a>
             </li>
             <li>
               {" "}
-              <Link className={styles.MenuItem} href={"/careers"}>
+              <a className={styles.MenuItem} href={"/careers"}>
                 Careers
-              </Link>
+              </a>
             </li>
             <li>
               {" "}
-              <Link className={styles.MenuItem} href={"/contactus"}>
+              <a className={styles.MenuItem} href={"/contactus"}>
                 Contact Us
-              </Link>
+              </a>
             </li>
           </ul>
           <ul className={styles.FooterMenus}>
             <li>
               {" "}
-              <Link className={styles.MenuItem} href={"/terms"}>
+              <a className={styles.MenuItem} href={"/terms"}>
                 Terms
-              </Link>
+              </a>
             </li>
             <li>
               {" "}
-              <Link className={styles.MenuItem} href="#gettingstarted">
+              <a className={styles.MenuItem} href="/#gettingstarted">
                 How it works
-              </Link>
+              </a>
             </li>
             <li>
               {" "}
-              <Link className={styles.MenuItem} href={"/rates"}>
+              <a className={styles.MenuItem} href={"/rates"}>
                 Rates
-              </Link>
+              </a>
             </li>
             <li>
               {" "}
-              <Link className={styles.MenuItem} href="#ourteam">
+              <a className={styles.MenuItem} href="/about#ourteam">
                 Our Team
-              </Link>
+              </a>
             </li>
           </ul>
           <ul className={styles.FooterMenus}>
             <li>
               {" "}
-              <Link
+              <a
                 className={styles.MenuItem}
-                href="#frequencly-asked-questions"
+                href="/#frequencly-asked-questions"
               >
                 FAQs
-              </Link>
+              </a>
             </li>
             <li>
               {" "}
-              <Link className={styles.MenuItem} href="/contactus">
+              <a className={styles.MenuItem} href="/contactus">
                 Report a Bug
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
