@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import moment from "moment";
+import dayjs from "dayjs";
 import { DatePicker, Select } from "antd";
 
 import dynamic from "next/dynamic";
@@ -47,9 +47,9 @@ const Rates = () => {
   const [rowsPerPage, setRowsPerPage] = useState(3);
   const [currentPage, setCurrentPage] = useState(1);
   const [startDate, setStartDate] = useState(
-    moment().subtract(3, "days").format("YYYY-MM-DD")
+    dayjs().subtract(3, "days").format("YYYY-MM-DD")
   );
-  const [endDate, setEndDate] = useState(moment().format("YYYY-MM-DD"));
+  const [endDate, setEndDate] = useState(dayjs().format("YYYY-MM-DD"));
   const [timePeriod, setTimePeriod] = useState("morning");
 
   const paginate = {
@@ -288,7 +288,11 @@ const Rates = () => {
           <div className="col-xs-12 col-sm-12 col-md-6"></div>
           <div className="col-xs-12 col-sm-12 col-md-6">
             <div className="d-flex justify-content-end">
-              <RangePicker onChange={handleChangeDate} format={"YYYY-MM-DD"} />
+              <RangePicker
+                onChange={handleChangeDate}
+                format={"YYYY-MM-DD"}
+                defaultValue={[dayjs().subtract(3, "days"), dayjs()]}
+              />
               <Select
                 showSearch={false}
                 style={{ marginLeft: "2rem" }}
