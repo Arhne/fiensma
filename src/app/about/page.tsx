@@ -26,7 +26,7 @@ const About = () => {
         <div
           className={`col-sm-12 col-xs-12 col-lg-6  ${styles.LeftContainer}`}
         >
-          <p className={styles.headerPara}>About Us</p>
+          
           <h2 className={styles.HeaderText}>
             We are a team of creators and{" "}
             <span className={styles.HighlightedInnovators}>innovators</span>
