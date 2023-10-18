@@ -16,7 +16,11 @@
   .LeftContainer {
     padding-top: 5rem;
     position: relative;
-
+    .headerPara {
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.375rem;
+    }
     .HeaderText {
       margin-bottom: 4rem;
 
@@ -188,9 +192,37 @@
     .Right {
       .RightImage {
         width: 100%;
-        height: auto;
+        height: 32.563rem;
         margin-top: 1rem;
       }
+    }
+  }
+}
+.userCenteric {
+  min-height: 33rem;
+  background-color: #facc15;
+  border-radius: 1.25rem;
+
+  .Left {
+    padding-left: 6rem;
+    padding-top: 7rem;
+
+    p {
+      line-height: 2.7rem;
+      font-size: 1.375rem;
+    }
+
+    p,
+    h4 {
+      color: #10192d;
+    }
+  }
+
+  .Right {
+    .RightImage {
+      width: 100%;
+      height: auto;
+      margin-top: 1rem;
     }
   }
 }
@@ -474,6 +506,28 @@
         p,
         h4 {
           color: #ffffff;
+        }
+      }
+
+      .Right {
+        display: flex;
+        justify-content: center;
+
+        .RightImage {
+          width: 100%;
+          height: 12.5rem;
+
+          margin-right: 6rem;
+        }
+      }
+    }
+    .userCenteric {
+      .Left {
+        padding: 1.5rem;
+
+        p {
+          line-height: 2.7rem;
+          font-size: 1.375rem;
         }
       }
 
