@@ -7,7 +7,7 @@ import SwiperButtonNext from "./Components/SliderButtons/Next";
 import SwiperButtonPrevious from "./Components/SliderButtons/Prev";
 
 import { imageLoader } from "@/common/Utils/imageLoaders";
-
+import ImageStar from "../../../public/about_star.svg";
 import { Pagination, Navigation, Scrollbar, A11y } from "swiper/modules";
 
 // Import Swiper styles
@@ -26,10 +26,11 @@ const About = () => {
         <div
           className={`col-sm-12 col-xs-12 col-lg-6  ${styles.LeftContainer}`}
         >
-          <p>About Us</p>
+          <p className={styles.headerPara}>About Us</p>
           <h2 className={styles.HeaderText}>
             We are a team of creators and{" "}
             <span className={styles.HighlightedInnovators}>innovators</span>
+            <Image src={ImageStar} height={33} width={33} alt="" />
           </h2>
           <p className={styles.TagLine}>
             We believe that peace and prosperity are built on economic and
