@@ -101,7 +101,7 @@ const About = () => {
           <div className={`col-xs-12 col-sm-12 col-lg-5 ${styles.Left}`}>
             <h4>Security</h4>
             <p>
-              We prioritize the security of our users' funds and personal
+              We prioritize the security of our users&apos; funds and personal
               information. We employ robust security measures to ensure the
               utmost protection against threats and vulnerabilities.
             </p>
