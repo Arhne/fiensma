@@ -195,8 +195,8 @@
   }
 }
 .userCenteric {
-  height: 33rem;
-  background-color: yellow;
+  min-height: 33rem;
+  background-color: #facc15;
   border-radius: 1.25rem;
 
   .Left {
@@ -502,6 +502,28 @@
         p,
         h4 {
           color: #ffffff;
+        }
+      }
+
+      .Right {
+        display: flex;
+        justify-content: center;
+
+        .RightImage {
+          width: 100%;
+          // height: auto;
+
+          margin-right: 6rem;
+        }
+      }
+    }
+    .userCenteric {
+      .Left {
+        padding: 1.5rem;
+
+        p {
+          line-height: 2.7rem;
+          font-size: 1.375rem;
         }
       }
 
