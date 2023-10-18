@@ -127,7 +127,13 @@
       }
     }
   }
-
+  .teamContainer {
+    display: flex;
+    justify-content: space-between;
+    div {
+      width: 49.5%;
+    }
+  }
   .Teamwork {
     background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1694626480/ibx-website-v2/about-us/teamwork_img_uy7pcu.webp");
     background-repeat: no-repeat;
@@ -458,6 +464,14 @@
         }
       }
     }
+    .teamContainer {
+      flex-direction: column;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      div {
+        width: 100%;
+      }
+    }
 
     .Teamwork {
       height: auto;
@@ -538,8 +552,6 @@
         .RightImage {
           width: 100%;
           // height: auto;
-
-          margin-right: 6rem;
         }
       }
     }
