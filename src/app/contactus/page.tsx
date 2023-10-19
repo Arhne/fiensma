@@ -4,7 +4,7 @@ import { Controller, useForm } from "react-hook-form";
 
 import Image from "next/image";
 import styles from "./ContactUs.module.scss";
-import CustomInput from "@/common/components/Inputs";
+import { CustomInput } from "@/common/components/Inputs";
 import CustomTextArea from "@/common/components/TextArea";
 import { useAddContactUsMutation } from "@/redux/services/contactUsApi";
 import { showErrorToast, showSuccessToast } from "@/common/Utils/toast";
