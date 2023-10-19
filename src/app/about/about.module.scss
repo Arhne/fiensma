@@ -127,7 +127,13 @@
       }
     }
   }
-
+  .teamContainer {
+    display: flex;
+    justify-content: space-between;
+    div {
+      width: 49.5%;
+    }
+  }
   .Teamwork {
     background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1694626480/ibx-website-v2/about-us/teamwork_img_uy7pcu.webp");
     background-repeat: no-repeat;
@@ -345,7 +351,7 @@
       padding-top: 0;
 
       .TagLine {
-        text-align: center;
+        text-align: left;
         color: #10192d;
         font-size: 1.25rem;
         font-style: normal;
@@ -356,7 +362,7 @@
       }
       .HeaderText {
         font-size: 3rem;
-        text-align: center;
+        text-align: left;
       }
     }
   }
@@ -365,11 +371,20 @@
     padding: 1rem;
     background-image: none;
     height: auto;
-
+    h1 {
+      line-height: 110%;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+    p {
+      font-weight: 400;
+      line-height: 160%;
+      font-size: 1rem;
+    }
     .RightContainer {
       padding: 0 1rem;
       margin-top: 2rem;
-      text-align: center;
+      text-align: left;
 
       .Text {
         color: rgba(0, 0, 0, 0.6);
@@ -386,9 +401,19 @@
   .Vision {
     padding: 0;
     background-color: #ffffff;
+    h1 {
+      line-height: 110%;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+    p {
+      font-weight: 400;
+      line-height: 160%;
+      font-size: 1rem;
+    }
 
     .LeftColumn {
-      text-align: center;
+      text-align: left;
 
       .Title {
         margin-top: 4rem;
@@ -418,9 +443,10 @@
 
   .Values {
     padding: 1.5rem;
-    width: 100%;
-    text-align: center;
+    width: 90%;
+    text-align: left;
     margin-bottom: 1rem;
+    margin: auto;
 
     .Text {
       // line-height: 2.7rem;
@@ -432,7 +458,16 @@
       letter-spacing: 1px;
       margin-top: 1.5rem;
     }
-
+    h3 {
+      line-height: 110%;
+      font-size: 1.75rem;
+      font-weight: 700;
+    }
+    p {
+      font-weight: 400;
+      line-height: 160%;
+      font-size: 1rem;
+    }
     .Trust {
       height: auto;
 
@@ -457,6 +492,24 @@
           height: auto;
         }
       }
+      h4 {
+        line-height: 110%;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+      p {
+        font-weight: 400;
+        line-height: 160%;
+        font-size: 1rem;
+      }
+    }
+    .teamContainer {
+      flex-direction: column;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      div {
+        width: 100%;
+      }
     }
 
     .Teamwork {
@@ -464,14 +517,19 @@
       padding: 1.5rem;
       border-radius: 20px;
 
-      p {
-        line-height: 2.7rem;
-        font-size: 1.375rem;
-      }
-
       p,
       h4 {
         color: #ffffff;
+      }
+      h4 {
+        line-height: 110%;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+      p {
+        font-weight: 400;
+        line-height: 160%;
+        font-size: 1rem;
       }
     }
 
@@ -479,9 +537,15 @@
       height: auto;
       padding: 1.5rem;
       margin-top: 1rem;
+      h4 {
+        line-height: 110%;
+        font-size: 2rem;
+        font-weight: 400;
+      }
       p {
-        line-height: 2.7rem;
-        font-size: 1.375rem;
+        font-weight: 400;
+        line-height: 160%;
+        font-size: 1rem;
       }
 
       p,
@@ -498,11 +562,16 @@
       .Left {
         padding: 1.5rem;
 
-        p {
-          line-height: 2.7rem;
-          font-size: 1.375rem;
+        h4 {
+          line-height: 110%;
+          font-size: 2rem;
+          font-weight: 400;
         }
-
+        p {
+          font-weight: 400;
+          line-height: 160%;
+          font-size: 1rem;
+        }
         p,
         h4 {
           color: #ffffff;
@@ -522,13 +591,18 @@
       }
     }
     .userCenteric {
+      h4 {
+        line-height: 110%;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+      p {
+        font-weight: 400;
+        line-height: 160%;
+        font-size: 1rem;
+      }
       .Left {
         padding: 1.5rem;
-
-        p {
-          line-height: 2.7rem;
-          font-size: 1.375rem;
-        }
       }
 
       .Right {
@@ -538,8 +612,6 @@
         .RightImage {
           width: 100%;
           // height: auto;
-
-          margin-right: 6rem;
         }
       }
     }
@@ -549,7 +621,7 @@
     padding: 1.5rem;
 
     .Title {
-      text-align: center;
+      text-align: left;
       font-size: 2rem;
     }
 
@@ -560,7 +632,7 @@
       margin-bottom: 2rem;
 
       .LeftText {
-        text-align: center;
+        text-align: left;
 
         .FirstSentence::after {
           content: " ";
@@ -618,7 +690,12 @@
     background-position-x: 0;
     background-size: cover;
   }
-
+  .teamContainer {
+    flex-direction: column;
+    div {
+      width: 100% !important;
+    }
+  }
   .Mission {
     margin: 0 1.5rem 8.7rem;
     padding: 1rem;

@@ -26,7 +26,6 @@ const About = () => {
         <div
           className={`col-sm-12 col-xs-12 col-lg-6  ${styles.LeftContainer}`}
         >
-          <p className={styles.headerPara}>About Us</p>
           <h2 className={styles.HeaderText}>
             We are a team of creators and{" "}
             <span className={styles.HighlightedInnovators}>innovators</span>
@@ -121,7 +120,7 @@ const About = () => {
             />
           </div>
         </div>
-        <div className="row gx-5 mt-3">
+        <div className={`row mt-3 ${styles.teamContainer}`}>
           <div className={`col-xs-12 col-sm-12 col-lg-6 ${styles.Teamwork}`}>
             <h4>Community</h4>
             <p>
@@ -167,7 +166,7 @@ const About = () => {
             />
           </div>
         </div>
-        <div className={`row gx-5  ${styles.Trust}`}>
+        <div className={`row gx-5 mt-3 ${styles.Trust}`}>
           <div className={`col-xs-12 col-sm-12 col-lg-5 ${styles.Left}`}>
             <h4>Innovation</h4>
             <p>
