@@ -4,7 +4,7 @@ import { Controller, useForm } from "react-hook-form";
 
 import { showErrorToast, showSuccessToast } from "@/common/Utils/toast";
 import { useApplyForJobMutation } from "@/redux/services/jobApi";
-import CustomInput from "@/common/components/Inputs";
+import { CustomInput, CustomPhoneInput } from "@/common/components/Inputs";
 import { FileUploaderComp } from "@/common/components/FileUploadComp";
 
 import styles from "./JobApplication.module.scss";
@@ -19,6 +19,8 @@ const JobApplication = ({ jobId }: { jobId: string }) => {
       email: "",
       applicantCv: "",
       phone: "",
+      applicantCoverLetter: "",
+      applyingFrom: "",
     },
   });
 
@@ -28,6 +30,8 @@ const JobApplication = ({ jobId }: { jobId: string }) => {
     email: string;
     phone: string;
     applicantCv: string;
+    applyingFrom: string;
+    applicantCoverLetter: string;
   }) => {
     const payload = {
       job: jobId,
@@ -35,6 +39,9 @@ const JobApplication = ({ jobId }: { jobId: string }) => {
       lastName: value.lastName,
       email: value.email,
       applicantCV: value.applicantCv,
+      applyingFrom: value?.applyingFrom,
+      phone: value?.phone,
+      applicantCoverLetter: value?.applicantCoverLetter,
     };
 
     applyForJob(payload)
@@ -144,12 +151,10 @@ const JobApplication = ({ jobId }: { jobId: string }) => {
               }) => {
                 const errorMessage = errors.phone?.message;
                 return (
-                  <CustomInput
+                  <CustomPhoneInput
                     isShowLabel
                     labelText="Phone Number"
-                    type="number"
                     customStyle={inputStyle}
-                    placeholder="+23464537838"
                     {...{ value, onChange, errors: [errorMessage] }}
                   />
                 );
@@ -167,6 +172,43 @@ const JobApplication = ({ jobId }: { jobId: string }) => {
               const errorMessage = errors.applicantCv?.message;
               return (
                 <FileUploaderComp
+                  labelText="Upload Resume/CV"
+                  {...{ value, onChange, errors: [errorMessage] }}
+                />
+              );
+            }}
+          />
+        </div>
+        <div className="mb-3">
+          <Controller
+            name="applicantCoverLetter"
+            control={control}
+            render={({ field: { onChange, value }, formState: { errors } }) => {
+              const errorMessage = errors.applicantCoverLetter?.message;
+              return (
+                <FileUploaderComp
+                  labelText="Upload Cover Letter"
+                  {...{ value, onChange, errors: [errorMessage] }}
+                />
+              );
+            }}
+          />
+        </div>
+        <div className={`col-12 ${styles.InputContainer}`}>
+          {" "}
+          <Controller
+            name="applyingFrom"
+            control={control}
+            rules={{ required: "*This field is required" }}
+            render={({ field: { onChange, value }, formState: { errors } }) => {
+              const errorMessage = errors.applyingFrom?.message;
+              return (
+                <CustomInput
+                  isShowLabel
+                  labelText="How did you hear about this job?"
+                  type="text"
+                  customStyle={inputStyle}
+                  placeholder="e.g. Facebook"
                   {...{ value, onChange, errors: [errorMessage] }}
                 />
               );
