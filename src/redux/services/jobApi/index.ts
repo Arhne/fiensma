@@ -18,7 +18,10 @@ export const jobApi = createApi({
         firstName: string;
         lastName: string;
         email: string;
+        phone: string;
         applicantCV: string;
+        applicantCoverLetter: string;
+        applyingFrom: string;
       }
     >({
       query: (body) => ({

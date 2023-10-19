@@ -4,7 +4,6 @@
   }
 
   .Input {
-    // min-width: 19.3rem;
     width: 100%;
     height: 4rem;
     padding: 1.25rem 1.125rem;
@@ -14,11 +13,15 @@
 
     &::placeholder {
       color: #6b7280;
+      outline: none;
     }
+  }
 
-    //   &:focus {
-    //     border: 1px solid var(--primary-color);
-    //   }
+  .PhoneInput {
+    input {
+      border: none;
+      outline: none;
+    }
   }
 }
 
