@@ -21,7 +21,7 @@ import styles from "./about.module.scss";
 const About = () => {
   const router = useRouter();
   return (
-    <main>
+    <main className={styles.main}>
       <div className={`row ${styles.AboutUs}`}>
         <div
           className={`col-sm-12 col-xs-12 col-lg-6  ${styles.LeftContainer}`}
