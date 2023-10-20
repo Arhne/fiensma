@@ -368,6 +368,9 @@
 
 /* Media Query for Mobile Devices */
 @media screen and (max-width: 480px) {
+  .main {
+    width: 100%;
+  }
   .AboutUs {
     padding: 1rem;
     background-image: none;
@@ -392,7 +395,7 @@
       }
     }
   }
-.teamContainer {
+  .teamContainer {
     flex-direction: column;
     gap: 12px;
     div {
