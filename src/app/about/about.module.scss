@@ -392,7 +392,13 @@
       }
     }
   }
-
+.teamContainer {
+    flex-direction: column;
+    gap: 12px;
+    div {
+      width: 100% !important;
+    }
+  }
   .Mission {
     padding: 1rem;
     background-image: none;
@@ -707,7 +713,7 @@
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
-@media screen and (min-width: 200px) and (max-width: 768px) {
+@media screen and (min-width: 485px) and (max-width: 768px) {
   .main {
     width: 100%;
   }
