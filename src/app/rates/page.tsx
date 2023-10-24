@@ -15,18 +15,10 @@ import {
 import { ExchangeRateLoader } from "./components/loader";
 
 import { useGetAllCurrencyPairQuery } from "@/redux/services/currencyPairApi";
-import { PaginatedResponse } from "@/util/interface";
-import { ICurrencyPair } from "@/redux/services/currencyPairApi/interface";
 
 const { RangePicker } = DatePicker;
 
 import styles from "./rates.module.scss";
-
-type TGraphData = {
-  name: string;
-  sellPrice: number;
-  date: string;
-};
 
 type TState = {
   options: {
@@ -87,6 +79,7 @@ const Rates = () => {
     data: exchangeSummaryByDate,
     isLoading: isLoadingGraphSummaryByDate,
     isError: isGraphError,
+    error: graphError,
   } = useGetExchangeRateSummaryByDateQuery(
     {
       startDate: startDate,
@@ -105,62 +98,12 @@ const Rates = () => {
     }
   );
 
-  const extractGraphData = (
-    currencyPair: PaginatedResponse<ICurrencyPair[]> | undefined
-  ) => {
-    const graphDataRepo = [] as TGraphData[];
-    if (currencyPair) {
-      currencyPair?.data.forEach((_cpair) => {
-        if (exchangeSummaryByDate) {
-          exchangeSummaryByDate?.data.forEach((_data) => {
-            if (
-              _data?.currencyPair?.tradingCurrency?.name ===
-              _cpair?.tradingCurrency?.name
-            ) {
-              graphDataRepo.push({
-                name: `${_data?.currencyPair?.tradingCurrency?.name.toUpperCase()}/${_data?.currencyPair?.baseCurrency?.name.toUpperCase()}`,
-                sellPrice: _data?.sellPrice,
-                date: _data?.createdAt.split("T")[0],
-              });
-            }
-          });
-        }
-      });
-    }
-
-    return graphDataRepo;
-  };
-
-  const getXaxis = (groupedKeys: { [key: string]: TGraphData[] }) => {
-    const dates = [] as string[];
-    Object.keys(groupedKeys)?.forEach((_item) => {
-      groupedKeys[_item].forEach((_data) => {
-        dates.push(_data?.date);
-      });
-    });
-    let uniqueDates = new Set([...dates]);
-
-    return Array.from(uniqueDates);
-  };
-
   useEffect(() => {
     if (exchangeSummaryByDate) {
-      extractGraphData(currencyPair);
-      const groupedKeys = extractGraphData(currencyPair).reduce(
-        (group: { [key: string]: TGraphData[] }, item) => {
-          if (!group[item.name]) {
-            group[item.name] = [];
-          }
-          group[item.name].push(item);
-          return group;
-        },
-        {}
-      );
-
-      const series = Object.keys(groupedKeys)?.map((_item) => {
+      const yAxis = exchangeSummaryByDate?.data?.yAxis.map((_item) => {
         return {
-          name: _item,
-          data: groupedKeys[_item].map((_data) => _data?.sellPrice).reverse(),
+          name: _item?.currencyPair.toUpperCase(),
+          data: _item.prices.map((_price) => _price.sellPrice),
         };
       });
 
@@ -170,13 +113,13 @@ const Rates = () => {
           options: {
             ...state?.options,
             xaxis: {
-              categories: getXaxis(groupedKeys),
+              categories: exchangeSummaryByDate?.data?.xAxis,
             },
             chart: {
               ...state?.options?.chart,
             },
           },
-          series: [...series],
+          series: yAxis,
         };
       });
     }
@@ -196,11 +139,19 @@ const Rates = () => {
       return <ExchangeRateLoader />;
     } else if (!isLoadingGraphSummaryByDate) {
       if (isGraphError) {
-        return (
-          <p className="text-center mt-5">
-            There was a problem fetching exchange rate date
-          </p>
-        );
+        if ("status" in graphError) {
+          const errMsg =
+            "error" in graphError
+              ? graphError.error
+              : JSON.stringify(graphError.data);
+
+          return (
+            <p className="text-center mt-5">
+              {JSON.parse(errMsg)?.message ??
+                "There was a problem fetching exchange rate date"}
+            </p>
+          );
+        }
       } else {
         return (
           <div className={styles.Chart} id="chart">
