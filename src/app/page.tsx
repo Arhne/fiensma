@@ -47,7 +47,7 @@ export default function Home() {
       <Services />
       <div className={`row gx-5 ${styles.Features}`}>
         <div className="col-xs-12 col-sm-12 col-md-6">
-          <h3>Gain more with IBX</h3>
+          <h3>Still says crypto, please remove it</h3>
           <p className={styles.LeftText}>
             Ibx Exchange is Your Premier Destination for Peer-to-Peer Crypto and
             Fiat Trading. Discover a Seamless Platform for Buying and Selling

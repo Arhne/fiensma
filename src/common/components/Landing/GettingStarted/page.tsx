@@ -14,7 +14,7 @@ const GettingStarted = () => {
         />
       </div>
       <div className={`col-xs-12 col-sm-12 col-md-6 ${styles.RightColumn}`}>
-        <h3>Get Started In Just Few Steps.</h3>
+        <h3>Get Started In 3 Steps.</h3>
         <p className={styles.HeaderText}>
           Start your trading experience with us.
         </p>

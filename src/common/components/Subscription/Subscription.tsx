@@ -35,9 +35,9 @@ const Subscription = () => {
       <div className={`col-xs-12 col-sm-6 ${styles.RightColumn}`}>
         <p>
           Stay up to date with us now and be at the forefront of the latest
-          developments, insights, and trends in cryptocurrency and fiat trading.
-          Connect with us to access exclusive content, real-time market
-          analyses, and valuable resources that empower your trading journey.
+          developments, insights, and trends in fiat trading. Connect with us to
+          access exclusive content, real-time market analyses, and valuable
+          resources that empower your trading journey.
         </p>
 
         <form onSubmit={handleSubmit(onHandleSubmit)}>
