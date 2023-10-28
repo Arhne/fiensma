@@ -1,3 +1,4 @@
+import { useRouter } from "next/navigation";
 import { useFindActiveSetupQuery } from "@/redux/services/supportApi";
 
 import styles from "./Footer.module.scss";
@@ -5,12 +6,15 @@ import styles from "./Footer.module.scss";
 const Footer = () => {
   const { data: activeQuery } = useFindActiveSetupQuery();
 
+  const router = useRouter();
+
   return (
-    <div className={`row ${styles.FooterContainer}`}>
+    <div className={`row gx-0 ${styles.FooterContainer}`}>
       <div className="col-sm-6">
         <img
           src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418205/ibx-website-v2/logo_white_g81svy.svg"
           alt=""
+          onClick={() => router.push("/")}
         />
         <p className={styles.Address}>Abuja, Nigeria</p>
         <p>Follow us</p>
@@ -21,7 +25,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="https://instagram.com/ibx__marketplace?igshid=MzRlODBiNWFlZA==">
+            <a href={activeQuery && activeQuery?.data?.socialLinks?.instagram}>
               <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/instagram_lwt3ga.svg" />
             </a>
           </li>
@@ -36,7 +40,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="">
+            <a href={activeQuery && activeQuery?.data?.socialLinks?.linkedin}>
               <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1695043080/ibx-website-v2/linkedin_ac5uvc.svg" />
             </a>
           </li>
@@ -47,24 +51,75 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="col-sm-6">
-        <div className="d-flex flex-row justify-content-between">
+      <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div className={`${styles.MenusContainer}`}>
           <ul className={styles.FooterMenus}>
-            <li>Home</li>
-            <li>Resources</li>
-            <li>Careers</li>
-            <li>Contact Us</li>
+            <li>
+              <a className={styles.MenuItem} href={"/"}>
+                Home
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a className={styles.MenuItem} href={"/about"}>
+                About
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a className={styles.MenuItem} href={"/careers"}>
+                Careers
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a className={styles.MenuItem} href={"/contactus"}>
+                Contact Us
+              </a>
+            </li>
           </ul>
           <ul className={styles.FooterMenus}>
-            <li>Terms</li>
-            <li>How it works</li>
-            <li>Our Deals</li>
-            <li>Our Team</li>
+            <li>
+              {" "}
+              <a className={styles.MenuItem} href={"/terms"}>
+                Terms
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a className={styles.MenuItem} href="/#gettingstarted">
+                How it works
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a className={styles.MenuItem} href={"/rates"}>
+                Rates
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a className={styles.MenuItem} href="/about#ourteam">
+                Our Team
+              </a>
+            </li>
           </ul>
           <ul className={styles.FooterMenus}>
-            <li>About Us</li>
-            <li>FAQs</li>
-            <li>Report a Bug</li>
+            <li>
+              {" "}
+              <a
+                className={styles.MenuItem}
+                href="/#frequencly-asked-questions"
+              >
+                FAQs
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a className={styles.MenuItem} href="/contactus">
+                Report a Bug
+              </a>
+            </li>
           </ul>
         </div>
       </div>

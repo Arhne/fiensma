@@ -1,11 +1,56 @@
 import Link from "next/link";
+
+import parse from "html-react-parser";
 import CustomAccordion from "../../CustomAccordion";
+import { useGetAllFaqQuery } from "@/redux/services/faqApi";
+import { ExchangeRateLoader } from "@/app/rates/components/loader";
 
 import styles from "./Faq.module.scss";
 
 const Faq = () => {
+  const {
+    data: faq,
+    isLoading,
+    isError,
+  } = useGetAllFaqQuery({ perPage: 15, currentPage: 1 });
+
+  const renderFaq = () => {
+    if (isLoading) {
+      return <ExchangeRateLoader />;
+    } else if (!isLoading) {
+      if (isError) {
+        return (
+          <p className="text-center mt-5">There was a problem fetching faqs</p>
+        );
+      } else {
+        if (faq && faq.data.length > 0) {
+          return (
+            <>
+              {faq?.data.map((item, index) => (
+                <CustomAccordion
+                  key={index}
+                  title={item?.question}
+                  isDefaultOpen={false}
+                  customHeaderStyle={{
+                    padding: "2rem 0",
+                    height: "5rem",
+                  }}
+                >
+                  {parse(item?.answer)}
+                </CustomAccordion>
+              ))}
+            </>
+          );
+        } else {
+          return <p className="text-center mt-5">No data available</p>;
+        }
+      }
+    }
+  };
+
   return (
     <div
+      id="frequencly-asked-questions"
       className={`row d-flex justify-content-between ${styles.FaqContainer}`}
     >
       <div className={`col-xs-12 col-sm-5 ${styles.LeftColumn}`}>
@@ -22,55 +67,8 @@ const Faq = () => {
           </Link>
         </div>
       </div>
-      <div className={`col-xs-12 col-sm-6 ${styles.RightColumn}`}>
-        <CustomAccordion
-          title="What is IBXP2P.com?"
-          isDefaultOpen={false}
-          customHeaderStyle={{
-            padding: "2rem 0",
-            height: "5rem",
-          }}
-        >
-          IBXP2P.com is a peer-to-peer trading platform that allows users to buy
-          and sell bitcoin and fiat currencies.
-        </CustomAccordion>
-        <CustomAccordion
-          title="What services does IBXP2P.com provide?"
-          isDefaultOpen={false}
-          customHeaderStyle={{
-            padding: "2rem 0",
-            height: "5rem",
-          }}
-        >
-          IBXP2P.com provides a platform for peer-to-peer trading of bitcoin and
-          fiat currencies, as well as tools for managing transactions and
-          accounts.
-        </CustomAccordion>
-        <CustomAccordion
-          title="Is IBXP2P.com a legitimate website?"
-          isDefaultOpen={false}
-          customHeaderStyle={{
-            padding: "2rem 0",
-            height: "5rem",
-          }}
-        >
-          Yes, IBXP2P.com is a legitimate website that is registered and
-          licensed in the country where it operates. However, as with any
-          financial service, there are risks involved, and users should do their
-          own research and exercise caution.
-        </CustomAccordion>
-        <CustomAccordion
-          title="How do I create an account on IBXP2P.com?"
-          isDefaultOpen={false}
-          customHeaderStyle={{
-            padding: "2rem 0",
-            height: "5rem",
-          }}
-        >
-          To create an account on IBXP2P.com, go to the website and click on the
-          &quot;Register&quot; button. Follow the instructions to provide your
-          personal information and create a username and password.
-        </CustomAccordion>
+      <div className={`col-xs-12 col-sm-6  ${styles.RightColumn}`}>
+        {renderFaq()}
       </div>
     </div>
   );

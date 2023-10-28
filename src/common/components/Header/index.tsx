@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 
 import styles from "./Header.module.scss";
@@ -10,6 +10,7 @@ const Header = () => {
   const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
 
   const pathname = usePathname();
+  const router = useRouter();
 
   return (
     <div className={styles.HeaderContainer}>
@@ -20,6 +21,7 @@ const Header = () => {
           height={38}
           alt=""
           className={styles.Logo}
+          onClick={() => router.push("/")}
         />
 
         <Image
@@ -42,6 +44,7 @@ const Header = () => {
                 pathname === "/" && styles.Active
               }`}
               href={"/"}
+              onClick={() => setIsOpenMobileMenu(false)}
             >
               Home
             </Link>
@@ -52,6 +55,7 @@ const Header = () => {
                 pathname === "/about" && styles.Active
               }`}
               href={"/about"}
+              onClick={() => setIsOpenMobileMenu(false)}
             >
               About Us
             </Link>
@@ -62,6 +66,7 @@ const Header = () => {
                 pathname === "/rates" && styles.Active
               }`}
               href={"/rates"}
+              onClick={() => setIsOpenMobileMenu(false)}
             >
               Rates
             </Link>
@@ -72,6 +77,7 @@ const Header = () => {
                 pathname === "/careers" && styles.Active
               }`}
               href={"/careers"}
+              onClick={() => setIsOpenMobileMenu(false)}
             >
               Careers
             </Link>
@@ -82,6 +88,7 @@ const Header = () => {
                 pathname === "/contactus" && styles.Active
               }`}
               href={"/contactus"}
+              onClick={() => setIsOpenMobileMenu(false)}
             >
               Contact Us
             </Link>

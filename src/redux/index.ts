@@ -6,6 +6,7 @@ import { currencyPairApi } from "./services/currencyPairApi";
 import { configurationApi } from "./services/supportApi";
 import { subscribeApi } from "./services/subscribeApi";
 import { jobApi } from "./services/jobApi";
+import { faqApi } from "./services/faqApi";
 
 export const store = configureStore({
   preloadedState: {},
@@ -16,6 +17,7 @@ export const store = configureStore({
     [configurationApi.reducerPath]: configurationApi.reducer,
     [subscribeApi.reducerPath]: subscribeApi.reducer,
     [jobApi.reducerPath]: jobApi.reducer,
+    [faqApi.reducerPath]: faqApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(
@@ -24,7 +26,8 @@ export const store = configureStore({
       currencyPairApi.middleware,
       configurationApi.middleware,
       subscribeApi.middleware,
-      jobApi.middleware
+      jobApi.middleware,
+      faqApi.middleware
     ),
 });
 

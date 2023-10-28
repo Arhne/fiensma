@@ -1,0 +1,47 @@
+.FileUploadContainer {
+  .FileContainer {
+    border: 1px solid #a1a1a1;
+    border-style: dashed;
+    width: 100%;
+    height: auto;
+    background-color: #f8f9fb;
+    border-radius: 0.16rem;
+
+    input {
+      display: none;
+    }
+
+    .UploadIcon {
+      margin: 1.813rem auto;
+      display: block;
+    }
+
+    .UploadText,
+    .UploadTypeText {
+      color: #a1a1a1;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 0;
+    }
+
+    .UploadText {
+      font-size: 0.7rem;
+      text-align: center;
+
+      .ActionButton {
+        color: var(--primary-color);
+        cursor: pointer;
+      }
+    }
+
+    .UploadTypeText {
+      font-size: 0.6rem;
+      text-align: center;
+      margin-bottom: 1.75rem;
+    }
+
+    .FileName {
+      color: var(--primary-color);
+    }
+  }
+}

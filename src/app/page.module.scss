@@ -2,7 +2,7 @@
   padding: 0 6.25rem;
   height: 56rem;
   background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg"),
-    url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418243/ibx-website-v2/landing_image_l8ju3e.svg");
+    url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1695883945/ibx-website-v2/landing_image_l8ju3e_1_zqzdgg.png");
   background-repeat: no-repeat, no-repeat;
   background-position: left top, 0;
   background-position-x: 0, 93%;
@@ -78,10 +78,15 @@
 }
 
 .Features {
-  padding: 14rem 6.25rem;
+  padding: 8rem 6.25rem;
   background-color: #ffffff;
   max-width: 1440px;
   margin: 0 auto;
+
+  .LeftImage {
+    width: 100%;
+    height: auto;
+  }
 
   .LeftText {
     color: rgba(0, 0, 0, 0.6);
@@ -92,31 +97,33 @@
     text-transform: capitalize;
   }
 
-  .IconContainer {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
+  .RightColumn {
+    .IconContainer {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
 
-  .Heading {
-    color: #000;
-    text-align: center;
-    font-feature-settings: "clig" off, "liga" off;
-    font-size: 1.75rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: capitalize;
-  }
+    .Heading {
+      color: #000;
+      text-align: center;
+      font-feature-settings: "clig" off, "liga" off;
+      font-size: 1.75rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: capitalize;
+    }
 
-  .Content {
-    color: rgba(0, 0, 0, 0.6);
-    text-align: center;
-    font-feature-settings: "clig" off, "liga" off;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 2rem;
-    text-transform: capitalize;
+    .Content {
+      color: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      font-feature-settings: "clig" off, "liga" off;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2rem;
+      text-transform: capitalize;
+    }
   }
 }
 
@@ -136,8 +143,13 @@
     text-transform: capitalize;
   }
 
-  .StatTitle {
-    margin-top: -1rem;
+  .StatContainer {
+    margin-bottom: 2rem;
+    .StatItem {
+      .StatTitle {
+        margin-top: -1rem;
+      }
+    }
   }
 }
 
@@ -179,7 +191,7 @@
 /* Media Query for Mobile Devices */
 @media screen and (max-width: 480px) {
   .Landing {
-    padding: 0 2rem;
+    padding: 0 1.5rem;
     background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg");
     background-repeat: no-repeat;
     background-position: left top;
@@ -245,11 +257,29 @@
   }
 
   .Features {
-    padding: 2rem 1.5rem;
+    padding: 2rem 0;
     background-color: #ffffff;
+
+    h3 {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .LeftText {
+      text-align: center;
+    }
 
     .RightColumn {
       margin-top: 1.5rem;
+      padding: 1rem;
+
+      .Heading {
+        font-size: 1.5rem;
+      }
+
+      .Content {
+        font-size: 0.8rem;
+      }
     }
 
     .LeftImage {
@@ -258,11 +288,14 @@
   }
 
   .Statistics {
-    padding: 0 1.5rem;
+    padding: 0;
     background-color: #ffffff;
-    margin-bottom: 19rem;
 
     .LeftColumn {
+      h3 {
+        font-size: 2rem;
+        text-align: center;
+      }
       .LeftText {
         color: rgba(0, 0, 0, 0.6);
         font-feature-settings: "clig" off, "liga" off;
@@ -270,27 +303,46 @@
         font-weight: 400;
         line-height: 32px;
         text-transform: capitalize;
+        text-align: center;
       }
 
       h2 {
         font-size: 2rem;
       }
 
-      .StatTitle {
-        margin-top: -1rem;
-        font-size: 0.875rem;
+      .StatContainer {
+        .StatItem {
+          margin-bottom: 2rem;
+          .Stat,
+          .StatTitle {
+            text-align: center;
+            font-size: 3rem;
+          }
+
+          .StatTitle {
+            margin-top: -1rem;
+            font-size: 0.875rem;
+          }
+        }
       }
     }
 
     .RightColumn {
       .RightImage {
         width: 100%;
+        height: auto;
       }
     }
   }
 
   .Advert {
     padding: 1.5rem 1.5rem;
+    margin-top: -15rem;
+    height: auto;
+
+    .HeaderText {
+      text-align: center;
+    }
 
     .MobileStore {
       .GoogleStore,

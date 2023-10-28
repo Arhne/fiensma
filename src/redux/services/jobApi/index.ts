@@ -18,7 +18,10 @@ export const jobApi = createApi({
         firstName: string;
         lastName: string;
         email: string;
+        phone: string;
         applicantCV: string;
+        applicantCoverLetter: string;
+        applyingFrom: string;
       }
     >({
       query: (body) => ({
@@ -30,10 +33,23 @@ export const jobApi = createApi({
 
     getAllJobs: builder.query<
       Response<IJob[]>,
-      { perPage: number; currentPage: number }
+      { perPage: number; currentPage: number; category?: string }
     >({
-      query: ({ perPage, currentPage }) => ({
-        url: `/user/api/v1/jobs?perPage=${perPage}&currentPage=${currentPage}`,
+      query: ({ perPage, currentPage, category }) => {
+        let query = `?isActive=true&perPage=${perPage}&currentPage=${currentPage}`;
+        if (category) {
+          query = `${query}&category=${category}`;
+        }
+        return {
+          url: `/user/api/v1/jobs${query}`,
+          method: "GET",
+        };
+      },
+      providesTags: ["job"],
+    }),
+    getAllJobCategories: builder.query<Response<string[]>, void>({
+      query: () => ({
+        url: `/user/api/v1/jobs/get-all-job-categories`,
         method: "GET",
       }),
       providesTags: ["job"],
@@ -52,4 +68,5 @@ export const {
   useApplyForJobMutation,
   useGetAllJobsQuery,
   useGetSingleJobsQuery,
+  useGetAllJobCategoriesQuery,
 } = jobApi;

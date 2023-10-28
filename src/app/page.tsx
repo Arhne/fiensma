@@ -10,6 +10,7 @@ import Ticker from "@/common/components/Landing/Ticker";
 import GettingStarted from "@/common/components/Landing/GettingStarted/page";
 
 import styles from "./page.module.scss";
+import Services from "@/common/components/Landing/Services";
 
 export default function Home() {
   return (
@@ -42,6 +43,182 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Ticker />
+      <Services />
+      <div className={`row gx-5 ${styles.Features}`}>
+        <div className="col-xs-12 col-sm-12 col-md-6">
+          <h3>Gain more with IBX</h3>
+          <p className={styles.LeftText}>
+            Ibx Exchange is Your Premier Destination for Peer-to-Peer Crypto and
+            Fiat Trading. Discover a Seamless Platform for Buying and Selling
+            Digital and Traditional Currencies with Confidence. Explore Our
+            User-Friendly Interface, Robust Security Measures, and Diverse
+            Cryptocurrency Selection Today!
+          </p>
+          <Image
+            loader={() =>
+              imageLoader(
+                "https://res.cloudinary.com/dbg2z1svm/image/upload/v1691574412/ibx-website-v2/money_uulrjr.png"
+              )
+            }
+            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691574412/ibx-website-v2/money_uulrjr.png"
+            width={505}
+            height={449}
+            className={styles.LeftImage}
+            alt=""
+          />
+        </div>
+        <div className={`col-xs-12 col-sm-12 col-md-6 ${styles.RightColumn}`}>
+          <div className="row mb-4">
+            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <div className={styles.IconContainer}>
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/feature_reliable_icon_jmu1il.svg"
+                  width={100}
+                  height={100}
+                  alt=""
+                />
+              </div>
+              <p className={styles.Heading}>Reliable and Accurate</p>
+              <p className={styles.Content}>
+                We have access to real-time exchange rates for hundreds of
+                currencies, we also provide accurate and current data.
+              </p>
+            </div>
+            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <div className={styles.IconContainer}>
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/feature_dollar_icon_alxtvq.svg"
+                  width={100}
+                  height={100}
+                  alt=""
+                />
+              </div>
+              <p className={styles.Heading}>0% Charges</p>
+              <p className={styles.Content}>
+                Enjoy fee-free trading with Ibx Exchange, where your profits
+                stay yours and we keep your costs at zero.
+              </p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <div className={styles.IconContainer}>
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/feature_shield_icon_lczop6.svg"
+                  width={100}
+                  height={100}
+                  alt=""
+                />
+              </div>
+
+              <p className={styles.Heading}>Trust Guaranteed</p>
+              <p className={styles.Content}>
+                Our team of expert are on hand to help you safely navigate the
+                international currency markets every step of the way.
+              </p>
+            </div>
+            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <div className={styles.IconContainer}>
+                <Image
+                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/feature_hour_icon_edqbct.svg"
+                  width={100}
+                  height={100}
+                  alt=""
+                />
+              </div>
+              <p className={styles.Heading}>24/7 p2p ads</p>
+              <p className={styles.Content}>
+                Experience round-the-clock access to our dynamic peer-to-peer
+                ads, empowering you to trade cryptocurrencies and fiat
+                currencies at your convenience, any time, day or night.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={`row gx-5 ${styles.Statistics}`}>
+        <div className={`col-xs-12 col-sm-7 ${styles.LeftColumn}`}>
+          <h3>We believe in the power of numbers</h3>
+          <p className={styles.LeftText}>
+            Every trade, every transaction, and every connection made on Ibx
+            Exchange contributes to a growing ecosystem of empowered
+            individuals, shaping the future of currency exchange. Join us on
+            this journey of limitless possibilities.
+          </p>
+          <div className={`row ${styles.StatContainer}`}>
+            <div
+              className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
+            >
+              <h2 className={styles.Stat}>235,000</h2>
+              <p className={styles.StatTitle}>Mobile App Download</p>
+            </div>
+            <div
+              className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
+            >
+              <h2 className={styles.Stat}>$10m</h2>
+              <p className={styles.StatTitle}>Contributors</p>
+            </div>
+          </div>
+          <div className={`row ${styles.StatContainer}`}>
+            <div
+              className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
+            >
+              <h2 className={styles.Stat}>50,000+</h2>
+              <p className={styles.StatTitle}>Daily Users</p>
+            </div>
+            <div
+              className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
+            >
+              <h2 className={styles.Stat}>$10b</h2>
+              <p className={styles.StatTitle}>Transaction volume per quarter</p>
+            </div>
+          </div>
+        </div>
+        <div className={`col-xs-12 col-sm-5 ${styles.RightColumn}`}>
+          <Image
+            loader={() =>
+              imageLoader(
+                "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692872973/ibx-website-v2/money_dollar_qbsefi.webp"
+              )
+            }
+            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1692872973/ibx-website-v2/money_dollar_qbsefi.webp"
+            width={505}
+            height={543}
+            className={styles.RightImage}
+            alt=""
+          />
+        </div>
+      </div>
+      <div className={styles.Advert}>
+        <h1 className={styles.HeaderText}>
+          Join our 235,000+ <br /> mobile app users
+        </h1>
+        {/* <p className={styles.AdvertText}>
+          Scan QR code to download mobile app{" "}
+        </p> */}
+        <div className={styles.MobileStore}>
+          <Image
+            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691583936/ibx-website-v2/google_play_white_mzoobw.svg"
+            alt=""
+            width={180}
+            height={54}
+            className={styles.GoogleStore}
+          />
+
+          <Image
+            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691583936/ibx-website-v2/apple_store_white_frrda0.svg"
+            width={183}
+            height={54}
+            alt=""
+            className={styles.AppleStore}
+          />
+        </div>
+      </div>
+      <ClientTestimonial />
+      <AdvertSectionTwo />
+      <GettingStarted />
+      <Faq />
       <div className={styles.Companies}>
         <div className={styles.TextContainer}>
           <p className={styles.BoldText}>
@@ -110,175 +287,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Ticker />
-      <div className={`row gx-5 ${styles.Features}`}>
-        <div className="col-xs-12 col-sm-12 col-md-6">
-          <h3>Gain more with IBX</h3>
-          <p className={styles.LeftText}>
-            Ibx Exchange is Your Premier Destination for Peer-to-Peer Crypto and
-            Fiat Trading. Discover a Seamless Platform for Buying and Selling
-            Digital and Traditional Currencies with Confidence. Explore Our
-            User-Friendly Interface, Robust Security Measures, and Diverse
-            Cryptocurrency Selection Today!
-          </p>
-          <Image
-            loader={() =>
-              imageLoader(
-                "https://res.cloudinary.com/dbg2z1svm/image/upload/v1691574412/ibx-website-v2/money_uulrjr.png"
-              )
-            }
-            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691574412/ibx-website-v2/money_uulrjr.png"
-            width={505}
-            height={449}
-            className={styles.LeftImage}
-            alt=""
-          />
-        </div>
-        <div className={`col-xs-12 col-sm-12 col-md-6 ${styles.RightColumn}`}>
-          <div className="row mb-4">
-            <div className="col-6">
-              <div className={styles.IconContainer}>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/feature_reliable_icon_jmu1il.svg"
-                  width={100}
-                  height={100}
-                  alt=""
-                />
-              </div>
-              <p className={styles.Heading}>Reliable and Accurate</p>
-              <p className={styles.Content}>
-                We have access to real-time exchange rates for hundreds of
-                currencies, we also provide accurate and current data.
-              </p>
-            </div>
-            <div className="col-6">
-              <div className={styles.IconContainer}>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/feature_dollar_icon_alxtvq.svg"
-                  width={100}
-                  height={100}
-                  alt=""
-                />
-              </div>
-              <p className={styles.Heading}>0% Charges</p>
-              <p className={styles.Content}>
-                Enjoy fee-free trading with Ibx Exchange, where your profits
-                stay yours and we keep your costs at zero.
-              </p>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-6">
-              <div className={styles.IconContainer}>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/feature_shield_icon_lczop6.svg"
-                  width={100}
-                  height={100}
-                  alt=""
-                />
-              </div>
-
-              <p className={styles.Heading}>Trust Guaranteed</p>
-              <p className={styles.Content}>
-                Our team of expert are on hand to help you safely navigate the
-                international currency markets every step of the way.
-              </p>
-            </div>
-            <div className="col-6">
-              <div className={styles.IconContainer}>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/feature_hour_icon_edqbct.svg"
-                  width={100}
-                  height={100}
-                  alt=""
-                />
-              </div>
-              <p className={styles.Heading}>24/7 p2p ads</p>
-              <p className={styles.Content}>
-                Experience round-the-clock access to our dynamic peer-to-peer
-                ads, empowering you to trade cryptocurrencies and fiat
-                currencies at your convenience, any time, day or night.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={`row gx-5 ${styles.Statistics}`}>
-        <div className={`col-xs-12 col-sm-7 ${styles.LeftColumn}`}>
-          <h3>
-            We believe in the <br /> power of numbers
-          </h3>
-          <p className={styles.LeftText}>
-            Every trade, every transaction, and every connection made on Ibx
-            Exchange contributes to a growing ecosystem of empowered
-            individuals, shaping the future of currency exchange. Join us on
-            this journey of limitless possibilities.
-          </p>
-          <div className="row mb-4">
-            <div className="col-6">
-              <h2>235,000</h2>
-              <p className={styles.StatTitle}>Mobile App Download</p>
-            </div>
-            <div className="col-6">
-              <h2>$10m</h2>
-              <p className={styles.StatTitle}>Contributors</p>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-6">
-              <h2>50,000+</h2>
-              <p className={styles.StatTitle}>Daily Users</p>
-            </div>
-            <div className="col-6">
-              <h2>$10b</h2>
-              <p className={styles.StatTitle}>Transaction volume per quarter</p>
-            </div>
-          </div>
-        </div>
-        <div className={`col-xs-12 col-sm-5 ${styles.RightColumn}`}>
-          <Image
-            loader={() =>
-              imageLoader(
-                "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692872973/ibx-website-v2/money_dollar_qbsefi.webp"
-              )
-            }
-            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1692872973/ibx-website-v2/money_dollar_qbsefi.webp"
-            width={505}
-            height={543}
-            className={styles.RightImage}
-            alt=""
-          />
-        </div>
-      </div>
-      <div className={styles.Advert}>
-        <h1 className={styles.HeaderText}>
-          Join our 235,000+ <br /> mobile app users
-        </h1>
-        {/* <p className={styles.AdvertText}>
-          Scan QR code to download mobile app{" "}
-        </p> */}
-        <div className={styles.MobileStore}>
-          <Image
-            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691583936/ibx-website-v2/google_play_white_mzoobw.svg"
-            alt=""
-            width={180}
-            height={54}
-            className={styles.GoogleStore}
-          />
-
-          <Image
-            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691583936/ibx-website-v2/apple_store_white_frrda0.svg"
-            width={183}
-            height={54}
-            alt=""
-            className={styles.AppleStore}
-          />
-        </div>
-      </div>
-      <ClientTestimonial />
-      <AdvertSectionTwo />
-      <GettingStarted />
-      <Faq />
     </main>
   );
 }

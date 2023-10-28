@@ -16,7 +16,11 @@
   .LeftContainer {
     padding-top: 5rem;
     position: relative;
-
+    .headerPara {
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.375rem;
+    }
     .HeaderText {
       margin-bottom: 4rem;
 
@@ -66,7 +70,6 @@
   background-color: #ffffff;
   max-width: 1440px;
   margin: 0 auto;
-  // margin-bottom: 19rem;
   margin-bottom: 10rem;
   padding-top: 4.3rem;
 
@@ -124,7 +127,13 @@
       }
     }
   }
-
+  .teamContainer {
+    display: flex;
+    justify-content: space-between;
+    div {
+      width: 49.5%;
+    }
+  }
   .Teamwork {
     background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1694626480/ibx-website-v2/about-us/teamwork_img_uy7pcu.webp");
     background-repeat: no-repeat;
@@ -189,16 +198,146 @@
     .Right {
       .RightImage {
         width: 100%;
-        height: auto;
+        height: 32.563rem;
         margin-top: 1rem;
       }
     }
   }
 }
+.userCenteric {
+  min-height: 33rem;
+  background-color: #facc15;
+  border-radius: 1.25rem;
+
+  .Left {
+    padding-left: 6rem;
+    padding-top: 7rem;
+
+    p {
+      line-height: 2.7rem;
+      font-size: 1.375rem;
+    }
+
+    p,
+    h4 {
+      color: #10192d;
+    }
+  }
+
+  .Right {
+    .RightImage {
+      width: 100%;
+      height: auto;
+      margin-top: 1rem;
+    }
+  }
+}
 
 .OurTeam {
-  padding: 11rem 6.25rem 0 6.25rem;
+  padding: 0 4rem 0 6.25rem;
   max-width: 1440px;
+  overflow-x: hidden;
+  margin-bottom: 7rem;
+
+  .ActionBar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    .LeftText {
+      .FirstSentence::after {
+        content: "\a";
+        white-space: pre;
+      }
+    }
+
+    .ActionContainer {
+      position: relative;
+
+      .WantToJoin {
+        position: absolute;
+        top: -2rem;
+        right: 8rem;
+      }
+      .ActionButton {
+        cursor: pointer;
+        border: none;
+        width: 9rem;
+        height: 3rem;
+        border-radius: 4.3rem;
+        color: #ffffff;
+        font-weight: 600;
+        background-color: var(--primary-color);
+      }
+    }
+  }
+
+  .CarouselContainer {
+    margin-right: -5rem;
+
+    .SwiperButtonContainer {
+      display: flex;
+      justify-content: left;
+
+      .NextButton,
+      .PrevButton {
+        border-radius: 50%;
+        border: none;
+        height: 3rem;
+        width: 3rem;
+        margin-top: 1rem;
+      }
+    }
+
+    .PrevButton {
+      background-color: var(--primary-color);
+      margin-left: 0.5rem;
+    }
+
+    .Slide {
+      width: 32rem;
+      min-height: 16rem;
+
+      .MetaData {
+        margin-top: 1.25rem;
+
+        .Name {
+          font-size: 1.3rem;
+          color: #2a3342;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 35.989px;
+          letter-spacing: 0.421px;
+          margin-bottom: 0.1rem;
+        }
+
+        .Role {
+          color: #5e5e60;
+          font-size: 0.938rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22.902px;
+        }
+      }
+
+      .SlideItem {
+        border-radius: 30px;
+
+        .ImageContainer {
+          display: flex;
+        }
+
+        .Content {
+          margin-top: 1.2rem;
+          color: #000;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 2rem;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
 }
 
 /* Media Query for Mobile Devices */
@@ -206,11 +345,24 @@
   .AboutUs {
     padding: 1rem;
     background-image: none;
-    height: 60rem;
+    height: auto;
 
     .LeftContainer {
+      padding-top: 0;
+
+      .TagLine {
+        text-align: left;
+        color: #10192d;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 35px;
+        letter-spacing: 1px;
+        margin-bottom: 5rem;
+      }
       .HeaderText {
-        font-size: 4rem;
+        font-size: 3rem;
+        text-align: left;
       }
     }
   }
@@ -219,24 +371,54 @@
     padding: 1rem;
     background-image: none;
     height: auto;
-
-    .Text {
-      color: #10192d;
-      font-size: 1.5rem;
-      font-style: normal;
+    h1 {
+      line-height: 110%;
+      font-size: 2rem;
       font-weight: 400;
-      line-height: 35px; /* 145.833% */
-      letter-spacing: 1px;
-      margin-top: 4rem;
+    }
+    p {
+      font-weight: 400;
+      line-height: 160%;
+      font-size: 1rem;
+    }
+    .RightContainer {
+      padding: 0 1rem;
+      margin-top: 2rem;
+      text-align: left;
+
+      .Text {
+        color: rgba(0, 0, 0, 0.6);
+        font-feature-settings: "clig" off, "liga" off;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        text-transform: capitalize;
+        margin-top: 2rem;
+      }
     }
   }
 
   .Vision {
     padding: 0;
     background-color: #ffffff;
-    // margin-bottom: 19rem;
+    h1 {
+      line-height: 110%;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+    p {
+      font-weight: 400;
+      line-height: 160%;
+      font-size: 1rem;
+    }
 
     .LeftColumn {
+      text-align: left;
+
+      .Title {
+        margin-top: 4rem;
+      }
+
       .LeftText {
         color: rgba(0, 0, 0, 0.6);
         font-feature-settings: "clig" off, "liga" off;
@@ -261,8 +443,31 @@
 
   .Values {
     padding: 1.5rem;
-    width: 100%;
+    width: 90%;
+    text-align: left;
+    margin-bottom: 1rem;
+    margin: auto;
 
+    .Text {
+      // line-height: 2.7rem;
+      color: #10192d;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 35px;
+      letter-spacing: 1px;
+      margin-top: 1.5rem;
+    }
+    h3 {
+      line-height: 110%;
+      font-size: 1.75rem;
+      font-weight: 700;
+    }
+    p {
+      font-weight: 400;
+      line-height: 160%;
+      font-size: 1rem;
+    }
     .Trust {
       height: auto;
 
@@ -271,7 +476,13 @@
 
         p {
           line-height: 2.7rem;
-          font-size: 1.375rem;
+          color: #10192d;
+          font-size: 1.25rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 35px;
+          letter-spacing: 1px;
+          margin-top: 1.5rem;
         }
       }
 
@@ -281,6 +492,24 @@
           height: auto;
         }
       }
+      h4 {
+        line-height: 110%;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+      p {
+        font-weight: 400;
+        line-height: 160%;
+        font-size: 1rem;
+      }
+    }
+    .teamContainer {
+      flex-direction: column;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      div {
+        width: 100%;
+      }
     }
 
     .Teamwork {
@@ -288,14 +517,19 @@
       padding: 1.5rem;
       border-radius: 20px;
 
-      p {
-        line-height: 2.7rem;
-        font-size: 1.375rem;
-      }
-
       p,
       h4 {
         color: #ffffff;
+      }
+      h4 {
+        line-height: 110%;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+      p {
+        font-weight: 400;
+        line-height: 160%;
+        font-size: 1rem;
       }
     }
 
@@ -303,9 +537,15 @@
       height: auto;
       padding: 1.5rem;
       margin-top: 1rem;
+      h4 {
+        line-height: 110%;
+        font-size: 2rem;
+        font-weight: 400;
+      }
       p {
-        line-height: 2.7rem;
-        font-size: 1.375rem;
+        font-weight: 400;
+        line-height: 160%;
+        font-size: 1rem;
       }
 
       p,
@@ -322,11 +562,16 @@
       .Left {
         padding: 1.5rem;
 
-        p {
-          line-height: 2.7rem;
-          font-size: 1.375rem;
+        h4 {
+          line-height: 110%;
+          font-size: 2rem;
+          font-weight: 400;
         }
-
+        p {
+          font-weight: 400;
+          line-height: 160%;
+          font-size: 1rem;
+        }
         p,
         h4 {
           color: #ffffff;
@@ -334,10 +579,101 @@
       }
 
       .Right {
+        display: flex;
+        justify-content: center;
+
         .RightImage {
           width: 100%;
-          height: auto;
-          margin-top: 1rem;
+          height: 12.5rem;
+
+          margin-right: 6rem;
+        }
+      }
+    }
+    .userCenteric {
+      h4 {
+        line-height: 110%;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+      p {
+        font-weight: 400;
+        line-height: 160%;
+        font-size: 1rem;
+      }
+      .Left {
+        padding: 1.5rem;
+      }
+
+      .Right {
+        display: flex;
+        justify-content: center;
+
+        .RightImage {
+          width: 100%;
+          // height: auto;
+        }
+      }
+    }
+  }
+
+  .OurTeam {
+    padding: 1.5rem;
+
+    .Title {
+      text-align: left;
+      font-size: 2rem;
+    }
+
+    .ActionBar {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+
+      .LeftText {
+        text-align: left;
+
+        .FirstSentence::after {
+          content: " ";
+        }
+      }
+
+      .ActionContainer {
+        display: flex;
+        justify-content: center;
+        .WantToJoin {
+          display: none;
+        }
+        .ActionButton {
+          cursor: pointer;
+          border: none;
+          width: 12rem;
+          height: 3.6rem;
+          border-radius: 4.3rem;
+          color: #ffffff;
+          font-weight: 600;
+          background-color: var(--primary-color);
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .CarouselContainer {
+      .Slide {
+        width: 100%;
+
+        .SlideItem {
+          border-radius: 30px;
+
+          .ImageContainer {
+            display: flex;
+
+            .TeamImage {
+              object-fit: cover;
+              width: 80%;
+            }
+          }
         }
       }
     }
@@ -354,7 +690,12 @@
     background-position-x: 0;
     background-size: cover;
   }
-
+  .teamContainer {
+    flex-direction: column;
+    div {
+      width: 100% !important;
+    }
+  }
   .Mission {
     margin: 0 1.5rem 8.7rem;
     padding: 1rem;

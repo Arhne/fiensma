@@ -50,6 +50,17 @@ export interface ICurrencyPair {
 
 export type ITrend = "UP" | "DOWN";
 
+export interface ISummaryByDateData {
+  xAxis: string[];
+  yAxis: {
+    currencyPair: string;
+    prices: {
+      buyPrice: number;
+      createdAt: string;
+      sellPrice: number;
+    }[];
+  }[];
+}
 export interface ITimePeriodData {
   buyPrice: number;
   buyTrend: ITrend;
