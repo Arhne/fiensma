@@ -1,5 +1,5 @@
 import { useAddSubscribeMutation } from "@/redux/services/subscribeApi";
-import CustomInput from "../Inputs";
+import { CustomInput } from "../Inputs";
 
 import styles from "./Subscription.module.scss";
 import { showErrorToast, showSuccessToast } from "@/common/Utils/toast";

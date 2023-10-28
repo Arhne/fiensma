@@ -1,5 +1,9 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
-import { ICurrentRates, IExchangeSummary, ITimePeriodData } from "./interface";
+import {
+  ICurrentRates,
+  IExchangeSummary,
+  ISummaryByDateData,
+} from "./interface";
 import { Response } from "@/util/interface";
 import { BASE_URL } from "@/api/baseUrl";
 
@@ -22,7 +26,7 @@ export const exchangeRatesApi = createApi({
     }),
 
     getExchangeRateSummaryByDate: builder.query<
-      Response<ITimePeriodData[]>,
+      Response<ISummaryByDateData>,
       {
         currencyPairId?: string;
         startDate: string;
