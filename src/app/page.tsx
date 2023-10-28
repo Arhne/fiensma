@@ -49,11 +49,11 @@ export default function Home() {
         <div className="col-xs-12 col-sm-12 col-md-6">
           <h3>Still says crypto, please remove it</h3>
           <p className={styles.LeftText}>
-            Ibx Exchange is Your Premier Destination for Peer-to-Peer Crypto and
-            Fiat Trading. Discover a Seamless Platform for Buying and Selling
-            Digital and Traditional Currencies with Confidence. Explore Our
-            User-Friendly Interface, Robust Security Measures, and Diverse
-            Cryptocurrency Selection Today!
+            <span> Ibx</span> Exchange is Your Premier Destination for
+            Peer-to-Peer Crypto and Fiat Trading. Discover a Seamless Platform
+            for Buying and Selling Digital and Traditional Currencies with
+            Confidence. Explore Our User-Friendly Interface, Robust Security
+            Measures, and Diverse Cryptocurrency Selection Today!
           </p>
           <Image
             loader={() =>
@@ -81,8 +81,9 @@ export default function Home() {
               </div>
               <p className={styles.Heading}>Reliable and Accurate</p>
               <p className={styles.Content}>
-                We have access to real-time exchange rates for hundreds of
-                currencies, we also provide accurate and current data.
+                <span>We</span> have access to real-time exchange rates for
+                hundreds of currencies, we also provide accurate and current
+                data.
               </p>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -96,8 +97,8 @@ export default function Home() {
               </div>
               <p className={styles.Heading}>0% Charges</p>
               <p className={styles.Content}>
-                Enjoy fee-free trading with Ibx Exchange, where your profits
-                stay yours and we keep your costs at zero.
+                <span>Enjoy</span> fee-free trading with Ibx Exchange, where
+                your profits stay yours and we keep your costs at zero.
               </p>
             </div>
           </div>
@@ -114,8 +115,9 @@ export default function Home() {
 
               <p className={styles.Heading}>Trust Guaranteed</p>
               <p className={styles.Content}>
-                Our team of experts is here to guide you safely through the
-                global currency markets at every step of your journey.
+                <span>Our</span> team of experts is here to guide you safely
+                through the global currency markets at every step of your
+                journey.
               </p>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -129,9 +131,9 @@ export default function Home() {
               </div>
               <p className={styles.Heading}>24/7 p2p ads</p>
               <p className={styles.Content}>
-                Experience round-the-clock access to our dynamic peer-to-peer
-                ads, empowering you to trade cryptocurrencies and fiat
-                currencies at your convenience, any time, day or night.
+                <span>Experience</span> round-the-clock access to our dynamic
+                peer-to-peer ads, empowering you to trade cryptocurrencies and
+                fiat currencies at your convenience, any time, day or night.
               </p>
             </div>
           </div>
@@ -141,8 +143,8 @@ export default function Home() {
         <div className={`col-xs-12 col-sm-7 ${styles.LeftColumn}`}>
           <h3>We believe in the power of numbers</h3>
           <p className={styles.LeftText}>
-            Every trade, every transaction, and every connection made on Ibx
-            Exchange contributes to a growing ecosystem of empowered
+            <span>Every</span> trade, every transaction, and every connection
+            made on Ibx Exchange contributes to a growing ecosystem of empowered
             individuals, shaping the future of currency exchange. Join us on
             this journey of limitless possibilities.
           </p>
