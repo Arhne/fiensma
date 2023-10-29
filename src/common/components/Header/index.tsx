@@ -17,8 +17,8 @@ const Header = () => {
       <div className={styles.LogoHamburger}>
         <Image
           src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418208/ibx-website-v2/logo_cz22mb.svg"
-          width={57}
-          height={38}
+          width={100}
+          height={50}
           alt=""
           className={styles.Logo}
           onClick={() => router.push("/")}
