@@ -19,10 +19,10 @@ export default function Home() {
         <div
           className={`col-sm-12 col-xs-12 col-lg-7  ${styles.LandingLeftContainer}`}
         >
-          <h1 className={styles.HeaderText}>Currency Exchange Made Easy</h1>
+          <h1 className={styles.HeaderText}>P2P Currency Exchange Made Easy</h1>
           <p className={styles.TagLine}>
-            Welcome to Ibx Exchange - Your Gateway to <br /> Effortless Currency
-            Trading with Uncompromising <br /> Security.
+            Welcome to Ibx Exchange - Your trusted marketplace for <br /> peer-to-peer fiat currency
+            exchange.
           </p>
           <div className={styles.MobileStore}>
             <Image
@@ -49,11 +49,10 @@ export default function Home() {
         <div className="col-xs-12 col-sm-12 col-md-6">
           <h3>Gain more with Ibx</h3>
           <p className={styles.LeftText}>
-            Ibx Exchange is Your Premier Destination for Peer-to-Peer Crypto and
-            Fiat Trading. Discover a Seamless Platform for Buying and Selling
-            Digital and Traditional Currencies with Confidence. Explore Our
-            User-Friendly Interface, Robust Security Measures, and Diverse
-            Cryptocurrency Selection Today!
+            Ibx Exchange is your premier destination for peer-to-peer
+            fiat exchange. Discover a seamless platform for exchanging
+            your local and foreign currencies directly to your bank account. Explore our
+            user-friendly interface, 24/7 support  and robust security measures, well designed to ensure you have a pleasant experience.
           </p>
           <Image
             loader={() =>
