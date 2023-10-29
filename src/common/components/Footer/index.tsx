@@ -16,7 +16,7 @@ const Footer = () => {
           alt=""
           onClick={() => router.push("/")}
         />
-        <p className={styles.Address}>Abuja, Nigeria</p>
+        <p className={styles.Address}>No 90 Edeki Street, Dawaki Abuja Nigeria</p>
         <p>Follow us</p>
         <ul className={styles.SocialIcons}>
           <li>
