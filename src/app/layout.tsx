@@ -17,7 +17,7 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: "Ibx Exchange",
-  description: "A P2P fiat-crypto trading platform",
+  description: "A P2P marketplace for currecy exchange, anytime and at your terms",
 };
 
 export default function RootLayout({

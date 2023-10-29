@@ -47,7 +47,7 @@ export default function Home() {
       <Services />
       <div className={`row gx-5 ${styles.Features}`}>
         <div className="col-xs-12 col-sm-12 col-md-6">
-          <h3>Gain more with IBX</h3>
+          <h3>Gain more with Ibx</h3>
           <p className={styles.LeftText}>
             Ibx Exchange is Your Premier Destination for Peer-to-Peer Crypto and
             Fiat Trading. Discover a Seamless Platform for Buying and Selling
@@ -127,10 +127,10 @@ export default function Home() {
                   alt=""
                 />
               </div>
-              <p className={styles.Heading}>24/7 p2p ads</p>
+              <p className={styles.Heading}>24/7 p2p transactions</p>
               <p className={styles.Content}>
                 Experience round-the-clock access to our dynamic peer-to-peer
-                ads, empowering you to trade cryptocurrencies and fiat
+                transactions, empowering you to trade cryptocurrencies and fiat
                 currencies at your convenience, any time, day or night.
               </p>
             </div>
@@ -156,7 +156,7 @@ export default function Home() {
             <div
               className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
             >
-              <h2 className={styles.Stat}>$10m</h2>
+              <h2 className={styles.Stat}>2,000+</h2>
               <p className={styles.StatTitle}>Contributors</p>
             </div>
           </div>
@@ -164,13 +164,13 @@ export default function Home() {
             <div
               className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
             >
-              <h2 className={styles.Stat}>50,000+</h2>
+              <h2 className={styles.Stat}>10,000+</h2>
               <p className={styles.StatTitle}>Daily Users</p>
             </div>
             <div
               className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
             >
-              <h2 className={styles.Stat}>$10b</h2>
+              <h2 className={styles.Stat}>$10,000</h2>
               <p className={styles.StatTitle}>Transaction volume per quarter</p>
             </div>
           </div>
@@ -225,7 +225,7 @@ export default function Home() {
             Trusted by Top <br /> Companies
           </p>
           <p className={styles.CommonText}>
-            More than 45,000+ companies trust IBX
+            More than 45,000+ companies trust Ibx
           </p>
         </div>
         <div className={`row ${styles.PartnerCompanies}`}>
