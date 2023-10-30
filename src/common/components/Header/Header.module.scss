@@ -6,7 +6,7 @@
   max-width: 1440px;
   margin: 0 auto;
   position: fixed;
-  top: -8%;
+  top: -12%;
   left: 50%;
   transform: translate(-50%, 50%);
   width: 100%;
@@ -66,7 +66,11 @@
     }
   }
 }
-
+@media screen and (min-width: 2000px) {
+  .HeaderContainer {
+    top: -5%;
+  }
+}
 @media screen and (max-width: 993px) {
   .HeaderContainer {
     flex-direction: column;
