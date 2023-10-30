@@ -80,8 +80,9 @@ export default function Home() {
               </div>
               <p className={styles.Heading}>Reliable and Accurate</p>
               <p className={styles.Content}>
-                We have access to real-time exchange rates for hundreds of
-                currencies, we also provide accurate and current data.
+                <span>We</span> have access to real-time exchange rates for
+                hundreds of currencies, we also provide accurate and current
+                data.
               </p>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -95,8 +96,8 @@ export default function Home() {
               </div>
               <p className={styles.Heading}>0% Charges</p>
               <p className={styles.Content}>
-                Enjoy fee-free trading with Ibx Exchange, where your profits
-                stay yours and we keep your costs at zero.
+                <span>Enjoy</span> fee-free trading with Ibx Exchange, where
+                your profits stay yours and we keep your costs at zero.
               </p>
             </div>
           </div>
@@ -113,8 +114,9 @@ export default function Home() {
 
               <p className={styles.Heading}>Trust Guaranteed</p>
               <p className={styles.Content}>
-                Our team of expert are on hand to help you safely navigate the
-                international currency markets every step of the way.
+                <span>Our</span> team of experts is here to guide you safely
+                through the global currency markets at every step of your
+                journey.
               </p>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -140,8 +142,8 @@ export default function Home() {
         <div className={`col-xs-12 col-sm-7 ${styles.LeftColumn}`}>
           <h3>We believe in the power of numbers</h3>
           <p className={styles.LeftText}>
-            Every trade, every transaction, and every connection made on Ibx
-            Exchange contributes to a growing ecosystem of empowered
+            <span>Every</span> trade, every transaction, and every connection
+            made on Ibx Exchange contributes to a growing ecosystem of empowered
             individuals, shaping the future of currency exchange. Join us on
             this journey of limitless possibilities.
           </p>
