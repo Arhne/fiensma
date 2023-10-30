@@ -6,8 +6,8 @@ const Services = () => {
     <div className={styles.ServicesContainer}>
       <h4 className={styles.Question}>What we do</h4>
       <p className={styles.Content}>
-        These are some of the reasons why you should use our platform in fiat
-        exchange finances.
+        Discover why our platform is your ideal choice for fiat currency
+        exchange and financial solutions
       </p>
 
       <div className={`row gx-5 ${styles.Services}`}>
@@ -16,7 +16,7 @@ const Services = () => {
             <ul className={styles.Flow}>
               <li className={`${styles.FlowItem} ${styles.One}`}>
                 <p className={styles.FlowContent}>
-                  Stay informed about the current Naira exchange rates.
+                  Keep up-to-date with the latest Naira exchange rates.
                 </p>
               </li>
               <li className={`${styles.FlowItem} ${styles.Two}`}>
@@ -27,8 +27,7 @@ const Services = () => {
               </li>
               <li className={`${styles.FlowItem} ${styles.Three}`}>
                 <p className={styles.FlowContent}>
-                  Keep abreast of the most recent developments in the foreign
-                  exchange market trend
+                  Stay updated on the latest forex market trends.
                 </p>
               </li>
             </ul>

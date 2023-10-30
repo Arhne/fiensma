@@ -95,7 +95,11 @@
     font-style: normal;
     font-weight: 400;
     line-height: 32px;
-    text-transform: capitalize;
+    text-transform: lowercase;
+    // text-transform: capitalize;
+    span {
+      text-transform: capitalize;
+    }
   }
 
   .RightColumn {
@@ -123,7 +127,9 @@
       font-style: normal;
       font-weight: 400;
       line-height: 2rem;
-      text-transform: capitalize;
+      span {
+        text-transform: capitalize;
+      }
     }
   }
 }
@@ -141,7 +147,9 @@
     font-style: normal;
     font-weight: 400;
     line-height: 32px;
-    text-transform: capitalize;
+    span {
+      text-transform: capitalize;
+    }
   }
 
   .StatContainer {
