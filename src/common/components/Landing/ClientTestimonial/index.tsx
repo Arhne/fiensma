@@ -18,6 +18,7 @@ const ClientTestimonial = () => {
   const _slides = [
     {
       id: 1,
+      job: "Forex Trader",
       imageSrc:
         "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692537582/ibx-website-v2/carousel-images/testifier_1_oyjwt4.webp",
       title: "Alex T",
@@ -25,6 +26,7 @@ const ClientTestimonial = () => {
     },
     {
       id: 2,
+      job: "Tech Intern",
       imageSrc:
         "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692535820/ibx-website-v2/carousel-images/testifier_5_ufidpu.webp",
       title: "Jordn O'Reilly",
@@ -32,6 +34,7 @@ const ClientTestimonial = () => {
     },
     {
       id: 3,
+      job: "Web3 Specialist",
       imageSrc:
         "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692535819/ibx-website-v2/carousel-images/testifier_2_t7gevb.webp",
       title: "Elena M",
@@ -39,6 +42,7 @@ const ClientTestimonial = () => {
     },
     {
       id: 4,
+      job: "Forex Trader",
       imageSrc:
         "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692535819/ibx-website-v2/carousel-images/testifier_3_ypgpkj.webp",
       title: "Sarah Mekka",
@@ -46,6 +50,7 @@ const ClientTestimonial = () => {
     },
     {
       id: 5,
+      job: "Tech Intern",
       imageSrc:
         "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692535820/ibx-website-v2/carousel-images/testifier_4_sdcp8r.webp",
       title: "Emily S",
@@ -115,7 +120,7 @@ const ClientTestimonial = () => {
                     />
                     <div className={styles.Header}>
                       <h6>{_slide.title}</h6>
-                      <small>CEO youtube</small>
+                      <small>{_slide.job}</small>
                     </div>
                   </div>
                   <div className={styles.Content}>{_slide.content}</div>

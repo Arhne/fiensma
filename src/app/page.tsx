@@ -19,10 +19,10 @@ export default function Home() {
         <div
           className={`col-sm-12 col-xs-12 col-lg-7  ${styles.LandingLeftContainer}`}
         >
-          <h1 className={styles.HeaderText}>Currency Exchange Made Easy</h1>
+          <h1 className={styles.HeaderText}>P2P Currency Exchange Made Easy</h1>
           <p className={styles.TagLine}>
-            Welcome to Ibx Exchange - Your Gateway to <br /> Effortless Currency
-            Trading with Uncompromising <br /> Security.
+            Welcome to Ibx Exchange - Your trusted marketplace for <br /> peer-to-peer fiat currency
+            exchange.
           </p>
           <div className={styles.MobileStore}>
             <Image
@@ -47,13 +47,12 @@ export default function Home() {
       <Services />
       <div className={`row gx-5 ${styles.Features}`}>
         <div className="col-xs-12 col-sm-12 col-md-6">
-          <h3>Gain more with IBX</h3>
+          <h3>Gain more with Ibx</h3>
           <p className={styles.LeftText}>
-            Ibx Exchange is Your Premier Destination for Peer-to-Peer Crypto and
-            Fiat Trading. Discover a Seamless Platform for Buying and Selling
-            Digital and Traditional Currencies with Confidence. Explore Our
-            User-Friendly Interface, Robust Security Measures, and Diverse
-            Cryptocurrency Selection Today!
+            Ibx Exchange is your premier destination for peer-to-peer
+            fiat exchange. Discover a seamless platform for exchanging
+            your local and foreign currencies directly to your bank account. Explore our
+            user-friendly interface, 24/7 support  and robust security measures, well designed to ensure you have a pleasant experience.
           </p>
           <Image
             loader={() =>
@@ -81,8 +80,9 @@ export default function Home() {
               </div>
               <p className={styles.Heading}>Reliable and Accurate</p>
               <p className={styles.Content}>
-                We have access to real-time exchange rates for hundreds of
-                currencies, we also provide accurate and current data.
+                <span>We</span> have access to real-time exchange rates for
+                hundreds of currencies, we also provide accurate and current
+                data.
               </p>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -96,8 +96,8 @@ export default function Home() {
               </div>
               <p className={styles.Heading}>0% Charges</p>
               <p className={styles.Content}>
-                Enjoy fee-free trading with Ibx Exchange, where your profits
-                stay yours and we keep your costs at zero.
+                <span>Enjoy</span> fee-free trading with Ibx Exchange, where
+                your profits stay yours and we keep your costs at zero.
               </p>
             </div>
           </div>
@@ -114,8 +114,9 @@ export default function Home() {
 
               <p className={styles.Heading}>Trust Guaranteed</p>
               <p className={styles.Content}>
-                Our team of expert are on hand to help you safely navigate the
-                international currency markets every step of the way.
+                <span>Our</span> team of experts is here to guide you safely
+                through the global currency markets at every step of your
+                journey.
               </p>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -127,10 +128,10 @@ export default function Home() {
                   alt=""
                 />
               </div>
-              <p className={styles.Heading}>24/7 p2p ads</p>
+              <p className={styles.Heading}>24/7 p2p transactions</p>
               <p className={styles.Content}>
                 Experience round-the-clock access to our dynamic peer-to-peer
-                ads, empowering you to trade cryptocurrencies and fiat
+                transactions, empowering you to trade cryptocurrencies and fiat
                 currencies at your convenience, any time, day or night.
               </p>
             </div>
@@ -141,8 +142,8 @@ export default function Home() {
         <div className={`col-xs-12 col-sm-7 ${styles.LeftColumn}`}>
           <h3>We believe in the power of numbers</h3>
           <p className={styles.LeftText}>
-            Every trade, every transaction, and every connection made on Ibx
-            Exchange contributes to a growing ecosystem of empowered
+            <span>Every</span> trade, every transaction, and every connection
+            made on Ibx Exchange contributes to a growing ecosystem of empowered
             individuals, shaping the future of currency exchange. Join us on
             this journey of limitless possibilities.
           </p>
@@ -156,7 +157,7 @@ export default function Home() {
             <div
               className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
             >
-              <h2 className={styles.Stat}>$10m</h2>
+              <h2 className={styles.Stat}>2,000+</h2>
               <p className={styles.StatTitle}>Contributors</p>
             </div>
           </div>
@@ -164,13 +165,13 @@ export default function Home() {
             <div
               className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
             >
-              <h2 className={styles.Stat}>50,000+</h2>
+              <h2 className={styles.Stat}>10,000+</h2>
               <p className={styles.StatTitle}>Daily Users</p>
             </div>
             <div
               className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
             >
-              <h2 className={styles.Stat}>$10b</h2>
+              <h2 className={styles.Stat}>$10,000</h2>
               <p className={styles.StatTitle}>Transaction volume per quarter</p>
             </div>
           </div>
@@ -225,7 +226,7 @@ export default function Home() {
             Trusted by Top <br /> Companies
           </p>
           <p className={styles.CommonText}>
-            More than 45,000+ companies trust IBX
+            More than 45,000+ companies trust Ibx
           </p>
         </div>
         <div className={`row ${styles.PartnerCompanies}`}>
