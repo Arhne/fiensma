@@ -21,7 +21,7 @@ import styles from "./about.module.scss";
 const About = () => {
   const router = useRouter();
   return (
-    <main className={styles.main}>
+    <main className={styles.Main}>
       <div className={`row ${styles.AboutUs}`}>
         <div
           className={`col-sm-12 col-xs-12 col-lg-6  ${styles.LeftContainer}`}
@@ -104,7 +104,7 @@ const About = () => {
           We hold our customers so dearly and always focus on bring a seamless
           solution to them.
         </p>
-        <div className={`row gx-5 mt-3 ${styles.Accountability}`}>
+        <div className={`row m-0 mt-3 ${styles.Accountability}`}>
           <div className={`col-xs-12 col-sm-12 col-lg-5 ${styles.Left}`}>
             <h4>Security</h4>
             <p>
@@ -128,7 +128,7 @@ const About = () => {
             />
           </div>
         </div>
-        <div className={`row mt-3 ${styles.teamContainer}`}>
+        <div className={`row m-0 mt-3 ${styles.TeamContainer}`}>
           <div className={`col-xs-12 col-sm-12 col-lg-6 ${styles.Teamwork}`}>
             <h4>Community</h4>
             <p>
@@ -150,7 +150,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className={`row gx-5 mt-3 ${styles.userCenteric}`}>
+        <div className={`row m-0 mt-3 ${styles.UserCenteric}`}>
           <div className={`col-xs-12 col-sm-12 col-lg-5 ${styles.Left}`}>
             <h4>User-Centric Approach</h4>
             <p>
@@ -174,7 +174,7 @@ const About = () => {
             />
           </div>
         </div>
-        <div className={`row gx-5 mt-3 ${styles.Trust}`}>
+        <div className={`row m-0 mt-3 ${styles.Trust}`}>
           <div className={`col-xs-12 col-sm-12 col-lg-5 ${styles.Left}`}>
             <h4>Innovation</h4>
             <p>
