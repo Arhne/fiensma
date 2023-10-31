@@ -286,7 +286,7 @@ const About = () => {
             </Swiper>
           </div>
         </div>
-      </div>
+      
     </main>
   );
 };

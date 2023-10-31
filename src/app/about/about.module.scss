@@ -1,36 +1,36 @@
 .Main {
   padding: 0 6.25rem;
   margin: 0 auto;
-
-  .AboutUs {
-    height: 41rem;
-    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1694619314/ibx-website-v2/about-us/aboout_us_img_w6opzu.svg");
-    background-repeat: no-repeat;
-    background-position-x: 93%;
-    background-position-y: 15%;
-    max-width: 1440px;
-    margin: 0 auto;
-.main {
-  // padding: 0 6.25rem;
-  margin: auto;
 }
-// .AboutContainer {
-//   width: 87%;
-//   margin: auto;
-// }
 .AboutUs {
-  padding: 0 0;
   height: 41rem;
   background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1694619314/ibx-website-v2/about-us/aboout_us_img_w6opzu.svg");
   background-repeat: no-repeat;
   background-position-x: 93%;
   background-position-y: 15%;
   max-width: 1440px;
-
-  .AboutUsTag {
-    font: 1.25rem;
-    color: var(--header-one-color);
+  margin: 0 auto;
+  .main {
+    // padding: 0 6.25rem;
+    margin: auto;
   }
+  // .AboutContainer {
+  //   width: 87%;
+  //   margin: auto;
+  // }
+  .AboutUs {
+    padding: 0 0;
+    height: 41rem;
+    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1694619314/ibx-website-v2/about-us/aboout_us_img_w6opzu.svg");
+    background-repeat: no-repeat;
+    background-position-x: 93%;
+    background-position-y: 15%;
+    max-width: 1440px;
+
+    .AboutUsTag {
+      font: 1.25rem;
+      color: var(--header-one-color);
+    }
 
     .LeftContainer {
       padding-top: 5rem;
