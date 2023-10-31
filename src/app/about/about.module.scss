@@ -1,3 +1,15 @@
+.Main {
+  padding: 0 6.25rem;
+  margin: 0 auto;
+
+  .AboutUs {
+    height: 41rem;
+    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1694619314/ibx-website-v2/about-us/aboout_us_img_w6opzu.svg");
+    background-repeat: no-repeat;
+    background-position-x: 93%;
+    background-position-y: 15%;
+    max-width: 1440px;
+    margin: 0 auto;
 .main {
   // padding: 0 6.25rem;
   margin: auto;
@@ -20,478 +32,71 @@
     color: var(--header-one-color);
   }
 
-  .LeftContainer {
-    padding-top: 5rem;
-    position: relative;
-    .headerPara {
-      font-size: 1.25rem;
-      font-weight: 600;
-      line-height: 1.375rem;
-    }
-    .HeaderText {
-      margin-bottom: 4rem;
-
-      .HighlightedInnovators {
-        color: var(--primary-color);
-      }
-    }
-
-    .TagLine {
-      font-size: 1.5rem;
-      margin-bottom: 5rem;
-    }
-  }
-}
-
-.Mission {
-  background-color: #f5f5f5;
-  height: 39rem;
-  padding: 0 0;
-  max-width: 1440px;
-
-  .LeftContainer {
-    .LeftImage {
-      width: 100%;
-      height: auto;
-      margin-top: 5rem;
-    }
-  }
-
-  .RightContainer {
-    padding-top: 14rem;
-    .Text {
-      color: #10192d;
-      font-size: 1.25rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 35px; /* 145.833% */
-      letter-spacing: 1px;
-      margin-top: 1.5rem;
-    }
-  }
-}
-
-.Vision {
-  // padding: 0 6.25rem;
-  background-color: #ffffff;
-  max-width: 1440px;
-  margin: 0 auto;
-  margin-bottom: 10rem;
-  padding-top: 4.3rem;
-
-  .LeftColumn {
-    .Title {
-      margin-top: 10rem;
-    }
-  }
-
-  .LeftText {
-    color: #10192d;
-    font-size: 1.25rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 35px; /* 145.833% */
-    letter-spacing: 1px;
-    margin-top: 1.5rem;
-  }
-
-  .StatTitle {
-    margin-top: -1rem;
-  }
-}
-
-.Values {
-  max-width: 1440px;
-  margin: 0 auto;
-  margin-bottom: 11rem;
-
-  .Trust {
-    min-height: 33rem;
-    background-color: #ececec;
-    border-radius: 1.25rem;
-
-    .Left {
-      padding-left: 6rem;
-      padding-top: 7rem;
-
-      p {
-        line-height: 2.7rem;
-        font-size: 1.375rem;
-      }
-
-      p,
-      h4 {
-        color: var(--header-one-color);
-      }
-      h3,
-      h4 {
-        font-size: 2.625rem;
-      }
-    }
-
-    .Right {
-      .RightImage {
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
-  .teamContainer {
-    display: flex;
-    gap: 5px;
-    border-radius: 1.25rem;
-    div {
-      width: 49.5%;
-    }
-  }
-  .Teamwork {
-    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1694626480/ibx-website-v2/about-us/teamwork_img_uy7pcu.webp");
-    background-repeat: no-repeat;
-    background-color: #f4beba;
-    background-position-x: 100%;
-    background-position-y: 100%;
-    min-height: 47.5rem;
-    padding-left: 5.6rem;
-    padding-top: 8.4rem;
-    border: 4px solid black;
-
-    p {
-      line-height: 2.7rem;
-      font-size: 1.375rem;
-    }
-
-    p,
-    h4 {
-      color: #ffffff;
-    }
-    h3,
-    h4 {
-      font-size: 2.625rem;
-    }
-  }
-
-  .Transparency {
-    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1694626756/ibx-website-v2/about-us/transparency_img_vxy63g.png");
-    background-repeat: no-repeat;
-    background-position-x: 100%;
-    background-position-y: 100%;
-    min-height: 47.5rem;
-    padding-left: 5.6rem;
-    padding-top: 8.4rem;
-    border: 4px solid black;
-
-    p {
-      line-height: 2.7rem;
-      font-size: 1.375rem;
-    }
-
-    p,
-    h4 {
-      color: #ffffff;
-    }
-    h3,
-    h4 {
-      font-size: 2.625rem;
-    }
-  }
-
-  .Accountability {
-    min-height: 33rem;
-    background-color: var(--primary-color);
-    border-radius: 1.25rem;
-    border: 5px solid black;
-
-    .Left {
-      padding-left: 6rem;
-      padding-top: 7rem;
-
-      p {
-        line-height: 2.7rem;
-        font-size: 1.375rem;
-      }
-
-      p,
-      h4 {
-        color: #ffffff;
-      }
-      h3,
-      h4 {
-        font-size: 2.625rem;
-      }
-    }
-
-    .Right {
-      .RightImage {
-        width: 100%;
-        height: 32.563rem;
-        margin-top: 1rem;
-      }
-      h3,
-      h4 {
-        font-size: 2.625rem;
-      }
-    }
-  }
-}
-.userCenteric {
-  min-height: 33rem;
-  background-color: #facc15;
-  border-radius: 1.25rem;
-
-  .Left {
-    padding-left: 6rem;
-    padding-top: 7rem;
-
-    p {
-      line-height: 2.7rem;
-      font-size: 1.375rem;
-    }
-
-    p,
-    h4 {
-      color: #10192d;
-    }
-    h3,
-    h4 {
-      font-size: 2.625rem;
-    }
-  }
-
-  .Right {
-    .RightImage {
-      width: 100%;
-      height: auto;
-      margin-top: 1rem;
-    }
-  }
-}
-
-.OurTeam {
-  padding: 0 4rem 0 6.25rem;
-  max-width: 1440px;
-  overflow-x: hidden;
-  margin-bottom: 7rem;
-
-  .ActionBar {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-
-    .LeftText {
-      .FirstSentence::after {
-        content: "\a";
-        white-space: pre;
-      }
-    }
-
-    .ActionContainer {
-      position: relative;
-
-      .WantToJoin {
-        position: absolute;
-        top: -2rem;
-        right: 8rem;
-      }
-      .ActionButton {
-        cursor: pointer;
-        border: none;
-        width: 9rem;
-        height: 3rem;
-        border-radius: 4.3rem;
-        color: #ffffff;
-        font-weight: 600;
-        background-color: var(--primary-color);
-      }
-    }
-  }
-
-  .CarouselContainer {
-    margin-right: -5rem;
-
-    .SwiperButtonContainer {
-      display: flex;
-      justify-content: left;
-
-      .NextButton,
-      .PrevButton {
-        border-radius: 50%;
-        border: none;
-        height: 3rem;
-        width: 3rem;
-        margin-top: 1rem;
-      }
-    }
-
-    .PrevButton {
-      background-color: var(--primary-color);
-      margin-left: 0.5rem;
-    }
-
-    .Slide {
-      width: 32rem;
-      min-height: 16rem;
-
-      .MetaData {
-        margin-top: 1.25rem;
-
-        .Name {
-          font-size: 1.3rem;
-          color: #2a3342;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 35.989px;
-          letter-spacing: 0.421px;
-          margin-bottom: 0.1rem;
-        }
-
-        .Role {
-          color: #5e5e60;
-          font-size: 0.938rem;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 22.902px;
-        }
-      }
-
-      .SlideItem {
-        border-radius: 30px;
-
-        .ImageContainer {
-          display: flex;
-        }
-
-        .Content {
-          margin-top: 1.2rem;
-          color: #000;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 2rem;
-          text-transform: capitalize;
-        }
-      }
-    }
-  }
-}
-
-/* Media Query for Mobile Devices */
-@media screen and (max-width: 480px) {
-  .main {
-    width: 100%;
-  }
-  .AboutUs {
-    padding: 1rem;
-    background-image: none;
-    height: auto;
-
     .LeftContainer {
-      padding-top: 0;
+      padding-top: 5rem;
+      position: relative;
+      .headerPara {
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 1.375rem;
+      }
+      .HeaderText {
+        margin-bottom: 4rem;
+
+        .HighlightedInnovators {
+          color: var(--primary-color);
+        }
+      }
 
       .TagLine {
-        text-align: left;
+        font-size: 1.5rem;
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+  .Mission {
+    background-color: #f5f5f5;
+    height: 39rem;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .LeftContainer {
+      .LeftImage {
+        width: 100%;
+        height: auto;
+        margin-top: 5rem;
+      }
+    }
+
+    .RightContainer {
+      padding-top: 14rem;
+      .Text {
         color: #10192d;
         font-size: 1.25rem;
         font-style: normal;
         font-weight: 400;
-        line-height: 35px;
+        line-height: 35px; /* 145.833% */
         letter-spacing: 1px;
-        margin-bottom: 5rem;
-      }
-      .HeaderText {
-        font-size: 3rem;
-        text-align: center;
-      }
-    }
-  }
-  .teamContainer {
-    flex-direction: column;
-    gap: 12px;
-    div {
-      width: 100% !important;
-    }
-  }
-  .Mission {
-    padding: 1rem;
-    background-image: none;
-    height: auto;
-    h1 {
-      line-height: 110%;
-      font-size: 2rem;
-      font-weight: 400;
-    }
-    p {
-      font-weight: 400;
-      line-height: 160%;
-      font-size: 1rem;
-    }
-    .RightContainer {
-      padding: 0 1rem;
-      margin-top: 2rem;
-      text-align: center;
-
-      .Text {
-        color: rgba(0, 0, 0, 0.6);
-        font-feature-settings: "clig" off, "liga" off;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 32px;
-        text-transform: capitalize;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
       }
     }
   }
 
   .Vision {
-    padding: 0;
     background-color: #ffffff;
-    h1 {
-      line-height: 110%;
-      font-size: 2rem;
-      font-weight: 400;
-    }
-    p {
-      font-weight: 400;
-      line-height: 160%;
-      font-size: 1rem;
-    }
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+    padding-top: 4.3rem;
 
     .LeftColumn {
-      text-align: center;
-
       .Title {
-        margin-top: 4rem;
-      }
-
-      .LeftText {
-        color: rgba(0, 0, 0, 0.6);
-        font-feature-settings: "clig" off, "liga" off;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 32px;
-        text-transform: capitalize;
-      }
-
-      h2 {
-        font-size: 2rem;
+        margin-top: 10rem;
       }
     }
 
-    .RightColumn {
-      .RightImage {
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
-
-  .Values {
-    padding: 1.5rem;
-    width: 90%;
-    text-align: center;
-    margin-bottom: 1rem;
-    margin: auto;
-
-    .Text {
-      // line-height: 2.7rem;
+    .LeftText {
       color: #10192d;
       font-size: 1.25rem;
       font-style: normal;
@@ -500,31 +105,38 @@
       letter-spacing: 1px;
       margin-top: 1.5rem;
     }
-    h3 {
-      line-height: 110%;
-      font-size: 1.75rem;
-      font-weight: 700;
+
+    .StatTitle {
+      margin-top: -1rem;
     }
-    p {
-      font-weight: 400;
-      line-height: 160%;
-      font-size: 1rem;
-    }
+  }
+
+  .Values {
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-bottom: 11rem;
+
     .Trust {
-      height: auto;
+      min-height: 33rem;
+      background-color: #ececec;
+      border-radius: 1.25rem;
 
       .Left {
-        padding: 1.5rem;
+        padding-left: 6rem;
+        padding-top: 7rem;
 
         p {
           line-height: 2.7rem;
-          color: #10192d;
-          font-size: 1.25rem;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 35px;
-          letter-spacing: 1px;
-          margin-top: 1.5rem;
+          font-size: 1.375rem;
+        }
+
+        p,
+        h4 {
+          color: var(--header-one-color);
+        }
+        h3,
+        h4 {
+          font-size: 2.625rem;
         }
       }
 
@@ -534,76 +146,392 @@
           height: auto;
         }
       }
-      h4 {
-        line-height: 110%;
-        font-size: 2rem;
-        font-weight: 400;
-      }
-      p {
-        font-weight: 400;
-        line-height: 160%;
-        font-size: 1rem;
-      }
-    }
-    .teamContainer {
-      flex-direction: column;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-      div {
-        width: 100%;
-      }
     }
 
-    .Teamwork {
-      height: auto;
-      padding: 1.5rem;
-      border-radius: 20px;
+    .TeamContainer {
+      .Teamwork {
+        background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1694626480/ibx-website-v2/about-us/teamwork_img_uy7pcu.webp");
+        background-repeat: no-repeat;
+        background-color: #f4beba;
+        background-position-x: 100%;
+        background-position-y: 100%;
+        min-height: 47.5rem;
+        padding-left: 5.6rem;
+        padding-top: 8.4rem;
 
-      p,
-      h4 {
-        color: #ffffff;
-      }
-      h4 {
-        line-height: 110%;
-        font-size: 2rem;
-        font-weight: 400;
-      }
-      p {
-        font-weight: 400;
-        line-height: 160%;
-        font-size: 1rem;
-      }
-    }
+        p {
+          line-height: 2.7rem;
+          font-size: 1.375rem;
+        }
 
-    .Transparency {
-      height: auto;
-      padding: 1.5rem;
-      margin-top: 1rem;
-      h4 {
-        line-height: 110%;
-        font-size: 2rem;
-        font-weight: 400;
-      }
-      p {
-        font-weight: 400;
-        line-height: 160%;
-        font-size: 1rem;
+        p,
+        h4 {
+          color: #ffffff;
+        }
+        h3,
+        h4 {
+          font-size: 2.625rem;
+        }
       }
 
-      p,
-      h4 {
-        color: #ffffff;
+      .Transparency {
+        background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1694626756/ibx-website-v2/about-us/transparency_img_vxy63g.png");
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 100%;
+        min-height: 47.5rem;
+        padding-left: 5.6rem;
+        padding-top: 8.4rem;
+        background-size: 100%;
+
+        p {
+          line-height: 2.7rem;
+          font-size: 1.375rem;
+        }
+
+        p,
+        h4 {
+          color: #ffffff;
+        }
+        h3,
+        h4 {
+          font-size: 2.625rem;
+        }
       }
     }
 
     .Accountability {
-      height: auto;
+      min-height: 33rem;
       background-color: var(--primary-color);
       border-radius: 1.25rem;
 
       .Left {
-        padding: 1.5rem;
+        padding-left: 6rem;
+        padding-top: 7rem;
 
+        p {
+          line-height: 2.7rem;
+          font-size: 1.375rem;
+        }
+
+        p,
+        h4 {
+          color: #ffffff;
+        }
+        h3,
+        h4 {
+          font-size: 2.625rem;
+        }
+      }
+
+      .Right {
+        .RightImage {
+          width: 100%;
+          height: 32.563rem;
+          margin-top: 1rem;
+        }
+        h3,
+        h4 {
+          font-size: 2.625rem;
+        }
+      }
+    }
+  }
+  .UserCenteric {
+    min-height: 33rem;
+    background-color: #facc15;
+    border-radius: 1.25rem;
+
+    .Left {
+      padding-left: 6rem;
+      padding-top: 7rem;
+
+      p {
+        line-height: 2.7rem;
+        font-size: 1.375rem;
+      }
+
+      p,
+      h4 {
+        color: #10192d;
+      }
+      h3,
+      h4 {
+        font-size: 2.625rem;
+      }
+    }
+
+    .Right {
+      .RightImage {
+        width: 100%;
+        height: auto;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .OurTeam {
+    padding: 0 4rem 0 0;
+    max-width: 1440px;
+    overflow-x: hidden;
+    margin: 0 auto;
+    margin-bottom: 7rem;
+
+    .ActionBar {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+
+      .LeftText {
+        .FirstSentence::after {
+          content: "\a";
+          white-space: pre;
+        }
+      }
+
+      .ActionContainer {
+        position: relative;
+
+        .WantToJoin {
+          position: absolute;
+          top: -2rem;
+          right: 8rem;
+        }
+        .ActionButton {
+          cursor: pointer;
+          border: none;
+          width: 9rem;
+          height: 3rem;
+          border-radius: 4.3rem;
+          color: #ffffff;
+          font-weight: 600;
+          background-color: var(--primary-color);
+        }
+      }
+    }
+
+    .CarouselContainer {
+      margin-right: -5rem;
+
+      .SwiperButtonContainer {
+        display: flex;
+        justify-content: left;
+
+        .NextButton,
+        .PrevButton {
+          border-radius: 50%;
+          border: none;
+          height: 3rem;
+          width: 3rem;
+          margin-top: 1rem;
+        }
+      }
+
+      .PrevButton {
+        background-color: var(--primary-color);
+        margin-left: 0.5rem;
+      }
+
+      .Slide {
+        width: 32rem;
+        min-height: 16rem;
+
+        .MetaData {
+          margin-top: 1.25rem;
+
+          .Name {
+            font-size: 1.3rem;
+            color: #2a3342;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 35.989px;
+            letter-spacing: 0.421px;
+            margin-bottom: 0.1rem;
+          }
+
+          .Role {
+            color: #5e5e60;
+            font-size: 0.938rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22.902px;
+          }
+        }
+
+        .SlideItem {
+          border-radius: 30px;
+
+          .ImageContainer {
+            display: flex;
+          }
+
+          .Content {
+            margin-top: 1.2rem;
+            color: #000;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 2rem;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 480px) {
+  .Main {
+    padding: 1.5rem;
+
+    .AboutUs {
+      padding: 1rem;
+      background-image: none;
+      height: auto;
+
+      .LeftContainer {
+        padding-top: 0;
+
+        .TagLine {
+          text-align: left;
+          color: #10192d;
+          font-size: 1.25rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 35px;
+          letter-spacing: 1px;
+          margin-bottom: 5rem;
+        }
+        .HeaderText {
+          font-size: 3rem;
+          text-align: center;
+        }
+      }
+    }
+
+    .Mission {
+      padding: 1rem;
+      background-image: none;
+      height: auto;
+      h1 {
+        line-height: 110%;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+      p {
+        font-weight: 400;
+        line-height: 160%;
+        font-size: 1rem;
+      }
+      .RightContainer {
+        padding: 0 1rem;
+        margin-top: 2rem;
+        text-align: center;
+
+        .Text {
+          color: rgba(0, 0, 0, 0.6);
+          font-feature-settings: "clig" off, "liga" off;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 32px;
+          text-transform: capitalize;
+          margin-top: 2rem;
+        }
+      }
+    }
+
+    .Vision {
+      padding: 0;
+      background-color: #ffffff;
+      h1 {
+        line-height: 110%;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+      p {
+        font-weight: 400;
+        line-height: 160%;
+        font-size: 1rem;
+      }
+
+      .LeftColumn {
+        text-align: center;
+
+        .Title {
+          margin-top: 4rem;
+        }
+
+        .LeftText {
+          color: rgba(0, 0, 0, 0.6);
+          font-feature-settings: "clig" off, "liga" off;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 32px;
+          text-transform: capitalize;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+      }
+
+      .RightColumn {
+        .RightImage {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .Values {
+      text-align: center;
+      margin-bottom: 1rem;
+      margin: auto;
+
+      .Text {
+        color: #10192d;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 35px;
+        letter-spacing: 1px;
+        margin-top: 1.5rem;
+      }
+      h3 {
+        line-height: 110%;
+        font-size: 1.75rem;
+        font-weight: 700;
+      }
+      p {
+        font-weight: 400;
+        line-height: 160%;
+        font-size: 1rem;
+      }
+
+      .Trust {
+        height: auto;
+
+        .Left {
+          padding: 1.5rem;
+
+          p {
+            line-height: 2.7rem;
+            color: #10192d;
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 35px;
+            letter-spacing: 1px;
+            margin-top: 1.5rem;
+          }
+        }
+
+        .Right {
+          .RightImage {
+            width: 100%;
+            height: auto;
+          }
+        }
         h4 {
           line-height: 110%;
           font-size: 2rem;
@@ -614,106 +542,179 @@
           line-height: 160%;
           font-size: 1rem;
         }
-        p,
+      }
+
+      .TeamContainer {
+        flex-direction: column;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        div {
+          width: 100%;
+        }
+
+        .Teamwork {
+          min-height: 25rem;
+          padding: 1.5rem;
+          border-radius: 20px;
+
+          p,
+          h4 {
+            color: #ffffff;
+          }
+          h4 {
+            line-height: 110%;
+            font-size: 2rem;
+            font-weight: 400;
+          }
+          p {
+            font-weight: 400;
+            line-height: 160%;
+            font-size: 1rem;
+          }
+        }
+
+        .Transparency {
+          padding: 1.5rem;
+          margin-top: 1.5rem;
+          min-height: 25rem;
+
+          h4 {
+            line-height: 110%;
+            font-size: 2rem;
+            font-weight: 400;
+          }
+
+          p {
+            font-weight: 400;
+            line-height: 160%;
+            font-size: 1rem;
+          }
+
+          p,
+          h4 {
+            color: #ffffff;
+          }
+        }
+      }
+
+      .Accountability {
+        min-height: 25rem;
+        background-color: var(--primary-color);
+        border-radius: 1.25rem;
+
+        .Left {
+          padding: 1.5rem;
+
+          h4 {
+            line-height: 110%;
+            font-size: 2rem;
+            font-weight: 400;
+          }
+          p {
+            font-weight: 400;
+            line-height: 160%;
+            font-size: 1rem;
+          }
+          p,
+          h4 {
+            color: #ffffff;
+          }
+        }
+
+        .Right {
+          display: flex;
+          justify-content: center;
+
+          .RightImage {
+            width: 100%;
+            height: 12.5rem;
+
+            margin-right: 6rem;
+          }
+        }
+      }
+      .UserCenteric {
         h4 {
-          color: #ffffff;
+          line-height: 110%;
+          font-size: 2rem;
+          font-weight: 400;
         }
-      }
-
-      .Right {
-        display: flex;
-        justify-content: center;
-
-        .RightImage {
-          width: 100%;
-          height: 12.5rem;
-
-          margin-right: 6rem;
-        }
-      }
-    }
-    .userCenteric {
-      h4 {
-        line-height: 110%;
-        font-size: 2rem;
-        font-weight: 400;
-      }
-      p {
-        font-weight: 400;
-        line-height: 160%;
-        font-size: 1rem;
-      }
-      .Left {
-        padding: 1.5rem;
-      }
-
-      .Right {
-        display: flex;
-        justify-content: center;
-
-        .RightImage {
-          width: 100%;
-          // height: auto;
-        }
-      }
-    }
-  }
-
-  .OurTeam {
-    padding: 1.5rem;
-
-    .Title {
-      text-align: center;
-      font-size: 2rem;
-    }
-
-    .ActionBar {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      margin-bottom: 2rem;
-
-      .LeftText {
-        text-align: center;
-
-        .FirstSentence::after {
-          content: " ";
-        }
-      }
-
-      .ActionContainer {
-        display: flex;
-        justify-content: center;
-        .WantToJoin {
-          display: none;
-        }
-        .ActionButton {
-          cursor: pointer;
-          border: none;
-          width: 12rem;
-          height: 3.6rem;
-          border-radius: 4.3rem;
-          color: #ffffff;
-          font-weight: 600;
-          background-color: var(--primary-color);
+        p {
+          font-weight: 400;
+          line-height: 160%;
           font-size: 1rem;
         }
+        .Left {
+          padding: 1.5rem;
+        }
+
+        .Right {
+          display: flex;
+          justify-content: center;
+
+          .RightImage {
+            width: 100%;
+          }
+        }
       }
     }
 
-    .CarouselContainer {
-      .Slide {
-        width: 100%;
+    .OurTeam {
+      padding: 1.5rem;
 
-        .SlideItem {
-          border-radius: 30px;
+      .Title {
+        text-align: center;
+        font-size: 2rem;
+      }
 
-          .ImageContainer {
-            display: flex;
+      .ActionBar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 2rem;
 
-            .TeamImage {
-              object-fit: cover;
-              width: 80%;
+        .LeftText {
+          text-align: center;
+
+          .FirstSentence::after {
+            content: " ";
+          }
+        }
+
+        .ActionContainer {
+          display: flex;
+          justify-content: center;
+          .WantToJoin {
+            display: none;
+          }
+          .ActionButton {
+            cursor: pointer;
+            border: none;
+            width: 12rem;
+            height: 3.6rem;
+            border-radius: 4.3rem;
+            color: #ffffff;
+            font-weight: 600;
+            background-color: var(--primary-color);
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .CarouselContainer {
+        .Slide {
+          width: 100%;
+
+          .SlideItem {
+            border-radius: 30px;
+
+            .ImageContainer {
+              display: flex;
+
+              .TeamImage {
+                object-fit: cover;
+                width: 80%;
+              }
             }
           }
         }
@@ -724,164 +725,155 @@
 
 /* Media Query for low resolution  Tablets, Ipads */
 @media screen and (min-width: 485px) and (max-width: 768px) {
-  .main {
-    width: 100%;
-  }
-  .AboutUs {
-    padding: 0 3rem;
-    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg");
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-position-x: 0;
-    background-size: cover;
-  }
-  .teamContainer {
-    flex-direction: column;
-    gap: 12px;
-    div {
-      width: 100% !important;
-    }
-  }
-  .Mission {
-    margin: 0 1.5rem 8.7rem;
-    padding: 1rem;
-    background-image: none;
-    height: auto;
+  .Main {
+    padding: 1.5rem;
 
-    .Text {
-      color: #10192d;
-      font-size: 1.5rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 35px; /* 145.833% */
-      letter-spacing: 1px;
-      margin-top: 4rem;
+    .AboutUs {
+      padding: 0 3rem;
+      background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-position-x: 0;
+      background-size: cover;
     }
-  }
-  .Accountability {
-    .Right {
-      .RightImage {
-        width: 100%;
-        margin-right: 0rem;
-        display: flex;
-        align-items: center;
+    .TeamContainer {
+      flex-direction: column;
+      gap: 12px;
+      div {
+        width: 100% !important;
       }
     }
-  }
-  .Vision {
-    padding: 0 1.5rem;
-    background-color: #ffffff;
-    margin-bottom: 19rem;
+    .Mission {
+      margin: 0 1.5rem 8.7rem;
+      padding: 1rem;
+      background-image: none;
+      height: auto;
 
-    .LeftColumn {
-      .LeftText {
-        color: rgba(0, 0, 0, 0.6);
-        font-feature-settings: "clig" off, "liga" off;
+      .Text {
+        color: #10192d;
+        font-size: 1.5rem;
         font-style: normal;
         font-weight: 400;
-        line-height: 32px;
-        text-transform: capitalize;
-      }
-
-      h2 {
-        font-size: 2rem;
-      }
-
-      .StatTitle {
-        margin-top: -1rem;
-        font-size: 0.875rem;
+        line-height: 35px; /* 145.833% */
+        letter-spacing: 1px;
+        margin-top: 4rem;
       }
     }
+    .Accountability {
+      .Right {
+        .RightImage {
+          width: 100%;
+          margin-right: 0rem;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    .Vision {
+      padding: 0 1.5rem;
+      background-color: #ffffff;
+      margin-bottom: 19rem;
 
-    .RightColumn {
-      .RightImage {
-        width: 100%;
-        object-fit: contain;
+      .LeftColumn {
+        .LeftText {
+          color: rgba(0, 0, 0, 0.6);
+          font-feature-settings: "clig" off, "liga" off;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 32px;
+          text-transform: capitalize;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        .StatTitle {
+          margin-top: -1rem;
+          font-size: 0.875rem;
+        }
+      }
+
+      .RightColumn {
+        .RightImage {
+          width: 100%;
+          object-fit: contain;
+        }
       }
     }
   }
 }
 
 /* Media Query for Tablets Ipads portrait mode */
-@media screen and (min-width: 768px) and (max-width: 1000px) {
-  .AboutUs {
-    background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg");
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-position-x: 0;
-    background-size: cover;
-  }
-  .Mission {
-    margin: 0 1.5rem 8.7rem;
-    padding: 1rem;
-    background-image: none;
-    height: auto;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .Main {
+    padding: 1.5rem;
 
-    .Text {
-      color: #10192d;
-      font-size: 1.5rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 35px; /* 145.833% */
-      letter-spacing: 1px;
-      margin-top: 4rem;
+    .AboutUs {
+      background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-position-x: 0;
+      background-size: cover;
     }
-  }
+    .Mission {
+      margin: 0 1.5rem 8.7rem;
+      padding: 1rem;
+      background-image: none;
+      height: auto;
 
-  .Vision {
-    padding: 0 1.5rem;
-    background-color: #ffffff;
-    margin-bottom: 19rem;
-
-    .LeftColumn {
-      .LeftText {
-        color: rgba(0, 0, 0, 0.6);
-        font-feature-settings: "clig" off, "liga" off;
+      .Text {
+        color: #10192d;
+        font-size: 1.5rem;
         font-style: normal;
         font-weight: 400;
-        line-height: 32px;
-        text-transform: capitalize;
-      }
-
-      h2 {
-        font-size: 2rem;
-      }
-
-      .StatTitle {
-        margin-top: -1rem;
-        font-size: 0.875rem;
+        line-height: 35px; /* 145.833% */
+        letter-spacing: 1px;
+        margin-top: 4rem;
       }
     }
 
-    .RightColumn {
-      .RightImage {
-        width: 100%;
-        object-fit: contain;
+    .Vision {
+      padding: 0 1.5rem;
+      background-color: #ffffff;
+      margin-bottom: 19rem;
+
+      .LeftColumn {
+        .LeftText {
+          color: rgba(0, 0, 0, 0.6);
+          font-feature-settings: "clig" off, "liga" off;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 32px;
+          text-transform: capitalize;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        .StatTitle {
+          margin-top: -1rem;
+          font-size: 0.875rem;
+        }
+      }
+
+      .RightColumn {
+        .RightImage {
+          width: 100%;
+          object-fit: contain;
+        }
       }
     }
-  }
-  .teamContainer {
-    flex-direction: column;
-    div {
-      width: 100% !important;
-    }
-    .Transparency {
-      background-repeat: inherit;
+
+    .TeamContainer {
+      flex-direction: column;
+      div {
+        width: 100% !important;
+      }
+      .Transparency {
+        background-repeat: inherit;
+      }
     }
   }
 }
-
-// // Mobile Exceptions
-// @media screen and (min-width: 360px) and (max-width: 375px) {
-//   .AboutUs {
-//     .LeftContainer {
-//       & .HeaderText::after {
-//         content: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418229/ibx-website-v2/yellow_mark_tsz3mm.svg");
-//         position: absolute;
-//         top: 20rem;
-//         left: 1rem;
-//         z-index: -1;
-//       }
-//     }
-//   }
-// }
