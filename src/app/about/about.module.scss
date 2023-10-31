@@ -1,8 +1,11 @@
 .main {
   // padding: 0 6.25rem;
-  width: 90%;
   margin: auto;
 }
+// .AboutContainer {
+//   width: 87%;
+//   margin: auto;
+// }
 .AboutUs {
   padding: 0 0;
   height: 41rem;
@@ -135,7 +138,8 @@
   }
   .teamContainer {
     display: flex;
-    justify-content: space-between;
+    gap: 5px;
+    border-radius: 1.25rem;
     div {
       width: 49.5%;
     }
@@ -149,6 +153,7 @@
     min-height: 47.5rem;
     padding-left: 5.6rem;
     padding-top: 8.4rem;
+    border: 4px solid black;
 
     p {
       line-height: 2.7rem;
@@ -173,6 +178,7 @@
     min-height: 47.5rem;
     padding-left: 5.6rem;
     padding-top: 8.4rem;
+    border: 4px solid black;
 
     p {
       line-height: 2.7rem;
@@ -193,6 +199,7 @@
     min-height: 33rem;
     background-color: var(--primary-color);
     border-radius: 1.25rem;
+    border: 5px solid black;
 
     .Left {
       padding-left: 6rem;

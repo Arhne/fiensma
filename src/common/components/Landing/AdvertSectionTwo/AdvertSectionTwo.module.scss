@@ -9,7 +9,9 @@
   padding: 15rem 4rem 0;
   max-width: 1440px;
   margin: 6.25rem auto;
-
+  .HeadText {
+    width: 30rem;
+  }
   .Text {
     color: #10192d;
     font-size: 1.5rem;
@@ -56,6 +58,10 @@
       line-height: 35px; /* 145.833% */
       letter-spacing: 1px;
       margin-top: 4rem;
+    }
+    .HeadText {
+      width: 30rem;
+      width: 100%;
     }
 
     .MobileStore {
