@@ -21,8 +21,8 @@ export default function Home() {
         >
           <h1 className={styles.HeaderText}>P2P Currency Exchange Made Easy</h1>
           <p className={styles.TagLine}>
-            Welcome to Ibx Exchange - Your trusted marketplace for <br /> peer-to-peer fiat currency
-            exchange.
+            Welcome to Ibx Exchange - Your trusted marketplace for <br />{" "}
+            peer-to-peer fiat currency exchange.
           </p>
           <div className={styles.MobileStore}>
             <Image
@@ -47,12 +47,13 @@ export default function Home() {
       <Services />
       <div className={`row gx-5 ${styles.Features}`}>
         <div className="col-xs-12 col-sm-12 col-md-6">
-          <h3>Gain more with Ibx</h3>
+          <h3>Gain More With Ibx</h3>
           <p className={styles.LeftText}>
-            Ibx Exchange is your premier destination for peer-to-peer
-            fiat exchange. Discover a seamless platform for exchanging
-            your local and foreign currencies directly to your bank account. Explore our
-            user-friendly interface, 24/7 support  and robust security measures, well designed to ensure you have a pleasant experience.
+            Ibx Exchange is your premier destination for peer-to-peer fiat
+            exchange. Discover a seamless platform for exchanging your local and
+            foreign currencies directly to your bank account. Explore our
+            user-friendly interface, 24/7 support and robust security measures,
+            well designed to ensure you have a pleasant experience.
           </p>
           <Image
             loader={() =>
@@ -80,9 +81,8 @@ export default function Home() {
               </div>
               <p className={styles.Heading}>Reliable and Accurate</p>
               <p className={styles.Content}>
-                <span>We</span> have access to real-time exchange rates for
-                hundreds of currencies, we also provide accurate and current
-                data.
+                We have access to real-time exchange rates for hundreds of
+                currencies, we also provide accurate and current data.
               </p>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -96,8 +96,8 @@ export default function Home() {
               </div>
               <p className={styles.Heading}>0% Charges</p>
               <p className={styles.Content}>
-                <span>Enjoy</span> fee-free trading with Ibx Exchange, where
-                your profits stay yours and we keep your costs at zero.
+                Enjoy fee-free trading with Ibx Exchange, where your profits
+                stay yours and we keep your costs at zero.
               </p>
             </div>
           </div>
@@ -114,9 +114,8 @@ export default function Home() {
 
               <p className={styles.Heading}>Trust Guaranteed</p>
               <p className={styles.Content}>
-                <span>Our</span> team of experts is here to guide you safely
-                through the global currency markets at every step of your
-                journey.
+                Our team of experts is here to guide you safely through the
+                global currency markets at every step of your journey.
               </p>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -128,7 +127,7 @@ export default function Home() {
                   alt=""
                 />
               </div>
-              <p className={styles.Heading}>24/7 p2p transactions</p>
+              <p className={styles.Heading}>24/7 P2P transactions</p>
               <p className={styles.Content}>
                 Experience round-the-clock access to our dynamic peer-to-peer
                 transactions, empowering you to trade cryptocurrencies and fiat
@@ -142,8 +141,8 @@ export default function Home() {
         <div className={`col-xs-12 col-sm-7 ${styles.LeftColumn}`}>
           <h3>We believe in the power of numbers</h3>
           <p className={styles.LeftText}>
-            <span>Every</span> trade, every transaction, and every connection
-            made on Ibx Exchange contributes to a growing ecosystem of empowered
+            Every trade, every transaction, and every connection made on Ibx
+            Exchange contributes to a growing ecosystem of empowered
             individuals, shaping the future of currency exchange. Join us on
             this journey of limitless possibilities.
           </p>

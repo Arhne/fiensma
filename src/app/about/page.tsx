@@ -227,65 +227,66 @@ const About = () => {
           </div>
         </div>
 
-        <div className={styles.CarouselContainer}>
-          <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
-            navigation
-            spaceBetween={0}
-            breakpoints={{
-              0: {
-                slidesPerView: 1,
-              },
-              576: {
-                slidesPerView: 2,
-              },
-              1024: {
-                slidesPerView: 4,
-              },
-            }}
-          >
-            <div className={styles.SwiperButtonContainer}>
-              <SwiperButtonNext>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1693404384/ibx-website-v2/icons/left_arrow_icon_dpdlxk.svg"
-                  width={47}
-                  height={47}
-                  alt=""
-                />
-              </SwiperButtonNext>
-              <SwiperButtonPrevious>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1693404384/ibx-website-v2/icons/right_arrow_icon_adrnmh.svg"
-                  width={47}
-                  height={47}
-                  alt=""
-                />
-              </SwiperButtonPrevious>
-            </div>
+          <div className={styles.CarouselContainer}>
+            <Swiper
+              modules={[Navigation, Pagination, Scrollbar, A11y]}
+              navigation
+              spaceBetween={0}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                },
+                576: {
+                  slidesPerView: 2,
+                },
+                1024: {
+                  slidesPerView: 4,
+                },
+              }}
+            >
+              <div className={styles.SwiperButtonContainer}>
+                <SwiperButtonNext>
+                  <Image
+                    src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1693404384/ibx-website-v2/icons/left_arrow_icon_dpdlxk.svg"
+                    width={47}
+                    height={47}
+                    alt=""
+                  />
+                </SwiperButtonNext>
+                <SwiperButtonPrevious>
+                  <Image
+                    src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1693404384/ibx-website-v2/icons/right_arrow_icon_adrnmh.svg"
+                    width={47}
+                    height={47}
+                    alt=""
+                  />
+                </SwiperButtonPrevious>
+              </div>
 
-            {teamData.map((_slide) => (
-              <SwiperSlide key={_slide?.id} className={styles.Slide}>
-                <div className={styles.SlideItem}>
-                  <div className={styles.ImageContainer}>
-                    <Image
-                      loader={() => imageLoader(_slide.image_url)}
-                      width={293.5}
-                      height={313.8}
-                      src={_slide.image_url}
-                      alt=""
-                      className={styles.TeamImage}
-                    />
+              {teamData.map((_slide) => (
+                <SwiperSlide key={_slide?.id} className={styles.Slide}>
+                  <div className={styles.SlideItem}>
+                    <div className={styles.ImageContainer}>
+                      <Image
+                        loader={() => imageLoader(_slide.image_url)}
+                        width={293.5}
+                        height={313.8}
+                        src={_slide.image_url}
+                        alt=""
+                        className={styles.TeamImage}
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className={styles.MetaData}>
-                  <p className={styles.Name}>{_slide?.name}</p>
-                  <small className={styles.Role}>{_slide?.role}</small>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                  <div className={styles.MetaData}>
+                    <p className={styles.Name}>{_slide?.name}</p>
+                    <small className={styles.Role}>{_slide?.role}</small>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
-      </div>
+      
     </main>
   );
 };
