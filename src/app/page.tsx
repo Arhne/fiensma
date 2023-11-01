@@ -114,7 +114,7 @@ export default function Home() {
 
               <p className={styles.Heading}>Trust Guaranteed</p>
               <p className={styles.Content}>
-                Ourteam of experts is here to guide you safely through the
+                Our team of experts is here to guide you safely through the
                 global currency markets at every step of your journey.
               </p>
             </div>
