@@ -6,7 +6,7 @@ const GettingStarted = () => {
     <div id="gettingstarted" className={`row gx-3 ${styles.GettingStarted}`}>
       <div className={`col-xs-12 col-sm-12 col-md-6 ${styles.LeftColumn}`}>
         <Image
-          src="/iphone.svg"
+          src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1698781666/ibx-website-v2/iPhone_12_Pro_Max_qqqpwr.svg"
           width={423}
           height={858}
           className={styles.LeftImage}
