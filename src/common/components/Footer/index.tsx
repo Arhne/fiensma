@@ -16,7 +16,9 @@ const Footer = () => {
           alt=""
           onClick={() => router.push("/")}
         />
-        <p className={styles.Address}>No 90 Edeki Street, Dawaki Abuja Nigeria</p>
+        <p className={styles.Address}>
+          No 90 Edeki Street, Dawaki Abuja Nigeria
+        </p>
         <p>Follow us</p>
         <ul className={styles.SocialIcons}>
           <li>
@@ -123,6 +125,9 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+      <p className={styles.copyright}>
+        &copy; 2023 Ibxp2p. - All Rights Reserved
+      </p>
     </div>
   );
 };

@@ -38,6 +38,16 @@
       }
     }
   }
+  .copyright {
+    color: #fff;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Manrope;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.25rem;
+    text-align: center;
+  }
 }
 
 /* Media Query for Mobile Devices */
