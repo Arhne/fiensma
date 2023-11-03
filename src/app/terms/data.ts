@@ -17,7 +17,7 @@ export const termsAndConditionsData = [
   {
     title: 'Fees',
     content:
-      'Ibx charges fees for various services, such as transaction fees and verification fees for merchants and partners. The exact fees depend on the type of transaction and verification to be carried out as clearly stated on the Ibx Merchant/Partner handbook. The use of this application is free for all users.',
+      'There are no fees for  conducting transactions in the Ibx platform for the general users. However,  Ibx charges fees for certain services and group of users, such as transaction fees and verification fees for merchants and partners. The exact fees depend on the type of transaction and verification to be carried out as clearly stated on the Ibx Merchant/Partner handbook',
   },
   {
     title: 'Deposits and Withdrawals',
