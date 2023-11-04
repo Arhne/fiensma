@@ -7,7 +7,7 @@ import styles from "./terms.module.scss";
 const Policy = ({}) => {
   const now = new Date();
   return (
-    <main className={styles.TermsContainer}>
+    <main className={styles.PolicyContainer}>
       <div className={styles.Landing}>
         <h1 className={styles.HeaderText}>Privacy Policy</h1>
       </div>
