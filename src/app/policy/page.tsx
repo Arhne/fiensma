@@ -2,7 +2,7 @@ import moment from "moment";
 
 import { policyData } from "./data";
 
-import styles from "./terms.module.scss";
+import styles from "./policy.module.scss";
 
 const Policy = ({}) => {
   const now = new Date();
