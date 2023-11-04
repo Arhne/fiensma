@@ -111,6 +111,15 @@ const Footer = () => {
               {" "}
               <a
                 className={styles.MenuItem}
+                href={"/policy"}
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a
+                className={styles.MenuItem}
                 href="/#frequencly-asked-questions"
               >
                 FAQs
