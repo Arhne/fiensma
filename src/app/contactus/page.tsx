@@ -191,7 +191,9 @@ const ContactUs = () => {
               <small className={styles.Terms}>
                 By submitting this form you agree to our{" "}
                 <span className={styles.HighlightedText}>
-                  terms and conditions
+                  <a href={"/terms"}>
+                    terms and conditions
+                  </a>
                 </span>{" "}
                 and our{" "}
                 <span className={styles.HighlightedText}>Privacy Policy</span>{" "}

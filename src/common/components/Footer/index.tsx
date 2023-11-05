@@ -111,6 +111,15 @@ const Footer = () => {
               {" "}
               <a
                 className={styles.MenuItem}
+                href={"/policy"}
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              {" "}
+              <a
+                className={styles.MenuItem}
                 href="/#frequencly-asked-questions"
               >
                 FAQs
@@ -125,7 +134,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <p className={styles.copyright}>
+      <p className={styles.CopyRight}>
         &copy; 2023 Ibxp2p. - All Rights Reserved
       </p>
     </div>
