@@ -191,14 +191,14 @@ const ContactUs = () => {
               <small className={styles.Terms}>
                 By submitting this form you agree to our{" "}
                 <span className={styles.HighlightedText}>
-                  <a href={"/terms"}>
-                    terms and conditions
-                  </a>
+                  <a href={"/terms"}>terms and conditions</a>
                 </span>{" "}
                 and our{" "}
                 <span className={styles.HighlightedText}>Privacy Policy</span>{" "}
-                which explains how we may collect, use and disclose your
-                personal information including to third parties.
+                <a href="/policy">
+                  which explains how we may collect, use and disclose your
+                  personal information including to third parties.
+                </a>
               </small>
               <div>
                 <button className={styles.ActionButton}>

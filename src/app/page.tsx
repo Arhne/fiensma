@@ -130,8 +130,8 @@ export default function Home() {
               <p className={styles.Heading}>24/7 P2P transactions</p>
               <p className={styles.Content}>
                 Experience round-the-clock access to our dynamic peer-to-peer
-                transactions, empowering you to trade cryptocurrencies and fiat
-                currencies at your convenience, any time, day or night.
+                transactions, empowering you to trade fiat currencies at your
+                convenience, any time, day or night.
               </p>
             </div>
           </div>
