@@ -2,6 +2,7 @@ import { IJob } from "@/redux/services/jobApi/interface";
 import { useRouter } from "next/navigation";
 
 import styles from "./JobCard.module.scss";
+import parse from "html-react-parser";
 
 interface IJobCard {
   data: IJob;
@@ -22,7 +23,7 @@ const JobCard = ({ data }: IJobCard) => {
           Apply
         </span>
       </div>
-      <p>We&apos;re looking for an expert ui/ux designer to join our team.</p>
+      {/* {parse(data?.description)} */}
       <div className={styles.TypeContainer}>
         <span className={styles.JobType}>{data?.location}</span>
         <span className={styles.ContractType}>{data?.schedule}</span>
