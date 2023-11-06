@@ -17,6 +17,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 48%;
+    background-position: center;
     height: 25rem;
 
     p {
@@ -71,10 +72,9 @@
     .Landing {
       padding: 1.5rem;
     }
-.Content{
-  padding: 0 1.2rem;
-}
-    
+    .Content {
+      padding: 0 1.2rem;
+    }
 
     .JobContainer {
       padding: 1.5rem;
