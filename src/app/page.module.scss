@@ -340,12 +340,18 @@
     padding: 1.5rem 1.5rem;
     margin-top: -15rem;
     height: auto;
-
+    .AdvertText {
+      font-size: 1rem;
+      text-align: center;
+    }
     .HeaderText {
       text-align: center;
+      font-size: 2rem;
     }
 
     .MobileStore {
+      display: flex;
+      align-items: center;
       .GoogleStore,
       .AppleStore {
         width: 100%;
