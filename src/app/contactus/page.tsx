@@ -32,10 +32,10 @@ const ContactUs = () => {
   }) => {
     addContactUs(value)
       .unwrap()
-      .then((result) => {
+      .then((result: { message: any }) => {
         showSuccessToast(result?.message);
       })
-      .catch((error) => {
+      .catch((error: { data: { message: any } }) => {
         showErrorToast(error?.data?.message);
       });
   };
@@ -43,14 +43,14 @@ const ContactUs = () => {
   return (
     <div className={styles.ContactUsContainer}>
       <div className="row gx-5">
-        <div className={`col-xs-12 col-sm-6 mt-5 ${styles.LeftColumn}`}>
+        <div className={`col-xs-12 col-sm-6 ${styles.LeftColumn}`}>
           <Image
             loader={() =>
               imageLoader(
-                "https://res.cloudinary.com/dbg2z1svm/image/upload/v1699276995/Group_1000001566_2_dyfcum.png"
+                "https://res.cloudinary.com/dbg2z1svm/image/upload/v1695026410/ibx-website-v2/contact-us/con_y0gfge.svg"
               )
             }
-            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1699276995/Group_1000001566_2_dyfcum.png"
+            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1699289186/ibx-website-v2/contact-us/Contact_Us_Background_usaf6g.svg"
             alt=""
             className={styles.LeftColumnImage}
             priority={true}
@@ -194,9 +194,11 @@ const ContactUs = () => {
                   <a href={"/terms"}>terms and conditions</a>
                 </span>{" "}
                 and our{" "}
-                <span className={styles.HighlightedText}><a href="/policy">privacy policy </a></span>{" "}
-                  which explains how we may collect, use and disclose your
-                  personal information including to third parties.
+                <span className={styles.HighlightedText}>
+                  <a href="/policy">privacy policy</a>
+                </span>{" "}
+                which explains how we may collect, use and disclose your
+                personal information including to third parties.
               </small>
               <div>
                 <button className={styles.ActionButton}>
