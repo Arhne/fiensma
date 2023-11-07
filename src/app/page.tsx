@@ -228,63 +228,56 @@ export default function Home() {
             More than 45,000+ companies trust Ibx
           </p>
         </div>
-        <div className={`row ${styles.PartnerCompanies}`}>
-          <div className="col-6">
-            <ul>
-              <li>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418218/ibx-website-v2/slack_et8vic.svg"
-                  width={150}
-                  height={60.959}
-                  alt=""
-                />
-              </li>
-              <li>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418206/ibx-website-v2/paypal_dphrwm.svg"
-                  width={143}
-                  height={48}
-                  alt=""
-                />
-              </li>
-              <li>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/adobe_thftlk.svg"
-                  width={133}
-                  height={48}
-                  alt=""
-                />
-              </li>
-            </ul>
-          </div>
-          <div className="col-6">
-            <ul>
-              <li>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418245/ibx-website-v2/youtube_e9gmem.svg"
-                  width={150}
-                  height={45.813}
-                  alt=""
-                />
-              </li>
-              <li>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418204/ibx-website-v2/microsoft_rpniif.svg"
-                  width={164}
-                  height={48}
-                  alt=""
-                />
-              </li>
-              <li>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/google_ox9wco.svg"
-                  width={113}
-                  height={48}
-                  alt=""
-                />
-              </li>
-            </ul>
-          </div>
+        <div className={`${styles.PartnerCompanies}`}>
+          <li>
+            <Image
+              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418218/ibx-website-v2/slack_et8vic.svg"
+              width={150}
+              height={60.959}
+              alt=""
+            />
+          </li>
+          <li>
+            <Image
+              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418206/ibx-website-v2/paypal_dphrwm.svg"
+              width={143}
+              height={48}
+              alt=""
+            />
+          </li>
+          <li>
+            <Image
+              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/adobe_thftlk.svg"
+              width={133}
+              height={48}
+              alt=""
+            />
+          </li>
+
+          <li>
+            <Image
+              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418245/ibx-website-v2/youtube_e9gmem.svg"
+              width={150}
+              height={45.813}
+              alt=""
+            />
+          </li>
+          <li>
+            <Image
+              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418204/ibx-website-v2/microsoft_rpniif.svg"
+              width={164}
+              height={48}
+              alt=""
+            />
+          </li>
+          <li>
+            <Image
+              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/google_ox9wco.svg"
+              width={113}
+              height={48}
+              alt=""
+            />
+          </li>
         </div>
       </div>
     </main>
