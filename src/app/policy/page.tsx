@@ -62,8 +62,10 @@ const Policy = ({}) => {
           <div>
             <div>
               <div>
-                <span>1</span>
-                <h3>INFORMATION WE COLLECT</h3>
+                <span className={styles.Header}>
+                  <small>1.</small>
+                  <h3>INFORMATION WE COLLECT</h3>
+                </span>
               </div>
               <p>
                 The following are the types of information we collect when you
@@ -180,8 +182,8 @@ const Policy = ({}) => {
 
           {/* SECOND CONTENT */}
           <div>
-            <span>
-              <small>2</small>
+            <span className={styles.Header}>
+              <small>2.</small>
               <h2>HOW WE COLLECT INFORMATION?</h2>
             </span>
 
@@ -279,8 +281,8 @@ const Policy = ({}) => {
           {/* THIRD CONTENT */}
 
           <div>
-            <span>
-              <small>3</small>
+            <span className={styles.Header}>
+              <small>3.</small>
               <h2>HOW WE USE THE INFORMATION WE COLLECT?</h2>
             </span>
             <p>
@@ -463,8 +465,8 @@ const Policy = ({}) => {
 
           {/* FOURTH CONTENT */}
           <div>
-            <span>
-              <small>4</small>
+            <span className={styles.Header}>
+              <small>4.</small>
               <h2>MARKETING</h2>
             </span>
             <p>
@@ -490,8 +492,8 @@ const Policy = ({}) => {
 
           {/* FIFTH */}
           <div>
-            <span>
-              <small>5</small>
+            <span className={styles.Header}>
+              <small>5.</small>
               <h2>HOW WE STORE AND PROTECT USER DATA</h2>
             </span>
             <p>
@@ -595,10 +597,10 @@ const Policy = ({}) => {
             </div>
           </div>
 
-          {/* SIXT CONTENT */}
+          {/* SIXTH CONTENT */}
 
           <div>
-            <span>
+            <span className={styles.Header}>
               <small>6.</small>
               <h2>TRANSFERS OF PERSONAL INFORMATION</h2>
             </span>
@@ -664,8 +666,8 @@ const Policy = ({}) => {
           {/* SEVENTH CONTENT */}
 
           <div>
-            <span>
-              <small>7</small>
+            <span className={styles.Header}>
+              <small>7.</small>
               <h2>PRIVACY POLICIES OF OTHER WEBSITES</h2>
             </span>
             <p>Privacy Policies of Non-Ibx Exchange Websites</p>
@@ -691,7 +693,8 @@ const Policy = ({}) => {
           {/* EIGHT CONTENT */}
           <div>
             <div>
-              <span>
+              <span className={styles.Header}>
+                <small>8.</small>
                 <h2>DATA PROTECTION RIGHTS THAT YOU ENJOY</h2>
               </span>
               <p>
@@ -770,8 +773,8 @@ const Policy = ({}) => {
 
           {/* NINTH CONTENT */}
           <div>
-            <span>
-              <small>9</small>
+            <span className={styles.Header}>
+              <small>9.</small>
               <h2>CHANGES TO THIS PRIVACY POLICY</h2>
             </span>
             <p>
@@ -790,8 +793,8 @@ const Policy = ({}) => {
 
           {/* TENTH CONTENT */}
           <div>
-            <span>
-              <small>10</small>
+            <span className={styles.Header}>
+              <small>10.</small>
               <h2>CONTACT US</h2>
             </span>
             <p>
