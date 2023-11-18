@@ -59,7 +59,7 @@ const Policy = ({}) => {
         </div>
         <div className={styles.PrivacyContent}>
           {/* FIRST CONTENT */}
-          <div>
+          <div className={styles.SubContent}>
             <div>
               <div>
                 <span className={styles.Header}>
@@ -91,6 +91,35 @@ const Policy = ({}) => {
                 to provide us with the corresponding information, such as the
                 fingerprint information and facial information, and your consent
                 to the processing of your biometric data
+              </p>
+            </div>
+
+            <div>
+              <span>
+                <small>1.2</small>
+                <h3>
+                  Information We Collect to Comply with Regulatory Policies
+                </h3>
+              </span>
+              <p>
+                To comply with global industry regulatory standards, local
+                industry regulatory standards, and government orders in
+                different aspects such as Anti-Money Laundering (AML),
+                Know-Your-Customer (KYC), and Counter-Terrorist Financing (CTF),
+                Ibx Exchange is required to collect personal information in
+                addition to Identification Information, such as identity
+                documents (including passport, driver's license, national
+                identity card, voters card, tax ID number, passport number,
+                driver's license details, national identity card details, visa
+                information, etc.), proof of address, source of fund
+                declaration,  BVN, purposes of fund documents, and source of
+                wealth “Regulation Information”）. We will explain to you the
+                content and requirements of such personal information each time
+                we collect information and we reserve the right to change the
+                content and requirements of the collected information as the
+                global industry regulatory standards, local regulatory standards
+                or government orders change. This provision applies to both
+                personal, merchant, and institutional Ibx Exchange Accounts
               </p>
             </div>
 
@@ -181,7 +210,7 @@ const Policy = ({}) => {
           </div>
 
           {/* SECOND CONTENT */}
-          <div>
+          <div className={styles.SubContent}>
             <span className={styles.Header}>
               <small>2.</small>
               <h2>HOW WE COLLECT INFORMATION?</h2>
@@ -280,7 +309,7 @@ const Policy = ({}) => {
 
           {/* THIRD CONTENT */}
 
-          <div>
+          <div className={styles.SubContent}>
             <span className={styles.Header}>
               <small>3.</small>
               <h2>HOW WE USE THE INFORMATION WE COLLECT?</h2>
@@ -464,7 +493,7 @@ const Policy = ({}) => {
           </div>
 
           {/* FOURTH CONTENT */}
-          <div>
+          <div className={styles.SubContent}>
             <span className={styles.Header}>
               <small>4.</small>
               <h2>MARKETING</h2>
@@ -491,7 +520,7 @@ const Policy = ({}) => {
           </div>
 
           {/* FIFTH */}
-          <div>
+          <div className={styles.SubContent}>
             <span className={styles.Header}>
               <small>5.</small>
               <h2>HOW WE STORE AND PROTECT USER DATA</h2>
@@ -599,7 +628,7 @@ const Policy = ({}) => {
 
           {/* SIXTH CONTENT */}
 
-          <div>
+          <div className={styles.SubContent}>
             <span className={styles.Header}>
               <small>6.</small>
               <h2>TRANSFERS OF PERSONAL INFORMATION</h2>
@@ -665,7 +694,7 @@ const Policy = ({}) => {
 
           {/* SEVENTH CONTENT */}
 
-          <div>
+          <div className={styles.SubContent}>
             <span className={styles.Header}>
               <small>7.</small>
               <h2>PRIVACY POLICIES OF OTHER WEBSITES</h2>
@@ -691,7 +720,7 @@ const Policy = ({}) => {
           </div>
 
           {/* EIGHT CONTENT */}
-          <div>
+          <div className={styles.SubContent}>
             <div>
               <span className={styles.Header}>
                 <small>8.</small>
@@ -772,7 +801,7 @@ const Policy = ({}) => {
           </div>
 
           {/* NINTH CONTENT */}
-          <div>
+          <div className={styles.SubContent}>
             <span className={styles.Header}>
               <small>9.</small>
               <h2>CHANGES TO THIS PRIVACY POLICY</h2>
@@ -792,7 +821,7 @@ const Policy = ({}) => {
           </div>
 
           {/* TENTH CONTENT */}
-          <div>
+          <div className={styles.SubContent}>
             <span className={styles.Header}>
               <small>10.</small>
               <h2>CONTACT US</h2>

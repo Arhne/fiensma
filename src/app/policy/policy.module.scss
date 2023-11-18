@@ -42,11 +42,18 @@
     }
   }
 
+  .PrivacyText {
+    h3 {
+      line-height: 1.875rem !important;
+    }
+  }
   .Content {
     height: auto;
     padding: 0 6.25rem;
     padding-top: 3.125rem;
-
+    p {
+      line-height: 1.875rem;
+    }
     h3,
     small {
       font-size: 1rem;
@@ -64,6 +71,10 @@
     .Header small {
       font-weight: 600;
       font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+    .SubContent {
+      padding: 1.45rem 0;
     }
 
     .Time {
