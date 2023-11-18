@@ -46,19 +46,23 @@
     height: auto;
     padding: 0 6.25rem;
     padding-top: 3.125rem;
-    .PrivacyText {
-      h3 {
-        font-size: 1rem;
-        font-style: 1.25rem;
-        font-weight: 700;
-        line-height: 1.5rem;
-        letter-spacing: 0.01rem;
-      }
+
+    h3,
+    small {
+      font-size: 1rem;
+      font-style: 1rem;
+      font-weight: 700;
+      line-height: 1.5rem;
+      letter-spacing: 0.01rem;
+    }
+    span {
+      display: flex;
+      gap: 0.35rem;
     }
 
-    h6 {
-      margin-bottom: 3.125rem;
+    h2 {
       font-weight: 600;
+      font-size: 1.25rem;
     }
 
     .Time {
