@@ -6,20 +6,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 6rem 6.25rem;
     background: linear-gradient(
         0deg,
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(0, 0, 0, 0.3) 100%
+        rgba(135, 127, 127, 0.3) 0%,
+        rgba(165, 152, 152, 0.3) 100%
       ),
-      url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1696354092/ibx-website-v2/terms/morgan-housel-X_fbh4Utwk4-unsplash_1_j9dwg0.webp"),
+      url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1700205559/ibx-web-application/settings/Rectangle_2533_tmbgdo.svg"),
       lightgray 50% / cover no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 48%;
     background-position: center;
     height: 25rem;
-
+    border-radius: 6px;
     p {
       color: #ffffff;
       font-size: 1.5rem;
@@ -37,17 +36,45 @@
       line-height: normal;
       margin-bottom: 2.6rem;
       text-align: center;
+      padding-top: 2.875rem;
+      color: var(--White, #fff);
+      font-weight: 700;
     }
   }
 
+  .PrivacyText {
+    h3 {
+      line-height: 1.875rem !important;
+    }
+  }
   .Content {
     height: auto;
     padding: 0 6.25rem;
     padding-top: 3.125rem;
+    p {
+      line-height: 1.875rem;
+    }
+    h3,
+    small {
+      font-size: 1rem;
+      font-style: 1rem;
+      font-weight: 700;
+      line-height: 1.5rem;
+      letter-spacing: 0.01rem;
+    }
+    span {
+      display: flex;
+      gap: 0.35rem;
+    }
 
-    h6 {
-      margin-bottom: 3.125rem;
+    h2,
+    .Header small {
       font-weight: 600;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+    .SubContent {
+      padding: 1.45rem 0;
     }
 
     .Time {
