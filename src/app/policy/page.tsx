@@ -52,7 +52,7 @@ const Policy = ({}) => {
             This Privacy Policy has incorporated elements from the General Data
             Protection Regulation (GDPR) and Nigerian Data Protection Regulation
             (NDPR). We utilize standard contract clauses, rely on the European
-            Commission's adequacy decisions about certain countries, as
+            Commission&apos;s adequacy decisions about certain countries, as
             applicable, and obtain your consent for these data transfers to
             third countries if required by applicable laws.
           </p>
@@ -108,10 +108,10 @@ const Policy = ({}) => {
                 Know-Your-Customer (KYC), and Counter-Terrorist Financing (CTF),
                 Ibx Exchange is required to collect personal information in
                 addition to Identification Information, such as identity
-                documents (including passport, driver's license, national
+                documents (including passport, driver&apos;s license, national
                 identity card, voters card, tax ID number, passport number,
-                driver's license details, national identity card details, visa
-                information, etc.), proof of address, source of fund
+                driver&apos;s license details, national identity card details,
+                visa information, etc.), proof of address, source of fund
                 declaration,  BVN, purposes of fund documents, and source of
                 wealth “Regulation Information”）. We will explain to you the
                 content and requirements of such personal information each time
