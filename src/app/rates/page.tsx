@@ -90,7 +90,6 @@ const Rates = () => {
     }
   );
 
-  console.log("exchangeRateSummary", exchangeRateSummary);
   const { data: currencyPair } = useGetAllCurrencyPairQuery(
     { perPage: 1000, currentPage: 1 },
     {
@@ -160,8 +159,6 @@ const Rates = () => {
       return <ExchangeRateLoader />;
     } else if (!isLoading) {
       if (isError) {
-        console.log("isError", error);
-
         return (
           <p className="text-center mt-5">
             There was a problem fetching exchange rates
