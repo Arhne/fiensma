@@ -28,12 +28,14 @@ const RatesTable = ({ data }: IRatesTable) => {
             <td className={styles.EmptyCell}></td>
             <td className={styles.TableCell}>
               <Image
-                src={_item?.currencyPair?.imageUrl}
+                src={_item?.currencyPair?.tradingCurrency?.imageUrl}
                 alt=""
                 width={30}
                 height={30}
                 className={styles.RateImage}
-                loader={() => imageLoader(_item?.currencyPair?.imageUrl)}
+                loader={() =>
+                  imageLoader(_item?.currencyPair?.tradingCurrency?.imageUrl)
+                }
               />
               <span>{`${_item?.currencyPair?.tradingCurrency?.name.toUpperCase()}/${_item.currencyPair.baseCurrency.name.toUpperCase()}`}</span>
             </td>
