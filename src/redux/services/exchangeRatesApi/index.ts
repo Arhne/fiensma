@@ -14,12 +14,9 @@ export const exchangeRatesApi = createApi({
   }),
   tagTypes: ["exchangeRates"],
   endpoints: (builder) => ({
-    getExchangeRateSummary: builder.query<
-      Response<IExchangeSummary[]>,
-      { perPage: number; currentPage: number }
-    >({
-      query: ({ perPage, currentPage }) => ({
-        url: `/marketPlace/api/v1/rates/a/stats/getRateSummary?perPage=${perPage}&currentPage=${currentPage}`,
+    getExchangeRateSummary: builder.query<Response<IExchangeSummary[]>, void>({
+      query: () => ({
+        url: `/marketPlace/api/v1/rates/a/stats/getRateSummary`,
         method: "GET",
       }),
       providesTags: ["exchangeRates"],

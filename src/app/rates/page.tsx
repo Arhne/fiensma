@@ -71,9 +71,8 @@ const Rates = () => {
     data: exchangeRateSummary,
     isLoading,
     isError,
-  } = useGetExchangeRateSummaryQuery(paginate, {
-    refetchOnMountOrArgChange: true,
-  });
+    error,
+  } = useGetExchangeRateSummaryQuery();
 
   const {
     data: exchangeSummaryByDate,
@@ -91,6 +90,7 @@ const Rates = () => {
     }
   );
 
+  console.log("exchangeRateSummary", exchangeRateSummary);
   const { data: currencyPair } = useGetAllCurrencyPairQuery(
     { perPage: 1000, currentPage: 1 },
     {
@@ -102,8 +102,8 @@ const Rates = () => {
     if (exchangeSummaryByDate) {
       const yAxis = exchangeSummaryByDate?.data?.yAxis.map((_item) => {
         return {
-          name: _item?.currencyPair.toUpperCase(),
-          data: _item.prices.map((_price) => _price.sellPrice),
+          name: _item?.currencyPair?.toUpperCase(),
+          data: _item?.prices?.map((_price) => _price.sellPrice),
         };
       });
 
@@ -138,20 +138,8 @@ const Rates = () => {
     if (isLoadingGraphSummaryByDate) {
       return <ExchangeRateLoader />;
     } else if (!isLoadingGraphSummaryByDate) {
-      if (isGraphError) {
-        if ("status" in graphError) {
-          const errMsg =
-            "error" in graphError
-              ? graphError.error
-              : JSON.stringify(graphError.data);
-
-          return (
-            <p className="text-center mt-5">
-              {JSON.parse(errMsg)?.message ??
-                "There was a problem fetching exchange rate date"}
-            </p>
-          );
-        }
+      if (exchangeSummaryByDate?.data.xAxis.length === 0) {
+        return <p className="text-center mt-5">No record found</p>;
       } else {
         return (
           <div className={styles.Chart} id="chart">
@@ -172,6 +160,8 @@ const Rates = () => {
       return <ExchangeRateLoader />;
     } else if (!isLoading) {
       if (isError) {
+        console.log("isError", error);
+
         return (
           <p className="text-center mt-5">
             There was a problem fetching exchange rates
