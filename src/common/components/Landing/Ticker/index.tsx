@@ -32,15 +32,15 @@ const Ticker = () => {
                   <div key={_item._id} className={styles.TickerItem}>
                     <div className={styles.TickerItemContent}>
                       <Image
-                        src={
-                          _item?.currencyPair?.tradingCurrency?.imageUrl ?? ""
-                        }
+                        src={_item?.currencyPair?.tradingCurrency?.imageUrl}
                         alt=""
                         width={30}
                         height={30}
                         className={styles.RateImage}
                         loader={() =>
-                          imageLoader(_item?.currencyPair?.imageUrl)
+                          imageLoader(
+                            _item?.currencyPair?.tradingCurrency?.imageUrl
+                          )
                         }
                       />
 
@@ -75,19 +75,25 @@ const Ticker = () => {
                         </div>
                       </div>
                       <div className={styles.TrendContainer}>
-                        <img
+                        <Image
                           src={`${
                             _item?.buyTrend === "UP"
                               ? "https://res.cloudinary.com/dbg2z1svm/image/upload/v1693285622/ibx-website-v2/icons/news-ticker/trend_up_fiqvbw.svg"
                               : "https://res.cloudinary.com/dbg2z1svm/image/upload/v1693285622/ibx-website-v2/icons/news-ticker/trend_down_tmkrx3.svg"
                           }`}
+                          alt=""
+                          height={15}
+                          width={15}
                         />
-                        <img
+                        <Image
                           src={`${
                             _item?.sellTrend === "UP"
                               ? "https://res.cloudinary.com/dbg2z1svm/image/upload/v1693285622/ibx-website-v2/icons/news-ticker/trend_up_fiqvbw.svg"
                               : "https://res.cloudinary.com/dbg2z1svm/image/upload/v1693285622/ibx-website-v2/icons/news-ticker/trend_down_tmkrx3.svg"
                           }`}
+                          alt=""
+                          height={15}
+                          width={15}
                         />
                       </div>
                     </div>

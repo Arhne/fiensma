@@ -9,6 +9,7 @@ import CustomTextArea from "@/common/components/TextArea";
 import { useAddContactUsMutation } from "@/redux/services/contactUsApi";
 import { showErrorToast, showSuccessToast } from "@/common/Utils/toast";
 import { imageLoader } from "@/common/Utils/imageLoaders";
+import { CustomPhoneInput } from "@/common/components/CustomPhoneInput";
 
 const ContactUs = () => {
   const [addContactUs, { isLoading }] = useAddContactUsMutation();
@@ -36,7 +37,7 @@ const ContactUs = () => {
         showSuccessToast(result?.message);
       })
       .catch((error: { data: { message: any } }) => {
-        showErrorToast(error?.data?.message);
+        showErrorToast(error?.data?.message.join());
       });
   };
 
@@ -47,7 +48,7 @@ const ContactUs = () => {
           <Image
             loader={() =>
               imageLoader(
-                "https://res.cloudinary.com/dbg2z1svm/image/upload/v1699276995/Group_1000001566_2_dyfcum.png"
+                "https://res.cloudinary.com/dbg2z1svm/image/upload/v1699289186/ibx-website-v2/contact-us/Contact_Us_Background_usaf6g.svg"
               )
             }
             src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1699289186/ibx-website-v2/contact-us/Contact_Us_Background_usaf6g.svg"
@@ -154,11 +155,10 @@ const ContactUs = () => {
                     }) => {
                       const errorMessage = errors.phone?.message;
                       return (
-                        <CustomInput
+                        <CustomPhoneInput
                           isShowLabel
                           labelText="Phone Number"
-                          type="number"
-                          customStyle={inputStyle}
+                          customStyle={phoneInputStyle}
                           {...{ value, onChange, errors: [errorMessage] }}
                         />
                       );
@@ -216,6 +216,13 @@ const ContactUs = () => {
 export default ContactUs;
 
 const inputStyle = {
+  border: "1px solid #D1D5DB",
+  borderRadius: "8px",
+  background: "#F9FAFB",
+  height: "3.25rem",
+};
+
+const phoneInputStyle = {
   border: "1px solid #D1D5DB",
   borderRadius: "8px",
   background: "#F9FAFB",
