@@ -2,7 +2,7 @@ export const termsAndConditionsData = [
   {
     title: 'Introduction',
     content:
-      "These terms and conditions govern your use of Ibx (the 'Website'), which is operated by Ibx, a peer-to-peer trading company that allows users to exchange fiat currencies amongst themselves at an agreed price.Transactions are done from the seller bank account to the buyer bank account, with Ibx acting as a marketplace and no 'money' actually passing through it. By using the Website, you agree to these terms and conditions infull. If you do not agree with any part of these terms and conditions, you must not use the Website.",
+      "These terms and conditions govern your use of Ibx (the 'Website') a product of IBXPEERS MARKETPLACE LTD RN:6965508 , which is operated by Ibx, a peer-to-peer trading company that allows users to exchange fiat currencies amongst themselves at an agreed price.Transactions are done from the seller bank account to the buyer bank account, with Ibx acting as a marketplace and no 'money' actually passing through it. By using the Website, you agree to these terms and conditions infull. If you do not agree with any part of these terms and conditions, you must not use the Website.",
   },
   {
     title: 'User Accounts',

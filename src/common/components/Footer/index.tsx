@@ -135,7 +135,7 @@ const Footer = () => {
         </div>
       </div>
       <p className={styles.CopyRight}>
-        &copy; 2023 Ibxp2p. - All Rights Reserved
+        &copy; 2023 IBXPEERS MARKETPLACE LTD (RN:6965508 ) - All Rights Reserved
       </p>
     </div>
   );
