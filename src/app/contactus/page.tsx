@@ -65,7 +65,16 @@ const ContactUs = () => {
           className={`col-xs-12 col-sm-6 col-md-12 col-lg-6  ${styles.RightColumn}`}
         >
           <h3>Contact Us</h3>
-          <p>Send us a message, we reply as soon as possible.</p>
+          <p>
+						Our support team are always on the standby 24/7 to ensure you have a
+						seamless trading experience. You can reach us via our support emails{" "}
+						<a href="mailto:admin@ibxp2p.com">admin@ibxp2p.com</a> or{" "}
+						<a href="mailto:support@ibxp2p.com">support@ibxp2p.com</a> and we
+						will respond in minutes.
+					</p>
+					<p>
+						You can also use this form to send us a message, we reply typically within 5mins.
+					</p>
           <div className={styles.FormSection}>
             <form onSubmit={handleSubmit(onHandleSubmit)}>
               <div className="row gx-5 mb-4">
