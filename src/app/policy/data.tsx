@@ -1,3 +1,4 @@
+//this has been deprecated
 export const adminEmail = 'admin@ibxp2p.com ';
 export const supportEmail = 'support@ibxp2p.com';
 export const policyData = [
