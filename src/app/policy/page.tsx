@@ -1,10 +1,6 @@
 import moment from "moment";
-
 import { policyData } from "./data";
-
 import styles from "./policy.module.scss";
-export const adminEmail = 'admin@ibxp2p.com ';
-export const supportEmail = 'support@ibxp2p.com';
 
 const Policy = ({}) => {
   const now = new Date();
@@ -20,8 +16,8 @@ const Policy = ({}) => {
         </small>
         <div className={styles.PrivacyText}>
           <p>
-            This Privacy Policy constitutes a part of Ibx Exchange ((IBXPEERS MARKETPLACE LTD RN:6965508)) Terms of Use
-            （the “TOU”). The terms used in this Privacy Policy shall have the
+            This Privacy Policy constitutes a part of Ibx Exchange (IBXPEERS MARKETPLACE LTD RN:6965508) Terms of Use
+            (the “TOU”). The terms used in this Privacy Policy shall have the
             same meanings as in the TOU except as otherwise provided.
           </p>
           <p>
@@ -833,7 +829,7 @@ const Policy = ({}) => {
               Ibx Exchange Users. Should you have any questions or concerns
               regarding this Privacy Policy, or if you would like to file a data
               protection request, please contact our Support, at
-              <a href={`mailto:${supportEmail}`}>{`${supportEmail}`}</a> or  <a href={`mailto:${adminEmail}`}>{`${adminEmail}`}</a>.
+              <a href='mailto:support@ibxp2p.com'>support@ibxp2p.com</a> or  <a href='mailto:admin@ibxp2p.com'>admin@ibxp2p.com</a>.
             </p>
           </div>
         </div>
