@@ -1,8 +1,9 @@
-export const ibxEmail = 'tryibex@gmail.com ';
+//this has been deprecated
+export const adminEmail = 'admin@ibxp2p.com ';
 export const supportEmail = 'support@ibxp2p.com';
 export const policyData = [
   {
-    title: 'Privacy Statement for Ibxp2p',
+    title: 'Privacy Statement for Ibx (IBXPEERS MARKETPLACE LTD RN:6965508)',
     content:
       "At Ibxp2p, we are committed to protecting the privacy and security of our users' personal information. This privacy statement explains how we collect, use, and share your personal information, as well as the choices you have about how we use your information.",
   },
@@ -45,7 +46,7 @@ export const policyData = [
       <>
         If you have any questions or concerns about our privacy practices,
         please contact us at{' '}
-        <a href={`mailto:${supportEmail}`}>{`${supportEmail}`}</a>. We will
+        <a href={`mailto:${supportEmail}`}>{`${supportEmail}`}</a> or  <a href={`mailto:${adminEmail}`}>{`${adminEmail}`}</a>. We will
         respond to your request as soon as possible.
       </>
     ),
