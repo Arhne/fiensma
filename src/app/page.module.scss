@@ -38,6 +38,12 @@
         width: 213px;
         height: 64px;
       }
+      .AppStore,
+      .GoogleStore {
+        &:active {
+          transform: scale(1.05);
+        }
+      }
     }
   }
 }

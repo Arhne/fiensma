@@ -11,6 +11,7 @@ import GettingStarted from "@/common/components/Landing/GettingStarted/page";
 
 import styles from "./page.module.scss";
 import Services from "@/common/components/Landing/Services";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -25,21 +26,30 @@ export default function Home() {
             peer-to-peer fiat currency exchange.
           </p>
           <div className={styles.MobileStore}>
-            <Image
-              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418195/ibx-website-v2/google_play_rm0r2b.svg"
-              alt=""
-              width={213}
-              height={64}
-              className={styles.GoogleStore}
-            />
-
-            <Image
-              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/apple_store_fgtmpg.svg"
-              width={213}
-              height={64}
-              alt=""
-              className={styles.AppStore}
-            />
+            <Link
+              href={"https://play.google.com/store/apps/details?id=com.ibx"}
+              target="_blank"
+            >
+              <Image
+                src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418195/ibx-website-v2/google_play_rm0r2b.svg"
+                alt=""
+                width={213}
+                height={64}
+                className={styles.GoogleStore}
+              />
+            </Link>
+            <Link
+              href={"https://apps.apple.com/us/app/ibx/id6455785836/"}
+              target="_blank"
+            >
+              <Image
+                src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/apple_store_fgtmpg.svg"
+                width={213}
+                height={64}
+                alt=""
+                className={styles.AppStore}
+              />
+            </Link>
           </div>
         </div>
       </div>
