@@ -1,17 +1,17 @@
 export const teamData = [
   {
     id: 1,
+    name: "Obiora Chikodili",
+    role: "Co-founder and CEO",
+    image_url:
+      "https://res.cloudinary.com/dbg2z1svm/image/upload/v1702655618/Obiora_Team.jpg",
+  },
+  {
+    id: 2,
     name: "Ugochukwu Mmaduekwe",
     role: "Product Owner",
     image_url:
       "https://res.cloudinary.com/dbg2z1svm/image/upload/v1702655618/Ugo_Team.jpg",
-  },
-  {
-    id: 2,
-    name: "Obiora Chikodili",
-    role: "CTO",
-    image_url:
-      "https://res.cloudinary.com/dbg2z1svm/image/upload/v1702655618/Obiora_Team.jpg",
   },
   {
     id: 3,
