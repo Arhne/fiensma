@@ -12,6 +12,7 @@ import GettingStarted from "@/common/components/Landing/GettingStarted/page";
 import styles from "./page.module.scss";
 import Services from "@/common/components/Landing/Services";
 import Link from "next/link";
+import { appUrl } from "@/common/data";
 
 export default function Home() {
   return (
@@ -26,10 +27,7 @@ export default function Home() {
             peer-to-peer fiat currency exchange.
           </p>
           <div className={styles.MobileStore}>
-            <Link
-              href={"https://play.google.com/store/apps/details?id=com.ibx"}
-              target="_blank"
-            >
+            <Link href={appUrl.android} target="_blank">
               <Image
                 src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418195/ibx-website-v2/google_play_rm0r2b.svg"
                 alt=""
@@ -38,10 +36,7 @@ export default function Home() {
                 className={styles.GoogleStore}
               />
             </Link>
-            <Link
-              href={"https://apps.apple.com/us/app/ibx/id6455785836/"}
-              target="_blank"
-            >
+            <Link href={appUrl.apple} target="_blank">
               <Image
                 src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/apple_store_fgtmpg.svg"
                 width={213}
@@ -205,24 +200,27 @@ export default function Home() {
           Join our 235,000+ <br /> mobile app users
         </h1>
         <p className={styles.AdvertText}>
-          Scan QR code to download mobile app{" "}
+          Click on the link below to download mobile app
         </p>
         <div className={styles.MobileStore}>
-          <Image
-            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691583936/ibx-website-v2/google_play_white_mzoobw.svg"
-            alt=""
-            width={180}
-            height={54}
-            className={styles.GoogleStore}
-          />
-
-          <Image
-            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691583936/ibx-website-v2/apple_store_white_frrda0.svg"
-            width={183}
-            height={54}
-            alt=""
-            className={styles.AppleStore}
-          />
+          <Link href={appUrl.android} target="_blank">
+            <Image
+              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691583936/ibx-website-v2/google_play_white_mzoobw.svg"
+              alt=""
+              width={180}
+              height={54}
+              className={styles.GoogleStore}
+            />
+          </Link>
+          <Link href={appUrl.apple} target="_blank">
+            <Image
+              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691583936/ibx-website-v2/apple_store_white_frrda0.svg"
+              width={183}
+              height={54}
+              alt=""
+              className={styles.AppleStore}
+            />
+          </Link>
         </div>
       </div>
       <ClientTestimonial />
