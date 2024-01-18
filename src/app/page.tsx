@@ -184,10 +184,10 @@ export default function Home() {
           <Image
             loader={() =>
               imageLoader(
-                "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692872973/ibx-website-v2/money_dollar_qbsefi.webp"
+                "https://res.cloudinary.com/dbg2z1svm/image/upload/v1705614346/ibx-user_xkiefg.png"
               )
             }
-            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1692872973/ibx-website-v2/money_dollar_qbsefi.webp"
+            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1705614346/ibx-user_xkiefg.png"
             width={505}
             height={543}
             className={styles.RightImage}
