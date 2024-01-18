@@ -48,4 +48,11 @@ export const teamData = [
     image_url:
       "https://res.cloudinary.com/dbg2z1svm/image/upload/v1702655620/Oge_Team.jpg",
   },
+  {
+    id: 8,
+    name: "Kene Augustine",
+    role: "Backend Engineer",
+    image_url:
+      "https://res.cloudinary.com/dbg2z1svm/image/upload/v1705614324/kene_Team.jpg",
+  },
 ];
