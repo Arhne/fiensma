@@ -2,6 +2,7 @@ import { useRouter } from "next/navigation";
 import { useFindActiveSetupQuery } from "@/redux/services/supportApi";
 
 import styles from "./Footer.module.scss";
+import Image from "next/image";
 
 const Footer = () => {
   const { data: activeQuery } = useFindActiveSetupQuery();
@@ -11,10 +12,12 @@ const Footer = () => {
   return (
     <div className={`row gx-0 ${styles.FooterContainer}`}>
       <div className="col-sm-6">
-        <img
+        <Image
           src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418205/ibx-website-v2/logo_white_g81svy.svg"
           alt=""
           onClick={() => router.push("/")}
+          width={82}
+          height={54}
         />
         <p className={styles.Address}>
           No 90 Edeki Street, Dawaki Abuja Nigeria
@@ -23,32 +26,62 @@ const Footer = () => {
         <ul className={styles.SocialIcons}>
           <li>
             <a href={activeQuery && activeQuery?.data?.socialLinks?.youtube}>
-              <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1695043081/ibx-website-v2/youtube_szam7l.svg" />
+              <Image
+                src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1695043081/ibx-website-v2/youtube_szam7l.svg"
+                alt=""
+                width={28}
+                height={28}
+              />
             </a>
           </li>
           <li>
             <a href={activeQuery && activeQuery?.data?.socialLinks?.instagram}>
-              <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/instagram_lwt3ga.svg" />
+              <Image
+                src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/instagram_lwt3ga.svg"
+                alt=""
+                width={28}
+                height={28}
+              />
             </a>
           </li>
           <li>
             <a href={activeQuery && activeQuery?.data?.socialLinks?.twitter}>
-              <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1695043080/ibx-website-v2/twitter_guf4bl.svg" />
+              <Image
+                src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1695043080/ibx-website-v2/twitter_guf4bl.svg"
+                alt=""
+                width={28}
+                height={28}
+              />
             </a>
           </li>
           <li>
             <a href={activeQuery && activeQuery?.data?.socialLinks?.facebook}>
-              <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1695043303/ibx-website-v2/ic_baseline-facebook_otzeuz.svg" />
+              <Image
+                src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1695043303/ibx-website-v2/ic_baseline-facebook_otzeuz.svg"
+                alt=""
+                width={28}
+                height={28}
+              />
             </a>
           </li>
           <li>
             <a href={activeQuery && activeQuery?.data?.socialLinks?.linkedin}>
-              <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1695043080/ibx-website-v2/linkedin_ac5uvc.svg" />
+              <Image
+                src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1695043080/ibx-website-v2/linkedin_ac5uvc.svg"
+                alt=""
+                width={28}
+                height={28}
+              />
             </a>
           </li>
           <li>
             <a href={activeQuery && activeQuery?.data?.socialLinks?.tiktok}>
-              <img src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1695043079/ibx-website-v2/ic_baseline-tiktok_pz6rmy.svg" />
+              <Image
+                src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1695043079/ibx-website-v2/ic_baseline-tiktok_pz6rmy.svg"
+                alt=""
+                width={28}
+                height={28}
+              />
             </a>
           </li>
         </ul>
@@ -109,10 +142,7 @@ const Footer = () => {
           <ul className={styles.FooterMenus}>
             <li>
               {" "}
-              <a
-                className={styles.MenuItem}
-                href={"/policy"}
-              >
+              <a className={styles.MenuItem} href={"/policy"}>
                 Privacy Policy
               </a>
             </li>
