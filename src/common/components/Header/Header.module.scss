@@ -230,3 +230,473 @@
     top: -70px;
   }
 }
+
+.HeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  background-color: inherit;
+  padding: 2.7rem 6.25rem 2rem 6.25rem;
+  margin: 0 auto;
+  position: fixed;
+  top: -14%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 100%;
+  z-index: 100;
+  .LogoHamburger {
+    .Logo {
+      margin-top: 0.5rem;
+      cursor: pointer;
+    }
+    .Hamburger {
+      display: none;
+      cursor: pointer;
+    }
+  }
+
+  .Menus {
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+      padding-top: 1rem;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 9rem;
+
+      li {
+        margin: 0 1.8rem;
+
+        & .NavLink {
+          color: var(--text-color);
+          text-decoration: none;
+
+          &:hover {
+            color: #101010;
+            font-weight: 500;
+          }
+        }
+
+        & .Active {
+          color: #101010;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .TryItButton {
+      cursor: pointer;
+      border: none;
+      width: 8.5rem;
+      height: 3rem;
+      border-radius: 4.4rem;
+      color: #ffffff;
+      font-weight: 600;
+      background-color: var(--primary-color);
+    }
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 480px) {
+  .HeaderContainer {
+    flex-direction: column;
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+
+    .LogoHamburger {
+      .Logo {
+        width: 48px;
+        height: 48px;
+        margin: 0;
+      }
+
+      .Hamburger {
+        display: block;
+        float: right;
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    .Menus {
+      padding: 1rem;
+      flex-direction: column;
+      display: none;
+
+      ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0 auto;
+
+        li {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+      }
+
+      .TryItButton {
+        margin: 0.5rem auto;
+        width: 100%;
+        border-radius: 2rem;
+      }
+    }
+
+    .Responsive {
+      display: block;
+    }
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .HeaderContainer {
+    flex-direction: column;
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+
+    .LogoHamburger {
+      .Logo {
+        width: 48px;
+        height: 48px;
+        margin: 0;
+      }
+
+      .Hamburger {
+        display: block;
+        float: right;
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    .Menus {
+      padding: 1rem;
+      flex-direction: column;
+      display: none;
+
+      ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0 auto;
+
+        li {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+      }
+
+      .TryItButton {
+        margin: 0.5rem auto;
+        width: 100%;
+        border-radius: 2rem;
+      }
+    }
+
+    .Responsive {
+      display: block;
+    }
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .HeaderContainer {
+    flex-direction: column;
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+
+    .LogoHamburger {
+      .Logo {
+        width: 48px;
+        height: 48px;
+        margin: 0;
+      }
+
+      .Hamburger {
+        display: block;
+        float: right;
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    .Menus {
+      padding: 1rem;
+      flex-direction: column;
+      display: none;
+
+      ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0 auto;
+
+        li {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+      }
+
+      .TryItButton {
+        margin: 0.5rem auto;
+        width: 100%;
+        border-radius: 2rem;
+      }
+    }
+
+    .Responsive {
+      display: block;
+    }
+  }
+}
+
+// Styles for the Download page
+
+/* Extremely large screens */
+@media screen and (min-width: 1441px) {
+  .HeaderContainer {
+    top: -70px;
+  }
+}
+
+.DownloadsHeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  background-color: inherit;
+  padding: 2.7rem 6.25rem 2rem 6.25rem;
+  margin: 0 auto;
+  position: fixed;
+  background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1707918053/Rectangle_34624848_qnhkjh.svg");
+
+  top: -14%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 100%;
+  z-index: 100;
+  .LogoHamburger {
+    .Logo {
+      margin-top: 0.5rem;
+      cursor: pointer;
+    }
+    .Hamburger {
+      display: none;
+      cursor: pointer;
+    }
+  }
+
+  .Menus {
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+      padding-top: 1rem;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 9rem;
+
+      li {
+        margin: 0 1.8rem;
+
+        & .NavLink {
+          color: #d2d2d2;
+          text-decoration: none;
+
+          &:hover {
+            color: #101010;
+            font-weight: 500;
+          }
+        }
+
+        & .Active {
+          color: #101010;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .DownloadsButton {
+      cursor: pointer;
+      border: none;
+      width: 8.5rem;
+      height: 3rem;
+      border-radius: 4.4rem;
+      background-color: #ffffff;
+      font-weight: 600;
+      color: var(--text-color);
+    }
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 480px) {
+  .DownloadsHeaderContainer {
+    flex-direction: column;
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+
+    .LogoHamburger {
+      .Logo {
+        width: 48px;
+        height: 48px;
+        margin: 0;
+      }
+
+      .Hamburger {
+        display: block;
+        float: right;
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    .Menus {
+      padding: 1rem;
+      flex-direction: column;
+      display: none;
+
+      ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0 auto;
+
+        li {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+      }
+
+      .DownloadsButton {
+        margin: 0.5rem auto;
+        width: 100%;
+        border-radius: 2rem;
+      }
+    }
+
+    .Responsive {
+      display: block;
+    }
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .DownloadsHeaderContainer {
+    flex-direction: column;
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+
+    .LogoHamburger {
+      .Logo {
+        width: 48px;
+        height: 48px;
+        margin: 0;
+      }
+
+      .Hamburger {
+        display: block;
+        float: right;
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    .Menus {
+      padding: 1rem;
+      flex-direction: column;
+      display: none;
+
+      ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0 auto;
+
+        li {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+      }
+
+      .DownloadsButton {
+        margin: 0.5rem auto;
+        width: 100%;
+        border-radius: 2rem;
+      }
+    }
+
+    .Responsive {
+      display: block;
+    }
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .DownloadsHeaderContainer {
+    flex-direction: column;
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+
+    .LogoHamburger {
+      .Logo {
+        width: 48px;
+        height: 48px;
+        margin: 0;
+      }
+
+      .Hamburger {
+        display: block;
+        float: right;
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    .Menus {
+      padding: 1rem;
+      flex-direction: column;
+      display: none;
+
+      ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0 auto;
+
+        li {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+      }
+
+      .DownloadsButton {
+        margin: 0.5rem auto;
+        width: 100%;
+        border-radius: 2rem;
+      }
+    }
+
+    .Responsive {
+      display: block;
+    }
+  }
+}
+
+/* Extremely large screens */
+@media screen and (min-width: 1441px) {
+  .DownloadsHeaderContainer {
+    top: -70px;
+  }
+}
