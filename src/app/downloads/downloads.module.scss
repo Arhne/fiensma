@@ -65,64 +65,12 @@
     .support {
       position: absolute;
       top: 10rem;
-      right: 20;
-    }
-
-    .Faqs {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      max-width: 70rem;
-      margin-left: auto;
-      margin-right: auto;
-      padding-top: 7.2rem;
-
-      aside {
-        max-width: 28rem;
-
-        h5 {
-          font-size: 20px;
-          font-weight: 700;
-          color: #10192d;
-          margin-top: 4rem;
-        }
-
-        p {
-          padding-top: 0.5rem;
-        }
-      }
-
-      h3 {
-        font-size: 40px;
-        font-weight: 700;
-      }
-
-      p {
-        font-size: 20px;
-        line-height: 36px;
-        color: rgba(0, 0, 0, 0.6);
-      }
-
-      .ActionContainer {
-        margin-top: 1.25rem;
-        display: flex;
-
-        .ActionButton {
-          cursor: pointer;
-          border: none;
-          margin-left: 1rem;
-          width: 9rem;
-          height: 4rem;
-          border-radius: 4.3rem;
-          color: #ffffff;
-          font-weight: 600;
-          background-color: #7041de;
-        }
-      }
+      right: -10rem;
     }
 
     .DownloadsOption {
-      display: grid;
       position: relative;
+      display: grid;
       grid-template-columns: 1fr 1fr;
       max-width: 70rem;
       row-gap: 2rem;
@@ -130,12 +78,11 @@
       margin-top: 80px;
       margin-right: auto;
     }
-  }
-
-  .DownloadsOptionSupport {
-    position: absolute;
-    top: 2rem;
-    right: 0;
+    .DownloadsOptionSupport {
+      position: absolute;
+      top: 2rem;
+      right: 0;
+    }
   }
 }
 @media screen and (max-width: 768px) {
@@ -153,22 +100,20 @@
         margin-left: auto;
         margin-right: auto;
         width: 100%;
+        height: 5rem;
+        z-index: 6;
+        margin-bottom: -0.9rem;
       }
 
       h1 {
         max-width: none !important;
-        font-size: 2.8rem;
-      }
-
-      p {
-        padding-top: 20px;
+        font-size: 2.9rem;
       }
 
       .downloadBtn {
         display: flex;
         flex-direction: column;
         justify-content: start;
-        width: full;
         align-items: center;
         margin-left: -1.5rem;
         gap: 1rem;
@@ -182,27 +127,62 @@
 
       .AppPreview {
         position: relative;
-        margin-top: -5rem;
+        margin-top: -6rem;
+        margin-bottom: -2.6rem;
 
         .IbxPreview {
           position: relative;
           width: 100%;
         }
       }
-      .DownloadsOption {
-        grid-template-columns: 1fr;
-        gap: 20rem;
+      .DownloadsOptionContainer {
+        .DownloadsOption {
+          grid-template-columns: 1fr;
+          gap: 20rem;
+        }
       }
-      .DownloadsOptionSupport {
-        display: none;
+
+      .DownloadsOptionImg {
+        height: 1rem;
       }
     }
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 580px) {
   .MainContainer {
     .DownloadsContainer {
+      .downloadBtn {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        margin-left: -1.5rem;
+        gap: 0;
+        margin-top: 4rem;
+      }
+
+      p {
+        max-width: 36rem;
+        margin-left: 0%;
+        margin-right: 0%;
+      }
+
+      .version {
+        margin-bottom: 6rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .MainContainer {
+    .DownloadsContainer {
+      .downloadBtn {
+        flex-direction: row;
+        justify-content: center;
+      }
+
       .DownloadsImage {
         z-index: 1 !important;
         margin-bottom: -2rem;
@@ -211,7 +191,14 @@
       h1 {
         font-size: 4rem;
       }
+
+      p {
+        max-width: 36rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
+
     .MainContainer {
       margin-top: -1rem;
       padding: 1rem;
@@ -231,7 +218,6 @@
         h1 {
           max-width: none !important;
           font-size: 2.8rem;
-          background-color: red;
         }
 
         p {
@@ -262,7 +248,51 @@
             position: relative;
           }
         }
+        .DownloadsOptionSupport {
+          display: none !important;
+        }
       }
     }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .MainContainer {
+    .DownloadsContainer {
+      .downloadBtn {
+        margin-top: 1.6rem;
+      }
+      .AppPreview {
+        position: relative;
+        margin-top: -6rem;
+        margin-bottom: 0rem;
+
+        .IbxPreview {
+          position: relative;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1042px) {
+  .Faqs {
+    margin-top: -11rem;
+  }
+}
+
+.DownloadsOptionContainer {
+  position: relative;
+  width: 100%;
+
+  .DownloadsOptionSupport {
+    position: absolute;
+    top: 4rem;
+    left: auto;
+    display: flex;
+    justify-content: end;
+
+    width: 100%;
   }
 }

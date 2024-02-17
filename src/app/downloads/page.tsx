@@ -5,17 +5,10 @@ import Link from "next/link";
 
 import styles from "./downloads.module.scss";
 
-import { Controller, useForm } from "react-hook-form";
-import { CustomInput } from "@/common/components/Inputs";
-import { downloadOption, faqs } from "./data";
+import { downloadOption } from "./data";
+import Faq from "@/common/components/Landing/Faq";
 
 const Downloads = () => {
-  const { control } = useForm({
-    defaultValues: {
-      email: "",
-    },
-  });
-
   return (
     <>
       <section className={styles.MainContainer}>
@@ -72,82 +65,32 @@ const Downloads = () => {
           </div>
         </div>
       </section>
-      <div className={styles.DownloadsOption}>
+      <div
+        className={`${styles.DownloadsOptionContainer} row p-3`}
+        style={{ maxWidth: "74.5rem", margin: "0 auto" }}
+      >
         {downloadOption.map(({ id, image }) => (
           <Image
             src={image}
             key={id}
             width={569}
             height={530}
-            className=""
+            className={`h-25 col col-lg-6 p-3`}
             alt={""}
           />
         ))}
-        <Image
-          src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1707920827/Intercom_Messenger_1_legqrn.svg"
-          width={140}
-          height={140}
-          alt=""
-          className={` ${styles.DownloadsOptionSupport} none`}
-        />
-      </div>
-      <div className={`${styles.Faqs} d-flex`}>
-        <aside>
-          <div>
-            <h3>Frequently Asked Questions</h3>
-            <p>
-              Find quick answers to common queries in our FAQs section, designed
-              to address your most pressing questions and provide you with the
-              information you need.
-            </p>
-          </div>
-          <h5>Can’t find an answer?</h5>
-          <form>
-            <div className={styles.ActionContainer}>
-              <Controller
-                name="email"
-                control={control}
-                rules={{ required: "Email is required" }}
-                render={({
-                  field: { onChange, value },
-                  formState: { errors },
-                }) => {
-                  const errorMessage = errors.email?.message;
-                  return (
-                    <CustomInput
-                      isShowLabel={false}
-                      customStyle={{ backgroundColor: "#fafafa" }}
-                      type="email"
-                      placeholder="Enter your email"
-                      {...{ value, onChange, errors: [errorMessage] }}
-                    />
-                  );
-                }}
-              />
-
-              <button className={styles.ActionButton}>Contact us</button>
-            </div>
-          </form>
-        </aside>
-        <div className="">
-          {faqs.map(({ id, question, answer }) => (
-            <div key={id}>
-              <div className="d-flex align-items-center justify-content-xl-between ">
-                {question}{" "}
-                <p>
-                  {" "}
-                  <Image
-                    src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1708076610/Subtract_l2dy3r.svg"
-                    width={20}
-                    height={20}
-                    alt=""
-                  />
-                </p>
-              </div>
-              <p className="border-bottom pb-4 fs-6">{answer}</p>
-            </div>
-          ))}
+        <div className={styles.DownloadsOptionSupport}>
+          <Image
+            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1707920827/Intercom_Messenger_1_legqrn.svg"
+            width={140}
+            height={140}
+            alt=""
+            className={"d-none d-lg-block"}
+          />
         </div>
+      </div>
+      <div className={`pt-4 ${styles.Faqs}`}>
+        <Faq />
       </div>
     </>
   );
