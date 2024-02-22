@@ -12,11 +12,11 @@ export const downloadOption = [
   {
     id: 3,
     image:
-      "https://res.cloudinary.com/dbg2z1svm/image/upload/v1707920834/Content_2_lghwzd.svg",
+      "https://res.cloudinary.com/dbg2z1svm/image/upload/v1708579143/Content_2_mdvcfp.svg",
   },
   {
     id: 4,
     image:
-      "https://res.cloudinary.com/dbg2z1svm/image/upload/v1707920834/Content_3_ixnuic.svg",
+      "https://res.cloudinary.com/dbg2z1svm/image/upload/v1708579143/Content_3_jqgqsn.svg",
   },
 ];
