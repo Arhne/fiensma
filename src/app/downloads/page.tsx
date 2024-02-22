@@ -14,7 +14,7 @@ const Downloads = () => {
   return (
     <>
       <Carousel
-        autoPlay={true}
+        // autoPlay={true}
         infiniteLoop={true}
         swipeable={true}
         showArrows={false}
@@ -28,7 +28,7 @@ const Downloads = () => {
                 Swift and secure trading experience with no hassle. Download the
                 ibx mobile app on your app store or play store.
               </p>
-              <div className={styles.downloadBtnMobileCarousel}>
+              <div className={styles.DownloadBtnMobileCarousel}>
                 <Link href={""}>
                   <Image
                     src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1708600502/Google_Play_plp6od.svg"
