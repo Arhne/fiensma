@@ -13,10 +13,16 @@ const Header = () => {
   const router = useRouter();
 
   return (
-    <div className={styles.HeaderContainer}>
+    <div
+      className={
+        pathname === "/downloads"
+          ? styles.DownloadsHeaderContainer
+          : styles.HeaderContainer
+      }
+    >
       <div className={styles.LogoHamburger}>
         <Image
-          src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418208/ibx-website-v2/logo_cz22mb.svg"
+          src={"https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418208/ibx-website-v2/logo_cz22mb.svg"}
           width={100}
           height={50}
           alt=""
@@ -25,7 +31,11 @@ const Header = () => {
         />
 
         <Image
-          src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/hamburger_wdp6ft.svg"
+          src={
+            pathname == "/downloads"
+              ? "https://res.cloudinary.com/dbg2z1svm/image/upload/v1708082210/Burger_menu_icon_fgs3tl.svg"
+              : "https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/hamburger_wdp6ft.svg"
+          }
           width={24}
           height={24}
           alt=""
@@ -94,7 +104,17 @@ const Header = () => {
             </Link>
           </li>
         </ul>
-        <button className={styles.TryItButton}>Try for Free</button>
+        <Link href={"/downloads"}>
+          <button
+            className={
+              pathname === "/downloads"
+                ? styles.DownloadsButton
+                : styles.TryItButton
+            }
+          >
+            Try for Free
+          </button>
+        </Link>
       </div>
     </div>
   );
