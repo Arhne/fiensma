@@ -22,11 +22,7 @@ const Header = () => {
     >
       <div className={styles.LogoHamburger}>
         <Image
-          src={
-            pathname === "/downloads"
-              ? "https://res.cloudinary.com/dbg2z1svm/image/upload/v1707945454/Full_Primary_Logo_d285qd.svg"
-              : "https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418208/ibx-website-v2/logo_cz22mb.svg"
-          }
+          src={"https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418208/ibx-website-v2/logo_cz22mb.svg"}
           width={100}
           height={50}
           alt=""
