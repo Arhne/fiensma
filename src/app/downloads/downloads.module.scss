@@ -46,6 +46,15 @@
 
     .downloadBtn {
       margin-top: 1.6rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 20rem;
+      flex-direction: column;
+
+      .downloadBtnLink {
+        margin-left: 8px;
+        margin-right: 8px;
+      }
     }
 
     .version {
@@ -65,7 +74,7 @@
     .support {
       position: absolute;
       top: 10rem;
-      right: -10rem;
+      right: -30rem;
     }
 
     .DownloadsOption {
@@ -95,6 +104,18 @@
       margin-left: 0;
       margin-right: 0;
       text-align: left;
+
+      .downloadBtnMobileCarousel {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        margin-left: -1.5rem;
+        gap: 1rem;
+        margin-top: 3rem;
+        height: 18rem;
+        margin-bottom: 0.2rem;
+      }
 
       .DownloadsImage {
         margin-left: auto;
@@ -152,6 +173,18 @@
 @media screen and (min-width: 580px) {
   .MainContainer {
     .DownloadsContainer {
+      .downloadBtnMobileCarousel {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        margin-left: -1.5rem;
+        gap: 1rem;
+        margin-top: 6rem;
+        height: 16rem;
+        margin-bottom: 4rem;
+      }
+
       .downloadBtn {
         display: flex;
         flex-direction: row;
@@ -194,8 +227,8 @@
 
       p {
         max-width: 36rem;
-        margin-left: auto;
-        margin-right: auto;
+        // margin-left: auto;
+        // margin-right: auto;
       }
     }
 
@@ -271,6 +304,11 @@
           position: relative;
           width: 100%;
         }
+      }
+       p {
+        max-width: 36rem;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   }
