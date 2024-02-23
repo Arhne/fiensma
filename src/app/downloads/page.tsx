@@ -12,9 +12,9 @@ import { Carousel } from "react-responsive-carousel";
 
 const Downloads = () => {
   return (
-    <>
+    <div className={styles.Downloads}>
       <Carousel
-        // autoPlay={true}
+        autoPlay={true}
         infiniteLoop={true}
         swipeable={true}
         showArrows={false}
@@ -69,8 +69,10 @@ const Downloads = () => {
         </section>
         <section className={styles.MainContainer}>
           <div className={styles.DownloadsContainer}>
-            <div className="lg:text-center">
-              <h1>Use the Ibx desktop app for swift experience</h1>
+            <div className={styles.SwiftExperience}>
+              <h1 className={styles.title}>
+                Use the Ibx desktop app for swift experience
+              </h1>
               <p>
                 Swift and secure trading experience with no hassle. Use the ibx
                 desktop app for your windows and macOS.
@@ -85,7 +87,7 @@ const Downloads = () => {
                     className={styles.downloadBtnLink}
                   />
                 </Link>
-                <Link href={""}>
+                <Link href={""} className={styles.Signup}>
                   <Image
                     src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1708578681/Windows_Link_1_dyx7rd.svg"
                     width={120}
@@ -104,15 +106,15 @@ const Downloads = () => {
                   alt=""
                   className={styles.IbxPreview}
                 />
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1707920827/Intercom_Messenger_1_legqrn.svg"
-                  width={140}
-                  height={140}
-                  alt=""
-                  className={styles.support}
-                />
               </div>
             </div>
+            <Image
+              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1707920827/Intercom_Messenger_1_legqrn.svg"
+              width={140}
+              height={140}
+              alt=""
+              className={styles.support}
+            />
           </div>
         </section>
       </Carousel>
@@ -143,7 +145,7 @@ const Downloads = () => {
       <div className={`pt-4 ${styles.Faqs}`}>
         <Faq />
       </div>
-    </>
+    </div>
   );
 };
 
