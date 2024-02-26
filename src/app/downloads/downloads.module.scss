@@ -25,7 +25,7 @@
         margin-top: 2rem;
 
         .title {
-          font-size: 40px;
+          font-size: 4rem;
           margin-top: -4rem;
         }
 
@@ -126,8 +126,8 @@
 
       .SwiftExperience {
         .title {
-          margin-top: -9rem;
-          font-size: 4rem;
+          margin-top: -12rem;
+          font-size: 40px !important;
         }
       }
 
@@ -298,9 +298,9 @@
 @media screen and (min-width: 768px) {
   .MainContainer {
     .DownloadsContainer {
-      .SwiftExperience {
+         .SwiftExperience {
         .title {
-          padding-top: 7rem;
+          margin-top: -9rem;
           font-size: 4rem;
         }
       }
@@ -399,6 +399,12 @@
       padding-top: 2rem;
 
       .DownloadsContainer {
+        .SwiftExperience {
+          .title {
+            margin-top: -9rem;
+            font-size: 4rem;
+          }
+        }
         .DownloadBtnMobileCarousel {
           display: flex;
           justify-content: center;
