@@ -4,12 +4,13 @@
   .MainContainer {
     background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1707918053/Rectangle_34624848_qnhkjh.svg");
     overflow: hidden;
+    padding-top: 2rem;
 
     .DownloadsContainer {
       font-size: 1.8rem;
       padding-top: 1rem;
       display: flex;
-      height: 55rem;
+      height: 54rem;
       flex-direction: column;
       justify-content: center;
       margin-left: auto;
@@ -24,6 +25,11 @@
         margin-top: 2rem;
 
         .title {
+          font-size: 40px;
+          margin-top: -4rem;
+        }
+
+        .DesktopTitle {
           margin-top: 6rem;
         }
       }
@@ -69,6 +75,7 @@
       .version {
         margin-top: 13px;
         margin-bottom: 10px;
+        padding-bottom: 4rem;
         cursor: pointer;
       }
 
@@ -116,6 +123,13 @@
       margin-left: 0;
       margin-right: 0;
       text-align: left;
+
+      .SwiftExperience {
+        .title {
+          margin-top: -9rem;
+          font-size: 4rem;
+        }
+      }
 
       .DownloadBtnMobileCarousel {
         display: flex;
@@ -185,7 +199,7 @@
       .DownloadsContainer {
         .SwiftExperience {
           .title {
-            margin-top: 0rem;
+            padding-top: 7rem;
           }
         }
       }
@@ -194,6 +208,32 @@
 }
 
 @media screen and (min-width: 500px) {
+  .Downloads {
+    .MainContainer {
+      .DownloadsContainer {
+        .SwiftExperience {
+          .title {
+            margin-top: -5rem;
+          }
+        }
+        .downloadBtn {
+          margin-top: 3rem;
+        }
+      }
+      .AppPreview {
+        margin-top: -2rem;
+        margin-bottom: -2.6rem;
+
+        .IbxPreview {
+          position: relative;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
   .Downloads {
     .MainContainer {
       .DownloadsContainer {
@@ -258,6 +298,12 @@
 @media screen and (min-width: 768px) {
   .MainContainer {
     .DownloadsContainer {
+      .SwiftExperience {
+        .title {
+          padding-top: 7rem;
+          font-size: 4rem;
+        }
+      }
       .DownloadBtnMobileCarousel {
         display: flex;
         flex-direction: row;
@@ -400,6 +446,38 @@
         margin-top: 6rem;
         height: 16rem;
         margin-bottom: 4rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1078px) {
+  .Downloads {
+    margin-top: 1rem;
+
+    .MainContainer {
+      padding-top: 6rem;
+
+      .DownloadsContainer {
+        .DownloadBtnMobileCarousel {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+          margin-top: -6rem;
+          height: 18rem;
+          margin-bottom: 5rem;
+        }
+
+        .downloadBtn {
+          margin-top: 1.6rem;
+        }
+
+        .AppPreview {
+          position: relative;
+          margin-top: 1rem;
+          margin-bottom: 0rem;
+        }
       }
     }
   }
