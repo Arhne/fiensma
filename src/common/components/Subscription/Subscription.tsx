@@ -19,6 +19,9 @@ const Subscription = () => {
       .unwrap()
       .then((result) => {
         showSuccessToast(result?.message);
+        control._reset({
+          email: "",
+        });
       })
       .catch((error) => {
         showErrorToast(error?.data?.message);

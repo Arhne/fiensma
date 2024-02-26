@@ -25,7 +25,7 @@
         margin-top: 2rem;
 
         .title {
-          font-size: 4rem;
+          font-size: 40px !important;
           margin-top: -4rem;
         }
 
@@ -126,7 +126,6 @@
 
       .SwiftExperience {
         .title {
-          margin-top: -12rem;
           font-size: 40px !important;
         }
       }
@@ -193,20 +192,6 @@
   }
 }
 
-@media screen and (min-width: 400px) {
-  .Downloads {
-    .MainContainer {
-      .DownloadsContainer {
-        .SwiftExperience {
-          .title {
-            padding-top: 7rem;
-          }
-        }
-      }
-    }
-  }
-}
-
 @media screen and (min-width: 500px) {
   .Downloads {
     .MainContainer {
@@ -262,6 +247,9 @@
 @media screen and (min-width: 580px) {
   .MainContainer {
     .DownloadsContainer {
+      .SwiftExperience {
+        text-align: center;
+      }
       .DownloadBtnMobileCarousel {
         display: flex;
         flex-direction: row;
@@ -298,7 +286,7 @@
 @media screen and (min-width: 768px) {
   .MainContainer {
     .DownloadsContainer {
-         .SwiftExperience {
+      .SwiftExperience {
         .title {
           margin-top: -9rem;
           font-size: 4rem;
@@ -401,8 +389,8 @@
       .DownloadsContainer {
         .SwiftExperience {
           .title {
-            margin-top: -9rem;
-            font-size: 4rem;
+            margin-top: -2rem;
+            font-size: 4rem !important;
           }
         }
         .DownloadBtnMobileCarousel {
