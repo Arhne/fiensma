@@ -16,8 +16,9 @@ const Downloads = () => {
       <Carousel
         autoPlay={true}
         infiniteLoop={true}
-        swipeable={true}
+        swipeable={false}
         showArrows={false}
+        interval={4000}
         showStatus={false}
       >
         <section className={styles.MainContainer}>
@@ -29,7 +30,11 @@ const Downloads = () => {
                 ibx mobile app on your app store or play store.
               </p>
               <div className={styles.DownloadBtnMobileCarousel}>
-                <Link href={""}>
+                <Link
+                  href={
+                    "https://play.google.com/store/apps/details?id=com.ibx&hl=en&gl=US"
+                  }
+                >
                   <Image
                     src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1708600502/Google_Play_plp6od.svg"
                     width={150}
@@ -38,7 +43,7 @@ const Downloads = () => {
                     className={styles.downloadBtnLink}
                   />
                 </Link>
-                <Link href={""}>
+                <Link href={"https://apps.apple.com/us/app/ibx/id6455785836"}>
                   <Image
                     src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1708600502/App_Store_wla5wr.svg"
                     width={150}
@@ -61,7 +66,7 @@ const Downloads = () => {
                   width={140}
                   height={140}
                   alt=""
-                  className={styles.support}
+                  className={styles.SupportMobile}
                 />
               </div>
             </div>
@@ -118,28 +123,36 @@ const Downloads = () => {
           </div>
         </section>
       </Carousel>
-      <div
-        className={`${styles.DownloadsOptionContainer} row p-3`}
-        style={{ maxWidth: "74.5rem", margin: "0 auto" }}
-      >
-        {downloadOption.map(({ id, image }) => (
-          <Image
-            src={image}
-            key={id}
-            width={569}
-            height={530}
-            className={`h-25 col col-lg-6 p-3 cursor-pointer`}
-            alt={""}
-          />
-        ))}
-        <div className={styles.DownloadsOptionSupport}>
-          <Image
-            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1707920827/Intercom_Messenger_1_legqrn.svg"
-            width={140}
-            height={140}
-            alt=""
-            className={"d-none d-lg-block cursor-pointer"}
-          />
+      <div className="d-flex justify-content-center">
+        <div
+          style={{ maxWidth: "75rem" }}
+          className={`${styles.DownloadsOptionContainer} row p-3`}
+        >
+          {downloadOption.map(({ id, image, downloadSource }) => (
+            <div
+              key={id}
+              className="col-12 col-lg-6 p-3 d-flex justify-content-center align-items-center"
+            >
+              <Link
+                className={`${styles.DownloadOptionImage} cursor-pointer relative`}
+                href={downloadSource}
+              >
+                <Image
+                  src={image}
+                  className={styles.DownloadsOptionImg}
+                  alt=""
+                  width={562}
+                  height={597}
+                  style={{
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                    width: "auto",
+                    height: "auto",
+                  }}
+                />
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
       <div className={`pt-4 ${styles.Faqs}`}>
