@@ -39,7 +39,7 @@ const Downloads = () => {
                     src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1708600502/Google_Play_plp6od.svg"
                     width={150}
                     height={48}
-                    alt=""
+                    alt="google play download"
                     className={styles.downloadBtnLink}
                   />
                 </Link>
@@ -48,7 +48,7 @@ const Downloads = () => {
                     src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1708600502/App_Store_wla5wr.svg"
                     width={150}
                     height={48}
-                    alt=""
+                    alt="ios download"
                     className={styles.downloadBtnLink}
                   />
                 </Link>
@@ -58,16 +58,21 @@ const Downloads = () => {
                   src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1708586497/iPhone_15_Pro_Portrait_Right_Mockup_1_2_yrfckt.svg"
                   width={884}
                   height={500}
-                  alt=""
+                  alt="ibx dashboard"
                   className={styles.IbxPreview}
                 />
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1707920827/Intercom_Messenger_1_legqrn.svg"
-                  width={140}
-                  height={140}
-                  alt=""
+                <Link
                   className={styles.SupportMobile}
-                />
+                  style={{ zIndex: 20 }}
+                  href={"/contactus"}
+                >
+                  <Image
+                    src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1707920827/Intercom_Messenger_1_legqrn.svg"
+                    width={140}
+                    height={140}
+                    alt="ibx support"
+                  />
+                </Link>
               </div>
             </div>
           </div>
@@ -83,21 +88,24 @@ const Downloads = () => {
                 desktop app for your windows and macOS.
               </p>
               <div className={styles.downloadBtn}>
-                <Link href={""}>
+                <Link href={"https://app.ibxp2p.com/"}>
                   <Image
                     src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1708578681/MacOS_Link_1_kqezbk.svg"
                     width={160}
                     height={48}
-                    alt=""
+                    alt="login"
                     className={styles.downloadBtnLink}
                   />
                 </Link>
-                <Link href={""} className={styles.Signup}>
+                <Link
+                  href={"https://app.ibxp2p.com/signup"}
+                  className={styles.Signup}
+                >
                   <Image
                     src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1708578681/Windows_Link_1_dyx7rd.svg"
                     width={120}
                     height={48}
-                    alt=""
+                    alt="register"
                     className={styles.downloadBtnLink}
                   />
                 </Link>
@@ -108,18 +116,19 @@ const Downloads = () => {
                   src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1707918084/Home_Verified_Merchant_oo2sng.svg"
                   width={884}
                   height={500}
-                  alt=""
+                  alt="ibx dashboard"
                   className={styles.IbxPreview}
                 />
               </div>
             </div>
-            <Image
-              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1707920827/Intercom_Messenger_1_legqrn.svg"
-              width={140}
-              height={140}
-              alt=""
-              className={styles.support}
-            />
+            <Link className={styles.support} href={"/contactus"}>
+              <Image
+                src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1707920827/Intercom_Messenger_1_legqrn.svg"
+                width={140}
+                height={140}
+                alt=""
+              />
+            </Link>
           </div>
         </section>
       </Carousel>
