@@ -108,17 +108,19 @@ const Header = () => {
             </Link>
           </li>
         </ul>
-        <Link href={"/downloads"}>
-          <button
-            className={
-              pathname === "/downloads"
-                ? styles.DownloadsButton
-                : styles.TryItButton
-            }
-          >
-            Try for Free
-          </button>
-        </Link>
+        {pathname !== "/downloads" && (
+          <Link href={"/downloads"}>
+            <button
+              className={
+                pathname === "/downloads"
+                  ? styles.DownloadsButton
+                  : styles.TryItButton
+              }
+            >
+              Try for Free
+            </button>
+          </Link>
+        )}
       </div>
     </div>
   );
