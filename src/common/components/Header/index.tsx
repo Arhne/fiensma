@@ -109,7 +109,7 @@ const Header = () => {
           </li>
         </ul>
         {pathname !== "/downloads" && (
-          <Link href={"/downloads"}>
+          <Link href={"/downloads"} onClick={() => setIsOpenMobileMenu(false)}>
             <button
               className={
                 pathname === "/downloads"
