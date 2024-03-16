@@ -20,6 +20,9 @@ const Footer = () => {
           height={54}
         />
         <p className={styles.Address}>
+          G25 Triangle business place jakonde Besides Circle Mall,<br/> Osapa, Lekki, Lagos
+        </p>
+        <p className={styles.Address}>
           No 90 Edeki Street, Dawaki Abuja Nigeria
         </p>
         <p>Follow us</p>
