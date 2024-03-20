@@ -72,7 +72,7 @@ const Downloads = () => {
         <div className={styles.DownloadsContainer}>
           <div className={styles.SwiftExperience}>
             <h1 className={styles.title}>
-              Use the Ibx desktop app for swift experience
+              Use the Ibx app for a swift trading experience
             </h1>
             <p>
               Swift and secure trading experience with no hassle. Use the ibx
