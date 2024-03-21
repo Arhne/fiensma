@@ -9,6 +9,10 @@ import { WEBSITE_HOST_URL } from "@/api/baseUrl";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+{
+  /* <meta name="google-site-verification" content="0YCNialYFsKHhkKSq3_GM5tNRhmxfPBXdu9Ail_3eKY" /> */
+}
+
 const manrope = Manrope({
   weight: ["400", "500", "700", "800"],
   style: ["normal"],
@@ -30,6 +34,9 @@ export const metadata: Metadata = {
   },
   description:
     "A P2P marketplace for currecy exchange, anytime and at your terms",
+  verification: {
+    google: "0YCNialYFsKHhkKSq3_GM5tNRhmxfPBXdu9Ail_3eKY",
+  },
   openGraph: {
     title: meta.title,
     description: meta.description,
