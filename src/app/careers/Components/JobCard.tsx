@@ -18,7 +18,7 @@ const JobCard = ({ data }: IJobCard) => {
         <h6 className={styles.Title}>{data?.title}</h6>
         <span
           className={styles.Apply}
-          onClick={() => router.push(`/careers/${data._id}`)}
+          onClick={() => router.push(`/careers/${data.slug}`)}
         >
           Apply
         </span>
