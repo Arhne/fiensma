@@ -34,6 +34,8 @@ const Careers = () => {
     isError: isCategoryError,
   } = useGetAllJobCategoriesQuery();
 
+  console.log(allJobs)
+
   const renderJobs = () => {
     if (isLoading) {
       return <ExchangeRateLoader />;

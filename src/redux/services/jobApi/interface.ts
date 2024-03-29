@@ -11,6 +11,7 @@ export interface IJob {
   deletedAt: string;
   createdAt: string;
   updatedAt: string;
+  slug: string;
   __v: number;
 }
 
