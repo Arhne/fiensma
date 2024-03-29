@@ -17,14 +17,14 @@ export async function generateStaticParams() {
 
   return jobs?.data.map((_job: any) => {
     return {
-      slug: _job?._id,
+      slug: _job?.slug,
     };
   });
 }
 
-async function getData(id: string) {
+async function getData(slug: string) {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/user/api/v1/jobs/get-job-by-id/${id}`
+    `${process.env.NEXT_PUBLIC_BASE_URL}/user/api/v1/jobs/get-job-by-slug/${slug}`
   );
 
   if (!res.ok) {
