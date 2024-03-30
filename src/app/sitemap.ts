@@ -30,7 +30,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const careers =
     jobs &&
     jobs?.data.map((_job: any) => ({
-      url: `${WEBSITE_HOST_URL}/careers/${_job?._id}`,
+      url: `${WEBSITE_HOST_URL}/careers/${_job?.slug}`,
       lastModified: _job?.updatedAt,
       changeFrequency,
     }));
