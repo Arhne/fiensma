@@ -20,12 +20,10 @@ const Footer = () => {
           height={54}
         />
         <p className={styles.Address}>
-          G25 Triangle business place jakonde Besides Circle Mall,<br/> Osapa, Lekki, Lagos
+          Jumbo Plaza Road, Opposite D Division Police Station<br/>Itam, Uyo, Akwa-Ibom State
         </p>
-        <p className={styles.Address}>
-          No 90 Edeki Street, Dawaki Abuja Nigeria
-        </p>
-        <p>Follow us</p>
+        
+        {/* <p>Follow us</p>
         <ul className={styles.SocialIcons}>
           <li>
             <a href={activeQuery && activeQuery?.data?.socialLinks?.youtube}>
@@ -87,7 +85,7 @@ const Footer = () => {
               />
             </a>
           </li>
-        </ul>
+        </ul> */}
       </div>
       <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
         <div className={`${styles.MenusContainer}`}>
@@ -99,14 +97,8 @@ const Footer = () => {
             </li>
             <li>
               {" "}
-              <a className={styles.MenuItem} href={"/about"}>
+              <a className={styles.MenuItem} href={"/#about"}>
                 About
-              </a>
-            </li>
-            <li>
-              {" "}
-              <a className={styles.MenuItem} href={"/careers"}>
-                Careers
               </a>
             </li>
             <li>
@@ -116,36 +108,18 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-          <ul className={styles.FooterMenus}>
+          {/* <ul className={styles.FooterMenus}>
             <li>
               {" "}
-              <a className={styles.MenuItem} href={"/terms"}>
+              <a className={styles.MenuItem} href="#">
                 Terms
               </a>
             </li>
-            <li>
-              {" "}
-              <a className={styles.MenuItem} href="/#gettingstarted">
-                How it works
-              </a>
-            </li>
-            <li>
-              {" "}
-              <a className={styles.MenuItem} href={"/rates"}>
-                Rates
-              </a>
-            </li>
-            <li>
-              {" "}
-              <a className={styles.MenuItem} href="/about#ourteam">
-                Our Team
-              </a>
-            </li>
-          </ul>
+          </ul> */}
           <ul className={styles.FooterMenus}>
             <li>
               {" "}
-              <a className={styles.MenuItem} href={"/policy"}>
+              <a className={styles.MenuItem} href={"#"}>
                 Privacy Policy
               </a>
             </li>
@@ -168,7 +142,7 @@ const Footer = () => {
         </div>
       </div>
       <p className={styles.CopyRight}>
-        &copy; 2023 IBXPEERS MARKETPLACE LTD (RN:6965508 ) - All Rights Reserved
+        &copy; 2022 FIENSMA SERVICES (RN:6965508 ) - All Rights Reserved
       </p>
     </div>
   );

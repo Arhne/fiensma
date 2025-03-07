@@ -18,54 +18,36 @@ const ClientTestimonial = () => {
   const _slides = [
     {
       id: 1,
-      job: "Forex Trader",
-      imageSrc:
-        "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692537582/ibx-website-v2/carousel-images/testifier_1_oyjwt4.webp",
-      title: "Alex T",
-      content: ` "I've been impressed with Ibx Exchange's commitment to security. The trust guarantee gives me confidence in every transaction, and the platform's reliability is unmatched. Their accurate data and user-friendly interface have made trading a breeze." - Alex T.`,
+      title: "John, Graduate",
+      content: ` "Fiensma Services transformed my tech skills! I now use Excel and Word with confidence." - John, Graduate.`,
     },
     {
       id: 2,
-      job: "Tech Intern",
-      imageSrc:
-        "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692535820/ibx-website-v2/carousel-images/testifier_5_ufidpu.webp",
-      title: "Jordn O'Reilly",
-      content: `"Trading fiat currencies on Ibx Exchange has been a game-changer for me. The platform's seamless process and diverse fiat options have simplified my trading journey. I've found a reliable partner for secure and convenient fiat exchange." - John S.`,
+    title: "Mrs Eno, Parent",
+      content: `"My 8-year-old now understands computers better and loves the classes!" - Mrs Eno, Parent.`,
     },
     {
       id: 3,
-      job: "Web3 Specialist",
-      imageSrc:
-        "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692535819/ibx-website-v2/carousel-images/testifier_2_t7gevb.webp",
-      title: "Elena M",
-      content: `"Customer satisfaction shines through at Ibx Exchange. Their swift responses to my inquiries coupled with the convenience of fiat currency trading make them a reliable choice for traders seeking a hassle-free experience." - Elena M.`,
+      title: "Esther Ime, Student",
+      content: `"Before joining Fiensma Services, I struggled with basic typing and using Word. Now, I can confidently create documents, spreadsheets, and even design simple presentations! The training was practical and easy to follow." - Esther Ime, Student`,
     },
     {
       id: 4,
-      job: "Forex Trader",
-      imageSrc:
-        "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692535819/ibx-website-v2/carousel-images/testifier_3_ypgpkj.webp",
-      title: "Sarah Mekka",
-      content: `"Ibx Exchange has transformed the way I trade currencies. The 24/7 P2P ads feature makes it incredibly convenient, and their trust guarantee truly puts my mind at ease. Plus, with zero charges, I can maximize my profits. I've found a reliable partner in Ibx Exchange." - Sarah M.`,
+    title: "Tunde E., Student",
+      content: `"After completing my secondary education, I wanted to improve my digital skills. Fiensma Services helped me gain confidence in using Excel, Word, and PowerPoint, which gave me an edge in my university applications." - Tunde E., Student`,
     },
     {
       id: 5,
-      job: "Tech Intern",
-      imageSrc:
-        "https://res.cloudinary.com/dbg2z1svm/image/upload/v1692535820/ibx-website-v2/carousel-images/testifier_4_sdcp8r.webp",
-      title: "Emily S",
-      content: `"Ibx Exchange has redefined my trading experience. The trust guarantee and secure environment have built a sense of community and trust among traders. With their accurate data and commitment to transparency, I know I'm in safe hands." - Emily S.`,
+      title: "Dr. Chinyere O., Parent",
+      content: `"My 10-year-old son can now use a computer better than I expected! He enjoys the lessons and even teaches me a few things. This program is perfect for kids." - Mrs. Chinyere O., Parent`,
     },
   ];
 
   return (
     <div className={styles.ClientTestimonialContainer}>
       <h3 className={styles.HeaderText}>
-        What Our Clients Have to Say About Us
+        Testimonials
       </h3>
-      <p className={styles.Description}>
-        Explore Testimonials from Our Valued Clients.
-      </p>
       <div className={styles.CarouselContainer}>
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -84,22 +66,22 @@ const ClientTestimonial = () => {
           }}
         >
           <div className={styles.SwiperButtonContainer}>
-            <SwiperButtonNext>
+            <SwiperButtonPrevious>
               <Image
                 src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1693404384/ibx-website-v2/icons/left_arrow_icon_dpdlxk.svg"
                 width={47}
                 height={47}
                 alt=""
               />
-            </SwiperButtonNext>
-            <SwiperButtonPrevious>
+            </SwiperButtonPrevious>
+            <SwiperButtonNext>
               <Image
                 src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1693404384/ibx-website-v2/icons/right_arrow_icon_adrnmh.svg"
                 width={47}
                 height={47}
                 alt=""
               />
-            </SwiperButtonPrevious>
+            </SwiperButtonNext>
           </div>
 
           {_slides.map((_slide) => (
@@ -110,20 +92,14 @@ const ClientTestimonial = () => {
                     isActive && styles.ActiveSwiper
                   }`}
                 >
+                  
+                  <div className={styles.Content}>{_slide.content}</div>
                   <div className={styles.HeaderContainer}>
-                    <Image
-                      loader={() => imageLoader(_slide.imageSrc)}
-                      width={85}
-                      height={85}
-                      src={_slide.imageSrc}
-                      alt=""
-                    />
                     <div className={styles.Header}>
                       <h6>{_slide.title}</h6>
-                      <small>{_slide.job}</small>
+                      
                     </div>
                   </div>
-                  <div className={styles.Content}>{_slide.content}</div>
                 </div>
               )}
             </SwiperSlide>

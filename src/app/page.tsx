@@ -8,7 +8,6 @@ import Faq from "@/common/components/Landing/Faq";
 import AdvertSectionTwo from "@/common/components/Landing/AdvertSectionTwo";
 import Ticker from "@/common/components/Landing/Ticker";
 import GettingStarted from "@/common/components/Landing/GettingStarted/page";
-
 import styles from "./page.module.scss";
 import Services from "@/common/components/Landing/Services";
 import Link from "next/link";
@@ -21,156 +20,108 @@ export default function Home() {
         <div
           className={`col-sm-12 col-xs-12 col-lg-7  ${styles.LandingLeftContainer}`}
         >
-          <h1 className={styles.HeaderText}>P2P Currency Exchange Made Easy</h1>
+          <h1 className={styles.HeaderText}>
+            Empowering All Ages with Tech Skills for the Future!
+          </h1>
           <p className={styles.TagLine}>
-            Welcome to Ibx Exchange - Your trusted marketplace for <br />{" "}
-            peer-to-peer fiat currency exchange.
+            Welcome to Fiensma Services, where we start from playful computer
+            appreciation for kids (5-12) to essential IT skills for school
+            leavers and advanced web development & data analysis for
+            graduates—unlock the power of technology with expert-led training..
           </p>
-          <div className={styles.MobileStore}>
-            <Link href={appUrl.android} target="_blank">
-              <Image
-                src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418195/ibx-website-v2/google_play_rm0r2b.svg"
-                alt=""
-                width={213}
-                height={64}
-                className={styles.GoogleStore}
-              />
-            </Link>
-            <Link href={appUrl.apple} target="_blank">
-              <Image
-                src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/apple_store_fgtmpg.svg"
-                width={213}
-                height={64}
-                alt=""
-                className={styles.AppStore}
-              />
-            </Link>
-          </div>
         </div>
       </div>
-      <Ticker />
+      <div id="about" className={styles.companyStory}>
+        <div className={styles.leftside}>
+          <hr />
+          <h3>Our Story</h3>
+          <p>why we started</p>
+        </div>
+        <div className={styles.rightside}>
+          <p>
+            Teaching Computer and Information Technology at the University of
+            Uyo opened my eyes to a major gap in digital literacy. Many
+            undergraduates and even graduates struggled with essential computer
+            skills—simple tasks like typing, using Word and Excel, and
+            navigating the digital world efficiently.
+          </p>
+          <p>
+            This realization sparked the birth of Fiensma Services—a training
+            institute dedicated to bridging this gap. Our mission is to empower
+            both young children with an early appreciation for computers and
+            equip school leavers, university students, and graduates with
+            practical IT skills like office productivity, web development, and
+            data analysis.
+          </p>
+          <p>
+            At Fiensma Services, we believe technology is for everyone, and
+            we’re here to ensure that no one is left behind in the digital age.
+          </p>
+        </div>
+      </div>
       <Services />
       <div className={`row gx-5 ${styles.Features}`}>
         <div className="col-xs-12 col-sm-12 col-md-6">
-          <h3>Gain More With Ibx</h3>
+          <h3>Benefits of Our Training Program</h3>
           <p className={styles.LeftText}>
-            Ibx Exchange is your premier destination for peer-to-peer fiat
-            exchange. Discover a seamless platform for exchanging your local and
-            foreign currencies directly to your bank account. Explore our
-            user-friendly interface, 24/7 support and robust security measures,
-            well designed to ensure you have a pleasant experience.
+            At Fiensma Services, we are more than just a computer training
+            institute—we are a bridge to digital empowerment for all ages.
+            Whether you're a young child exploring computers, a student
+            preparing for higher education, or a graduate looking to enhance
+            your career, we provide the right training to equip you with the
+            skills you need.
           </p>
-          <Image
-            loader={() =>
-              imageLoader(
-                "https://res.cloudinary.com/dbg2z1svm/image/upload/v1691574412/ibx-website-v2/money_uulrjr.png"
-              )
-            }
-            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691574412/ibx-website-v2/money_uulrjr.png"
-            width={505}
-            height={449}
-            className={styles.LeftImage}
-            alt=""
-          />
         </div>
         <div className={`col-xs-12 col-sm-12 col-md-6 ${styles.RightColumn}`}>
           <div className="row mb-4">
-            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-              <div className={styles.IconContainer}>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/feature_reliable_icon_jmu1il.svg"
-                  width={100}
-                  height={100}
-                  alt=""
-                />
-              </div>
-              <p className={styles.Heading}>Reliable and Accurate</p>
+            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <p className={styles.Heading}>Bridging the Digital Gap</p>
               <p className={styles.Content}>
-                We have access to real-time exchange rates for hundreds of
-                currencies, we also provide accurate and current data.
+                Many students and graduates struggle with basic computer skills.
+                We’re here to change that.
               </p>
             </div>
-            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-              <div className={styles.IconContainer}>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/feature_dollar_icon_alxtvq.svg"
-                  width={100}
-                  height={100}
-                  alt=""
-                />
-              </div>
-              <p className={styles.Heading}>0% Charges</p>
+            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <p className={styles.Heading}>Structured Learning for All</p>
               <p className={styles.Content}>
-                Enjoy fee-free trading with Ibx Exchange, where your profits
-                stay yours and we keep your costs at zero.
+                From kids (5-12) learning computer appreciation to students &
+                graduates mastering IT essentials.
+              </p>
+            </div>
+            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <p className={styles.Heading}>Practical & Hands-on Training</p>
+              <p className={styles.Content}>
+                Learn typing, office productivity, web development, and more
+                with real-world applications.
               </p>
             </div>
           </div>
-          <div className="row">
-            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-              <div className={styles.IconContainer}>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/feature_shield_icon_lczop6.svg"
-                  width={100}
-                  height={100}
-                  alt=""
-                />
-              </div>
-
-              <p className={styles.Heading}>Trust Guaranteed</p>
-              <p className={styles.Content}>
-                Our team of experts is here to guide you safely through the
-                global currency markets at every step of your journey.
-              </p>
-            </div>
-            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-              <div className={styles.IconContainer}>
-                <Image
-                  src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/feature_hour_icon_edqbct.svg"
-                  width={100}
-                  height={100}
-                  alt=""
-                />
-              </div>
-              <p className={styles.Heading}>24/7 P2P transactions</p>
-              <p className={styles.Content}>
-                Experience round-the-clock access to our dynamic peer-to-peer
-                transactions, empowering you to trade fiat currencies at your
-                convenience, any time, day or night.
-              </p>
-            </div>
-          </div>
+          
         </div>
       </div>
       <div className={`row gx-5 ${styles.Statistics}`}>
-        <div className={`col-xs-12 col-sm-7 ${styles.LeftColumn}`}>
-          <h3>We believe in the power of numbers</h3>
-          <p className={styles.LeftText}>
-            Every trade, every transaction, and every connection made on Ibx
-            Exchange contributes to a growing ecosystem of empowered
-            individuals, shaping the future of currency exchange. Join us on
-            this journey of limitless possibilities.
-          </p>
+        <div className={`col-xs-12 col-sm-12 col-lg-12 ${styles.LeftColumn}`}>
+        
           <div className={`row ${styles.StatContainer}`}>
             <div
               className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
             >
-              <h2 className={styles.Stat}>235,000</h2>
-              <p className={styles.StatTitle}>Mobile App Download</p>
+              <h2 className={styles.Stat}>5,000+</h2>
+              <p className={styles.StatTitle}>Graduates</p>
             </div>
             <div
               className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
             >
-              <h2 className={styles.Stat}>2,000+</h2>
-              <p className={styles.StatTitle}>Contributors</p>
+              <h2 className={styles.Stat}>12</h2>
+              <p className={styles.StatTitle}>Expert Instructors</p>
             </div>
           </div>
           <div className={`row ${styles.StatContainer}`}>
             <div
               className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
             >
-              <h2 className={styles.Stat}>10,000+</h2>
-              <p className={styles.StatTitle}>Daily Users</p>
+              <h2 className={styles.Stat}>98%</h2>
+              <p className={styles.StatTitle}>Success Rate</p>
             </div>
             <div
               className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
@@ -180,114 +131,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={`col-xs-12 col-sm-5 ${styles.RightColumn}`}>
-          <Image
-            loader={() =>
-              imageLoader(
-                "https://res.cloudinary.com/dbg2z1svm/image/upload/v1705614346/ibx-user_xkiefg.png"
-              )
-            }
-            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1705614346/ibx-user_xkiefg.png"
-            width={505}
-            height={543}
-            className={styles.RightImage}
-            alt=""
-          />
-        </div>
+       
       </div>
-      <div className={styles.Advert}>
-        <h1 className={styles.HeaderText}>
-          Join our 235,000+ <br /> mobile app users
-        </h1>
-        <p className={styles.AdvertText}>
-          Click on the link below to download mobile app
-        </p>
-        <div className={styles.MobileStore}>
-          <Link href={appUrl.android} target="_blank">
-            <Image
-              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691583936/ibx-website-v2/google_play_white_mzoobw.svg"
-              alt=""
-              width={180}
-              height={54}
-              className={styles.GoogleStore}
-            />
-          </Link>
-          <Link href={appUrl.apple} target="_blank">
-            <Image
-              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691583936/ibx-website-v2/apple_store_white_frrda0.svg"
-              width={183}
-              height={54}
-              alt=""
-              className={styles.AppleStore}
-            />
-          </Link>
-        </div>
-      </div>
+     
       <ClientTestimonial />
-      <AdvertSectionTwo />
-      <GettingStarted />
       <Faq />
-      <div className={styles.Companies}>
-        <div className={styles.TextContainer}>
-          <p className={styles.BoldText}>
-            Trusted by Top <br /> Companies
-          </p>
-          <p className={styles.CommonText}>
-            More than 45,000+ companies trust Ibx
-          </p>
-        </div>
-        <div className={`${styles.PartnerCompanies}`}>
-          <li>
-            <Image
-              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418218/ibx-website-v2/slack_et8vic.svg"
-              width={150}
-              height={60.959}
-              alt=""
-            />
-          </li>
-          <li>
-            <Image
-              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418206/ibx-website-v2/paypal_dphrwm.svg"
-              width={143}
-              height={48}
-              alt=""
-            />
-          </li>
-          <li>
-            <Image
-              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418194/ibx-website-v2/adobe_thftlk.svg"
-              width={133}
-              height={48}
-              alt=""
-            />
-          </li>
-
-          <li>
-            <Image
-              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418245/ibx-website-v2/youtube_e9gmem.svg"
-              width={150}
-              height={45.813}
-              alt=""
-            />
-          </li>
-          <li>
-            <Image
-              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418204/ibx-website-v2/microsoft_rpniif.svg"
-              width={164}
-              height={48}
-              alt=""
-            />
-          </li>
-          <li>
-            <Image
-              src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418196/ibx-website-v2/google_ox9wco.svg"
-              width={113}
-              height={48}
-              alt=""
-            />
-          </li>
-        </div>
-      </div>
     </main>
   );
 }

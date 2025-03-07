@@ -3,20 +3,12 @@
   max-width: 1440px;
   margin: 0 auto;
 
-  .Description {
-    color: rgba(0, 0, 0, 0.6);
-    font-size: 1.125rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 2rem;
-    text-transform: capitalize;
-  }
   .CarouselContainer {
     margin-right: -5rem;
-
+    margin-top: 4rem;
     .SwiperButtonContainer {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
 
       .NextButton,
       .PrevButton {
@@ -29,35 +21,28 @@
     }
 
     .PrevButton {
-      background-color: var(--primary-color);
+      background-color: #f2951c;
       margin-left: 0.5rem;
     }
 
     .Slide {
-      width: 32rem;
+      width: 100%;
       min-height: 16rem;
 
       .SlideItem {
         padding: 2.5rem 4.6rem 2.5rem 2.5rem;
         background-color: #f8f9ff;
         border-radius: 30px;
-
+        width: 100%;
+        flex: 1;
         .HeaderContainer {
           display: flex;
 
           .Header {
-            margin-left: 1.25rem;
+          margin-top: 2rem;
 
             h6 {
               color: #000;
-            }
-
-            small {
-              color: #facc15;
-              font-style: normal;
-              font-weight: 500;
-              line-height: normal;
-              text-transform: capitalize;
             }
           }
         }
@@ -68,12 +53,11 @@
           font-style: normal;
           font-weight: 400;
           line-height: 2rem;
-          
         }
       }
 
       .ActiveSwiper {
-        background-color: var(--primary-color);
+        background-color: #f2951c;
 
         .HeaderContainer {
           .Header {

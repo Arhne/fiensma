@@ -1,11 +1,9 @@
 "use client";
 
 import { useEffect } from "react";
-
 import Footer from "../Footer";
 import Header from "../Header";
 import Subscription from "../Subscription/Subscription";
-
 import styles from "./App.module.scss";
 
 interface IApp {
@@ -20,7 +18,7 @@ const App = ({ children }: IApp) => {
     <>
       <Header />
       <main className={styles.Main}>{children}</main>
-      <Subscription />
+      {/* <Subscription /> */}
       <Footer />
     </>
   );

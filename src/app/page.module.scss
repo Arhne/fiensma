@@ -2,7 +2,7 @@
   padding: 0 6.25rem;
   height: 56rem;
   background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418198/ibx-website-v2/landing_left_background_image_pbtfti.svg"),
-    url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1698895298/ibx-website-v2/landing-page/hero-image_lgnbzt.svg");
+    url("https://res.cloudinary.com/donrn3pjt/image/upload/v1741271161/Illustration_zivfmz.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: left top, 0;
   background-position-x: 0, 98%;
@@ -20,9 +20,9 @@
     }
 
     & .HeaderText::after {
-      content: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418229/ibx-website-v2/yellow_mark_tsz3mm.svg");
+      content: url("https://res.cloudinary.com/donrn3pjt/image/upload/v1741271105/Vector_n1zmev.svg");
       position: absolute;
-      top: 19rem;
+      top: 24rem;
       left: 1rem;
       z-index: -1;
     }
@@ -31,70 +31,36 @@
       font-size: 1.5rem;
       margin-bottom: 5rem;
     }
-
-    .MobileStore {
-      .GoogleStore {
-        margin-right: 1rem;
-        width: 213px;
-        height: 64px;
-      }
-      .AppStore,
-      .GoogleStore {
-        &:active {
-          transform: scale(1.05);
-        }
-      }
-    }
   }
 }
-
-.Companies {
-  padding: 5rem 6.25rem;
-  background-color: #fafafa;
-  max-width: 1440px;
-  margin: 0 auto;
-
-  .TextContainer {
-    display: flex;
-
-    .BoldText {
-      font-weight: 700;
-      color: #000;
-      font-size: 2.5rem;
-    }
-
-    .CommonText {
-      color: #10192d;
-      font-size: 1.5rem;
-      // font-weight: 400;
-      font-style: normal;
-      margin-left: 1.9rem;
-      margin-top: 1rem;
-    }
+.companyStory {
+  background-color: #f2951c;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 5rem 8rem 5rem 16rem;
+  align-items: center;
+  h3,
+  p,
+  hr {
+    color: #ffffff;
+  }
+  .leftside > hr {
+    width: 100px;
+    border-width: 2px;
   }
 
-  .PartnerCompanies {
-    margin-top: 7rem;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    li {
-      list-style-type: none;
-    }
+  p {
+    color: #ffffff;
+    font-size: 1.15rem;
   }
 }
 
 .Features {
-  padding: 8rem 6.25rem;
+  padding: 8rem 5.25rem;
   background-color: #ffffff;
   max-width: 1440px;
   margin: 0 auto;
 
-  .LeftImage {
-    width: 100%;
-    height: auto;
-  }
 
   .LeftText {
     color: rgba(0, 0, 0, 0.6);
@@ -105,21 +71,17 @@
   }
 
   .RightColumn {
-    .IconContainer {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 1rem;
-    }
-
+    // flex: 0 0 1;
     .Heading {
       color: #000;
       text-align: center;
       font-feature-settings: "clig" off, "liga" off;
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       font-style: normal;
-      font-weight: 500;
+      font-weight: 600;
       line-height: normal;
       text-transform: capitalize;
+      margin-bottom: 40px;
     }
 
     .Content {
@@ -134,64 +96,23 @@
 }
 
 .Statistics {
-  padding: 0 6.25rem;
-  background-color: #ffffff;
+  padding: 2rem 6.25rem 0;
+  background-color: #f2951c33;;
   max-width: 1440px;
+  border-radius: 99px;
   margin: 0 auto;
-  margin-bottom: 19rem;
+  margin-bottom: 8rem;
 
-  .LeftText {
-    color: rgba(0, 0, 0, 0.6);
-    font-feature-settings: "clig" off, "liga" off;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 32px;
-    span {
-      text-transform: capitalize;
-    }
+  h2,p{
+    color: #f2951c;
   }
-
   .StatContainer {
     margin-bottom: 2rem;
+    text-align: center;
     .StatItem {
       .StatTitle {
         margin-top: -1rem;
       }
-    }
-  }
-}
-
-.Advert {
-  padding: 8.75rem 6.25rem;
-  height: 40rem;
-  background-image: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1698895686/ibx-website-v2/landing-page/Rectangle_2487_2x_wgltyu.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  // max-width: 1440px;
-  margin: 0 auto;
-
-  .HeaderText {
-    color: #ffffff;
-    font-weight: 800;
-    font-size: 3rem;
-    font-style: normal;
-    line-height: normal;
-    margin-bottom: 3.125rem;
-  }
-
-  .AdvertText {
-    color: #ffffff;
-    font-feature-settings: "clig" off, "liga" off;
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-bottom: 5rem;
-  }
-
-  .MobileStore {
-    .GoogleStore {
-      margin-right: 1rem;
     }
   }
 }
@@ -208,60 +129,34 @@
 
     .LandingLeftContainer {
       .HeaderText {
-        font-size: 4rem;
+        font-size: 3rem;
       }
 
       & .HeaderText::after {
-        content: url("https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418229/ibx-website-v2/yellow_mark_tsz3mm.svg");
+        content: url("https://res.cloudinary.com/donrn3pjt/image/upload/v1741271105/Vector_n1zmev.svg");
         position: absolute;
-        top: 16rem;
-        left: 5rem;
+        top: 21rem;
+        left: 2rem;
         z-index: -1;
-      }
-
-      .MobileStore {
-        display: flex;
-
-        .GoogleStore,
-        .AppStore {
-          width: 150px;
-          height: 50px;
-        }
       }
     }
   }
 
-  .Companies {
-    padding: 1rem;
+  .companyStory {
+    background-color: #f2951c;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
 
-    .TextContainer {
-      flex-direction: column;
-
-      .BoldText {
-        text-align: center;
-        font-size: 2rem;
-      }
-
-      .CommonText {
-        text-align: center;
-        font-size: 1rem;
-      }
+    .leftside {
+      text-align: center;
+      margin-bottom: 3rem;
     }
-
-    .PartnerCompanies {
-      margin-top: 3rem;
-      display: flex;
-      padding: 0;
-      overflow-x: scroll;
-      ul {
-        // display: block;
-        // justify-content: space-between;
-
-        li {
-          margin-bottom: 2rem;
-          list-style-type: none;
-        }
-      }
+    .rightdide {
+      text-align: justify;
+    }
+    p {
+      font-size: 1rem;
     }
   }
 
@@ -283,7 +178,7 @@
       padding: 1rem;
 
       .Heading {
-        font-size: 1.5rem;
+        font-size: 1rem;
       }
 
       .Content {
@@ -305,20 +200,13 @@
         font-size: 2rem;
         text-align: center;
       }
-      .LeftText {
-        color: rgba(0, 0, 0, 0.6);
-        font-feature-settings: "clig" off, "liga" off;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 32px;
-        text-transform: capitalize;
-        text-align: center;
-      }
 
       h2 {
         font-size: 2rem;
       }
-
+      h2, p{
+        color: #f2951c;
+      }
       .StatContainer {
         .StatItem {
           margin-bottom: 2rem;
@@ -326,6 +214,7 @@
           .StatTitle {
             text-align: center;
             font-size: 3rem;
+           
           }
 
           .StatTitle {
@@ -344,29 +233,6 @@
     }
   }
 
-  .Advert {
-    padding: 1.5rem 1.5rem;
-    margin-top: -15rem;
-    height: auto;
-    .AdvertText {
-      font-size: 1rem;
-      text-align: center;
-    }
-    .HeaderText {
-      text-align: center;
-      font-size: 2rem;
-    }
-
-    .MobileStore {
-      display: flex;
-      align-items: center;
-      .GoogleStore,
-      .AppleStore {
-        width: 150px;
-        height: 50px;
-      }
-    }
-  }
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
@@ -378,6 +244,23 @@
     background-position: left top;
     background-position-x: 0;
     background-size: cover;
+  }
+  .companyStory {
+    background-color: #f2951c;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    .leftside {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .rightdide {
+      text-align: justify;
+    }
+    p {
+      font-size: 1rem;
+    }
   }
   .Companies {
     padding: 1rem;
@@ -427,7 +310,7 @@
   .Statistics {
     padding: 0 1.5rem;
     background-color: #ffffff;
-    margin-bottom: 19rem;
+    margin-bottom: 10rem;
 
     .LeftColumn {
       .LeftText {
@@ -442,10 +325,13 @@
       h2 {
         font-size: 2rem;
       }
-
+      h2, p{
+        color: #f2951c;
+      }
       .StatTitle {
         margin-top: -1rem;
         font-size: 0.875rem;
+        
       }
     }
 
@@ -456,20 +342,7 @@
       }
     }
   }
-  .Advert {
-    padding: 1.5rem 1.5rem;
 
-    .MobileStore {
-      .GoogleStore,
-      .AppleStore {
-        width: 100%;
-      }
-
-      .AppleStore {
-        margin-top: 1rem;
-      }
-    }
-  }
 }
 
 /* Media Query for Tablets Ipads portrait mode */

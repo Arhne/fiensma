@@ -1,9 +1,7 @@
 import { useState } from "react";
-
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
-
 import styles from "./Header.module.scss";
 
 const Header = () => {
@@ -68,13 +66,13 @@ const Header = () => {
               className={`${styles.NavLink} ${
                 pathname === "/about" && styles.Active
               }`}
-              href={"/about"}
+              href={"/#about"}
               onClick={() => setIsOpenMobileMenu(false)}
             >
               About Us
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               className={`${styles.NavLink} ${
                 pathname === "/rates" && styles.Active
@@ -84,43 +82,38 @@ const Header = () => {
             >
               Rates
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               className={`${styles.NavLink} ${
-                pathname === "/careers" && styles.Active
+                pathname === "/services" && styles.Active
               }`}
-              href={"/careers"}
+              href={"/#services"}
               onClick={() => setIsOpenMobileMenu(false)}
             >
-              Careers
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`${styles.NavLink} ${
-                pathname === "/contactus" && styles.Active
-              }`}
-              href={"/contactus"}
-              onClick={() => setIsOpenMobileMenu(false)}
-            >
-              Contact Us
+              Services
             </Link>
           </li>
         </ul>
-        {pathname !== "/downloads" && (
-          <Link href={"/downloads"} onClick={() => setIsOpenMobileMenu(false)}>
-            <button
+
+        
+            <Link
+              href={"/contactus"}
+              onClick={() => setIsOpenMobileMenu(false)}
+            >
+              <button
               className={
-                pathname === "/downloads"
-                  ? styles.DownloadsButton
+                pathname === "/contactus" 
+                  ? styles.TryItButton
                   : styles.TryItButton
               }
             >
-              Try for Free
+              Contact Us
             </button>
-          </Link>
-        )}
+       
+            </Link>
+          
+       
       </div>
     </div>
   );

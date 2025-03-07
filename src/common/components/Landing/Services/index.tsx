@@ -1,47 +1,50 @@
 import Image from "next/image";
 import styles from "./services.module.scss";
 
+const services = [
+  {
+    id: 1,
+    course: "Computer Fundamentals",
+    desc: "Underatanding software, hardware, and essential computing concepts",
+    price: "N 200,000",
+    month: "6 Weeks",
+  },
+  {
+    id: 2,
+    course: "Professional Typing",
+    desc: "Develop speed and accuracy with our specialized training modules",
+    price: "N 80,000",
+    month: "2 Weeks",
+  },
+  {
+    id: 3,
+    course: "Office Productivity",
+    desc: "Master Word, Excel, PowerPoint, and essential business tools",
+    price: "N 150,000",
+    month: "4 Weeks",
+  },
+];
 const Services = () => {
   return (
-    <div className={styles.ServicesContainer}>
+    <div id="services" className={styles.ServicesContainer}>
       <h4 className={styles.Question}>What we do</h4>
       <p className={styles.Content}>
-        Discover why our platform is your ideal choice for fiat currency
-        exchange and financial solutions
+        Provide professional development training
       </p>
-
-      <div className={`row gx-5 ${styles.Services}`}>
-        <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-          <div className={styles.FlowContainer}>
-            <ul className={styles.Flow}>
-              <li className={`${styles.FlowItem} ${styles.One}`}>
-                <p className={styles.FlowContent}>
-                  Keep up-to-date with the latest Naira exchange rates.
-                </p>
-              </li>
-              <li className={`${styles.FlowItem} ${styles.Two}`}>
-                <p className={styles.FlowContent}>
-                  Engage in peer-to-peer transactions for the buying and selling
-                  of Naira and various global fiat currencies.
-                </p>
-              </li>
-              <li className={`${styles.FlowItem} ${styles.Three}`}>
-                <p className={styles.FlowContent}>
-                  Stay updated on the latest forex market trends.
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-          <Image
-            src="/what_we_do.svg"
-            alt=""
-            width={608}
-            height={413}
-            className={styles.RightImage}
-          />
-        </div>
+      <div className={styles.Services}>
+        {services.map((service) => (
+          <div key={service.id} className={styles.cardWrap}>
+         
+              <h5>{service.course}</h5>
+              <p>{service.desc}</p>
+              <div className={styles.pricegroup}>
+              <p className={styles.month}>{service.month}</p>
+              <p className={styles.price}>{service.price}</p>
+              </div>
+             
+            </div>
+       
+        ))}
       </div>
     </div>
   );
