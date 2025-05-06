@@ -123,19 +123,19 @@ export default function Home() {
               <h2 className={styles.Stat}>98%</h2>
               <p className={styles.StatTitle}>Success Rate</p>
             </div>
-            <div
+            {/* <div
               className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
             >
               <h2 className={styles.Stat}>$10,000</h2>
               <p className={styles.StatTitle}>Transaction volume per quarter</p>
-            </div>
+            </div> */}
           </div>
         </div>
        
       </div>
      
       <ClientTestimonial />
-      <Faq />
+      {/* <Faq/> */}
     </main>
   );
 }

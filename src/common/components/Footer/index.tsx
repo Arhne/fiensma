@@ -13,11 +13,11 @@ const Footer = () => {
     <div className={`row gx-0 ${styles.FooterContainer}`}>
       <div className="col-sm-6">
         <Image
-          src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418205/ibx-website-v2/logo_white_g81svy.svg"
+          src="/logocolored.svg"
           alt=""
           onClick={() => router.push("/")}
-          width={82}
-          height={54}
+          width={100}
+          height={100}
         />
         <p className={styles.Address}>
           Jumbo Plaza Road, Opposite D Division Police Station<br/>Itam, Uyo, Akwa-Ibom State
@@ -108,14 +108,6 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-          {/* <ul className={styles.FooterMenus}>
-            <li>
-              {" "}
-              <a className={styles.MenuItem} href="#">
-                Terms
-              </a>
-            </li>
-          </ul> */}
           <ul className={styles.FooterMenus}>
             <li>
               {" "}

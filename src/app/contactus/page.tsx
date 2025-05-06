@@ -55,10 +55,10 @@ const ContactUs = () => {
           <Image
             loader={() =>
               imageLoader(
-                "https://res.cloudinary.com/dbg2z1svm/image/upload/v1699289186/ibx-website-v2/contact-us/Contact_Us_Background_usaf6g.svg"
+                ""
               )
             }
-            src="https://res.cloudinary.com/dbg2z1svm/image/upload/v1699289186/ibx-website-v2/contact-us/Contact_Us_Background_usaf6g.svg"
+            src=""
             alt=""
             className={styles.LeftColumnImage}
             priority={true}

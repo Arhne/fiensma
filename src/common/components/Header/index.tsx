@@ -20,11 +20,7 @@ const Header = () => {
     >
       <div className={styles.LogoHamburger}>
         <Image
-          src={
-            pathname === "/downloads"
-              ? "https://res.cloudinary.com/dbg2z1svm/image/upload/v1709022304/Full_Primary_Logo_1_1_fmffjy.svg"
-              : "https://res.cloudinary.com/dbg2z1svm/image/upload/v1691418208/ibx-website-v2/logo_cz22mb.svg"
-          }
+          src={"/logo.svg"}
           width={100}
           height={50}
           alt=""
@@ -32,7 +28,7 @@ const Header = () => {
           onClick={() => router.push("/")}
         />
 
-        <Image
+        {/* <Image
           src={
             pathname == "/downloads"
               ? "https://res.cloudinary.com/dbg2z1svm/image/upload/v1708082210/Burger_menu_icon_fgs3tl.svg"
@@ -43,7 +39,7 @@ const Header = () => {
           alt=""
           className={styles.Hamburger}
           onClick={() => setIsOpenMobileMenu((prev) => !prev)}
-        />
+        /> */}
       </div>
 
       <div

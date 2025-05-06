@@ -18,7 +18,6 @@ const App = ({ children }: IApp) => {
     <>
       <Header />
       <main className={styles.Main}>{children}</main>
-      {/* <Subscription /> */}
       <Footer />
     </>
   );
