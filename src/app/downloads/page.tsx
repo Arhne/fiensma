@@ -6,7 +6,7 @@ import Link from "next/link";
 import styles from "./downloads.module.scss";
 
 import { downloadOption } from "./data";
-import Faq from "@/common/components/Landing/Faq";
+// import Faq from "@/common/components/Landing/Faq";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Downloads = () => {
@@ -155,7 +155,7 @@ const Downloads = () => {
         </div>
       </div>
       <div className={`pt-4 ${styles.Faqs}`}>
-        <Faq />
+        {/* <Faq /> */}
       </div>
     </div>
   );

@@ -1,10 +1,8 @@
 "use client";
 
 import Image from "next/image";
-
 import { imageLoader } from "@/common/Utils/imageLoaders";
 import ClientTestimonial from "@/common/components/Landing/ClientTestimonial";
-import Faq from "@/common/components/Landing/Faq";
 import AdvertSectionTwo from "@/common/components/Landing/AdvertSectionTwo";
 import Ticker from "@/common/components/Landing/Ticker";
 import GettingStarted from "@/common/components/Landing/GettingStarted/page";
@@ -66,7 +64,7 @@ export default function Home() {
           <p className={styles.LeftText}>
             At Fiensma Services, we are more than just a computer training
             institute—we are a bridge to digital empowerment for all ages.
-            Whether you're a young child exploring computers, a student
+            Whether you&apos;re a young child exploring computers, a student
             preparing for higher education, or a graduate looking to enhance
             your career, we provide the right training to equip you with the
             skills you need.
@@ -123,12 +121,6 @@ export default function Home() {
               <h2 className={styles.Stat}>98%</h2>
               <p className={styles.StatTitle}>Success Rate</p>
             </div>
-            {/* <div
-              className={`${styles.StatItem} col-xs-12 col-sm-6 col-md-6 col-lg-6`}
-            >
-              <h2 className={styles.Stat}>$10,000</h2>
-              <p className={styles.StatTitle}>Transaction volume per quarter</p>
-            </div> */}
           </div>
         </div>
        
