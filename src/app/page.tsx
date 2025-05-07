@@ -3,13 +3,13 @@
 import Image from "next/image";
 import { imageLoader } from "@/common/Utils/imageLoaders";
 import ClientTestimonial from "@/common/components/Landing/ClientTestimonial";
-import AdvertSectionTwo from "@/common/components/Landing/AdvertSectionTwo";
-import Ticker from "@/common/components/Landing/Ticker";
-import GettingStarted from "@/common/components/Landing/GettingStarted/page";
+// import AdvertSectionTwo from "@/common/components/Landing/AdvertSectionTwo";
+// import Ticker from "@/common/components/Landing/Ticker";
+// import GettingStarted from "@/common/components/Landing/GettingStarted/page";
 import styles from "./page.module.scss";
 import Services from "@/common/components/Landing/Services";
-import Link from "next/link";
-import { appUrl } from "@/common/data";
+// import Link from "next/link";
+// import { appUrl } from "@/common/data";
 
 export default function Home() {
   return (
@@ -93,6 +93,7 @@ export default function Home() {
                 with real-world applications.
               </p>
             </div>
+           
           </div>
           
         </div>

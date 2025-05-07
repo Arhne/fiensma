@@ -1,11 +1,11 @@
 import { useRouter } from "next/navigation";
-import { useFindActiveSetupQuery } from "@/redux/services/supportApi";
+// import { useFindActiveSetupQuery } from "@/redux/services/supportApi";
 
 import styles from "./Footer.module.scss";
 import Image from "next/image";
 
 const Footer = () => {
-  const { data: activeQuery } = useFindActiveSetupQuery();
+  // const { data: activeQuery } = useFindActiveSetupQuery();
 
   const router = useRouter();
 

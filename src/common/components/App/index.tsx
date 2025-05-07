@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import Footer from "../Footer";
 import Header from "../Header";
-import Subscription from "../Subscription/Subscription";
+// import Subscription from "../Subscription/Subscription";
 import styles from "./App.module.scss";
 
 interface IApp {

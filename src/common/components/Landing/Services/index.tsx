@@ -23,6 +23,20 @@ const services = [
     price: "N 150,000",
     month: "4 Weeks",
   },
+  {
+    id: 4,
+    course: "Data Analysis",
+    desc: "Gain practical skills in Excel, SQL, and data visualization to analyze and interpret business data effectively.",
+    price: "N 550,000",
+    month: "16 Weeks",
+  },
+  {
+    id: 5,
+    course: "Graphic Design",
+    desc: "Learn to create stunning visuals using tools like Adobe Photoshop, Illustrator, and CorelDRAW for branding, marketing, and digital media.",
+    price: "N 400,000",
+    month: "10 Weeks",
+  },
 ];
 const Services = () => {
   return (

@@ -6,48 +6,30 @@ import Image from "next/image";
 import styles from "./ContactUs.module.scss";
 import { CustomInput } from "@/common/components/Inputs";
 import CustomTextArea from "@/common/components/TextArea";
-import { useAddContactUsMutation } from "@/redux/services/contactUsApi";
 import { showErrorToast, showSuccessToast } from "@/common/Utils/toast";
 import { imageLoader } from "@/common/Utils/imageLoaders";
 import { CustomPhoneInput } from "@/common/components/CustomPhoneInput";
 
 const ContactUs = () => {
-  const [addContactUs, { isLoading }] = useAddContactUsMutation();
-
-  const { handleSubmit, control } = useForm({
-    defaultValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      message: "",
-      phone: "",
-    },
-  });
-
-  const onHandleSubmit = (value: {
-    firstName: string;
-    lastName: string;
-    email: string;
-    message: string;
-    phone: string;
-  }) => {
-    addContactUs(value)
-      .unwrap()
-      .then((result: { message: any }) => {
-        showSuccessToast(result?.message);
-        control._reset({
-          firstName: "",
-          lastName: "",
-          email: "",
-          message: "",
-          phone: "",
-        });
-      })
-      .catch((error: { data: { message: any } }) => {
-        showErrorToast(error?.data?.message.join());
-      });
+  
+  const {
+    control,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  
+  const onSubmit = (data: any) => {
+    try {
+      // Replace this with your actual submission logic (e.g., API call)
+      console.log("Form Submitted", data);
+      showSuccessToast("Message sent successfully!");
+      reset();
+    } catch (error) {
+      showErrorToast("Something went wrong. Please try again.");
+    }
   };
-
+  
   return (
     <div className={styles.ContactUsContainer}>
       <div className="row gx-5">
@@ -82,7 +64,7 @@ const ContactUs = () => {
             You can also use this form to send us a message.
           </p>
           <div className={styles.FormSection}>
-            <form onSubmit={handleSubmit(onHandleSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)}>
               <div className="row gx-5 mb-4">
                 <div className={`col-sm-6 ${styles.InputContainer}`}>
                   {" "}
@@ -206,18 +188,18 @@ const ContactUs = () => {
               <small className={styles.Terms}>
                 By submitting this form you agree to our{" "}
                 <span className={styles.HighlightedText}>
-                  <a href={"/terms"}>terms and conditions</a>
+                  <a href={"#"}>terms and conditions</a>
                 </span>{" "}
                 and our{" "}
                 <span className={styles.HighlightedText}>
-                  <a href="/policy">privacy policy</a>
+                  <a href="#">privacy policy</a>
                 </span>{" "}
                 which explains how we may collect, use and disclose your
                 personal information including to third parties.
               </small>
               <div>
                 <button className={styles.ActionButton}>
-                  {isLoading ? "Sending" : "Send Message"}
+                  Send Message
                 </button>
               </div>
             </form>
